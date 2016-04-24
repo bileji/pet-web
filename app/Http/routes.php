@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::group(['prefix' => 'user'], function() {
     Route::post('signUp', 'UserController@signUp');
 });
+
+Route::group(['prefix' => 'qiniu'], function() {
+    Route::post('token', 'QiniuController@token');
+});
