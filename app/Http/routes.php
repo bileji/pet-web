@@ -11,6 +11,12 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::group(['prefix' => 'user'], function() {
+    Route::post('signUp', 'UserController@signUp');
 });
