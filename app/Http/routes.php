@@ -17,10 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'user'], function() {
+// 测试angular
+Route::get('/angular', function () {
+    return view('angulars.index');
+});
+
+Route::group(['prefix' => 'user'], function () {
     Route::post('signUp', 'UserController@signUp');
 });
 
-Route::group(['prefix' => 'qiniu'], function() {
+Route::group(['prefix' => 'qiniu'], function () {
     Route::post('token', 'QiniuController@token');
 });
