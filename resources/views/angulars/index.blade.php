@@ -7,12 +7,12 @@
 
     <script src="{{URL::asset('node_modules/es6-shim/es6-shim.min.js')}}"></script>
 
-    <script src="../../node_modules/zone.js/dist/zone.js"></script>
-    <script src="../../node_modules/reflect-metadata/Reflect.js"></script>
-    <script src="../../node_modules/systemjs/dist/system.src.js"></script>
+    <script src="{{URL::asset('node_modules/zone.js/dist/zone.js')}}"></script>
+    <script src="{{URL::asset('node_modules/reflect-metadata/Reflect.js')}}"></script>
+    <script src="{{URL::asset('node_modules/systemjs/dist/system.src.js')}}"></script>
 
     <!-- 2. Configure SystemJS -->
-    <script src="../../scripts/systemjs.config.js"></script>
+    <script src="{{URL::asset('public/scripts/systemjs.config.js')}}"></script>
     <script>
         System.import('app').catch(function (err) {
             console.error(err);
@@ -22,6 +22,6 @@
 
 <!-- 3. Display the application -->
 <body>
-<my-app>Loading...</my-app>
+    <my-app>Loading...</my-app>
 </body>
 </html>
