@@ -13,8 +13,8 @@
         <script src="{{asset('node_modules/@angular/platform-browser-dynamic/platform-browser-dynamic.umd.js')}}"></script>
         @yield('modules')
     </head>
-    
+
     <body>
-    @yield('content')
+    @yield('container')
     </body>
 </html>
