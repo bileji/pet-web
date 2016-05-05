@@ -19,8 +19,8 @@
     <script src="{{asset('node_modules/@angular/platform-browser-dynamic/platform-browser-dynamic.umd.js')}}"></script>
 
     <!-- 2. Load our 'modules' -->
-    <script src="{{asset('script/app/app.component.js')}}"></script>
-    <script src="{{asset('script/app/main.js')}}"></script>
+    <script src="{{asset('scripts/app/app.component.js')}}"></script>
+    <script src="{{asset('scripts/app/main.js')}}"></script>
 
 </head>
 
