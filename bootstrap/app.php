@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Blade;
+
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
 );
