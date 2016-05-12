@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/test', function() {
+    return view('user.sign_in');
+});
+
 // 测试angular
 Route::get('/angular', function () {
     return view('angulars.index');
