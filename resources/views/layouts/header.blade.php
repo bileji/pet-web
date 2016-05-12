@@ -1,3 +1,3 @@
 <header>
-    i am header
+    <div>i am header</div>
 </header>
