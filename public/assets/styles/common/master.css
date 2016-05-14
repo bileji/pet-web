@@ -5,6 +5,7 @@ body, input[text], button {
 }
 header {
     background-color: #369;
-    height: 40px;
+    height: 34px;
     width: 100%;
+    min-width: 990px;
 }
