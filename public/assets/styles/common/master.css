@@ -37,7 +37,7 @@ header {
     height: 100%;
 }
 
-.nav .separator {
+.separator {
     display: inline-block;
     width: 0;
     height: 14px;
