@@ -33,4 +33,6 @@ header {
 
 .nav-sign li {
     float: left;
+    height: 100%;
+    line-height: 100%;
 }
