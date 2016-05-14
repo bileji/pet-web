@@ -1,7 +1,9 @@
 <header>
     <div class="nav-pull"></div>
     <div class="nav-banner">
-
-        <div class="nav-sign">sign in/out</div>
+        <ul class="nav-sign">
+            <li>sign in</li>
+            <li>sign out</li>
+        </ul>
     </div>
 </header>
