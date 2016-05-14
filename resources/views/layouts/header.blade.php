@@ -1,3 +1,3 @@
 <header>
-    <div>i am header</div>
+    <div class = "nav">i am header</div>
 </header>
