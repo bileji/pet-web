@@ -12,17 +12,18 @@ header {
 }
 
 .nav-pull {
+    height: 80px;
     background-size: 100%;
-    background-image: url('./assets/images/banner_background.png');
+    background-image: url('http://www.bileji.com/assets/images/banner_background.png');
 }
 
 .nav-banner {
     height: 34px;
-    margin: auto;
     width: 1230px;
+    margin: auto;
     background-color: #e8e8e8;
 }
 
 .nav-sign {
-    margin-right: 0;
+    margin: auto 0 0 0;
 }
