@@ -25,10 +25,10 @@ header {
 }
 
 .nav-sign {
-    margin: 0;
     height: 100%;
     width: 240px;
     display: block;
+    margin: 0 0 0 auto;
 }
 
 .nav-sign li {
