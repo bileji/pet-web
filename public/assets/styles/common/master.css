@@ -3,15 +3,26 @@ body, input[text], button {
     color: #888;
     font-family: Cambria, Georgia, sans-serif;
 }
+
 header {
     width: 100%;
     min-width: 1230px;
     position: relative;
-    background-color: #369;
+    background-color: #e8e8e8;
 }
+
+.nav-pull {
+    background-size: 100%;
+    background-image: url('./assets/images/banner_background.png');
+}
+
 .nav-banner {
     height: 34px;
     margin: auto;
     width: 1230px;
     background-color: #e8e8e8;
+}
+
+.nav-sign {
+    margin-right: 0;
 }
