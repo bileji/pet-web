@@ -36,3 +36,10 @@ header {
     float: left;
     height: 100%;
 }
+
+.nav .separator {
+    display: inline-block;
+    width: 0;
+    height: 14px;
+    border-left: 1px solid #ccc;
+}
