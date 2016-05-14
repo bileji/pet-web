@@ -4,13 +4,13 @@ body, input[text], button {
     font-family: Cambria, Georgia, sans-serif;
 }
 header {
-    background-color: #369;
     width: 100%;
-    min-width: 990px;
     position: relative;
+    background-color: #369;
 }
-.nav {
+.nav-banner {
     height: 34px;
-    vertical-align: middle;
+    margin: auto;
+    min-width: 1230px;
     background-color: #e8e8e8;
 }
