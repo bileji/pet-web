@@ -5,7 +5,11 @@ body, input[text], button {
 }
 header {
     background-color: #369;
-    height: 34px;
     width: 100%;
     min-width: 990px;
+}
+.nav {
+    height: 34px;
+    vertical-align: middle;
+    background-color: #e8e8e8;
 }
