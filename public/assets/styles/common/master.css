@@ -5,12 +5,13 @@ body, input[text], button {
 }
 header {
     width: 100%;
+    min-width: 1230px;
     position: relative;
     background-color: #369;
 }
 .nav-banner {
     height: 34px;
     margin: auto;
-    min-width: 1230px;
+    width: 1230px;
     background-color: #e8e8e8;
 }
