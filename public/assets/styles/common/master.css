@@ -25,6 +25,7 @@ header {
 }
 
 .nav-sign {
+    padding: 0;
     height: 100%;
     width: 240px;
     display: block;
@@ -34,5 +35,4 @@ header {
 .nav-sign li {
     float: left;
     height: 100%;
-    line-height: 100%;
 }
