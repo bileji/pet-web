@@ -12,6 +12,11 @@
                     <a>商家支持</a>
                 </div>
             </li>
+            <li>
+                <div>
+                    <a>站内导航</a>
+                </div>
+            </li>
             <li class="separator"></li>
             <li>
                 <div>
