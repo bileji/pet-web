@@ -56,5 +56,6 @@ header {
 }
 
 .nav-right li div {
-    padding: 10px 5px;
+    padding: 10px 4px;
+    line-height: 1em;
 }
