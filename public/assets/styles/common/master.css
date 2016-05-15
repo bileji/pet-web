@@ -51,10 +51,10 @@ header {
     margin: 0 0 0 auto;
 }
 
-.nav-right ul li {
+.nav-right li {
     float: left;
 }
 
-.nav-right ul li div {
-    padding: 10px;
+.nav-right li div {
+    padding: 10px 5px;
 }
