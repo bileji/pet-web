@@ -3,17 +3,25 @@
     <div class="nav-banner">
         <ul class="nav-sign">
             <li>
-                <div>我的菜谱 </div>
+                <div>
+                    <a>我的菜谱</a>
+                </div>
             </li>
             <li>
-                <div>商家支持 </div>
+                <div>
+                    <a>商家支持</a>
+                </div>
             </li>
             <li class="separator"></li>
             <li>
-                <div>登录 </div>
+                <div>
+                    <a>登录</a>
+                </div>
             </li>
             <li>
-                <div>注册</div>
+                <div>
+                    <a>注册</a>
+                </div>
             </li>
         </ul>
     </div>
