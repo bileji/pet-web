@@ -8,9 +8,8 @@
 
 @section('container')
     @include('layouts.header')
-
-
-
-
+    <div class="container">
+        container
+    </div>
     @include('layouts.footer')
 @stop
