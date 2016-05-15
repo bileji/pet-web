@@ -1,7 +1,7 @@
 <header>
     <div class="nav-pull"></div>
     <div class="nav-banner">
-        <ul class="nav-sign">
+        <ul class="nav-right">
             <li>
                 <div>
                     <a>我的菜谱</a>

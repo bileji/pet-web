@@ -14,6 +14,14 @@ a {
     cursor: pointer;
 }
 
+.separator {
+    width: 0;
+    height: 14px;
+    margin: 9px 4px;
+    border-left: 1px solid #ccc;
+    display: inline-block;
+}
+
 header {
     font-size: 12px;
     width: 100%;
@@ -35,7 +43,7 @@ header {
     background-color: #e8e8e8;
 }
 
-.nav-sign {
+.nav-right {
     padding: 0;
     height: 100%;
     width: 240px;
@@ -43,14 +51,10 @@ header {
     margin: 0 0 0 auto;
 }
 
-.nav-sign li {
+.nav-right ul li {
     float: left;
 }
 
-.separator {
-    width: 0;
-    height: 14px;
-    margin: 9px 4px;
-    border-left: 1px solid #ccc;
-    display: inline-block;
+.nav-right ul li div {
+    padding: 10px;
 }
