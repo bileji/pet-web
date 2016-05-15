@@ -59,3 +59,12 @@ header {
     padding: 10px 4px;
     line-height: 1em;
 }
+
+.nav-right li div a {
+    color: #888;
+}
+
+.nav-right li div a:hover {
+    color: orange;
+    text-decoration: none;
+}
