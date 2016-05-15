@@ -71,6 +71,7 @@ header {
 }
 
 .container {
+    padding: 0;
     width: 100%;
     min-width: 1230px;
     position: relative;
@@ -80,7 +81,6 @@ header {
     height: 800px;
     width: 1230px;
     margin: auto;
-    padding: 0;
     background-color: #f8f8f8;
 }
 
