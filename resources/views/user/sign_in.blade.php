@@ -9,7 +9,9 @@
 @section('container')
     @include('layouts.header')
     <div class="container">
-        container
+        <div class="content">
+
+        </div>
     </div>
     @include('layouts.footer')
 @stop
