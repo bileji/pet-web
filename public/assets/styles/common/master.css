@@ -80,6 +80,7 @@ header {
     height: 800px;
     width: 1230px;
     margin: auto;
+    padding: 0;
     background-color: #f8f8f8;
 }
 
