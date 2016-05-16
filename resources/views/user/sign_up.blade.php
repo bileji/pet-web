@@ -61,6 +61,7 @@
 
                     <div id="div_geetest_lib">
                         <div id="captcha"></div>
+                        <script src="http://api.geetest.com/get.php?gt=421b84eeaee7b2aed4c0ec5706d8b571" async></script>
                         <script>
                             var handler = function (captchaObj) {
                                 // 将验证码加到id为captcha的元素里
