@@ -22,11 +22,11 @@
                 </div>
 
                 <div>
-                    <input type="number" class="form-control" required ng-model="placeholder.phone">
+                    <input type="text" class="form-control" required ng-model="placeholder.phone">
                 </div>
 
                 <div>
-                    <input type="number" class="form-control" required ng-model="placeholder.verify">
+                    <input type="text" class="form-control" required ng-model="placeholder.verify">
                 </div>
             </form>
         </div>
