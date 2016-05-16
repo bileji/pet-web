@@ -63,7 +63,7 @@
                         <input type="text" class="form-control" required ng-model="placeholder.phone">
                     </div>
 
-                    <div class="box" id="div_geetest_lib">
+                    <div id="div_geetest_lib">
                         <div id="captcha"></div>
                         <script src="http://api.geetest.com/get.php?gt=421b84eeaee7b2aed4c0ec5706d8b571" async></script>
                         <script>
