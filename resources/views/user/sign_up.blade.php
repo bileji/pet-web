@@ -32,7 +32,7 @@
         }
 
         .content .sign-up-body {
-            height: 300px;
+            width: 300px;
             margin: 30px auto;
         }
 
