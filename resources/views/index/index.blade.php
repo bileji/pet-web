@@ -129,7 +129,7 @@
                 </li>
                 <li>
                     <div>
-                        <a>登录</a>
+                        <a href="{{url('user/sign_in')}}">登录</a>
                     </div>
                 </li>
             </ul>

@@ -18,7 +18,7 @@ Route::get('/', function () {
     //    return view('welcome');
 });
 
-Route::get('/test', function() {
+Route::get('/test', function () {
     return view('user.sign_in');
 });
 
@@ -27,10 +27,14 @@ Route::get('/angular', function () {
     return view('angulars.index');
 });
 
+# 用户
 Route::group(['prefix' => 'user'], function () {
     # 页面
-    Route::get('sign_up', function() {
+    Route::get('sign_up', function () {
         return view('user.sign_up');
+    });
+    Route::get('sign_in', function () {
+        return view('user.sign_in');
     });
 
     # API
