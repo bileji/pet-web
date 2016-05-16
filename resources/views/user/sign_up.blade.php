@@ -36,8 +36,13 @@
             margin: 30px auto;
         }
 
-        .content .sign-up-body div {
-            margin: 10px 0;
+        .content .sign-up-body .verify {
+            height: 60px;
+            margin: 20px 2px;
+        }
+        
+        .content .sign-up-body .more-long {
+            width: 100%;
         }
     </style>
 @stop
@@ -68,7 +73,7 @@
                         <input type="text" class="form-control" required ng-model="placeholder.phone">
                     </div>
 
-                    <div>
+                    <div class="verify">
                         <div id="div_geetest_lib">
                             <div id="captcha"></div>
                             <script src="http://api.geetest.com/get.php?gt=421b84eeaee7b2aed4c0ec5706d8b571" async></script>
@@ -99,7 +104,7 @@
                     </div>
 
                     <div>
-                        <button type="button" class="btn btn-success">下一步</button>
+                        <button type="button" class="btn btn-success more-long">下一步</button>
                     </div>
                 </form>
             </div>
