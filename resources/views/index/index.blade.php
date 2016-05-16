@@ -1,9 +1,8 @@
 @extends('layouts.master')
 
-@section('title', '比乐集')
+@section('title', '首页-比乐集')
 
 @section('modules')
-    <script src="{{asset('assets/scripts/modules/user/controller.js')}}"></script>
     <style type="text/css">
         input[text], button {
             margin: 0;
