@@ -7,6 +7,36 @@
     <script src="{{'http://libs.baidu.com/jquery/1.9.0/jquery.js'}}"></script>
     <script src="{{'http://static.geetest.com/static/tools/gt.js'}}"></script>
     <style type="text/css">
+        .nav-banner {
+            height: 32px;
+            width: 1230px;
+            margin: auto;
+            background-color: #e8e8e8;
+        }
+
+        .nav-left {
+            padding: 0;
+            height: 100%;
+            width: 245px;
+            display: block;
+            margin: 0 auto 0 0;
+            float: left;
+        }
+
+        .nav-left li {
+            float: left;
+        }
+
+        .nav-left li div {
+            padding: 10px 4px;
+            line-height: 1em;
+            font-weight: normal;
+        }
+
+        .nav-left li:first-child div {
+            padding-left: 0;
+        }
+
         .content {
             padding: 140px 50px;
         }
@@ -48,7 +78,15 @@
 
 @section('container')
     <header>
-
+        <div class="nav-banner">
+            <ul class="nav-left">
+                <li>
+                    <div>
+                        <a href="{{url('/')}}">返回首页</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </header>
     <div class="container">
         <div class="content"  ng-app="user">
