@@ -2,7 +2,6 @@
     <head>
         <title>@yield('title')</title>
         <link rel="stylesheet" href="{{asset('node_modules/bootstrap/dist/css/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{asset('assets/styles/common/master.css')}}">
         <script src="{{asset('node_modules/angular/angular.min.js')}}"></script>
         @yield('modules')
     </head>
