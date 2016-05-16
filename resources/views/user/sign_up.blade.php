@@ -5,7 +5,6 @@
 @section('modules')
     <script src="{{asset('assets/scripts/modules/user/controller.js')}}"></script>
     <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
-    <script src="http://api.geetest.com/get.php"></script>
     <script src="http://static.geetest.com/static/tools/gt.js"></script>
     <style type="text/css">
         .content {
@@ -66,6 +65,7 @@
 
                     <div class="box" id="div_geetest_lib">
                         <div id="captcha"></div>
+                        <script src="http://api.geetest.com/get.php?gt=421b84eeaee7b2aed4c0ec5706d8b571" async></script>
                         <script>
                             var handler = function (captchaObj) {
                                 // 将验证码加到id为captcha的元素里
