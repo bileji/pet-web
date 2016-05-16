@@ -49,6 +49,7 @@ header {
     width: 245px;
     display: block;
     margin: 0 auto 0 0;
+    float: left;
 }
 
 .nav-left li {
