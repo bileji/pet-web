@@ -30,10 +30,6 @@
             width: 100%;
             margin: 5px 0;
         }
-
-        .container form div {
-            padding: 10px 100px;
-        }
     </style>
 @stop
 
