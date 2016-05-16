@@ -63,7 +63,9 @@
                         <input type="text" class="form-control" required ng-model="placeholder.phone">
                     </div>
 
-                    <div id="popup-captcha"></div>
+                    <div id="embed-captcha"></div>
+                    <p id="wait" class="show">正在加载验证码......</p>
+                    <p id="notice" class="hide">请先拖动验证码到相应位置</p>
                     <button type="button" class="btn btn-success">下一步</button>
                 </form>
             </div>
