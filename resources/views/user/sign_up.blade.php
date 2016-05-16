@@ -14,16 +14,18 @@
         }
 
         .content .sign-up-header .progress-title {
-            width: 630px;
+            width: 100%;
         }
 
         .content .sign-up-header .progress-title div {
-            width: 210px;
+            width: 33.3%;
             float: left;
         }
 
         .content .sign-up-header .fine {
             height: 8px;
+            width: 100%;
+            margin: 10px;
         }
 
         .container form div {
