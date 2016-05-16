@@ -5,7 +5,13 @@
 @section('modules')
     <script src="{{asset('assets/scripts/modules/user/controller.js')}}"></script>
     <style type="text/css">
+        .content {
+            padding: 140px 300px;
+        }
 
+        .container form div {
+            padding: 10px;
+        }
     </style>
 @stop
 
@@ -16,9 +22,6 @@
             <form ng-controller="sign_up">
                 <div>
                     <input type="text" class="form-control" required ng-model="placeholder.nickname">
-                    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-                        Name is required
-                    </div>
                 </div>
 
                 <div>
