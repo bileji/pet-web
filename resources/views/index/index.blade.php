@@ -4,7 +4,7 @@
 
 @section('modules')
     <script src="{{asset('assets/scripts/modules/user/controller.js')}}"></script>
-    <style rel="stylesheet">
+    <style type="text/css">
         body {
             margin: 0;
             color: #888;
