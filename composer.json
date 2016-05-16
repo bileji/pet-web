@@ -9,6 +9,7 @@
         "laravel/framework": "5.2.*"
     },
     "require-dev": {
+        "laravist/geecaptcha": "~1.0",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
