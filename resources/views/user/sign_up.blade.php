@@ -73,9 +73,9 @@
                             };
                             $.ajax({
                                 // 获取id，challenge，success（是否启用failback）
-                                url: "verify/captcha?rand="+Math.round(Math.random()*100),
+                                url: {{assert("verify/captcha?rand=")}} + Math.round(Math.random()*100),
                                 type: "get",
-                                dataType: "json", // 使用jsonp格式
+                                dataType: "json",
                                 success: function (data) {
                                     // 使用initGeetest接口
                                     // 参数1：配置参数，与创建Geetest实例时接受的参数一致
