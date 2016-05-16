@@ -28,6 +28,12 @@ Route::get('/angular', function () {
 });
 
 Route::group(['prefix' => 'user'], function () {
+    # 页面
+    Route::get('sign_up', function() {
+        return view('user.sign_up');
+    });
+
+    # API
     Route::post('signUp', 'UserController@signUp');
 });
 

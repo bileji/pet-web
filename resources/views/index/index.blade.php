@@ -124,7 +124,7 @@
                 <li class="separator"></li>
                 <li>
                     <div>
-                        <a>注册</a>
+                        <a href="{{redirect('user/sign_up')}}">注册</a>
                     </div>
                 </li>
                 <li>
