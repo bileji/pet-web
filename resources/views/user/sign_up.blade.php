@@ -78,22 +78,42 @@
                             <script src="http://api.geetest.com/get.php?gt=421b84eeaee7b2aed4c0ec5706d8b571" async></script>
                             <script>
                                 var handler = function (captchaObj) {
-                                    // 将验证码加到id为captcha的元素里
                                     captchaObj.appendTo("#captcha");
+                                    $('#check-phone').click(function () {
+                                        var validate = captchaObj.getValidate();
+                                        if (!validate) {
+                                            alert('请先完成验证！');
+                                            return;
+                                        }
+                                        $.ajax({
+                                            url: "{{asset('verify/captcha')}}", // 进行二次验证
+                                            type: "post",
+                                            dataType: "json",
+                                            data: {
+                                                // 二次验证所需的三个值
+                                                geetest_challenge: validate.geetest_challenge,
+                                                geetest_validate: validate.geetest_validate,
+                                                geetest_seccode: validate.geetest_seccode
+                                            },
+                                            success: function (result) {
+                                                if (result == "Yes!") {
+                                                    $(document.body).html('<h1>发送手机验证码成功</h1>');
+                                                } else {
+                                                    $(document.body).html('<h1>发送手机验证码失败</h1>');
+                                                }
+                                            }
+                                        });
+                                    });
                                 };
                                 $.ajax({
-                                    // 获取id，challenge，success（是否启用failback）
-                                    url: "{{asset("verify/captcha?rand=")}}" + Math.round(Math.random()*100),
+                                    url: "{{asset("verify/captcha?rand=")}}" + Math.round(Math.random() * 100),
                                     type: "get",
                                     dataType: "json",
                                     success: function (data) {
-                                        // 使用initGeetest接口
-                                        // 参数1：配置参数，与创建Geetest实例时接受的参数一致
-                                        // 参数2：回调，回调的第一个参数验证码对象，之后可以使用它做appendTo之类的事件
                                         initGeetest({
                                             gt: data.gt,
                                             challenge: data.challenge,
-                                            product: "float", // 产品形式
+                                            product: "float",
                                             offline: !data.success
                                         }, handler);
                                     }
@@ -103,7 +123,7 @@
                     </div>
 
                     <div>
-                        <button type="button" class="btn btn-success more-long">下一步</button>
+                        <button id="check-phone" type="button" class="btn btn-success more-long">下一步</button>
                     </div>
                 </form>
             </div>
