@@ -47,6 +47,9 @@
 @stop
 
 @section('container')
+    <header>
+
+    </header>
     <div class="container">
         <div class="content"  ng-app="user">
             <div class="sign-up-header">
