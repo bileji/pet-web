@@ -10,7 +10,7 @@
         }
 
         .container form div {
-            padding: 10px;
+            padding: 10px 100px;
         }
     </style>
 @stop
@@ -18,7 +18,9 @@
 @section('container')
     <div class="container">
         <div class="content"  ng-app="user">
-            <h1>Sign up</h1>
+            <div>
+                加入比乐集
+            </div>
             <form ng-controller="sign_up">
                 <div>
                     <input type="text" class="form-control" required ng-model="placeholder.nickname">
@@ -29,7 +31,12 @@
                 </div>
 
                 <div>
-                    <input type="text" class="form-control" required ng-model="placeholder.verify">
+                    <div>
+                        <input type="text" class="form-control" required ng-model="placeholder.verify">
+                    </div>
+                    <div>
+                        图形验证码
+                    </div>
                 </div>
             </form>
         </div>
