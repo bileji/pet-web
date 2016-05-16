@@ -55,15 +55,6 @@
             padding-left: 0;
         }
 
-        .nav-left li div a {
-            color: #888;
-        }
-
-        .nav-left li div a:hover {
-            color: orange;
-            text-decoration: none;
-        }
-
         .nav-right {
             padding: 0;
             height: 100%;
