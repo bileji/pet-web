@@ -73,7 +73,7 @@
                             };
                             $.ajax({
                                 // 获取id，challenge，success（是否启用failback）
-                                url: "captcha?rand="+Math.round(Math.random()*100),
+                                url: "verify/captcha?rand="+Math.round(Math.random()*100),
                                 type: "get",
                                 dataType: "json", // 使用jsonp格式
                                 success: function (data) {
