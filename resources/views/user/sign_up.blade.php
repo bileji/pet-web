@@ -15,6 +15,7 @@
 
         .content .sign-up-header .progress-title {
             width: 100%;
+            height: 20px;
         }
 
         .content .sign-up-header .progress-title div {
@@ -25,7 +26,7 @@
         .content .sign-up-header .fine {
             height: 8px;
             width: 100%;
-            margin: 10px;
+            margin: 5px 0;
         }
 
         .container form div {
