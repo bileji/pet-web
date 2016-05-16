@@ -4,8 +4,6 @@
 
 @section('modules')
     <script src="{{asset('assets/scripts/modules/user/controller.js')}}"></script>
-    <script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
-    <script src="http://static.geetest.com/static/tools/gt.js"></script>
     <style type="text/css">
         .content {
             padding: 140px 50px;
@@ -63,6 +61,8 @@
                         <input type="text" class="form-control" required ng-model="placeholder.phone">
                     </div>
 
+                    <script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
+                    <script src="http://static.geetest.com/static/tools/gt.js"></script>
                     <div id="embed-captcha"></div>
                     <p id="wait" class="show">正在加载验证码......</p>
                     <p id="notice" class="hide">请先拖动验证码到相应位置</p>
