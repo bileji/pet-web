@@ -77,15 +77,6 @@
             padding-right: 0;
         }
 
-        .nav-right li div a {
-            color: #888;
-        }
-
-        .nav-right li div a:hover {
-            color: orange;
-            text-decoration: none;
-        }
-
         .container {
             padding: 0;
             width: 100%;
