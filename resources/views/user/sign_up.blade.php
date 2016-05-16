@@ -5,7 +5,6 @@
 @section('modules')
     <script src="{{asset('assets/scripts/modules/user/controller.js')}}"></script>
     <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
-    <script src="http://api.geetest.com/get.php"></script>
     <style type="text/css">
         .content {
             padding: 140px 50px;
