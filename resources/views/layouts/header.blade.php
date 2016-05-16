@@ -1,21 +1,18 @@
 <header>
     <div class="nav-pull"></div>
     <div class="nav-banner">
+        <ul class="nav-left">
+            <li>
+               <div>
+                   <a>所在城市:</a>
+                   <a>成都</a>
+               </div>
+            </li>
+        </ul>
         <ul class="nav-right">
             <li>
                 <div>
-                    <a>登录</a>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <a>注册</a>
-                </div>
-            </li>
-            <li class="separator"></li>
-            <li>
-                <div>
-                    <a>我的菜谱</a>
+                    <a>站内导航</a>
                 </div>
             </li>
             <li>
@@ -25,7 +22,18 @@
             </li>
             <li>
                 <div>
-                    <a>站内导航</a>
+                    <a>我的菜谱</a>
+                </div>
+            </li>
+            <li class="separator"></li>
+            <li>
+                <div>
+                    <a>注册</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a>登录</a>
                 </div>
             </li>
         </ul>

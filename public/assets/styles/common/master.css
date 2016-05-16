@@ -43,6 +43,33 @@ header {
     background-color: #e8e8e8;
 }
 
+.nav-left {
+    padding: 0;
+    height: 100%;
+    width: 245px;
+    display: block;
+    margin: 0 0 0 auto;
+}
+
+.nav-left li {
+    float: left;
+}
+
+.nav-left li div {
+    padding: 10px 4px;
+    line-height: 1em;
+    font-weight: normal;
+}
+
+.nav-left li div a {
+    color: #888;
+}
+
+.nav-left li div a:hover {
+    color: orange;
+    text-decoration: none;
+}
+
 .nav-right {
     padding: 0;
     height: 100%;
@@ -52,7 +79,7 @@ header {
 }
 
 .nav-right li {
-    float: left;
+    float: right;
 }
 
 .nav-right li div {
