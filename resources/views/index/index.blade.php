@@ -5,20 +5,10 @@
 @section('modules')
     <script src="{{asset('assets/scripts/modules/user/controller.js')}}"></script>
     <style type="text/css">
-        body {
-            margin: 0;
-            color: #888;
-            font-family: 'Microsoft YaHei', tahoma, arial, 'Hiragino Sans GB', 宋体, sans-serif;
-        }
-
         input[text], button {
             margin: 0;
             color: #888;
             font-family: Cambria, Georgia, sans-serif;
-        }
-
-        a {
-            cursor: pointer;
         }
 
         .separator {
@@ -27,14 +17,6 @@
             margin: 9px 4px;
             border-left: 1px solid #ccc;
             display: inline-block;
-        }
-
-        header {
-            font-size: 12px;
-            width: 100%;
-            min-width: 1230px;
-            position: relative;
-            background-color: #e8e8e8;
         }
 
         .nav-pull {
@@ -125,15 +107,6 @@
             width: 1230px;
             margin: auto;
             background-color: #f8f8f8;
-        }
-
-        footer {
-            font-size: 12px;
-            width: 100%;
-            height: 300px;
-            min-width: 1230px;
-            position: relative;
-            background-color: orange;
         }
     </style>
 @stop
