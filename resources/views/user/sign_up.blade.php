@@ -4,6 +4,8 @@
 
 @section('modules')
     <script src="{{asset('assets/scripts/modules/user/controller.js')}}"></script>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="http://api.geetest.com/get.php"></script>
     <style type="text/css">
         .content {
             padding: 140px 50px;
@@ -61,13 +63,32 @@
                         <input type="text" class="form-control" required ng-model="placeholder.phone">
                     </div>
 
-                    <script src="http://code.jquery.com/jquery-1.12.3.min.js"></script>
-                    <script src="http://static.geetest.com/static/tools/gt.js"></script>
-                    <div class="gt_slider">
-                        <div class="gt_guide_tip gt_show">按住左边滑块，拖动完成上方拼图</div>
-                        <div class="gt_slider_knob gt_show" style="transform: translate(0px, 0px); -webkit-transform: translate(0px, 0px);"></div><div class="gt_curtain_tip gt_hide">点击上图按钮并沿道路拖动到终点处</div>
-                        <div class="gt_curtain_knob gt_hide">移动到此开始验证</div>
-                        <div class="gt_ajax_tip ready"></div>
+                    <div class="box" id="div_geetest_lib">
+                        <div id="captcha"></div>
+                        <script src="http://static.geetest.com/static/tools/gt.js"></script>
+                        <script>
+                            var handler = function (captchaObj) {
+                                // 将验证码加到id为captcha的元素里
+                                captchaObj.appendTo("#captcha");
+                            };
+                            $.ajax({
+                                // 获取id，challenge，success（是否启用failback）
+                                url: "captcha?rand="+Math.round(Math.random()*100),
+                                type: "get",
+                                dataType: "json", // 使用jsonp格式
+                                success: function (data) {
+                                    // 使用initGeetest接口
+                                    // 参数1：配置参数，与创建Geetest实例时接受的参数一致
+                                    // 参数2：回调，回调的第一个参数验证码对象，之后可以使用它做appendTo之类的事件
+                                    initGeetest({
+                                        gt: data.gt,
+                                        challenge: data.challenge,
+                                        product: "float", // 产品形式
+                                        offline: !data.success
+                                    }, handler);
+                                }
+                            });
+                        </script>
                     </div>
                     <button type="button" class="btn btn-success">下一步</button>
                 </form>

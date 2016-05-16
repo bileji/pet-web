@@ -1,9 +1,9 @@
 <?php
 use Illuminate\Support\Facades\Route;
+use Laravist\GeeCaptcha\GeeCaptcha;
 
 Route::get('/', function () {
     return view('index.index');
-    //    return view('welcome');
 });
 
 Route::get('/test', function () {
@@ -31,4 +31,18 @@ Route::group(['prefix' => 'user'], function () {
 
 Route::group(['prefix' => 'qiniu'], function () {
     Route::post('token', 'QiniuController@token');
+});
+
+# 图形验证码
+Route::group(['prefix' => 'verify'], function () {
+    $captcha = new GeeCaptcha('4f80a638af7e2350b04b7d2ce0508386', '81444990e20782d931fb59c2ac2f0ab3');
+    Route::get('captcha', function () use ($captcha) {
+        echo $captcha->GTServerIsNormal();
+    });
+    Route::post('captcha', function () use ($captcha) {
+        if ($captcha->isFromGTServer()) {
+            return $captcha->success() ? 'success' : 'no';
+        }
+        return $captcha->hasAnswer() ? "answer" : "no answer";
+    });
 });
