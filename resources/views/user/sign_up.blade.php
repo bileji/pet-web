@@ -73,7 +73,7 @@
                             };
                             $.ajax({
                                 // 获取id，challenge，success（是否启用failback）
-                                url: {{asset("verify/captcha?rand=")}} + Math.round(Math.random()*100),
+                                url: "{{asset("verify/captcha?rand=")}}" + Math.round(Math.random()*100),
                                 type: "get",
                                 dataType: "json",
                                 success: function (data) {
