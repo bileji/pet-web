@@ -37,7 +37,6 @@
         }
 
         .content .sign-up-body .verify {
-            height: 60px;
             margin: 20px 2px;
         }
         
