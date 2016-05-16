@@ -30,6 +30,15 @@
             width: 100%;
             margin: 5px 0;
         }
+
+        .content .sign-up-body {
+            height: 300px;
+            margin: 30px auto;
+        }
+
+        .content .sign-up-body div {
+            margin: 10px 0;
+        }
     </style>
 @stop
 
@@ -53,7 +62,7 @@
                 </div>
             </div>
 
-            <div ng-controller="sign_up">
+            <div ng-controller="sign_up" class="sign-up-body">
                 <form>
                     <div>
                         <input type="text" class="form-control" required ng-model="placeholder.phone">
