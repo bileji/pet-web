@@ -14,7 +14,12 @@
         }
 
         .content .sign-up-header .progress-title {
+            width: 630px;
+        }
+
+        .content .sign-up-header .progress-title div {
             width: 210px;
+            float: left;
         }
 
         .content .sign-up-header .fine {
