@@ -9,9 +9,12 @@
             padding: 140px 50px;
         }
 
-        .content .fine {
+        .sign-up-header {
+            padding: 0 200px;
+        }
+
+        .content .sign-up-header .fine {
             height: 8px;
-            padding: 0 100px;
         }
 
         .container form div {
@@ -23,9 +26,9 @@
 @section('container')
     <div class="container">
         <div class="content"  ng-app="user">
-            <div>
+            <div class="sign-up-header">
                 <div class="progress fine">
-                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="100" style="width: 33.3%"></div>
+                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="100" style="width: 33.3%"></div>
                 </div>
             </div>
             <form ng-controller="sign_up">
