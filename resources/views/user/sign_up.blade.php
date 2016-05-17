@@ -150,8 +150,12 @@
                     <div>
                         <span ng-show="form.ID.$error.required || form.ID.$pattern" style="color:red">
                             格式有误
+
+
+                            @{{ user.ID }}
+                            @{{ form.ID.$pattern }}
+                            @{{ form.ID.$error }}
                         </span>
-                        @{{ form.ID.$pattern }}
                     </div>
                     <div class="verify">
                         <div id="div_geetest_lib">
