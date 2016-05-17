@@ -160,10 +160,10 @@
             <div ng-controller="sign_up" class="sign-up-body">
                 <form name="step1" class="relative">
                     <div>
-                        <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" required>
+                        <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" id="ID" id-wrong="@{{ step1.ID.$error.wrongID }}" required>
                     </div>
                     <div class="alter">
-                        <span ng-show="!step1.ID.$error.required && step1.ID.$error.wrongID"  id="id_wrong" id-wrong="@{{ step1.ID.$error.wrongID }}">
+                        <span ng-show="!step1.ID.$error.required && step1.ID.$error.wrongID">
                             <span class="glyphicon glyphicon-remove x"></span> 请填写正确的手机号或邮箱
                         </span>
                     </div>
@@ -198,15 +198,15 @@
 
     <script>
         var handler = function (captchaObj) {
-            var id_wrong = $("#id_wrong"), captcha = $("#captcha").children("div"), check_phone = $('#check-phone'), progress_bar = $("#progress-bar");
+            var ID = $("#ID"), captcha = $("#captcha").children("div"), check_phone = $('#check-phone'), progress_bar = $("#progress-bar");
             captcha.css({"position": "absolute", "z-index": -9999});
             captchaObj.appendTo("#captcha");
             captcha.first().fadeOut(1000);
 
             // 验证成功
             captchaObj.onSuccess(function () {
-                console.log(id_wrong.attr("id-wrong"));
-                if (id_wrong.attr("id-wrong")) {
+                console.log(ID.attr("id-wrong"));
+                if (ID.attr("id-wrong") === "true") {
                     // 更新进度条
                     progress_bar.css({"width": "30%"});
                     // 打开下一步
