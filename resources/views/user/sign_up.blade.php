@@ -116,13 +116,13 @@
             <div class="sign-up-header">
                 <div class="progress-title">
                     <div>
-                        <a><span class="badge">1</span>验证手机号</a>
+                        <a><span class="badge">1</span> 验证手机号</a>
                     </div>
                     <div>
-                        <a><span class="badge">2</span>填写账号信息</a>
+                        <a><span class="badge">2</span> 填写账号信息</a>
                     </div>
                     <div>
-                        <a><span class="badge">3</span>注册成功</a>
+                        <a><span class="badge">3</span> 注册成功</a>
                     </div>
                 </div>
                 <div class="progress fine">
