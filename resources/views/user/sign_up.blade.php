@@ -148,6 +148,8 @@
                         <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" required>
                     </div>
                     <div>
+                        @{{ step1.ID.$error }}
+                        @{{ !step1.ID.$error.required && step1.ID.$error.phone-or-email }}
                         <span ng-show="!step1.ID.$error.required && step1.ID.$error.phone-or-email" class="glyphicon glyphicon-remove">
                             请填写正确的手机号或邮箱
                         </span>
