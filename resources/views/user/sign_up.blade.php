@@ -151,7 +151,7 @@
                                     // 验证成功
                                     captchaObj.onSuccess(function () {
                                         // todo 更新进度条
-                                        progress_bar.css({"width": "33%"});
+                                        progress_bar.css({"width": "20%"});
                                         // 打开下一步
                                         check_phone.removeClass("disabled");
                                     });
