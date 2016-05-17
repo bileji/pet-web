@@ -143,11 +143,15 @@
                             </div>
                             <script>
                                 var handler = function (captchaObj) {
-                                    var captcha = $("#captcha").children("div");
+                                    var captcha = $("#captcha").children("div"), check_phone = $('#check-phone');
                                     captcha.css({"position": "absolute", "z-index": -9999});
                                     captchaObj.appendTo("#captcha");
                                     captcha.first().fadeOut(1000);
-                                    var check_phone = $('#check-phone');
+
+                                    captchaObj.onSuccess(function () {
+                                        check_phone.removeClass("disabled");
+                                    });
+
                                     check_phone.click(function (event) {
                                         console.log(event);
                                         var validate = captchaObj.getValidate();
