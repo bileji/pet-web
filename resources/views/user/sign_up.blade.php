@@ -126,8 +126,9 @@
 
                     <div class="verify">
                         <div id="div_geetest_lib">
-                            <div id="captcha"></div>
-                            <script src="http://api.geetest.com/get.php?gt=4f80a638af7e2350b04b7d2ce0508386" async></script>
+                            <div id="captcha">
+                                <script src="http://api.geetest.com/get.php?gt=4f80a638af7e2350b04b7d2ce0508386" async></script>
+                            </div>
                             <script>
                                 var handler = function (captchaObj) {
                                     $("#captcha").empty();
