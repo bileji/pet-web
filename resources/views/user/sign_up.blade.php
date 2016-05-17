@@ -137,7 +137,7 @@
                                 var handler = function (captchaObj) {
 //                                    $("#captcha").empty();
 //                                    captchaObj.appendTo("#captcha");
-                                    $("div[id^='geetest_']").replace(captchaObj);
+                                    $("div[id^='geetest_']").replaceWith(captchaObj);
                                     $('#check-phone').click(function (i) {
                                         var validate = captchaObj.getValidate();
                                         if (!validate) {
