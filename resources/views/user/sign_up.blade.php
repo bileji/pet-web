@@ -59,7 +59,7 @@
         .content .sign-up-header .progress-title .step {
             position: relative;
             top: -1px;
-            color: #e8e8e8;
+            background-color: #e8e8e8;
         }
 
         .content .sign-up-header .progress-title div {
