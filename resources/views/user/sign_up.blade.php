@@ -214,14 +214,13 @@
                 var validate = captchaObj.getValidate();
                 if (!validate) {
                     var shake = function (object) {
-                        var times = 9, range = 5, origin = object.html();
+                        var times = 4, range = 3;
                         object.html("请完成验证");
                         object.css({"position": "relative"});
                         for (var time = times; time >= 0 ; time--) {
-                            object.animate({"left": time * range}, 20);
-                            object.animate({"left": - time * range}, 20);
+                            object.animate({"left": time * range}, 30);
+                            object.animate({"left": - time * range}, 30);
                         }
-                        object.html(origin);
                     };
                     shake(check_phone);
                     return;
