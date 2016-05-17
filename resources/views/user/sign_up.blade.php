@@ -80,7 +80,7 @@
         }
 
         .content .sign-up-body .protocol {
-            margin: 20px 0;
+            margin-top: 20px;
             font-size: 10px;
             text-align: left;
         }
@@ -140,8 +140,8 @@
                                     captcha.css({"position": "absolute", "z-index": -9999});
                                     captchaObj.appendTo("#captcha");
                                     captcha.first().fadeOut(1000);
-                                    $('#check-phone').click(function (i) {
-                                        console.log(i);
+                                    $('#check-phone').click(function (event) {
+                                        console.log(event);
                                         var validate = captchaObj.getValidate();
                                         if (!validate) {
                                             alert('请先完成验证！');
