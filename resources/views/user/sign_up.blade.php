@@ -142,7 +142,7 @@
                         <input type="text" class="form-control ng-valid" placeholder="手机号或邮箱" ng-model="user_id" required>
                     </div>
                     <div role="alert">
-                         <span class="error" ng-show="form.user_id.$error.required">Required!</span>
+                         <span class="error" ng-show="form.user_id.$error.integer">Required!</span>
                     </div>
                     <div class="verify">
                         <div id="div_geetest_lib">
