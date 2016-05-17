@@ -79,7 +79,18 @@
             margin: 30px auto;
         }
 
+        .content .sign-up-body .alter {
+            text-align: left;
+        }
 
+        .content .sign-up-body .alter span {
+            color: red;
+            padding: 5px 0 0 5px;
+        }
+
+        .content .sign-up-body .alter .x {
+            top: 2px;
+        }
 
         .content .sign-up-body .green-border {
             border-left: 5px solid #42A948;
@@ -147,10 +158,9 @@
                     <div>
                         <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID">
                     </div>
-                    <div>
-                        @{{step1.ID.$error.wrongID}}
-                        <span ng-show="step1.ID.$error.wrongID">
-                            <span class="glyphicon glyphicon-remove"></span>请填写正确的手机号或邮箱
+                    <div class="alter">
+                        <span ng-show="!step1.ID.$error.required && step1.ID.$error.wrongID">
+                            <span class="glyphicon glyphicon-remove x"></span>请填写正确的手机号或邮箱
                         </span>
                     </div>
                     <div class="verify">
