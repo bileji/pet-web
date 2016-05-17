@@ -145,13 +145,11 @@
             <div ng-controller="sign_up" class="sign-up-body">
                 <form name="step1">
                     <div>
-                        <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" required>
+                        <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID">
                     </div>
                     <div>
-                        <span ng-show="!step1.ID.$error.required && step1.ID.$error.phone-or-email" class="glyphicon glyphicon-remove" style="color: red">
+                        <span ng-show="step1.ID.$error.phone-or-email" class="glyphicon glyphicon-remove" style="color: red">
                             请填写正确的手机号或邮箱
-                            @{{ step1.ID.$error }}
-                            @{{ !step1.ID.$error.required && step1.ID.$error.phone-or-email }}
                         </span>
                     </div>
                     <div class="verify">
