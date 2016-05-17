@@ -136,10 +136,10 @@
                             </div>
                             <script>
                                 var handler = function (captchaObj) {
-                                    var captcha = $("#captcha");
-                                    captcha.children("div").css({"position": "absolute", "z-index": -9999});
+                                    var captcha = $("#captcha").children("div");
+                                    captcha.css({"position": "absolute", "z-index": -9999});
                                     captchaObj.appendTo("#captcha");
-                                    captcha.children("div").first().css({"display": "none"});
+                                    captcha.first().fadeOut(1000);
                                     $('#check-phone').click(function (i) {
                                         console.log(i);
                                         var validate = captchaObj.getValidate();
