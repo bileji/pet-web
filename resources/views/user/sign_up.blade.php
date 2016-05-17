@@ -39,7 +39,7 @@
 
         .content {
             padding: 140px 50px;
-            min-width: 630px;
+            min-width: 840px;
         }
 
         .content .sign-up-header {
@@ -110,13 +110,13 @@
             <div class="sign-up-header">
                 <div class="progress-title">
                     <div>
-                        <a>验证手机号</a>
+                        <a>1.验证手机号</a>
                     </div>
                     <div>
-                        <a>填写账号信息</a>
+                        <a>2.填写账号信息</a>
                     </div>
                     <div>
-                        <a>注册成功</a>
+                        <a>3.注册成功</a>
                     </div>
                 </div>
                 <div class="progress fine">
