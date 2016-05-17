@@ -205,11 +205,8 @@
 
             // 验证成功
             captchaObj.onSuccess(function () {
-                console.log(ID.attr("id-wrong"));
-                if (ID.attr("id-wrong") === "true") {
-                    // 更新进度条
+                if (ID.attr("id-wrong") !== "true") {
                     progress_bar.css({"width": "30%"});
-                    // 打开下一步
                     check_phone.removeClass("disabled");
                 }
             });
