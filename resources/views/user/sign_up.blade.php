@@ -129,7 +129,8 @@
                             <div id="captcha"></div>
                             <script>
                                 var handler = function (captchaObj) {
-                                    captchaObj.appendTo("#captcha");
+//                                    captchaObj.appendTo("#captcha");
+                                    captchaObj.replaceWith("#captcha");
                                     $('#check-phone').click(function () {
                                         var validate = captchaObj.getValidate();
                                         if (!validate) {
@@ -179,7 +180,7 @@
 
                     <div class="protocol">
                         <p>
-                                注册意味着你同意
+                            注册意味着你同意
                             <a class="legal-link" target="_blank">服务条款</a>
                             与
                             <a class="legal-link" target="_blank">隐私政策</a>
