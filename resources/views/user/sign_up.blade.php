@@ -69,6 +69,10 @@
         .content .sign-up-body .verify {
             margin: 20px 2px;
         }
+
+        .content .sign-up-body .verify .captcha {
+            height: 28px;
+        }
         
         .content .sign-up-body .more-long {
             width: 100%;
@@ -126,15 +130,13 @@
 
                     <div class="verify">
                         <div id="div_geetest_lib">
-                            <div id="captcha">
+                            <div id="captcha" class="captcha">
                                 <script src="http://api.geetest.com/get.php?gt=4f80a638af7e2350b04b7d2ce0508386" async></script>
                             </div>
                             <script>
                                 var handler = function (captchaObj) {
                                     $("#captcha").empty();
-                                    console.log($("#captcha"));
                                     captchaObj.appendTo("#captcha");
-                                    console.log($("#captcha"));
                                     $('#check-phone').click(function (i) {
                                         var validate = captchaObj.getValidate();
                                         if (!validate) {
