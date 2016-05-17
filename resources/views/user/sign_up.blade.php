@@ -82,6 +82,7 @@
         .content .sign-up-body .alter {
             top: 4px;
             left: 300px;
+            width: 200px;
             text-align: left;
             position: absolute;
         }
@@ -163,7 +164,7 @@
                     </div>
                     <div class="alter">
                         <span ng-show="!step1.ID.$error.required && step1.ID.$error.wrongID">
-                            <span class="glyphicon glyphicon-remove x"></span>请填写正确的手机号或邮箱
+                            <span class="glyphicon glyphicon-remove x"></span> 请填写正确的手机号或邮箱
                         </span>
                     </div>
                     <div class="verify">
