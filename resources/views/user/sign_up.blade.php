@@ -80,15 +80,15 @@
         }
 
         .content .sign-up-body .alter {
+            top: 4px;
+            left: 300px;
             text-align: left;
+            position: absolute;
         }
 
         .content .sign-up-body .alter span {
             color: red;
             padding: 5px 0 0 5px;
-            position: absolute;
-            top: 4px;
-            left: 300px;
         }
 
         .content .sign-up-body .alter .x {
