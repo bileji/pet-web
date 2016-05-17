@@ -125,7 +125,6 @@
 
             <div ng-controller="sign_up" class="sign-up-body">
                 <div>
-                    {{csrf_field()}}
                     <div>
                         <input type="text" class="form-control" required ng-model="placeholder.phone">
                     </div>
@@ -152,6 +151,9 @@
                                             url: "{{asset('verify/captcha')}}",
                                             type: "post",
                                             dataType: "json",
+                                            headers: {
+                                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                                            },
                                             data: {
                                                 geetest_challenge: validate.geetest_challenge,
                                                 geetest_validate: validate.geetest_validate,
