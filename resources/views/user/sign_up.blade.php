@@ -149,6 +149,7 @@
                     </div>
                     <div ng-show="!step1.ID.$error.required && step1.ID.$error.phone-or-email">
                         <span class="glyphicon glyphicon-remove" aria-hidden="true">
+                            @{{ step1.ID.$error }}
                             请填写正确的手机号或邮箱
                         </span>
                     </div>
