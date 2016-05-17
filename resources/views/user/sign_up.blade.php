@@ -127,11 +127,11 @@
                     <div class="verify">
                         <div id="div_geetest_lib">
                             <div id="captcha"></div>
-                            <script src="http://api.geetest.com/get.php?gt=421b84eeaee7b2aed4c0ec5706d8b571" async></script>
+                            <script src="http://api.geetest.com/get.php?gt=4f80a638af7e2350b04b7d2ce0508386" async></script>
                             <script>
                                 var handler = function (captchaObj) {
                                     $("#captcha").empty();
-                                    captchaObj.appendTo("#captcha");
+//                                    captchaObj.appendTo("#captcha");
                                     $('#check-phone').click(function () {
                                         var validate = captchaObj.getValidate();
                                         if (!validate) {
