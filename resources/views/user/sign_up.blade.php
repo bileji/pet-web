@@ -56,6 +56,12 @@
             height: 20px;
         }
 
+        .content .sign-up-header .progress-title .step {
+            position: relative;
+            top: -1px;
+            color: #e8e8e8;
+        }
+
         .content .sign-up-header .progress-title div {
             width: 33.3%;
             min-width: 140px;
@@ -116,13 +122,13 @@
             <div class="sign-up-header">
                 <div class="progress-title">
                     <div>
-                        <a><span class="badge">1</span> 验证手机号</a>
+                        <a><span class="badge step">1</span> 验证手机号</a>
                     </div>
                     <div>
-                        <a><span class="badge">2</span> 填写账号信息</a>
+                        <a><span class="badge step">2</span> 填写账号信息</a>
                     </div>
                     <div>
-                        <a><span class="badge">3</span> 注册成功</a>
+                        <a><span class="badge step">3</span> 注册成功</a>
                     </div>
                 </div>
                 <div class="progress fine">
@@ -150,7 +156,7 @@
 
                                     // 验证成功
                                     captchaObj.onSuccess(function () {
-                                        // todo 判断是否输入正确的手机号i
+                                        // todo 判断是否输入正确的手机号
                                         // 更新进度条
                                         progress_bar.css({"width": "20%"});
                                         // 打开下一步
