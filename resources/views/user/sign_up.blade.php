@@ -160,10 +160,10 @@
             <div ng-controller="sign_up" class="sign-up-body">
                 <form name="step1" class="relative">
                     <div>
-                        <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID">
+                        <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" required>
                     </div>
                     <div class="alter">
-                        <span ng-show="step1.ID.$error.wrongID">
+                        <span ng-show="!step1.ID.$error.required && step1.ID.$error.wrongID">
                             <span class="glyphicon glyphicon-remove x"></span> 请填写正确的手机号或邮箱
                         </span>
                     </div>
