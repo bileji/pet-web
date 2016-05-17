@@ -136,7 +136,7 @@
                             </div>
                             <script>
                                 var handler = function (captchaObj) {
-                                    $("#captcha").children('div').css({"position": "absolute", "z-index": -9999});
+                                    $("#captcha").children("div").css({"position": "absolute", "z-index": -9999});
                                     captchaObj.appendTo("#captcha");
 //                                    $("#captcha").empty();
 
