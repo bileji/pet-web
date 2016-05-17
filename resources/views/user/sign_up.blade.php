@@ -139,9 +139,11 @@
             <div ng-controller="sign_up" class="sign-up-body">
                 <div>
                     <div>
-                        <input type="text" class="form-control ng-valid" placeholder="手机号或邮箱" required>
+                        <input type="text" class="form-control ng-valid" placeholder="手机号或邮箱" ng-model="user_id" required>
                     </div>
-
+                    <div role="alert">
+                         <span class="error" ng-show="form.user_id.$error.required">Required!</span>
+                    </div>
                     <div class="verify">
                         <div id="div_geetest_lib">
                             <div id="captcha" class="captcha">
