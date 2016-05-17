@@ -130,7 +130,7 @@
                             <script>
                                 var handler = function (captchaObj) {
 //                                    captchaObj.appendTo("#captcha");
-                                    captchaObj.replaceWith("#captcha");
+                                    $("#captcha").replaceWith(captchaObj);
                                     $('#check-phone').click(function () {
                                         var validate = captchaObj.getValidate();
                                         if (!validate) {
