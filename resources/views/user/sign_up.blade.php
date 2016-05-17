@@ -160,7 +160,7 @@
             <div ng-controller="sign_up" class="sign-up-body">
                 <form name="step1" class="relative">
                     <div>
-                        <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" required>
+                        <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" id="ID" id-wrong="step1.ID.$error.wrongID" required>
                     </div>
                     <div class="alter">
                         <span ng-show="!step1.ID.$error.required && step1.ID.$error.wrongID">
@@ -198,18 +198,20 @@
 
     <script>
         var handler = function (captchaObj) {
-            var captcha = $("#captcha").children("div"), check_phone = $('#check-phone'), progress_bar = $("#progress-bar");
+            var ID = $("#ID"), captcha = $("#captcha").children("div"), check_phone = $('#check-phone'), progress_bar = $("#progress-bar");
             captcha.css({"position": "absolute", "z-index": -9999});
             captchaObj.appendTo("#captcha");
             captcha.first().fadeOut(1000);
 
             // 验证成功
             captchaObj.onSuccess(function () {
-                // todo 判断是否输入正确的手机号
-                // 更新进度条
-                progress_bar.css({"width": "20%"});
-                // 打开下一步
-                check_phone.removeClass("disabled");
+                console.log(ID.attr("id-wrong"));
+                if (ID.attr("id-wrong")) {
+                    // 更新进度条
+                    progress_bar.css({"width": "30%"});
+                    // 打开下一步
+                    check_phone.removeClass("disabled");
+                }
             });
 
             check_phone.click(function (event) {
