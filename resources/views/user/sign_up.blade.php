@@ -129,8 +129,8 @@
                             <div id="captcha"></div>
                             <script>
                                 var handler = function (captchaObj) {
-//                                    captchaObj.appendTo("#captcha");
-                                    $("#captcha").replaceWith(captchaObj);
+                                    $("#captcha").empty();
+                                    captchaObj.appendTo("#captcha");
                                     $('#check-phone').click(function () {
                                         var validate = captchaObj.getValidate();
                                         if (!validate) {
