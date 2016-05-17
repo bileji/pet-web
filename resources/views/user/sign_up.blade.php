@@ -148,14 +148,11 @@
                         <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID"  ng-model="user.ID" ng-pattern="/^\w{6,20}$/" required>
                     </div>
                     <div>
-                        <span ng-show="form.ID.$error.required || form.ID.$pattern" style="color:red">
+                        <span ng-show="!form.ID.$error.required && form.ID.$error.pattern" style="color:red">
                             格式有误
-
-
                             @{{ user.ID }}
                             @{{ form.ID.$error }}
                             @{{ form.ID.$valid }}
-
                         </span>
                     </div>
                     <div class="verify">
