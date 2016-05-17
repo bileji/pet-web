@@ -13,10 +13,10 @@ app.controller('sign_up', ['$scope', function ($scope) {
             ngModelController.$parsers.push(function (viewValue) {
                 if (email.test(viewValue) || phone.test(viewValue)) {
                     progress_bar.css({"width": "20%"});
-                    ngModelController.$setValidity('phone-or-email', true);
+                    ngModelController.$setValidity('wrongID', true);
                 } else {
                     progress_bar.css({"width": "0"});
-                    ngModelController.$setValidity('phone-or-email', false);
+                    ngModelController.$setValidity('wrongID', false);
                 }
                 return viewValue;
             });
