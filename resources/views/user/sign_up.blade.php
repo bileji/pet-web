@@ -38,8 +38,8 @@
         }
 
         .content {
-            padding: 140px 50px;
-            min-width: 420px;
+            padding: 140px 0;
+            min-width: 700px;
         }
 
         .content .sign-up-header {
