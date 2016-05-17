@@ -214,12 +214,12 @@
                 var validate = captchaObj.getValidate();
                 if (!validate) {
                     var shake = function (object) {
-                        var times = 4, range = 10, origin = object.html();
+                        var times = 9, range = 5, origin = object.html();
                         object.html("请完成验证");
                         object.css({"position": "relative"});
                         for (var time = times; time >= 0 ; time--) {
-                            object.animate({"left": time * range}, 50);
-                            object.animate({"left": - time * range}, 50);
+                            object.animate({"left": time * range}, 20);
+                            object.animate({"left": - time * range}, 20);
                         }
                         object.html(origin);
                     };
