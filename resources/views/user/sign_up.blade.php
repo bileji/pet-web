@@ -150,14 +150,14 @@
 
                                     // 验证成功
                                     captchaObj.onSuccess(function () {
-                                        // todo 更新进度条
+                                        // todo 判断是否输入正确的手机号
+                                        // 更新进度条
                                         progress_bar.css({"width": "20%"});
                                         // 打开下一步
                                         check_phone.removeClass("disabled");
                                     });
 
                                     check_phone.click(function (event) {
-                                        console.log(event);
                                         var validate = captchaObj.getValidate();
                                         if (!validate) {
                                             alert('请先完成验证！');
