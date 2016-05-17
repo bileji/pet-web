@@ -11,10 +11,11 @@ app.controller('sign_up', ['$scope', function ($scope) {
         require: "ngModel",
         link: function (scope, element, attrs, ngModelController) {
             ngModelController.$parsers.push(function (viewValue) {
-                console.log(progress_bar);
                 if (email.test(viewValue) || phone.test(viewValue)) {
+                    progress_bar.css({"width": "20%"});
                     ngModelController.$setValidity('phone-or-email', true);
                 } else {
+                    progress_bar.css({"width": "0"});
                     ngModelController.$setValidity('phone-or-email', false);
                 }
                 return viewValue;
