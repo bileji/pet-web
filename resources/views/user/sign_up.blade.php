@@ -137,7 +137,7 @@
             </div>
 
             <div ng-controller="sign_up" class="sign-up-body">
-                <form>
+                <div>
                     <div>
                         <input type="text" class="form-control ng-valid" placeholder="手机号或邮箱" name="ID" required>
                     </div>
@@ -222,7 +222,7 @@
                             。其他用户将可以通过你所提供的邮件地址或手机号码找到你。
                         </p>
                     </div>
-                </form>
+                </div>
             </div>
 
         </div>
