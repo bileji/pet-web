@@ -217,9 +217,9 @@
                         var times = 4, range = 10, origin = object.html();
                         object.html("请完成验证");
                         object.css({"position": "relative"});
-                        for (var time = 0; time < times; time++) {
-                            object.animate({"left": times * range - time * range}, 50);
-                            object.animate({"left": times * range + time * range}, 50);
+                        for (var time = times; time >= 0 ; time--) {
+                            object.animate({"left": time * range}, 50);
+                            object.animate({"left": - time * range}, 50);
                         }
                         object.html(origin);
                     };
