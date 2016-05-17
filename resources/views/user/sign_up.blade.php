@@ -74,10 +74,6 @@
             height: 28px;
             position: relative;
         }
-
-        .content .sign-up-body .verify .captcha div {
-            position: absolute;
-        }
         
         .content .sign-up-body .more-long {
             width: 100%;
@@ -140,6 +136,7 @@
                             </div>
                             <script>
                                 var handler = function (captchaObj) {
+                                    $("#captcha:first-child").css({"position": "absolute", "z-index": -9999});
                                     captchaObj.appendTo("#captcha");
 //                                    $("#captcha").empty();
 
