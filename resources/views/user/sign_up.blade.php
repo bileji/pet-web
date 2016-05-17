@@ -206,11 +206,12 @@
             // 验证成功
             captchaObj.onSuccess(function () {
                 if (ID.attr("id-wrong") !== "true") {
+                    check_phone.html("下一步");
                     progress_bar.css({"width": "30%"});
                 }
             });
 
-            check_phone.click(function (event) {
+            check_phone.click(function () {
                 var validate = captchaObj.getValidate();
                 if (!validate) {
                     var shake = function (object) {
