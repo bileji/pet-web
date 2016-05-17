@@ -143,7 +143,7 @@
             </div>
 
             <div ng-controller="sign_up" class="sign-up-body">
-                <div>
+                <form>
                     <div>
                         <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID"  ng-model="user.ID" ng-pattern="/^\w{6,20}$/" required>
                     </div>
@@ -175,7 +175,7 @@
                             。其他用户将可以通过你所提供的邮件地址或手机号码找到你。
                         </p>
                     </div>
-                </div>
+                </form>
             </div>
 
         </div>
