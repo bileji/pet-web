@@ -125,6 +125,7 @@
 
             <div ng-controller="sign_up" class="sign-up-body">
                 <div>
+                    {{csrf_token()}}
                     <div>
                         <input type="text" class="form-control" required ng-model="placeholder.phone">
                     </div>
