@@ -131,8 +131,8 @@
                             <script>
                                 var handler = function (captchaObj) {
                                     $("#captcha").empty();
-//                                    captchaObj.appendTo("#captcha");
-                                    $('#check-phone').click(function () {
+                                    captchaObj.appendTo("#captcha");
+                                    $('#check-phone').click(function (i) {
                                         var validate = captchaObj.getValidate();
                                         if (!validate) {
                                             alert('请先完成验证！');
