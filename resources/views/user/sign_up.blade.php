@@ -145,14 +145,12 @@
             <div ng-controller="sign_up" class="sign-up-body">
                 <form name="form">
                     <div>
-                        <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID"  ng-model="user.ID" ng-pattern="/^\w{6,20}$/" required>
+                        <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" ng-pattern="/^\w{6,20}$/" required>
                     </div>
                     <div>
                         <span ng-show="!form.ID.$error.required && form.ID.$error.pattern" style="color:red">
                             格式有误
-                            @{{ user.ID }}
                             @{{ form.ID.$error }}
-                            @{{ form.ID.$valid }}
                         </span>
                     </div>
                     <div class="verify">
