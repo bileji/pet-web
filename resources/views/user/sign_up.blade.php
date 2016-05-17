@@ -138,10 +138,9 @@
                                 var handler = function (captchaObj) {
                                     $("#captcha").children("div").css({"position": "absolute", "z-index": -9999});
                                     captchaObj.appendTo("#captcha");
-//                                    $("#captcha").empty();
-
-//                                    $("div[id^='geetest_']").replaceWith(captchaObj);
+                                    $("#captcha").children("div").first().css({"display": "none"});
                                     $('#check-phone').click(function (i) {
+                                        console.log(i);
                                         var validate = captchaObj.getValidate();
                                         if (!validate) {
                                             alert('请先完成验证！');
