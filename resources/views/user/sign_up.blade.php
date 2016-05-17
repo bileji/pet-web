@@ -144,11 +144,10 @@
                                             return;
                                         }
                                         $.ajax({
-                                            url: "{{asset('verify/captcha')}}", // 进行二次验证
+                                            url: "{{asset('verify/captcha')}}",
                                             type: "post",
                                             dataType: "json",
                                             data: {
-                                                // 二次验证所需的三个值
                                                 geetest_challenge: validate.geetest_challenge,
                                                 geetest_validate: validate.geetest_validate,
                                                 geetest_seccode: validate.geetest_seccode
