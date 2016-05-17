@@ -207,14 +207,13 @@
             captchaObj.onSuccess(function () {
                 if (ID.attr("id-wrong") !== "true") {
                     progress_bar.css({"width": "30%"});
-                    check_phone.removeClass("disabled");
                 }
             });
 
             check_phone.click(function (event) {
                 var validate = captchaObj.getValidate();
                 if (!validate) {
-                    captcha.html("请完成验证");
+                    check_phone.html("请完成验证");
                     return;
                 }
                 $.ajax({
