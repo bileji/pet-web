@@ -160,7 +160,7 @@
             <div ng-controller="sign_up" class="sign-up-body">
                 <form name="step1" class="relative">
                     <div>
-                        <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" id="ID" id-wrong="@{{ step1.ID.$error.wrongID }}" required>
+                        <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" id="ID" id-wrong="@{{ step1.ID.$error.wrongID || step1.ID.$error.required }}" required>
                     </div>
                     <div class="alter">
                         <span ng-show="!step1.ID.$error.required && step1.ID.$error.wrongID">
@@ -176,7 +176,7 @@
                     </div>
 
                     <div>
-                        <button id="check-phone" type="button" class="btn btn-success more-long disabled">下一步</button>
+                        <button id="check-phone" type="button" class="btn btn-success more-long">下一步</button>
                     </div>
 
                     <div class="protocol">
@@ -214,7 +214,8 @@
             check_phone.click(function (event) {
                 var validate = captchaObj.getValidate();
                 if (!validate) {
-                    return captcha.html("请完成验证");
+                    captcha.html("请完成验证");
+                    return;
                 }
                 $.ajax({
                     url: "{{asset('verify/captcha')}}",
