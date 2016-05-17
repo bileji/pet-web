@@ -153,8 +153,9 @@
 
 
                             @{{ user.ID }}
-                            @{{ form.ID.$pattern }}
                             @{{ form.ID.$error }}
+                            @{{ form.ID.$valid }}
+
                         </span>
                     </div>
                     <div class="verify">
