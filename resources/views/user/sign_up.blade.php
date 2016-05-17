@@ -143,7 +143,7 @@
             </div>
 
             <div ng-controller="sign_up" class="sign-up-body">
-                <form>
+                <form name="form">
                     <div>
                         <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID"  ng-model="user.ID" ng-pattern="/^\w{6,20}$/" required>
                     </div>
