@@ -39,7 +39,7 @@
 
         .content {
             padding: 140px 50px;
-            min-width: 1140px;
+            min-width: 630px;
         }
 
         .content .sign-up-header {
