@@ -214,8 +214,7 @@
             check_phone.click(function (event) {
                 var validate = captchaObj.getValidate();
                 if (!validate) {
-                    alert('请先完成验证！');
-                    return;
+                    return captcha.value("请完成验证");
                 }
                 $.ajax({
                     url: "{{asset('verify/captcha')}}",
