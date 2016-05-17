@@ -126,7 +126,7 @@
                     </div>
                 </div>
                 <div class="progress fine">
-                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="100" style="width: 33.3%"></div>
+                    <div id="progress-bar" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
                 </div>
             </div>
 
@@ -143,12 +143,16 @@
                             </div>
                             <script>
                                 var handler = function (captchaObj) {
-                                    var captcha = $("#captcha").children("div"), check_phone = $('#check-phone');
+                                    var captcha = $("#captcha").children("div"), check_phone = $('#check-phone'), progress_bar = $("#progress-bar");
                                     captcha.css({"position": "absolute", "z-index": -9999});
                                     captchaObj.appendTo("#captcha");
                                     captcha.first().fadeOut(1000);
 
+                                    // 验证成功
                                     captchaObj.onSuccess(function () {
+                                        // todo 更新进度条
+                                        progress_bar.css({"width": "33%"});
+                                        // 打开下一步
                                         check_phone.removeClass("disabled");
                                     });
 
