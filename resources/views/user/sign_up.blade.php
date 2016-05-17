@@ -13,7 +13,7 @@
 
         .nav-banner {
             height: 32px;
-            width: 740px;
+            width: 66%;
             margin: auto;
             background-color: #e8e8e8;
         }
@@ -47,7 +47,7 @@
         }
 
         .content .sign-up-header {
-            width: 80%;
+            width: 66%;
             margin: 0 auto;
         }
 
