@@ -79,6 +79,12 @@
             margin: 30px auto;
         }
 
+
+
+        .content .sign-up-body .green-border {
+            border-left: 5px solid #42A948;
+        }
+
         .content .sign-up-body .verify {
             margin: 20px 2px;
         }
@@ -139,71 +145,18 @@
             <div ng-controller="sign_up" class="sign-up-body">
                 <div>
                     <div>
-                        <input type="text" class="form-control ng-valid" placeholder="手机号或邮箱" name="ID" required>
+                        <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID"  ng-model="user.ID" ng-pattern="/^\w{6,20}$/" required>
+                    </div>
+                    <div>
+                        <span ng-show="form.ID.$error.required || form.Id.$error.pattern" style="color:red">
+                            格式有误
+                        </span>
                     </div>
                     <div class="verify">
                         <div id="div_geetest_lib">
                             <div id="captcha" class="captcha">
                                 <script src="http://api.geetest.com/get.php?gt=4f80a638af7e2350b04b7d2ce0508386" async></script>
                             </div>
-                            <script>
-                                var handler = function (captchaObj) {
-                                    var captcha = $("#captcha").children("div"), check_phone = $('#check-phone'), progress_bar = $("#progress-bar");
-                                    captcha.css({"position": "absolute", "z-index": -9999});
-                                    captchaObj.appendTo("#captcha");
-                                    captcha.first().fadeOut(1000);
-
-                                    // 验证成功
-                                    captchaObj.onSuccess(function () {
-                                        // todo 判断是否输入正确的手机号
-                                        // 更新进度条
-                                        progress_bar.css({"width": "20%"});
-                                        // 打开下一步
-                                        check_phone.removeClass("disabled");
-                                    });
-
-                                    check_phone.click(function (event) {
-                                        var validate = captchaObj.getValidate();
-                                        if (!validate) {
-                                            alert('请先完成验证！');
-                                            return;
-                                        }
-                                        $.ajax({
-                                            url: "{{asset('verify/captcha')}}",
-                                            type: "post",
-                                            dataType: "json",
-                                            headers: {
-                                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                                            },
-                                            data: {
-                                                geetest_challenge: validate.geetest_challenge,
-                                                geetest_validate: validate.geetest_validate,
-                                                geetest_seccode: validate.geetest_seccode
-                                            },
-                                            success: function (result) {
-                                                if (result == "success") {
-                                                    $(document.body).html('<h1>发送手机验证码成功</h1>');
-                                                } else {
-                                                    $(document.body).html('<h1>发送手机验证码失败</h1>');
-                                                }
-                                            }
-                                        });
-                                    });
-                                };
-                                $.ajax({
-                                    url: "{{asset("verify/captcha?rand=")}}" + Math.round(Math.random() * 100),
-                                    type: "get",
-                                    dataType: "json",
-                                    success: function (data) {
-                                        initGeetest({
-                                            gt: data.gt,
-                                            challenge: data.challenge,
-                                            product: "float",
-                                            offline: !data.success
-                                        }, handler);
-                                    }
-                                });
-                            </script>
                         </div>
                     </div>
 
@@ -227,4 +180,63 @@
 
         </div>
     </div>
+
+    <script>
+        var handler = function (captchaObj) {
+            var captcha = $("#captcha").children("div"), check_phone = $('#check-phone'), progress_bar = $("#progress-bar");
+            captcha.css({"position": "absolute", "z-index": -9999});
+            captchaObj.appendTo("#captcha");
+            captcha.first().fadeOut(1000);
+
+            // 验证成功
+            captchaObj.onSuccess(function () {
+                // todo 判断是否输入正确的手机号
+                // 更新进度条
+                progress_bar.css({"width": "20%"});
+                // 打开下一步
+                check_phone.removeClass("disabled");
+            });
+
+            check_phone.click(function (event) {
+                var validate = captchaObj.getValidate();
+                if (!validate) {
+                    alert('请先完成验证！');
+                    return;
+                }
+                $.ajax({
+                    url: "{{asset('verify/captcha')}}",
+                    type: "post",
+                    dataType: "json",
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    data: {
+                        geetest_challenge: validate.geetest_challenge,
+                        geetest_validate: validate.geetest_validate,
+                        geetest_seccode: validate.geetest_seccode
+                    },
+                    success: function (result) {
+                        if (result == "success") {
+                            $(document.body).html('<h1>发送手机验证码成功</h1>');
+                        } else {
+                            $(document.body).html('<h1>发送手机验证码失败</h1>');
+                        }
+                    }
+                });
+            });
+        };
+        $.ajax({
+            url: "{{asset("verify/captcha?rand=")}}" + Math.round(Math.random() * 100),
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+                initGeetest({
+                    gt: data.gt,
+                    challenge: data.challenge,
+                    product: "float",
+                    offline: !data.success
+                }, handler);
+            }
+        });
+    </script>
 @stop
