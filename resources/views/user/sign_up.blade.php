@@ -86,6 +86,9 @@
         .content .sign-up-body .alter span {
             color: red;
             padding: 5px 0 0 5px;
+            position: absolute;
+            top: 4px;
+            left: 300px;
         }
 
         .content .sign-up-body .alter .x {
@@ -154,7 +157,7 @@
             </div>
 
             <div ng-controller="sign_up" class="sign-up-body">
-                <form name="step1">
+                <form name="step1" class="relative">
                     <div>
                         <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID">
                     </div>

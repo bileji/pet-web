@@ -37,3 +37,7 @@ header, footer {
     position: relative;
     background-color: #e8e8e8;
 }
+
+.relative {
+    position: relative;
+}
