@@ -213,7 +213,17 @@
             check_phone.click(function (event) {
                 var validate = captchaObj.getValidate();
                 if (!validate) {
-                    check_phone.html("请完成验证");
+                    var shake = function (object) {
+                        var times = 4, range = 10, origin = object.html();
+                        object.html("请完成验证");
+                        object.css({"position": "relative"});
+                        for (var time = 0; time = times; time++) {
+                            object.animate({"left": times * range - time * range}, 50);
+                            object.animate({"left": times * range + time * range}, 50);
+                        }
+                        object.html(origin);
+                    };
+                    shake(check_phone);
                     return;
                 }
                 $.ajax({
