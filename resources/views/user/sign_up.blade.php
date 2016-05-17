@@ -145,7 +145,7 @@
             <div ng-controller="sign_up" class="sign-up-body">
                 <form name="step1">
                     <div>
-                        <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" ng-pattern="/^\w{6,20}$/" required>
+                        <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" required>
                     </div>
                     <div>
                         <span ng-show="!step1.ID.$error.required && step1.ID.$error.phone-or-email" class="glyphicon glyphicon-remove">
