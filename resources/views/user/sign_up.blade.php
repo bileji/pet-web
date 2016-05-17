@@ -111,6 +111,7 @@
         
         .content .sign-up-body .more-long {
             width: 100%;
+            outline: none;
         }
 
         .content .sign-up-body .protocol {
