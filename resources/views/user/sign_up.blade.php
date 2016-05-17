@@ -137,12 +137,12 @@
             </div>
 
             <div ng-controller="sign_up" class="sign-up-body">
-                <div>
+                <form>
                     <div>
-                        <input type="text" class="form-control ng-valid" placeholder="手机号或邮箱" ng-model="user_id" name="user_id" required>
+                        <input type="text" class="form-control ng-valid" placeholder="手机号或邮箱" ng-model="ID" name="ID" required>
                     </div>
                     <div role="alert">
-                         <span class="error" ng-show="form.user_id.$error.integer">Required!</span>
+                         <span class="error" ng-show="form.ID.$error.integer">Required!</span>
                     </div>
                     <div class="verify">
                         <div id="div_geetest_lib">
@@ -225,7 +225,7 @@
                             。其他用户将可以通过你所提供的邮件地址或手机号码找到你。
                         </p>
                     </div>
-                </div>
+                </form>
             </div>
 
         </div>
