@@ -72,6 +72,11 @@
 
         .content .sign-up-body .verify .captcha {
             height: 28px;
+            position: relative;
+        }
+
+        .content .sign-up-body .verify .captcha div {
+            position: absolute;
         }
         
         .content .sign-up-body .more-long {
@@ -136,7 +141,7 @@
                             <script>
                                 var handler = function (captchaObj) {
                                     captchaObj.appendTo("#captcha");
-                                    $("#captcha").empty();
+//                                    $("#captcha").empty();
 
 //                                    $("div[id^='geetest_']").replaceWith(captchaObj);
                                     $('#check-phone').click(function (i) {
