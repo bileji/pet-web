@@ -139,7 +139,7 @@
             <div ng-controller="sign_up" class="sign-up-body">
                 <div>
                     <div>
-                        <input type="text" class="form-control ng-valid" placeholder="手机号或邮箱" ng-model="user_id" required>
+                        <input type="text" class="form-control ng-valid" placeholder="手机号或邮箱" ng-model="user_id" name="user_id" required>
                     </div>
                     <div role="alert">
                          <span class="error" ng-show="form.user_id.$error.integer">Required!</span>
