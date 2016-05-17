@@ -116,13 +116,13 @@
             <div class="sign-up-header">
                 <div class="progress-title">
                     <div>
-                        <a>1.验证手机号</a>
+                        <a><span class="badge">1</span>验证手机号</a>
                     </div>
                     <div>
-                        <a>2.填写账号信息</a>
+                        <a><span class="badge">2</span>填写账号信息</a>
                     </div>
                     <div>
-                        <a>3.注册成功</a>
+                        <a><span class="badge">3</span>注册成功</a>
                     </div>
                 </div>
                 <div class="progress fine">
@@ -150,7 +150,7 @@
 
                                     // 验证成功
                                     captchaObj.onSuccess(function () {
-                                        // todo 判断是否输入正确的手机号
+                                        // todo 判断是否输入正确的手机号i
                                         // 更新进度条
                                         progress_bar.css({"width": "20%"});
                                         // 打开下一步
