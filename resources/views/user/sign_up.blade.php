@@ -131,7 +131,9 @@
                             <script>
                                 var handler = function (captchaObj) {
                                     $("#captcha").empty();
+                                    console.log($("#captcha"));
                                     captchaObj.appendTo("#captcha");
+                                    console.log($("#captcha"));
                                     $('#check-phone').click(function (i) {
                                         var validate = captchaObj.getValidate();
                                         if (!validate) {
