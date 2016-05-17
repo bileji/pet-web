@@ -43,7 +43,8 @@
         }
 
         .content .sign-up-header {
-            padding: 0 205px;
+            width: 60%;
+            margin: 0 auto;
         }
 
         .content .sign-up-header .progress-title {
@@ -53,6 +54,7 @@
 
         .content .sign-up-header .progress-title div {
             width: 33.3%;
+            min-width: 140px;
             float: left;
         }
 
