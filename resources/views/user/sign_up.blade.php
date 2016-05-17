@@ -7,9 +7,13 @@
     <script src="{{'http://libs.baidu.com/jquery/1.9.0/jquery.js'}}"></script>
     <script src="{{'http://static.geetest.com/static/tools/gt.js'}}"></script>
     <style type="text/css">
+        header, .container {
+            min-width: 740px;
+        }
+
         .nav-banner {
             height: 32px;
-            width: 1230px;
+            width: 740px;
             margin: auto;
             background-color: #e8e8e8;
         }
@@ -43,7 +47,7 @@
         }
 
         .content .sign-up-header {
-            width: 60%;
+            width: 80%;
             margin: 0 auto;
         }
 
