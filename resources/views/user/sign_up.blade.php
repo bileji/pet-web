@@ -139,7 +139,7 @@
             <div ng-controller="sign_up" class="sign-up-body">
                 <div>
                     <div>
-                        <input type="text" class="form-control" placeholder="手机号或邮箱" required>
+                        <input type="text" class="form-control ng-valid" placeholder="手机号或邮箱" required>
                     </div>
 
                     <div class="verify">
