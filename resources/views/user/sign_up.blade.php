@@ -147,7 +147,8 @@
                                     captcha.css({"position": "absolute", "z-index": -9999});
                                     captchaObj.appendTo("#captcha");
                                     captcha.first().fadeOut(1000);
-                                    $('#check-phone').click(function (event) {
+                                    var check_phone = $('#check-phone');
+                                    check_phone.click(function (event) {
                                         console.log(event);
                                         var validate = captchaObj.getValidate();
                                         if (!validate) {
@@ -167,7 +168,7 @@
                                                 geetest_seccode: validate.geetest_seccode
                                             },
                                             success: function (result) {
-                                                if (result == "Yes!") {
+                                                if (result == "success") {
                                                     $(document.body).html('<h1>发送手机验证码成功</h1>');
                                                 } else {
                                                     $(document.body).html('<h1>发送手机验证码失败</h1>');
@@ -194,7 +195,7 @@
                     </div>
 
                     <div>
-                        <button id="check-phone" type="button" class="btn btn-success more-long">下一步</button>
+                        <button id="check-phone" type="button" class="btn btn-success more-long disabled">下一步</button>
                     </div>
 
                     <div class="protocol">
