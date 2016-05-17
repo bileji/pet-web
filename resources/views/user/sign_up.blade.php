@@ -77,10 +77,12 @@
         .content .sign-up-body .protocol {
             margin: 20px 0;
             font-size: 10px;
+            text-align: left;
         }
 
         .content .sign-up-body .protocol a {
-            text-decoration: blink;
+            color: #337ab7;
+            text-decoration: underline;
         }
     </style>
 @stop
@@ -177,7 +179,7 @@
 
                     <div class="protocol">
                         <p>
-                            注册意味着你同意
+                                注册意味着你同意
                             <a class="legal-link" target="_blank">服务条款</a>
                             与
                             <a class="legal-link" target="_blank">隐私政策</a>
