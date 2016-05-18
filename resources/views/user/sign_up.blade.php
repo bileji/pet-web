@@ -75,18 +75,9 @@
             margin: 5px 0;
         }
 
-        .content .sign-up-header .progress-bar-dot .dot1 {
+        .content .sign-up-header .progress-bar-dot .dot {
             top: -16px;
-            left: 33.3%;
-            width: 14px;
-            height: 14px;
-            border-radius: 7px;
-            position: relative;
-        }
-
-        .content .sign-up-header .progress-bar-dot .dot2 {
-            top: -35px;
-            left: 66.6%;
+            left: 32%;
             width: 14px;
             height: 14px;
             border-radius: 7px;
@@ -191,11 +182,8 @@
                         <div id="progress-bar" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
                     </div>
                     <div class="progress-bar-dot">
-                        <div class="progress fine dot1">
-                            <div id="dot1" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
-                        </div>
-                        <div class="progress fine dot2">
-                            <div id="dot2" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
+                        <div class="progress fine dot">
+                            <div id="dot" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
                         </div>
                     </div>
                 </div>
@@ -278,7 +266,7 @@
         $(".alter").children('span').removeClass("hide");
 
         var handler = function (captchaObj) {
-            var step1 = $("#step1"), step2 = $("#step2"), step3 = $("#step3"), ID = $("#ID"), captcha = $("#captcha").children("div"), check_phone = $('#check-phone'), progress_bar = $("#progress-bar");
+            var step1 = $("#step1"), step2 = $("#step2"), step3 = $("#step3"), dot = $("#dot"), ID = $("#ID"), captcha = $("#captcha").children("div"), check_phone = $('#check-phone'), progress_bar = $("#progress-bar");
 
             var check_phone_html = check_phone.html();
 
@@ -300,7 +288,7 @@
             captchaObj.onSuccess(function () {
                 if (ID.attr("id-wrong") !== "true") {
                     check_phone.html(check_phone_html);
-                    progress_bar.css({"width": "30%"});
+                    progress_bar.css({"width": "32%"});
                 }
             });
 
@@ -324,6 +312,7 @@
                     },
                     success: function (object) {
                         if (object.status == 0) {
+                            dot.animate({"left": "66%"}, 100);
                             step1.addClass("hide");
                             step2.removeClass("hide");
                         } else {
