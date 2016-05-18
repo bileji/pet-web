@@ -102,17 +102,17 @@
         }
 
         .content .sign-up-body .alter-second {
-            top: 4px;
+            top: 45px;
             left: 300px;
         }
 
         .content .sign-up-body .alter-third {
-            top: 4px;
+            top: 86px;
             left: 300px;
         }
 
         .content .sign-up-body .alter-fourth {
-            top: 4px;
+            top: 127px;
             left: 300px;
         }
 
@@ -247,7 +247,7 @@
                         <input type="text" class="form-control" placeholder="您的昵称(4-16位)" name="nickname" nickname="nickname" ng-model="user.nickname" nickname-wrong="@{{ step2.nickname.$error.nickname || step2.nickname.$error.required }}" required>
                     </div>
                     <div class="alter alter-first">
-                        <span ng-show="!step2.nickname.$error.required && step2.nickname.$error.nickname" class="hide">
+                        <span ng-show="!step2.nickname.$error.required && step2.nickname.$error.nickname == true" class="hide">
                             <span class="glyphicon glyphicon-remove x"></span> 昵称格式错误
                         </span>
                     </div>
