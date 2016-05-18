@@ -243,11 +243,14 @@
                     },
                     success: function (result) {
                         console.log(result);
-                        if (result == "success") {
-                            step1.addClass(".hide");
-                        } else {
-                            $(document.body).html('<h1>发送手机验证码失败</h1>');
-                        }
+//                        if (result == "success") {
+//                            step1.addClass(".hide");
+//                        } else {
+//                            $(document.body).html('<h1>发送手机验证码失败</h1>');
+//                        }
+                    },
+                    error:function(){
+                        console.log('ajax error');
                     }
                 });
             });
