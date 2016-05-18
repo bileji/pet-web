@@ -58,6 +58,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
         restrict: "A",
         require: "ngModel",
         link: function (scope, element, attrs, ngModelController) {
+            attrs.cache_nickname = "";
             ngModelController.$parsers.push(function (viewValue) {
                 if ((nickname1.test(viewValue) || nickname2.test(viewValue)) && (viewValue.length >= 4 && viewValue.length <= 16)) {
                     !attrs.cache_nickname && progress_bar_plus(10);
