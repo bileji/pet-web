@@ -48,6 +48,7 @@
 
         .content .sign-up-header {
             width: 55%;
+            height: 30px;
             margin: 0 auto;
         }
 
@@ -84,7 +85,7 @@
         }
 
         .content .sign-up-header .progress-bar-dot .dot2 {
-            top: -16px;
+            top: -35px;
             left: 66.6%;
             width: 14px;
             height: 14px;
