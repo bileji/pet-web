@@ -79,8 +79,12 @@ app.controller('sign_up', ['$scope', function ($scope) {
                             ngModelController.$setValidity("nickname", false);
                             ngModelController.$setValidity("less", true);
                             ngModelController.$setValidity("more", true);
+                        } else {
+                            ngModelController.$setValidity("less", true);
+                            ngModelController.$setValidity("more", true);
+                            ngModelController.$setValidity("nickname", true);
                         }
-                        
+
                         return viewValue;
                     }
                 );
