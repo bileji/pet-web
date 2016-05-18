@@ -74,6 +74,24 @@
             margin: 5px 0;
         }
 
+        .content .sign-up-header .progress-bar-dot .dot1 {
+            top: -16px;
+            left: 33.3%;
+            width: 14px;
+            height: 14px;
+            border-radius: 7px;
+            position: relative;
+        }
+
+        .content .sign-up-header .progress-bar-dot .dot2 {
+            top: -16px;
+            left: 66.6%;
+            width: 14px;
+            height: 14px;
+            border-radius: 7px;
+            position: relative;
+        }
+
         .content .sign-up-body {
             width: 300px;
             margin: 30px auto;
@@ -173,10 +191,10 @@
                     </div>
                     <div class="progress-bar-dot">
                         <div class="progress fine">
-                            <div id="dot1" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
+                            <div id="dot1" class="progress-bar progress-bar-success progress-bar-striped dot1 active" role="progressbar" style="width: 0;"></div>
                         </div>
                         <div class="progress fine">
-                            <div id="dot2" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
+                            <div id="dot2" class="progress-bar progress-bar-success progress-bar-striped dot2 active" role="progressbar" style="width: 0;"></div>
                         </div>
                     </div>
                 </div>
