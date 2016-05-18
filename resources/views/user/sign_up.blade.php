@@ -245,6 +245,9 @@
     </div>
 
     <script>
+        // 移除alert的隐藏
+        $(".alter").children('span').removeClass("hide");
+
         var handler = function (captchaObj) {
             var step1 = $("#step1"), step2 = $("#step2"), step3 = $("#step3"), ID = $("#ID"), captcha = $("#captcha").children("div"), check_phone = $('#check-phone'), progress_bar = $("#progress-bar");
 
