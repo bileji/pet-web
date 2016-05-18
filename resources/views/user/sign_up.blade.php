@@ -13,7 +13,7 @@
 
         .nav-banner {
             height: 32px;
-            width: 55%;
+            width: 1230px;
             margin: auto;
             background-color: #e8e8e8;
         }
@@ -153,7 +153,9 @@
             <ul class="nav-left">
                 <li>
                     <div>
-                        <a href="{{url('/')}}">返回首页</a>
+                        <a href="{{url('/')}}">
+                            <span class="glyphicon glyphicon-home x"></span> 返回首页
+                        </a>
                     </div>
                 </li>
             </ul>
