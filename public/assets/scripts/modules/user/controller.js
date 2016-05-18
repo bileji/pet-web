@@ -21,10 +21,10 @@ app.controller('sign_up', ['$scope', function ($scope) {
             ngModelController.$parsers.push(function (viewValue) {
                 if (email.test(viewValue) || phone.test(viewValue)) {
                     progress_bar.css({"width": "20%"});
-                    ngModelController.$setValidity('wrongID', true);
+                    ngModelController.$setValidity("wrongID", true);
                 } else {
                     progress_bar.css({"width": "0"});
-                    ngModelController.$setValidity('wrongID', false);
+                    ngModelController.$setValidity("wrongID", false);
                 }
                 return viewValue;
             });
@@ -33,8 +33,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
 }).directive('nickname', function () {
     var progress_bar = $("#progress-bar");
 
-    var nickname1 = /^\w+$/;
-    var nickname2 = /[\u4e00-\u9fa5]/gm;
+    var nickname = /^[\-\w\u4e00-\u9fa5]+$/;
 
     var clear_nickname = function (attrs) {
         attrs.$set("cache_nickname", "");
@@ -46,7 +45,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
 
     var progress_bar_plus = function (percent) {
         var total_width = parseFloat(progress_bar.parent().css("width"));
-        progress_bar.css({"width":parseFloat(progress_bar.css("width")) + total_width * percent / 100});
+        progress_bar.css({"width": parseFloat(progress_bar.css("width")) + total_width * percent / 100});
     };
 
     var progress_bar_reduce = function (percent) {
@@ -60,14 +59,20 @@ app.controller('sign_up', ['$scope', function ($scope) {
         link: function (scope, element, attrs, ngModelController) {
             attrs.cache_nickname = "";
             ngModelController.$parsers.push(function (viewValue) {
-                if ((nickname1.test(viewValue) || nickname2.test(viewValue)) && (viewValue.length >= 4 && viewValue.length <= 16)) {
+                if (nickname.test(viewValue) && (viewValue.length >= 4 && viewValue.length <= 16)) {
                     !attrs.cache_nickname && progress_bar_plus(10);
                     save_nickname(attrs, viewValue);
-                    ngModelController.$setValidity('nickname', true);
+                    if (viewValue.length < 4) {
+                        ngModelController.$setValidity("nickname", "less");
+                    } else if (viewValue.length > 16) {
+                        ngModelController.$setValidity("nickname", "more");
+                    } else {
+                        ngModelController.$setValidity("nickname", true);
+                    }
                 } else {
                     attrs.cache_nickname && progress_bar_reduce(10);
                     clear_nickname(attrs);
-                    ngModelController.$setValidity('nickname', false);
+                    ngModelController.$setValidity("nickname", false);
                 }
                 return viewValue;
             });

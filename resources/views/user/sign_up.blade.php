@@ -248,7 +248,13 @@
                     </div>
                     <div class="alter alter-first">
                         <span ng-show="!step2.nickname.$error.required && step2.nickname.$error.nickname == true" class="hide">
-                            <span class="glyphicon glyphicon-remove x"></span> 昵称格式错误
+                            <span class="glyphicon glyphicon-remove x"></span> 仅支持字母、数字、汉字、"-"、"_"的组合
+                        </span>
+                        <span ng-show="!step2.nickname.$error.required && step2.nickname.$error.nickname == less" class="hide">
+                            <span class="glyphicon glyphicon-remove x"></span> 昵称太简短了
+                        </span>
+                        <span ng-show="!step2.nickname.$error.required && step2.nickname.$error.nickname == more" class="hide">
+                            <span class="glyphicon glyphicon-remove x"></span> 昵称字数太多了
                         </span>
                     </div>
 
