@@ -77,7 +77,7 @@
 
         .content .sign-up-header .progress-bar-dot .dot {
             top: -16px;
-            left: 32%;
+            left: 212px;
             width: 14px;
             height: 14px;
             border-radius: 7px;
@@ -312,7 +312,7 @@
                     },
                     success: function (object) {
                         if (object.status == 0) {
-                            dot.animate({"left": "66%"}, 100);
+                            dot.animate({"left": 200}, 100);
                             step1.addClass("hide");
                             step2.removeClass("hide");
                         } else {
