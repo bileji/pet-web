@@ -2,6 +2,12 @@ var app = angular.module('user', []);
 
 app.controller('sign_up', ['$scope', function ($scope) {
     $scope.user = {};
+
+    $scope.validate = {
+        ID : {
+            format: '<span class="glyphicon glyphicon-remove x"></span> 请填写正确的手机号或邮箱'
+        }
+    }
 }]).directive('phoneOrEmail', function () {
     var email = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
     var phone = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;

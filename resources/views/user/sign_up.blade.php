@@ -179,7 +179,7 @@
                     </div>
                     <div class="alter">
                         <span ng-show="!step1.ID.$error.required && step1.ID.$error.wrongID">
-                            <span class="glyphicon glyphicon-remove x"></span> 请填写正确的手机号或邮箱
+                            @{{ validate.ID.format }}
                         </span>
                     </div>
 
