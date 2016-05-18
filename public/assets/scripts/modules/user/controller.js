@@ -41,7 +41,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
         require: "ngModel",
         link: function (scope, element, attrs, ngModelController) {
             ngModelController.$parsers.push(function (viewValue) {
-                if (nickname1.test(viewValue) || nickname2.test(viewValue) || (viewValue.length >= 4 && viewValue.length <= 16)) {
+                if ((nickname1.test(viewValue) || nickname2.test(viewValue)) && (viewValue.length >= 4 && viewValue.length <= 16)) {
                     progress_bar.css({"width": "40%"});
                     ngModelController.$setValidity('nickname', true);
                 } else {
