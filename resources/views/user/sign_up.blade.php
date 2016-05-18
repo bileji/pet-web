@@ -241,16 +241,12 @@
                         geetest_validate: validate.geetest_validate,
                         geetest_seccode: validate.geetest_seccode
                     },
-                    success: function (result) {
-                        console.log(result);
-//                        if (result == "success") {
-//                            step1.addClass(".hide");
-//                        } else {
-//                            $(document.body).html('<h1>发送手机验证码失败</h1>');
-//                        }
-                    },
-                    error:function(){
-                        console.log('ajax error');
+                    success: function (object) {
+                        if (object.status == 0) {
+                            step1.addClass(".hide");
+                        } else {
+                            console.log('todo');
+                        }
                     }
                 });
             });
