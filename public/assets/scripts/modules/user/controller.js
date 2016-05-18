@@ -67,10 +67,12 @@ app.controller('sign_up', ['$scope', function ($scope) {
                             attrs.cache_nickname && progress_bar_reduce(10);
                             clear_nickname(attrs);
                             if (viewValue.length < 4) {
-                                ngModelController.$setValidity("less", true);
+                                ngModelController.$setValidity("less", false);
+                                ngModelController.$setValidity("more", true);
                             }
                             if (viewValue.length > 16) {
-                                ngModelController.$setValidity("more", true);
+                                ngModelController.$setValidity("more", false);
+                                ngModelController.$setValidity("less", true);
                             }
                             ngModelController.$setValidity("nickname", false);
                             return viewValue;
