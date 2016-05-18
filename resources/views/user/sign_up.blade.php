@@ -243,7 +243,16 @@
                     </div>
 
                     <div class="table-space">
-                        <input type="text" class="form-control verify-code" placeholder="验证码" required>
+                        <input type="text" class="form-control" placeholder="确认密码" required>
+                    </div>
+                    <div class="alter">
+                        <span ng-show="">
+                            <span class="glyphicon glyphicon-remove x"></span> 密码格式错误
+                        </span>
+                    </div>
+
+                    <div class="table-space">
+                        <input type="text" class="form-control verify-code" placeholder="短信/邮件验证码" required>
                         <button id="re-send" type="button" class="btn btn-success verify-btn">重新发送</button>
                     </div>
                     <div class="alter">
