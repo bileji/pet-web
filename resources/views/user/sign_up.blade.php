@@ -8,6 +8,7 @@
     <script src="{{'http://static.geetest.com/static/tools/gt.js'}}"></script>
     <style type="text/css">
         header, .container {
+            padding: 0;
             min-width: 1230px;
         }
 
