@@ -178,7 +178,7 @@
                         <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" id="ID" id-wrong="@{{ step1.ID.$error.wrongID || step1.ID.$error.required }}" required>
                     </div>
                     <div class="alter">
-                        <span ng-show="!step1.ID.$error.required && step1.ID.$error.wrongID">
+                        <span ng-show="!step1.ID.$error.required && step1.ID.$error.wrongID" class="hide">
                             @{{ validate.ID.format }}
                         </span>
                     </div>
