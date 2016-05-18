@@ -37,11 +37,11 @@ app.controller('sign_up', ['$scope', function ($scope) {
     var nickname2 = /[\u4e00-\u9fa5]/gm;
 
     var clear_nickname = function (attrs) {
-        attrs.$set.cache_nickname = "";
+        attrs.$set("cache_nickname", "");
     };
 
     var save_nickname = function (attrs, nickname) {
-        attrs.$set.cache_nickname = nickname;
+        attrs.$set("cache_nickname", nickname);
     };
 
     var progress_bar_plus = function (percent) {
@@ -59,6 +59,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
         require: "ngModel",
         link: function (scope, element, attrs, ngModelController) {
             ngModelController.$parsers.push(function (viewValue) {
+                console.log(attrs);
                 console.log(attrs.cache_nickname);
                 if ((nickname1.test(viewValue) || nickname2.test(viewValue)) && (viewValue.length >= 4 && viewValue.length <= 16)) {
                     progress_bar_plus(10);
