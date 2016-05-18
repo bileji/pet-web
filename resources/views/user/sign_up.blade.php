@@ -317,7 +317,7 @@
 
             captchaObj.appendTo("#captcha");
 
-            captcha.first().fadeOut(800);
+            captcha.first().fadeOut(400);
 
             // 验证成功
             captchaObj.onSuccess(function () {
