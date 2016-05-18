@@ -106,10 +106,6 @@
             top: 2px;
         }
 
-        .content .sign-up-body .green-border {
-            border-left: 5px solid #42A948;
-        }
-
         .content .sign-up-body .verify {
             margin: 20px 2px;
         }
@@ -192,7 +188,7 @@
             <div ng-controller="sign_up" class="sign-up-body">
                 <form name="step1" id="step1" class="relative">
                     <div>
-                        <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" id="ID" id-wrong="@{{ step1.ID.$error.wrongID || step1.ID.$error.required }}" required>
+                        <input type="text" class="form-control" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" id="ID" id-wrong="@{{ step1.ID.$error.wrongID || step1.ID.$error.required }}" required>
                     </div>
                     <div class="alter">
                         <span ng-show="!step1.ID.$error.required && step1.ID.$error.wrongID" class="hide">
@@ -226,7 +222,7 @@
                 </form>
                 <form name="step2" id="step2" class="relative hide">
                     <div class="table-space">
-                        <input type="text" class="form-control green-border" placeholder="您的昵称" required>
+                        <input type="text" class="form-control" placeholder="您的昵称" required>
                     </div>
                     <div class="alter">
                         <span ng-show="">
@@ -235,7 +231,7 @@
                     </div>
 
                     <div class="table-space">
-                        <input type="text" class="form-control green-border" placeholder="设置密码" required>
+                        <input type="text" class="form-control" placeholder="设置密码" required>
                     </div>
                     <div class="alter">
                         <span ng-show="">
@@ -244,7 +240,7 @@
                     </div>
 
                     <div class="table-space">
-                        <input type="text" class="form-control green-border verify-code" placeholder="验证码" required>
+                        <input type="text" class="form-control verify-code" placeholder="验证码" required>
                         <button id="re-send" type="button" class="btn btn-success verify-btn">重新发送</button>
                     </div>
                     <div class="alter">
@@ -281,8 +277,10 @@
             };
 
             captcha.css({"position": "absolute", "z-index": -9999});
+
             captchaObj.appendTo("#captcha");
-            captcha.first().fadeOut(1000);
+
+            captcha.first().fadeOut(800);
 
             // 验证成功
             captchaObj.onSuccess(function () {
@@ -302,13 +300,11 @@
                     url: "{{asset('verify/captcha')}}",
                     type: "post",
                     dataType: "json",
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
+                    headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
                     data: {
-                        geetest_challenge: validate.geetest_challenge,
+                        geetest_seccode: validate.geetest_seccode,
                         geetest_validate: validate.geetest_validate,
-                        geetest_seccode: validate.geetest_seccode
+                        geetest_challenge: validate.geetest_challenge
                     },
                     success: function (object) {
                         if (object.status == 0) {
