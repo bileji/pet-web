@@ -192,7 +192,7 @@
                         </p>
                     </div>
                 </form>
-                <form name="step2" id="step2" class="relative">
+                <form name="step2" id="step2" class="relative hide">
                     <div>
                         <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" id="ID" id-wrong="@{{ step1.ID.$error.wrongID || step1.ID.$error.required }}" required>
                     </div>
@@ -210,7 +210,7 @@
 
     <script>
         var handler = function (captchaObj) {
-            var step1 = $("#step1"), ID = $("#ID"), captcha = $("#captcha").children("div"), check_phone = $('#check-phone'), progress_bar = $("#progress-bar");
+            var step1 = $("#step1"), step2 = $("#step2"), step3 = $("#step3"), ID = $("#ID"), captcha = $("#captcha").children("div"), check_phone = $('#check-phone'), progress_bar = $("#progress-bar");
 
             var shake = function (object) {
                 var times = 4, range = 3;
@@ -255,6 +255,7 @@
                     success: function (object) {
                         if (object.status == 0) {
                             step1.addClass("hide");
+                            step2.removeClass("hide");
                         } else {
                             console.log('todo');
                         }
