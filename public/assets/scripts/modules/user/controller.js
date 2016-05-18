@@ -46,13 +46,17 @@ app.controller('sign_up', ['$scope', function ($scope) {
 
     var progress_bar_plus = function (percent) {
         var total_width = parseFloat(progress_bar.parent().css("width"));
+
         console.log(parseFloat(progress_bar.css("width")) + total_width * percent / 100);
+
         progress_bar.css({"width":parseFloat(progress_bar.css("width")) + total_width * percent / 100});
     };
 
     var progress_bar_reduce = function (percent) {
         var total_width = parseFloat(progress_bar.parent().css("width"));
+
         console.log(parseFloat(progress_bar.css("width")) - total_width * percent / 100);
+
         progress_bar.css({"width": parseFloat(progress_bar.css("width")) - total_width * percent / 100});
     };
 
@@ -61,13 +65,12 @@ app.controller('sign_up', ['$scope', function ($scope) {
         require: "ngModel",
         link: function (scope, element, attrs, ngModelController) {
             ngModelController.$parsers.push(function (viewValue) {
-                console.log(attrs.cache_nickname);
                 if ((nickname1.test(viewValue) || nickname2.test(viewValue)) && (viewValue.length >= 4 && viewValue.length <= 16)) {
                     progress_bar_plus(10);
                     save_nickname(attrs, viewValue);
                     ngModelController.$setValidity('nickname', true);
                 } else {
-                    (typeof attrs.cache_nickname == "undefined" || !attrs.cache_nickname) && progress_bar_reduce(10);
+                    !attrs.cache_nickname && progress_bar_reduce(10);
                     clear_nickname(attrs);
                     ngModelController.$setValidity('nickname', false);
                 }
