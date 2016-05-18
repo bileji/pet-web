@@ -38,6 +38,10 @@ header, footer {
     background-color: #e8e8e8;
 }
 
+.hide {
+    display: none !important;
+}
+
 .relative {
     position: relative;
 }

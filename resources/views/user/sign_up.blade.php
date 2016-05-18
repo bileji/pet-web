@@ -159,7 +159,7 @@
             </div>
 
             <div ng-controller="sign_up" class="sign-up-body">
-                <form name="step1" class="relative">
+                <form name="step1" id="step1" class="relative">
                     <div>
                         <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" id="ID" id-wrong="@{{ step1.ID.$error.wrongID || step1.ID.$error.required }}" required>
                     </div>
@@ -199,7 +199,18 @@
 
     <script>
         var handler = function (captchaObj) {
-            var ID = $("#ID"), captcha = $("#captcha").children("div"), check_phone = $('#check-phone'), progress_bar = $("#progress-bar");
+            var step1 = $("#step1"), ID = $("#ID"), captcha = $("#captcha").children("div"), check_phone = $('#check-phone'), progress_bar = $("#progress-bar");
+
+            var shake = function (object) {
+                var times = 4, range = 3;
+                object.html("请完成验证");
+                object.css({"position": "relative"});
+                for (var time = times; time >= 0 ; time--) {
+                    object.animate({"left": time * range}, 30);
+                    object.animate({"left": - time * range}, 30);
+                }
+            };
+
             captcha.css({"position": "absolute", "z-index": -9999});
             captchaObj.appendTo("#captcha");
             captcha.first().fadeOut(1000);
@@ -215,15 +226,6 @@
             check_phone.click(function () {
                 var validate = captchaObj.getValidate();
                 if (!validate) {
-                    var shake = function (object) {
-                        var times = 4, range = 3;
-                        object.html("请完成验证");
-                        object.css({"position": "relative"});
-                        for (var time = times; time >= 0 ; time--) {
-                            object.animate({"left": time * range}, 30);
-                            object.animate({"left": - time * range}, 30);
-                        }
-                    };
                     shake(check_phone);
                     return;
                 }
@@ -240,8 +242,9 @@
                         geetest_seccode: validate.geetest_seccode
                     },
                     success: function (result) {
+                        console.log(result);
                         if (result == "success") {
-                            $(document.body).html('<h1>发送手机验证码成功</h1>');
+                            step1.addClass(".hide");
                         } else {
                             $(document.body).html('<h1>发送手机验证码失败</h1>');
                         }
