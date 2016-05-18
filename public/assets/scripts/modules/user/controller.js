@@ -70,7 +70,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
                     save_nickname(attrs, viewValue);
                     ngModelController.$setValidity('nickname', true);
                 } else {
-                    !attrs.cache_nickname && progress_bar_reduce(10);
+                    attrs.cache_nickname && progress_bar_reduce(10);
                     clear_nickname(attrs);
                     ngModelController.$setValidity('nickname', false);
                 }
