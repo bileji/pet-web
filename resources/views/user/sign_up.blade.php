@@ -226,7 +226,7 @@
 
                 <form name="step2" id="step2" class="relative hide">
                     <div class="table-space">
-                        <input type="text" class="form-control" placeholder="您的昵称" name="nickname" nickname="nickname" ng-model="user.nickname" name-wrong="" required>
+                        <input type="text" class="form-control" placeholder="您的昵称" name="nickname" nickname="nickname" ng-model="user.nickname" name-wrong="@{{ step1.ID.$error.nickname || step1.ID.$error.required }}" required>
                     </div>
                     <div class="alter">
                         <span ng-show="!step1.ID.$error.required && step1.ID.$error.nickname" class="hide">
