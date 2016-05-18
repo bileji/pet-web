@@ -91,11 +91,29 @@
         }
 
         .content .sign-up-body .alter {
-            top: 4px;
-            left: 300px;
             width: 200px;
             text-align: left;
             position: absolute;
+        }
+
+        .content .sign-up-body .alter-first {
+            top: 4px;
+            left: 300px;
+        }
+
+        .content .sign-up-body .alter-second {
+            top: 4px;
+            left: 300px;
+        }
+
+        .content .sign-up-body .alter-third {
+            top: 4px;
+            left: 300px;
+        }
+
+        .content .sign-up-body .alter-fourth {
+            top: 4px;
+            left: 300px;
         }
 
         .content .sign-up-body .alter span {
@@ -193,7 +211,7 @@
                     <div>
                         <input type="text" class="form-control" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" id="ID" id-wrong="@{{ step1.ID.$error.wrongID || step1.ID.$error.required }}" required>
                     </div>
-                    <div class="alter">
+                    <div class="alter alter-first">
                         <span ng-show="!step1.ID.$error.required && step1.ID.$error.wrongID" class="hide">
                             <span class="glyphicon glyphicon-remove x"></span> 请填写正确的手机号或邮箱
                         </span>
@@ -228,9 +246,8 @@
                     <div class="table-space">
                         <input type="text" class="form-control" placeholder="您的昵称(4-16位)" name="nickname" nickname="nickname" ng-model="user.nickname" nickname-wrong="@{{ step2.nickname.$error.nickname || step2.nickname.$error.required }}" required>
                     </div>
-                    <div class="alter">
+                    <div class="alter alter-first">
                         <span ng-show="!step2.nickname.$error.required && step2.nickname.$error.nickname" class="hide">
-                            @{{ step2.nickname.$error }}
                             <span class="glyphicon glyphicon-remove x"></span> 昵称格式错误
                         </span>
                     </div>
@@ -238,7 +255,7 @@
                     <div class="table-space">
                         <input type="text" class="form-control" placeholder="设置密码(6-16位)" required>
                     </div>
-                    <div class="alter">
+                    <div class="alter alter-second">
                         <span ng-show="">
                             <span class="glyphicon glyphicon-remove x"></span> 密码格式错误
                         </span>
@@ -247,7 +264,7 @@
                     <div class="table-space">
                         <input type="text" class="form-control" placeholder="确认密码" required>
                     </div>
-                    <div class="alter">
+                    <div class="alter alter-third">
                         <span ng-show="">
                             <span class="glyphicon glyphicon-remove x"></span> 密码格式错误
                         </span>
@@ -257,7 +274,7 @@
                         <input type="text" class="form-control verify-code" placeholder="短信/邮件验证码" required>
                         <button id="re-send" type="button" class="btn btn-success verify-btn">重新发送</button>
                     </div>
-                    <div class="alter">
+                    <div class="alter alter-fourth">
                         <span ng-show="">
                             <span class="glyphicon glyphicon-remove x"></span> 验证码格式错误
                         </span>
