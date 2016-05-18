@@ -247,7 +247,6 @@
                         <input type="text" class="form-control" placeholder="您的昵称(4-16位)" name="nickname" nickname="nickname" ng-model="user.nickname" nickname-wrong="@{{ step2.nickname.$error.nickname || step2.nickname.$error.required }}" required>
                     </div>
                     <div class="alter alter-first">
-                        @{{ step2.nickname.$error }}
                         <span ng-show="!step2.nickname.$error.required && step2.nickname.$error.nickname" class="hide">
                             <span class="glyphicon glyphicon-remove x"></span> 支持字母、数字、汉字、"-"、"_"的组合
                         </span>
