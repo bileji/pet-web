@@ -167,8 +167,21 @@
                         <a><span class="badge step">3</span> 注册成功</a>
                     </div>
                 </div>
-                <div class="progress fine">
-                    <div id="progress-bar" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
+                <div>
+                    <div class="progress fine">
+                        <div id="progress-bar" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
+                    </div>
+                    <div class="progress-bar-dot">
+                        <div class="progress fine">
+                            <div id="dot1" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
+                        </div>
+                        <div class="progress fine">
+                            <div id="dot2" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
+                        </div>
+                        <div class="progress fine">
+                            <div id="dot3" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
