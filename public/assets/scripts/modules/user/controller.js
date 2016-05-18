@@ -1,7 +1,5 @@
 var app = angular.module('user', []);
 
-var progress_bar = $("#progress-bar");
-
 app.controller('sign_up', ['$scope', function ($scope) {
     $scope.user = {};
 
@@ -11,6 +9,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
         }
     }
 }]).directive('phoneOrEmail', function () {
+    var progress_bar = $("#progress-bar");
     var email = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
     var phone = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
     return {
@@ -30,6 +29,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
         }
     }
 }).directive('nickname', function () {
+    var progress_bar = $("#progress-bar");
     var nickname = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
     return {
         restrict: "A",
