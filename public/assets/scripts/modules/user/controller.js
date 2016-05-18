@@ -10,8 +10,10 @@ app.controller('sign_up', ['$scope', function ($scope) {
     }
 }]).directive('phoneOrEmail', function () {
     var progress_bar = $("#progress-bar");
+
     var email = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
     var phone = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
+
     return {
         restrict: "A",
         require: "ngModel",
@@ -30,13 +32,16 @@ app.controller('sign_up', ['$scope', function ($scope) {
     }
 }).directive('nickname', function () {
     var progress_bar = $("#progress-bar");
-    var nickname = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
+
+    var nickname1 = /^\w+$/;
+    var nickname2 = /[\u4e00-\u9fa5]/gm;
+
     return {
         restrict: "A",
         require: "ngModel",
         link: function (scope, element, attrs, ngModelController) {
             ngModelController.$parsers.push(function (viewValue) {
-                if (nickname.test(viewValue) || (viewValue.length >= 4 && viewValue.length <= 16)) {
+                if (nickname1.test(viewValue) || nickname2.test(viewValue) || (viewValue.length >= 4 && viewValue.length <= 16)) {
                     progress_bar.css({"width": "40%"});
                     ngModelController.$setValidity('nickname', true);
                 } else {

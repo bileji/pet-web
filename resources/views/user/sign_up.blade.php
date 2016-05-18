@@ -226,16 +226,17 @@
 
                 <form name="step2" id="step2" class="relative hide">
                     <div class="table-space">
-                        <input type="text" class="form-control" placeholder="您的昵称" name="nickname" nickname="nickname" ng-model="user.nickname" nickname-wrong="@{{ step2.nickname.$error.nickname || step2.nickname.$error.required }}" required>
+                        <input type="text" class="form-control" placeholder="您的昵称(4-16位)" name="nickname" nickname="nickname" ng-model="user.nickname" nickname-wrong="@{{ step2.nickname.$error.nickname || step2.nickname.$error.required }}" required>
                     </div>
                     <div class="alter">
                         <span ng-show="!step2.nickname.$error.required && step2.nickname.$error.nickname" class="hide">
+                            @{{ step2.nickname.$error }}
                             <span class="glyphicon glyphicon-remove x"></span> 昵称格式错误
                         </span>
                     </div>
 
                     <div class="table-space">
-                        <input type="text" class="form-control" placeholder="设置密码" required>
+                        <input type="text" class="form-control" placeholder="设置密码(6-16位)" required>
                     </div>
                     <div class="alter">
                         <span ng-show="">
