@@ -5,7 +5,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
 
     $scope.validate = {
         ID : {
-            format: '<span class="glyphicon glyphicon-remove x"></span> 请填写正确的手机号或邮箱'
+            format: ''
         }
     }
 }]).directive('phoneOrEmail', function () {
