@@ -46,7 +46,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
                     ngModelController.$setValidity('nickname', true);
                 } else {
                     progress_bar.css({"width": "31%"});
-                    ngModelController.$setValidity('nickname', true);
+                    ngModelController.$setValidity('nickname', false);
                 }
                 return viewValue;
             });
