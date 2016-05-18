@@ -63,18 +63,18 @@ app.controller('sign_up', ['$scope', function ($scope) {
                     !attrs.cache_nickname && progress_bar_plus(10);
                     save_nickname(attrs, viewValue);
                     if (viewValue.length < 4) {
-                        ngModelController.$setValidity("less", false);
+                        ngModelController.$setValidity("less", true);
                     } else if (viewValue.length > 16) {
-                        ngModelController.$setValidity("more", false);
+                        ngModelController.$setValidity("more", true);
                     } else {
-                        ngModelController.$setValidity("nickname", false);
+                        ngModelController.$setValidity("nickname", true);
                     }
                 } else {
                     attrs.cache_nickname && progress_bar_reduce(10);
                     clear_nickname(attrs);
-                    ngModelController.$setValidity("less", true);
-                    ngModelController.$setValidity("more", true);
-                    ngModelController.$setValidity("nickname", true);
+                    ngModelController.$setValidity("less", false);
+                    ngModelController.$setValidity("more", false);
+                    ngModelController.$setValidity("nickname", false);
                 }
                 return viewValue;
             });
