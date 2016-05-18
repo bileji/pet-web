@@ -182,8 +182,8 @@
                         <div id="progress-bar" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
                     </div>
                     <div class="progress-bar-dot">
-                        <div class="progress fine dot">
-                            <div id="dot" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
+                        <div class="progress fine dot" id="dot">
+                            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
                         </div>
                     </div>
                 </div>
