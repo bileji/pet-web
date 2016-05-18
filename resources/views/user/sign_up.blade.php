@@ -126,7 +126,8 @@
         }
 
         .content .sign-up-body .table-space {
-            margin: 5px 0;
+            margin: 8px 0;
+            height: 34px;
         }
 
         .content .sign-up-body .verify-code {
@@ -208,7 +209,7 @@
                 </form>
                 <form name="step2" id="step2" class="relative">
                     <div class="table-space">
-                        <input type="text" class="form-control" placeholder="您的昵称" required>
+                        <input type="text" class="form-control green-border" placeholder="您的昵称" required>
                     </div>
                     <div class="alter">
                         <span ng-show="">
@@ -217,7 +218,7 @@
                     </div>
 
                     <div class="table-space">
-                        <input type="text" class="form-control" placeholder="设置密码" required>
+                        <input type="text" class="form-control green-border" placeholder="设置密码" required>
                     </div>
                     <div class="alter">
                         <span ng-show="">
@@ -226,7 +227,7 @@
                     </div>
 
                     <div class="table-space">
-                        <input type="text" class="form-control  green-border verify-code" placeholder="验证码" required>
+                        <input type="text" class="form-control green-border verify-code" placeholder="验证码" required>
                         <button id="re-send" type="button" class="btn btn-success verify-btn">重新发送</button>
                     </div>
                     <div class="alter">
