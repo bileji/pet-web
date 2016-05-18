@@ -45,15 +45,15 @@ app.controller('sign_up', ['$scope', function ($scope) {
     };
 
     var progress_bar_plus = function (percent) {
-        var total_width = progress_bar.parent().css("width");
-        console.log(progress_bar.css("width") + total_width * percent / 100);
-        progress_bar.css({"width": progress_bar.css("width") + total_width * percent / 100});
+        var total_width = parseFloat(progress_bar.parent().css("width"));
+        console.log(parseFloat(progress_bar.css("width")) + total_width * percent / 100);
+        progress_bar.css({"width":parseFloat(progress_bar.css("width")) + total_width * percent / 100});
     };
 
     var progress_bar_reduce = function (percent) {
-        var total_width = progress_bar.parent().css("width");
-        console.log(progress_bar.css("width") - total_width * percent / 100);
-        progress_bar.css({"width": progress_bar.css("width") - total_width * percent / 100});
+        var total_width = parseFloat(progress_bar.parent().css("width"));
+        console.log(parseFloat(progress_bar.css("width")) - total_width * percent / 100);
+        progress_bar.css({"width": parseFloat(progress_bar.css("width")) - total_width * percent / 100});
     };
 
     return {
