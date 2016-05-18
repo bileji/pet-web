@@ -173,7 +173,7 @@
             </div>
 
             <div ng-controller="sign_up" class="sign-up-body">
-                <form name="step1" id="step1" class="relative hide">
+                <form name="step1" id="step1" class="relative">
                     <div>
                         <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" id="ID" id-wrong="@{{ step1.ID.$error.wrongID || step1.ID.$error.required }}" required>
                     </div>
@@ -207,7 +207,7 @@
                         </p>
                     </div>
                 </form>
-                <form name="step2" id="step2" class="relative">
+                <form name="step2" id="step2" class="relative hide">
                     <div class="table-space">
                         <input type="text" class="form-control green-border" placeholder="您的昵称" required>
                     </div>
