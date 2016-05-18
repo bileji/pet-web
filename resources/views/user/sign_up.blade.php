@@ -8,7 +8,7 @@
     <script src="{{'http://static.geetest.com/static/tools/gt.js'}}"></script>
     <style type="text/css">
         header, .container {
-            min-width: 740px;
+            min-width: 1230px;
         }
 
         .nav-banner {
@@ -194,14 +194,22 @@
                 </form>
                 <form name="step2" id="step2" class="relative hide">
                     <div>
-                        <input type="text" class="form-control green-border" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" id="ID" id-wrong="@{{ step1.ID.$error.wrongID || step1.ID.$error.required }}" required>
+                        <input type="text" class="form-control green-border" placeholder="您的昵称" required>
                     </div>
                     <div class="alter">
-                        <span ng-show="!step1.ID.$error.required && step1.ID.$error.wrongID">
+                        <span ng-show="">
                             <span class="glyphicon glyphicon-remove x"></span> 请填写正确的手机号或邮箱
                         </span>
                     </div>
-
+                    <div>
+                        <input type="text" class="form-control" placeholder="验证码" required>
+                        <button id="re-send" type="button" class="btn btn-success">重新发送</button>
+                    </div>
+                    <div class="alter">
+                        <span ng-show="">
+                            <span class="glyphicon glyphicon-remove x"></span> 请填写正确的手机号或邮箱
+                        </span>
+                    </div>
                 </form>
             </div>
 
