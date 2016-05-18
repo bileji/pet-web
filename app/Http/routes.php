@@ -41,8 +41,8 @@ Route::group(['prefix' => 'verify'], function () {
     });
     Route::post('captcha', function () use ($captcha) {
         if ($captcha->isFromGTServer()) {
-            return $captcha->success() ? 'success' : 'no';
+            return $captcha->success() ? json_encode(['status' => 0, 'data' => 'success']) : json_encode(['status' => -10, 'data' => 'failed']);
         }
-        return $captcha->hasAnswer() ? "answer" : "no answer";
+        return $captcha->hasAnswer() ? json_encode(['status' => 0, 'data' => 'answer']) : json_encode(['status' => -20, 'data' => 'no answer']);
     });
 });
