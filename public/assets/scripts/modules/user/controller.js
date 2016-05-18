@@ -33,7 +33,6 @@ app.controller('sign_up', ['$scope', function ($scope) {
 }).directive('nickname', function () {
     var progress_bar = $("#progress-bar");
 
-
     var nickname1 = /^\w+$/;
     var nickname2 = /[\u4e00-\u9fa5]/gm;
 
