@@ -225,14 +225,6 @@
                 </form>
 
                 <form name="step2" id="step2" class="relative hide">
-                    <div class="table-space">
-                        <input type="text" class="form-control" placeholder="您的昵称" name="nickname" nickname="nickname" ng-model="user.nickname" name-wrong="@{{ step2.nickname.$error.nickname || step2.nickname.$error.required }}" required>
-                    </div>
-                    <div class="alter">
-                        <span ng-show="!step2.nickname.$error.required && step2.nickname.$error.nickname" class="hide">
-                            <span class="glyphicon glyphicon-remove x"></span> 昵称格式错误
-                        </span>
-                    </div>
 
                     <div class="table-space">
                         <input type="text" class="form-control" placeholder="设置密码" required>
