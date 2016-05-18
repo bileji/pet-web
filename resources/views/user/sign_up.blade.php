@@ -79,10 +79,6 @@
             margin: 30px auto;
         }
 
-        .content .sign-up-body .table-space {
-            margin: 5px 0;
-        }
-
         .content .sign-up-body .alter {
             top: 4px;
             left: 300px;
@@ -127,6 +123,10 @@
         .content .sign-up-body .protocol a {
             color: #337ab7;
             text-decoration: underline;
+        }
+
+        .content .sign-up-body .table-space {
+            margin: 5px 0;
         }
 
         .content .sign-up-body .verify-code {
