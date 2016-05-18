@@ -190,11 +190,11 @@
                         <div id="progress-bar" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
                     </div>
                     <div class="progress-bar-dot">
-                        <div class="progress fine">
-                            <div id="dot1" class="progress-bar progress-bar-success progress-bar-striped dot1 active" role="progressbar" style="width: 0;"></div>
+                        <div class="progress fine dot1">
+                            <div id="dot1" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
                         </div>
-                        <div class="progress fine">
-                            <div id="dot2" class="progress-bar progress-bar-success progress-bar-striped dot2 active" role="progressbar" style="width: 0;"></div>
+                        <div class="progress fine dot2">
+                            <div id="dot2" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
                         </div>
                     </div>
                 </div>
