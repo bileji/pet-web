@@ -59,24 +59,26 @@ app.controller('sign_up', ['$scope', function ($scope) {
             link: function (scope, element, attrs, ngModelController) {
                 attrs.cache_nickname = "";
                 ngModelController.$parsers.push(function (viewValue) {
-                        if (nickname.test(viewValue) && (viewValue.length >= 4 && viewValue.length <= 16)) {
+                        if (nickname.test(viewValue) && viewValue.length >= 4 && viewValue.length <= 16) {
                             !attrs.cache_nickname && progress_bar_plus(10);
                             save_nickname(attrs, viewValue);
-                            ngModelController.$setValidity("nickname", true);
-                            ngModelController.$setValidity("less", false);
-                            ngModelController.$setValidity("more", false);
                         } else {
                             attrs.cache_nickname && progress_bar_reduce(10);
                             clear_nickname(attrs);
+                        }
+
+                        if (nickname.test(viewValue)) {
+                            ngModelController.$setValidity("nickname", true);
+                        } else {
                             if (viewValue.length < 4) {
                                 ngModelController.$setValidity("less", false);
                                 ngModelController.$setValidity("more", true);
-                            }
-                            if (viewValue.length > 16) {
+                            } else if (viewValue.length > 16) {
                                 ngModelController.$setValidity("more", false);
                                 ngModelController.$setValidity("less", true);
+                            } else {
+                                ngModelController.$setValidity("nickname", false);
                             }
-                            ngModelController.$setValidity("nickname", false);
                             return viewValue;
                         }
                     }
