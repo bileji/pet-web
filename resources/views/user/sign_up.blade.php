@@ -259,7 +259,7 @@
                     </div>
 
                     <div class="table-space">
-                        <input type="text" class="form-control" placeholder="设置密码(6-16位)" required>
+                        <input type="password" class="form-control" placeholder="设置密码(6-16位)" required>
                     </div>
                     <div class="alter alter-second">
                         <span ng-show="">
@@ -268,7 +268,7 @@
                     </div>
 
                     <div class="table-space">
-                        <input type="text" class="form-control" placeholder="确认密码" required>
+                        <input type="password" class="form-control" placeholder="确认密码" required>
                     </div>
                     <div class="alter alter-third">
                         <span ng-show="">
