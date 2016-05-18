@@ -77,7 +77,7 @@
 
         .content .sign-up-header .progress-bar-dot .dot {
             top: -16px;
-            left: 33%;
+            left: 30%;
             width: 14px;
             height: 14px;
             border-radius: 7px;
@@ -288,7 +288,7 @@
             captchaObj.onSuccess(function () {
                 if (ID.attr("id-wrong") !== "true") {
                     check_phone.html(check_phone_html);
-                    progress_bar.css({"width": "32%"});
+                    progress_bar.css({"width": "31%"});
                 }
             });
 
@@ -312,7 +312,7 @@
                     },
                     success: function (object) {
                         if (object.status == 0) {
-                            dot.animate({"left": "66.6%"}, 500);
+                            dot.animate({"left": "70%"}, 1500);
                             step1.addClass("hide");
                             step2.removeClass("hide");
                         } else {
