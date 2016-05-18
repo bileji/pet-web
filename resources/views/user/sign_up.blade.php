@@ -79,6 +79,10 @@
             margin: 30px auto;
         }
 
+        .content .sign-up-body .table-space {
+            margin: 5px 0;
+        }
+
         .content .sign-up-body .alter {
             top: 4px;
             left: 300px;
@@ -124,6 +128,15 @@
             color: #337ab7;
             text-decoration: underline;
         }
+
+        .content .sign-up-body .verify-code {
+            width: 210px;
+            float: left;
+        }
+
+        .content .sign-up-body .verify-btn {
+            float: right;
+        }
     </style>
 @stop
 
@@ -168,6 +181,7 @@
                             <span class="glyphicon glyphicon-remove x"></span> 请填写正确的手机号或邮箱
                         </span>
                     </div>
+
                     <div class="verify">
                         <div id="div_geetest_lib">
                             <div id="captcha" class="captcha">
@@ -192,33 +206,48 @@
                         </p>
                     </div>
                 </form>
-                <form name="step2" id="step2" class="relative hide">
-                    <div>
-                        <input type="text" class="form-control green-border" placeholder="您的昵称" required>
+                <form name="step2" id="step2" class="relative">
+                    <div class="table-space">
+                        <input type="text" class="form-control" placeholder="您的昵称" required>
                     </div>
                     <div class="alter">
                         <span ng-show="">
-                            <span class="glyphicon glyphicon-remove x"></span> 请填写正确的手机号或邮箱
+                            <span class="glyphicon glyphicon-remove x"></span> 昵称格式错误
                         </span>
                     </div>
-                    <div>
-                        <input type="text" class="form-control" placeholder="验证码" required>
-                        <button id="re-send" type="button" class="btn btn-success">重新发送</button>
+
+                    <div class="table-space">
+                        <input type="text" class="form-control" placeholder="设置密码" required>
                     </div>
                     <div class="alter">
                         <span ng-show="">
-                            <span class="glyphicon glyphicon-remove x"></span> 请填写正确的手机号或邮箱
+                            <span class="glyphicon glyphicon-remove x"></span> 密码格式错误
                         </span>
+                    </div>
+
+                    <div class="table-space">
+                        <input type="text" class="form-control  green-border verify-code" placeholder="验证码" required>
+                        <button id="re-send" type="button" class="btn btn-success verify-btn">重新发送</button>
+                    </div>
+                    <div class="alter">
+                        <span ng-show="">
+                            <span class="glyphicon glyphicon-remove x"></span> 验证码格式错误
+                        </span>
+                    </div>
+
+                    <div class="table-space">
+                        <button id="user-sign-up" type="button" class="btn btn-success more-long">下一步</button>
                     </div>
                 </form>
             </div>
-
         </div>
     </div>
 
     <script>
         var handler = function (captchaObj) {
             var step1 = $("#step1"), step2 = $("#step2"), step3 = $("#step3"), ID = $("#ID"), captcha = $("#captcha").children("div"), check_phone = $('#check-phone'), progress_bar = $("#progress-bar");
+
+            var check_phone_html = check_phone.html();
 
             var shake = function (object) {
                 var times = 4, range = 3;
@@ -237,7 +266,7 @@
             // 验证成功
             captchaObj.onSuccess(function () {
                 if (ID.attr("id-wrong") !== "true") {
-                    check_phone.html("下一步");
+                    check_phone.html(check_phone_html);
                     progress_bar.css({"width": "30%"});
                 }
             });
