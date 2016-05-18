@@ -63,6 +63,8 @@ app.controller('sign_up', ['$scope', function ($scope) {
                             !attrs.cache_nickname && progress_bar_plus(10);
                             save_nickname(attrs, viewValue);
                             ngModelController.$setValidity("nickname", true);
+                            ngModelController.$setValidity("less", false);
+                            ngModelController.$setValidity("more", false);
                         } else {
                             attrs.cache_nickname && progress_bar_reduce(10);
                             clear_nickname(attrs);
