@@ -244,10 +244,10 @@
 
                 <form name="step2" id="step2" class="relative hide">
                     <div class="table-space">
-                        <input type="text" class="form-control" placeholder="您的昵称(4-16位)" name="nickname" nickname="nickname" ng-model="user.nickname" nickname-wrong="@{{ step2.nickname.$error.nickname || step2.nickname.$error.required }}" required>
+                        <input type="text" class="form-control" placeholder="您的昵称(4-16位)" name="nickname" nickname="nickname" ng-model="user.nickname" nickname-wrong="@{{ step2.nickname.$error.wrong || step2.nickname.$error.required }}" required>
                     </div>
                     <div class="alter alter-first">
-                        <span ng-show="!step2.nickname.$error.required && step2.nickname.$error.nickname" class="hide">
+                        <span ng-show="!step2.nickname.$error.required && step2.nickname.$error.wrong" class="hide">
                             <span class="glyphicon glyphicon-remove x"></span> 支持字母、数字、汉字、"-"、"_"的组合
                         </span>
                         <span ng-show="!step2.nickname.$error.required && step2.nickname.$error.less" class="hide">
@@ -259,11 +259,17 @@
                     </div>
 
                     <div class="table-space">
-                        <input type="password" class="form-control" placeholder="设置密码(6-16位)" required>
+                        <input type="password" class="form-control" placeholder="设置密码(6-16位)" name="password" password="password" ng-model="user.password" required>
                     </div>
                     <div class="alter alter-second">
-                        <span ng-show="">
-                            <span class="glyphicon glyphicon-remove x"></span> 密码格式错误
+                        <span ng-show="!step2.password.$error.required && step2.password.$error.less">
+                            <span class="glyphicon glyphicon-remove x"></span> 你的密码必须至少包含六个字符
+                        </span>
+                        <span ng-show="!step2.password.$error.required && step2.password.$error.more">
+                            <span class="glyphicon glyphicon-remove x"></span> 密码位数过长
+                        </span>
+                        <span ng-show="!step2.password.$error.required && step2.password.$error.easy">
+                            <span class="glyphicon glyphicon-remove x"></span> 密码太过简单
                         </span>
                     </div>
 
