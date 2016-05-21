@@ -276,7 +276,7 @@
 
                     <div class="table-space">
                         <input type="text" class="form-control verify-code" placeholder="短信/邮件验证码" required>
-                        <button id="re-send" type="button" class="btn btn-success verify-btn" ng-click="send_verify()">发送验证码</button>
+                        <button id="resend" type="button" class="btn btn-success verify-btn" ng-click="send_verify()">发送验证码</button>
                     </div>
                     <div class="alter alter-fourth">
                         <span ng-show="">

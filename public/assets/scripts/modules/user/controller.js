@@ -5,7 +5,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
 
     $scope.send_verify = function () {
         var count_down = 60;
-        var button = $("#re-send");
+        var button = $("#resend");
 
         var able = function () {
             button.removeAttr("disabled").html("发送验证码");
