@@ -316,6 +316,8 @@
 
             // 验证成功
             captchaObj.onSuccess(function () {
+                console.log(ID.attr("wrong"));
+                console.log(ID.attr("wrong") != "true" || ID.attr("wrong") != true);
                 if (ID.attr("wrong") != "true" || ID.attr("wrong") != true) {
                     check_phone.html(check_phone_html);
                     progress_bar.css({"width": "31%"});
