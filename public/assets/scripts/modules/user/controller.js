@@ -3,15 +3,16 @@ var app = angular.module('user', []);
 app.controller('sign_up', ['$scope', function ($scope) {
     $scope.user = {};
 
-    $scope.send_verify = function (object) {
+    $scope.send_verify = function () {
         var count_down = 60;
         setInterval(function () {
             if (count_down <= 0) {
-                object.value = "发送验证码";
-                object.removeAttribute("disabled");
+                this.item.value = "发送验证码";
+                this.item.removeAttribute("disabled");
             } else {
-                object.value = count_down + "s重新发送";
-                object.setAttribute("disabled", true);
+                console.log(this.item);
+                this.item.value = count_down + "s重新发送";
+                this.item.setAttribute("disabled", true);
                 count_down--;
             }
         }, 1000);
@@ -37,7 +38,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
                 return viewValue;
             });
         }
-    }
+    };
 }).directive('nickname', function () {
     var progress_bar = $("#progress-bar");
 
