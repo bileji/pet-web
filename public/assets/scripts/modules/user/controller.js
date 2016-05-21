@@ -9,11 +9,10 @@ app.controller('sign_up', ['$scope', function ($scope) {
         setInterval(function () {
             if (count_down <= 0) {
                 button.value = "发送验证码";
-                button.removeAttribute("disabled");
+                button.removeAttr("disabled");
             } else {
-                console.log(this);
                 button.value = count_down + "s重新发送";
-                button.setAttribute("disabled", "true");
+                button.attr("disabled", "true");
                 count_down--;
             }
         }, 1000);
