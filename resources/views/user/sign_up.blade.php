@@ -310,11 +310,9 @@
                 }
             };
 
-            captcha.css({"position": "absolute", "z-index": -9999});
+            captcha.css({"position": "absolute", "z-index": -9999}).first().fadeOut(200);
 
             captchaObj.appendTo("#captcha");
-
-            captcha.first().fadeOut(200);
 
             // 验证成功
             captchaObj.onSuccess(function () {
