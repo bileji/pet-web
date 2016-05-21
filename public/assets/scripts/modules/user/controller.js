@@ -3,18 +3,18 @@ var app = angular.module('user', []);
 app.controller('sign_up', ['$scope', function ($scope) {
     $scope.user = {};
 
-    $scope.send_verify = function () {
-        console.log(this);
+    $scope.send_verify = function (object) {
+        console.log(object);
         console.log("--");
         var count_down = 60;
         setInterval(function () {
             if (count_down <= 0) {
                 this.value = "发送验证码";
-                this.removeAttribute("disabled");
+                //this.removeAttribute("disabled");
             } else {
                 console.log(this);
                 this.value = count_down + "s重新发送";
-                this.setAttribute("disabled", true);
+                //this.setAttribute("disabled", true);
                 count_down--;
             }
         }, 1000);
