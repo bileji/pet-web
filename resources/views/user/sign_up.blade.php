@@ -156,11 +156,12 @@
         }
 
         .content .sign-up-body .verify-code {
-            width: 210px;
+            width: 195px;
             float: left;
         }
 
         .content .sign-up-body .verify-btn {
+            width: 105px;
             float: right;
         }
     </style>

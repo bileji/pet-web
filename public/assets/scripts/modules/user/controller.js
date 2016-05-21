@@ -6,17 +6,25 @@ app.controller('sign_up', ['$scope', function ($scope) {
     $scope.send_verify = function () {
         var count_down = 60;
         var button = $("#re-send");
-        setInterval(function () {
+
+        var able = function () {
+            button.removeAttr("disabled").html("发送验证码");
+        };
+
+        var disable = function (time) {
+            button.attr("disabled", "true").html(time + "s重新发送");
+        };
+
+        var interval = setInterval(function () {
             if (count_down <= 0) {
-                button.html("发送验证码");
-                button.removeAttr("disabled");
+                able();
                 return false;
             } else {
-                button.html(count_down + "s重新发送");
-                button.attr("disabled", "true");
-                count_down--;
+                disable(count_down--);
             }
         }, 1000);
+
+        clearInterval(interval);
     };
 }]).directive('username', function () {
     var progress_bar = $("#progress-bar");
