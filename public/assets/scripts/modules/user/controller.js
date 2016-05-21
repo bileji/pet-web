@@ -8,10 +8,11 @@ app.controller('sign_up', ['$scope', function ($scope) {
         var button = $("#re-send");
         setInterval(function () {
             if (count_down <= 0) {
-                button.value = "发送验证码";
+                button.html("发送验证码");
                 button.removeAttr("disabled");
+                return false;
             } else {
-                button.value = count_down + "s重新发送";
+                button.html(count_down + "s重新发送");
                 button.attr("disabled", "true");
                 count_down--;
             }
