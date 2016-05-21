@@ -322,7 +322,7 @@
 
             check_phone.click(function () {
                 var validate = captchaObj.getValidate();
-                if (!validate || ID.attr("wrong") != "true") {
+                if (!validate || ID.attr("wrong") == "true") {
                     shake(check_phone);
                     return;
                 }
