@@ -210,7 +210,7 @@
             <div ng-controller="sign_up" class="sign-up-body">
                 <form name="step1" id="step1" class="relative">
                     <div>
-                        <input type="text" class="form-control" placeholder="手机号或邮箱" name="ID" username="ID" ng-model="user.ID" id="ID" id-wrong="@{{ step1.ID.$error.wrong || step1.ID.$error.required }}" required>
+                        <input type="text" class="form-control" placeholder="手机号或邮箱" name="ID" username="ID" ng-model="user.ID" id="ID" wrong="@{{ step1.ID.$error.wrong || step1.ID.$error.required }}" required>
                     </div>
                     <div class="alter alter-first">
                         <span ng-show="!step1.ID.$error.required && step1.ID.$error.wrong" class="hide">
@@ -303,8 +303,7 @@
 
             var shake = function (object) {
                 var times = 4, range = 3;
-                object.html("请完成验证");
-                object.css({"position": "relative"});
+                object.html("请完成验证").css({"position": "relative"});
                 for (var time = times; time >= 0 ; time--) {
                     object.animate({"left": time * range}, 30);
                     object.animate({"left": - time * range}, 30);
@@ -319,7 +318,8 @@
 
             // 验证成功
             captchaObj.onSuccess(function () {
-                if (ID.attr("id-wrong") !== "true") {
+                console.log(ID.attr("wrong"));
+                if (ID.attr("wrong") != "true") {
                     check_phone.html(check_phone_html);
                     progress_bar.css({"width": "31%"});
                 }
