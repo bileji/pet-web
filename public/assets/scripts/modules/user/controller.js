@@ -3,23 +3,22 @@ var app = angular.module('user', []);
 app.controller('sign_up', ['$scope', function ($scope) {
     $scope.user = {};
 
-    $scope.send_verify = function (object) {
-        console.log(object);
-        console.log("--");
+    $scope.send_verify = function () {
         var count_down = 60;
+        var button = $("re-send");
         setInterval(function () {
             if (count_down <= 0) {
-                this.value = "发送验证码";
-                //this.removeAttribute("disabled");
+                button.value = "发送验证码";
+                button.removeAttribute("disabled");
             } else {
                 console.log(this);
-                this.value = count_down + "s重新发送";
-                //this.setAttribute("disabled", true);
+                button.value = count_down + "s重新发送";
+                button.setAttribute("disabled", "true");
                 count_down--;
             }
         }, 1000);
     };
-}]).directive('phoneOrEmail', function () {
+}]).directive('username', function () {
     var progress_bar = $("#progress-bar");
 
     var email = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
@@ -32,10 +31,10 @@ app.controller('sign_up', ['$scope', function ($scope) {
             ngModelController.$parsers.push(function (viewValue) {
                 if (email.test(viewValue) || phone.test(viewValue)) {
                     progress_bar.css({"width": "20%"});
-                    ngModelController.$setValidity("wrongID", true);
+                    ngModelController.$setValidity("wrong", true);
                 } else {
                     progress_bar.css({"width": "0"});
-                    ngModelController.$setValidity("wrongID", false);
+                    ngModelController.$setValidity("wrong", false);
                 }
                 return viewValue;
             });

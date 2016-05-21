@@ -209,10 +209,10 @@
             <div ng-controller="sign_up" class="sign-up-body">
                 <form name="step1" id="step1" class="relative">
                     <div>
-                        <input type="text" class="form-control" placeholder="手机号或邮箱" name="ID" phone-or-email="ID" ng-model="user.ID" id="ID" id-wrong="@{{ step1.ID.$error.wrongID || step1.ID.$error.required }}" required>
+                        <input type="text" class="form-control" placeholder="手机号或邮箱" name="ID" username="ID" ng-model="user.ID" id="ID" id-wrong="@{{ step1.ID.$error.wrong || step1.ID.$error.required }}" required>
                     </div>
                     <div class="alter alter-first">
-                        <span ng-show="!step1.ID.$error.required && step1.ID.$error.wrongID" class="hide">
+                        <span ng-show="!step1.ID.$error.required && step1.ID.$error.wrong" class="hide">
                             <span class="glyphicon glyphicon-remove x"></span> 请填写正确的手机号或邮箱
                         </span>
                     </div>
@@ -275,7 +275,7 @@
 
                     <div class="table-space">
                         <input type="text" class="form-control verify-code" placeholder="短信/邮件验证码" required>
-                        <button id="re-send" type="button" class="btn btn-success verify-btn" ng-click="send_verify(this)">发送验证码</button>
+                        <button id="re-send" type="button" class="btn btn-success verify-btn" ng-click="send_verify()">发送验证码</button>
                     </div>
                     <div class="alter alter-fourth">
                         <span ng-show="">
