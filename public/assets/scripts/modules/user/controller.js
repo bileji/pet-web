@@ -96,7 +96,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
     var password = /^(?=.{6,16}$)(?![0-9]+$)[\w!@#$%^&*()-_+=]+$/;
 
     var clear_password = function (attrs) {
-        attrs.$set("cache_nickname", "");
+        attrs.$set("cache_password", "");
     };
 
     var save_password = function (attrs, nickname) {
@@ -117,14 +117,14 @@ app.controller('sign_up', ['$scope', function ($scope) {
         restrict: "A",
         require: "ngModel",
         link: function (scope, element, attrs, ngModelController) {
-            attrs.cache_nickname = "";
+            attrs.cache_password = "";
 
             ngModelController.$parsers.push(function (viewValue) {
                 if (password.test(viewValue) && viewValue.length >= 6 && viewValue.length <= 16) {
-                    !attrs.cache_nickname && progress_bar_plus(10);
+                    !attrs.cache_password && progress_bar_plus(10);
                     save_password(attrs, "cache");
                 } else {
-                    attrs.cache_nickname && progress_bar_reduce(10);
+                    attrs.cache_password && progress_bar_reduce(10);
                     clear_password(attrs);
                 }
 
