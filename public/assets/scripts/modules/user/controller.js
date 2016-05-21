@@ -18,13 +18,11 @@ app.controller('sign_up', ['$scope', function ($scope) {
         var interval = setInterval(function () {
             if (count_down <= 0) {
                 able();
-                return false;
+                clearInterval(interval);
             } else {
                 disable(count_down--);
             }
         }, 1000);
-
-        clearInterval(interval);
     };
 }]).directive('username', function () {
     var progress_bar = $("#progress-bar");
