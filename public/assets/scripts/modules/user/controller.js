@@ -105,7 +105,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
                 }
             );
         }
-    }
+    };
 }).directive('password', function () {
     var progress_bar = $("#progress-bar");
 

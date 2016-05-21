@@ -316,20 +316,13 @@
 
             // 验证成功
             captchaObj.onSuccess(function () {
-                console.log(typeof ID.attr("wrong"));
-                console.log(ID.attr("wrong") != "true" || ID.attr("wrong") != true);
-                if (ID.attr("wrong") != "true" || ID.attr("wrong") != true) {
-                    check_phone.html(check_phone_html);
-                    progress_bar.css({"width": "31%"});
-                } else {
-                    console.log(ID.attr("wrong"));
-                    return false;
-                }
+                check_phone.html(check_phone_html);
+                progress_bar.css({"width": "31%"});
             });
 
             check_phone.click(function () {
                 var validate = captchaObj.getValidate();
-                if (!validate) {
+                if (!validate || ID.attr("wrong") != "true") {
                     shake(check_phone);
                     return;
                 }
