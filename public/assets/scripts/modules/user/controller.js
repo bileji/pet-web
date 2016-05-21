@@ -3,11 +3,19 @@ var app = angular.module('user', []);
 app.controller('sign_up', ['$scope', function ($scope) {
     $scope.user = {};
 
-    $scope.validate = {
-        ID: {
-            format: ''
-        }
-    }
+    $scope.send_verify = function (object) {
+        var count_down = 60;
+        setInterval(function () {
+            if (count_down <= 0) {
+                object.value = "发送验证码";
+                object.removeAttribute("disabled");
+            } else {
+                object.value = count_down + "s重新发送";
+                object.setAttribute("disabled", true);
+                count_down--;
+            }
+        }, 1000);
+    };
 }]).directive('phoneOrEmail', function () {
     var progress_bar = $("#progress-bar");
 
