@@ -5,7 +5,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
 
     $scope.send_verify = function () {
         var count_down = 60;
-        var button = $("re-send");
+        var button = $("#re-send");
         setInterval(function () {
             if (count_down <= 0) {
                 button.value = "发送验证码";
