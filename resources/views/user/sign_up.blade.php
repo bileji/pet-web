@@ -184,6 +184,21 @@
             width: 100px;
             float: right;
         }
+
+        .content .sign-up-body .sign-up-success {
+            height: 250px;
+            line-height: 250px;
+        }
+
+        .content .sign-up-body .sign-up-success h2 {
+            color: black;
+            font-weight: 300;
+        }
+
+        .content .sign-up-body .sign-up-success h2 a {
+            color: #5cb85c;
+            text-decoration: underline;
+        }
     </style>
 @stop
 
@@ -316,7 +331,7 @@
                     </div>
                 </form>
                 <form name="step3" id="step3" class="relative">
-                    <div>
+                    <div class="sign-up-success">
                         <h2>
                             注册成功<a href="">enjoy it!</a>
                         </h2>
