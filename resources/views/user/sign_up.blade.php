@@ -315,6 +315,13 @@
                         <button id="user-sign-up" type="button" class="btn btn-success more-long" ng-click="sign_up()">下一步</button>
                     </div>
                 </form>
+                <form name="step3" id="step3" class="relative">
+                    <div>
+                        <h2>
+                            注册成功<a href="">enjoy it!</a>
+                        </h2>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
