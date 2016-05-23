@@ -78,6 +78,7 @@ var verify_handler = function (captcha) {
             },
             success: function (object) {
                 if (object.code == 0) {
+                    button.attr("captcha_token", object.data.captcha_token);
                     $("#dot").animate({"left": "70%"}, 1500);
                     step_show_one($("#step2"));
                 } else {
