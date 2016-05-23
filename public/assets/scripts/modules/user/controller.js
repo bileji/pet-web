@@ -12,7 +12,9 @@ var progress_plus = function (progress, percent) {
     var total_width = parseFloat(progress.parent().css("width"));
 
     var width = parseFloat(progress.attr("width")) + total_width * percent / 100;
-    progress.attr("width", width).css({"width": width});
+
+    progress.attr("width", width);
+    progress.css({"width": width});
 
     return true;
 };
@@ -22,7 +24,9 @@ var progress_reduce = function (progress, percent) {
 
     var width = parseFloat(progress.attr("width")) - total_width * percent / 100;
 
-    progress.attr("width", width).css({"width": width > 0 ? width : 0});
+    progress.attr("width", width);
+    progress.css({"width": width > 0 ? width : 0});
+
     return true;
 };
 
