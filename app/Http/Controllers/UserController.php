@@ -17,8 +17,7 @@ class UserController extends Controller
 {
     public function signUp()
     {
-        return Cache::get(Input::get("captcha_token"));
-        if (Cache::has(Input::get("captcha_token")) && Cache::get(Input::get("captcha_token")) == Input::get("phone")) {
+        if (Cache::has(Input::get("captcha_token")) && Cache::get(Input::get("captcha_token")) == Input::get("username")) {
             return UserService::signUp(Input::all());
         } else {
             return Response::out(Status::SIGN_UP_INFO_ILLEGALITY);
