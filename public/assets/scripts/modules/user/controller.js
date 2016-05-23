@@ -47,7 +47,7 @@ var verify_handler = function (captcha) {
         container.removeAttr("cache");
     });
 
-    captcha.refresh(function () {
+    captcha.onRefresh(function () {
         container.attr("cache") == true && progress_reduce(progress, percent);
         container.removeAttr("cache");
     });
