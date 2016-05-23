@@ -31,15 +31,15 @@ var button_shake = function (button, message) {
 };
 
 var verify_handler = function (captcha) {
-    var percent = 11, fade_out_time = 200, button = $("#check-phone"), container = $("#captcha"), html = button.html(), progress = $("#progress-bar");
+    var percent = 11, fade_out_time = 50, button = $("#check-phone"), container = $("#captcha"), html = button.html(), progress = $("#progress-bar");
 
-    container.children("div").css({"position": "absolute", "z-index": 1}).first().fadeOut(fade_out_time);
+    container.children("div").css({"position": "absolute", "z-index": -9999}).first().fadeOut(fade_out_time);
     captcha.appendTo("#captcha");
 
     captcha.onSuccess(function () {
         !$("#ID").attr("wrong") && button.html(html);
         !container.attr("cache") && progress_plus(progress, percent);
-        container.attr("cache", true);
+        container.attr("cache", "true");
     });
 
     captcha.onFail(function () {
