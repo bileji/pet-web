@@ -19,7 +19,14 @@ var progress_reduce = function (progress, percent) {
     progress.css({"width": width > 0 ? width : 0});
 };
 
-app.controller('sign_up', ['$scope', function ($scope) {
+app.controller('sign_up', ['$scope', '$http', function ($scope, $http) {
+    var url = "verify/captcha?rand=" + Math.round(Math.random() * 100);
+    console.log("start ajax:" + url);
+    $http.get(url).success(function (response) {
+
+    });
+    console.log("ajax end!!!");
+
     $scope.user = {};
 
     $scope.send_verify = function () {
@@ -43,8 +50,6 @@ app.controller('sign_up', ['$scope', function ($scope) {
             }
         }, 1000);
     };
-
-    console.log("hello shu chao");
 }]).directive('username', function () {
     var progress = $("#progress-bar");
 
@@ -72,9 +77,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
 }).directive('nickname', function () {
     var progress = $("#progress-bar");
 
-    var min = 4;
-    var max = 16;
-    var length = 10;
+    var min = 4, max = 16, length = 10;
 
     var nickname = /^[\-\w\u4e00-\u9fa5]+$/;
 
@@ -118,9 +121,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
 }).directive('password', function () {
     var progress = $("#progress-bar");
 
-    var min = 6;
-    var max = 16;
-    var length = 10;
+    var min = 6, max = 16, length = 10;
 
     var password = /^(?=.{6,16}$)(?![0-9]+$)[\w!@#$%^&*()-_+=]+$/;
 
