@@ -60,8 +60,8 @@ var verify_handler = function (captcha) {
 
     // 点击下一步step1
     button.click(function () {
-        var validate = captcha.getValidate();
-        if (!validate || $("#ID").attr("wrong") == "true") {
+        var ID = $("#ID"), validate = captcha.getValidate();
+        if (!validate || ID.attr("wrong") == "true") {
             button_shake(button, "请完成验证");
             return;
         }
@@ -71,6 +71,7 @@ var verify_handler = function (captcha) {
             dataType: "json",
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             data: {
+                id: ID.val(),
                 geetest_seccode: validate.geetest_seccode,
                 geetest_validate: validate.geetest_validate,
                 geetest_challenge: validate.geetest_challenge
