@@ -77,7 +77,7 @@ var verify_handler = function (captcha) {
                 geetest_challenge: validate.geetest_challenge
             },
             success: function (object) {
-                if (object.status == 0) {
+                if (object.code == 0) {
                     $("#dot").animate({"left": "70%"}, 1500);
                     step_show_one($("#step2"));
                 } else {
