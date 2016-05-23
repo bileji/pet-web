@@ -202,8 +202,7 @@
 
         footer {
             width: 100%;
-            height: 160px;
-            background-color: #f0ad4e;
+            height: 320px;
         }
     </style>
 @stop
