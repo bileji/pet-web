@@ -35,8 +35,9 @@ var verify_handler = function (captcha) {
     captcha.appendTo("#captcha");
 
     captcha.onSuccess(function () {
+        button.html(html);
         if ($("#ID").attr("wrong") != true) {
-            container.attr("cache") != true && progress_plus(progress, percent) && button.html(html);
+            container.attr("cache") != true && progress_plus(progress, percent);
             container.attr("cache", true);
         }
     });
