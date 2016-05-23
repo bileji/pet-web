@@ -11,9 +11,9 @@ var save_cache = function (attrs) {
 var progress_plus = function (progress, percent) {
     var total_width = parseFloat(progress.parent().css("width"));
 
-    var width = parseFloat(progress.attr("width")) + total_width * percent / 100;
+    var width = parseFloat(progress.attr("width") ? progress.attr("width") : 0) + total_width * percent / 100;
 console.log(width);
-    //progress.attr("width", width);
+    progress.attr("width", width);
     progress.css({"width": width});
 
     return true;
@@ -22,9 +22,9 @@ console.log(width);
 var progress_reduce = function (progress, percent) {
     var total_width = parseFloat(progress.parent().css("width"));
 
-    var width = parseFloat(progress.attr("width")) - total_width * percent / 100;
+    var width = parseFloat(progress.attr("width") ? progress.attr("width") : 0) - total_width * percent / 100;
 console.log(width);
-    //progress.attr("width", width);
+    progress.attr("width", width);
     progress.css({"width": width > 0 ? width : 0});
 
     return true;
