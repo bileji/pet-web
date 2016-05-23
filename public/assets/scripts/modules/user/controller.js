@@ -1,5 +1,13 @@
 var app = angular.module('user', []);
 
+var clear_cache = function (attrs) {
+    attrs.$set("cache", "");
+};
+
+var save_cache = function (attrs) {
+    attrs.$set("cache", true);
+};
+
 var progress_plus = function (progress, percent) {
     var total_width = parseFloat(progress.parent().css("width"));
     progress.css({"width": parseFloat(progress.css("width")) + total_width * percent / 100});
@@ -38,6 +46,8 @@ app.controller('sign_up', ['$scope', function ($scope) {
 }]).directive('username', function () {
     var progress = $("#progress-bar");
 
+    var length = 20;
+
     var email = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
     var phone = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
 
@@ -47,10 +57,10 @@ app.controller('sign_up', ['$scope', function ($scope) {
         link: function (scope, element, attrs, ngModelController) {
             ngModelController.$parsers.push(function (viewValue) {
                 if (email.test(viewValue) || phone.test(viewValue)) {
-                    progress_plus(progress, 20);
+                    progress_plus(progress, length);
                     ngModelController.$setValidity("wrong", true);
                 } else {
-                    progress_reduce(progress, 20);
+                    progress_reduce(progress, length);
                     ngModelController.$setValidity("wrong", false);
                 }
                 return viewValue;
@@ -60,35 +70,31 @@ app.controller('sign_up', ['$scope', function ($scope) {
 }).directive('nickname', function () {
     var progress = $("#progress-bar");
 
+    var min = 4;
+    var max = 16;
+    var length = 10;
+
     var nickname = /^[\-\w\u4e00-\u9fa5]+$/;
-
-    var clear_nickname = function (attrs) {
-        attrs.$set("cache_nickname", "");
-    };
-
-    var save_nickname = function (attrs, nickname) {
-        attrs.$set("cache_nickname", nickname);
-    };
 
     return {
         restrict: "A",
         require: "ngModel",
         link: function (scope, element, attrs, ngModelController) {
-            attrs.cache_nickname = "";
+            attrs.cache = "";
             ngModelController.$parsers.push(function (viewValue) {
-                    if (nickname.test(viewValue) && viewValue.length >= 4 && viewValue.length <= 16) {
-                        !attrs.cache_nickname && progress_plus(progress, 10);
-                        save_nickname(attrs, viewValue);
+                    if (nickname.test(viewValue) && viewValue.length >= min && viewValue.length <= max) {
+                        !attrs.cache && progress_plus(progress, length);
+                        save_cache(attrs);
                     } else {
-                        attrs.cache_nickname && progress_reduce(progress, 10);
-                        clear_nickname(attrs);
+                        attrs.cache && progress_reduce(progress, length);
+                        clear_cache(attrs);
                     }
 
-                    if (viewValue.length < 4) {
+                    if (viewValue.length < min) {
                         ngModelController.$setValidity("less", false);
                         ngModelController.$setValidity("more", true);
                         ngModelController.$setValidity("wrong", true);
-                    } else if (viewValue.length > 16) {
+                    } else if (viewValue.length > max) {
                         ngModelController.$setValidity("more", false);
                         ngModelController.$setValidity("less", true);
                         ngModelController.$setValidity("wrong", true);
@@ -110,36 +116,32 @@ app.controller('sign_up', ['$scope', function ($scope) {
 }).directive('password', function () {
     var progress = $("#progress-bar");
 
+    var min = 6;
+    var max = 16;
+    var length = 10;
+
     var password = /^(?=.{6,16}$)(?![0-9]+$)[\w!@#$%^&*()-_+=]+$/;
-
-    var clear_password = function (attrs) {
-        attrs.$set("cache_password", "");
-    };
-
-    var save_password = function (attrs, nickname) {
-        attrs.$set("cache_password", nickname);
-    };
 
     return {
         restrict: "A",
         require: "ngModel",
         link: function (scope, element, attrs, ngModelController) {
-            attrs.cache_password = "";
+            attrs.cache = "";
 
             ngModelController.$parsers.push(function (viewValue) {
-                if (password.test(viewValue) && viewValue.length >= 6 && viewValue.length <= 16) {
-                    !attrs.cache_password && progress_plus(progress, 10);
-                    save_password(attrs, "cache");
+                if (password.test(viewValue) && viewValue.length >= min && viewValue.length <= max) {
+                    !attrs.cache && progress_plus(progress, length);
+                    save_cache(attrs);
                 } else {
-                    attrs.cache_password && progress_reduce(progress, 10);
-                    clear_password(attrs);
+                    attrs.cache && progress_reduce(progress, length);
+                    clear_cache(attrs);
                 }
 
-                if (viewValue.length < 6) {
+                if (viewValue.length < min) {
                     ngModelController.$setValidity("less", false);
                     ngModelController.$setValidity("more", true);
                     ngModelController.$setValidity("easy", true);
-                } else if (viewValue.length > 16) {
+                } else if (viewValue.length > max) {
                     ngModelController.$setValidity("more", false);
                     ngModelController.$setValidity("less", true);
                     ngModelController.$setValidity("easy", true);
