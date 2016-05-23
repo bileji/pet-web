@@ -30,6 +30,11 @@ var button_shake = function (button, message) {
     }
 };
 
+var step_show_one = function (step) {
+    $(".sign-up-body").children().addClass("hide");
+    step.removeClass("hide");
+};
+
 var verify_handler = function (captcha) {
     var percent = 11, fade_out_time = 200, button = $("#check-phone"), container = $("#captcha"), html = button.html(), progress = $("#progress-bar");
 
@@ -73,7 +78,8 @@ var verify_handler = function (captcha) {
             success: function (object) {
                 if (object.status == 0) {
                     $("#dot").animate({"left": "70%"}, 1500);
-                    $("#step1").addClass("hide") && $("#step2").removeClass("hide");
+                    step_show_one($("#step2"));
+                    //$("#step1").addClass("hide") && $("#step2").removeClass("hide");
                 } else {
                     button_shake(button, "请刷新重试");
                 }
@@ -126,6 +132,8 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
         if (!(nickname.attr("cache") && password.attr("cache") && verify.attr("cache"))) {
             button_shake(sign_up, "请正确填写账号信息");
         }
+
+        step_show_one($("#step3"));
     }
 }]).directive('username', function () {
     var progress = $("#progress-bar");
