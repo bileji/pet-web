@@ -233,13 +233,13 @@
             <div class="sign-up-header">
                 <div class="progress-title">
                     <div>
-                        <a><span class="badge step">1</span> 验证手机号</a>
+                        <span><span class="badge step">1</span> 验证手机号</span>
                     </div>
                     <div>
-                        <a><span class="badge step">2</span> 填写账号信息</a>
+                        <span><span class="badge step">2</span> 填写账号信息</span>
                     </div>
                     <div>
-                        <a><span class="badge step">3</span> 注册成功</a>
+                        <span><span class="badge step">3</span> 注册成功</span>
                     </div>
                 </div>
                 <div>
