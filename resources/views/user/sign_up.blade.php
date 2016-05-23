@@ -275,11 +275,11 @@
                     </div>
 
                     <div class="table-space">
-                        <input type="text" class="form-control verify-code" placeholder="短信/邮件验证码" required>
+                        <input type="text" class="form-control verify-code" placeholder="短信/邮件验证码" name="verify" verify="verify" ng-model="user.verify" required>
                         <button id="resend" type="button" class="btn btn-success verify-btn" ng-click="send_verify()">发送验证码</button>
                     </div>
-                    <div class="alter alter-fourth">
-                        <span ng-show="">
+                    <div class="alter alter-third">
+                        <span ng-show="!step2.verify.$error.required && step2.verify.$error.wrong">
                             <span class="glyphicon glyphicon-remove x"></span> 验证码格式错误
                         </span>
                     </div>
