@@ -31,7 +31,7 @@ var button_shake = function (button, message) {
 };
 
 var verify_handler = function (captcha) {
-    var percent = 11, fade_out_time = 200, button = $("#check-phone"), container = $("#captcha"), html = button.html(), progress = $("#progress-bar");
+    var percent = 13, fade_out_time = 200, button = $("#check-phone"), container = $("#captcha"), html = button.html(), progress = $("#progress-bar");
 
     container.children("div").css({"position": "absolute"}).first().fadeOut(fade_out_time);
     captcha.appendTo("#captcha");
@@ -151,7 +151,7 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
 }).directive('nickname', function () {
     var progress = $("#progress-bar");
 
-    var min = 4, max = 16, length = 10;
+    var min = 4, max = 16, length = 13;
 
     var nickname = /^[\-\w\u4e00-\u9fa5]+$/;
 
