@@ -43,6 +43,8 @@ app.controller('sign_up', ['$scope', function ($scope) {
             }
         }, 1000);
     };
+
+    console.log("hello shu chao");
 }]).directive('username', function () {
     var progress = $("#progress-bar");
 
@@ -160,6 +162,9 @@ app.controller('sign_up', ['$scope', function ($scope) {
         }
     };
 }).directive("verify", function () {
+    var progress = $("#progress-bar");
+
+    var length = 10;
 
     var verify = /^\d{6}$/;
 
@@ -167,11 +172,17 @@ app.controller('sign_up', ['$scope', function ($scope) {
         restrict: "A",
         require: "ngModel",
         link: function (scope, element, attrs, ngModelController) {
+            attrs.cache = "";
+
             ngModelController.$parsers.push(function (viewValue) {
                 if (verify.test(viewValue)) {
                     ngModelController.$setValidity("wrong", true);
+                    !attrs.cache && progress_plus(progress, length);
+                    save_cache(attrs);
                 } else {
                     ngModelController.$setValidity("wrong", false);
+                    attrs.cache && progress_reduce(progress, length);
+                    clear_cache(attrs);
                 }
                 return viewValue;
             });
