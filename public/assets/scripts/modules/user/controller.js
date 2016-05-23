@@ -35,6 +35,7 @@ var verify_handler = function (captcha) {
     captcha.appendTo("#captcha");
 
     captcha.onSuccess(function () {
+        console.log($("#ID").attr("wrong"));
         if ($("#ID").attr("wrong") != true) {
             container.attr("cache") != true && progress_plus(progress, percent) && button.html(html);
             container.attr("cache", true);
