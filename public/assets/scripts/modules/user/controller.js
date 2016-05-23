@@ -119,7 +119,7 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
         var button = $("#resend");
 
         var able = function () {
-            button.removeAttr("disabled").html("发送验证码");
+            button.removeAttr("disabled").html("重发验证码");
         };
 
         var disable = function (time) {

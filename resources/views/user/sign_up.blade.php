@@ -323,7 +323,7 @@
 
                     <div class="table-space">
                         <input type="text" class="form-control verify-code" placeholder="短信/邮件验证码" id="verify" name="verify" verify="verify" ng-model="user.verify" required>
-                        <button id="resend" type="button" class="btn btn-success verify-btn" ng-click="send_verify()">发送验证码</button>
+                        <button id="resend" type="button" class="btn btn-success verify-btn" ng-click="send_verify()">重发验证码</button>
                     </div>
                     <div class="alter alter-third">
                         <span ng-show="!step2.verify.$error.required && step2.verify.$error.wrong">
