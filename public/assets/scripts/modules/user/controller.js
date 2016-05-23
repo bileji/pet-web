@@ -35,11 +35,9 @@ var verify_handler = function (captcha) {
     captcha.appendTo("#captcha");
 
     captcha.onSuccess(function () {
-        if ($("#ID").attr("wrong") != true) {
-            button.html(html);
-            container.attr("cache") != true && progress_plus(progress, percent);
-            container.attr("cache", true);
-        }
+        $("#ID").attr("wrong") != true && button.html(html);
+        container.attr("cache") != true && progress_plus(progress, percent);
+        container.attr("cache", true);
     });
 
     captcha.onFail(function () {
@@ -48,8 +46,6 @@ var verify_handler = function (captcha) {
     });
 
     captcha.onRefresh(function () {
-        console.log("refresh");
-        console.log(container.attr("cache") == true);
         container.attr("cache") == true && progress_reduce(progress, percent);
         container.removeAttr("cache");
     });
