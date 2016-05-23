@@ -129,12 +129,28 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
 
     // 点击下一步step2
     $scope.sign_up = function () {
-        var sign_up = $("#user-sign-up"), nickname = $("#nickname"), password = $("#password"), verify = $("#verify");
+        var sign_up = $("#user-sign-up"), ID = $("#ID"), nickname = $("#nickname"), password = $("#password"), verify = $("#verify"), step1_button = $("#check-phone");
 
         if (nickname.attr("cache") && password.attr("cache") && verify.attr("cache")) {
-            $("#dot").css({"display": "none"});
-            step_show_one($("#step3"));
-            progress_plus($("#progress-bar"), 40);
+
+            var user = {
+                username: ID.val(),
+                verify: verify.val(),
+                nickname: nickname.val(),
+                password: password.val(),
+                captcha_token: step1_button.attr("captcha_token")
+            };
+
+            $http.post("sign_up", user).success(function (response) {
+                if (response.code == 0) {
+                    $("#dot").css({"display": "none"});
+                    step_show_one($("#step3"));
+                    progress_plus($("#progress-bar"), 40);
+                } else {
+                    button_shake(sign_up, "网络错误，请刷新重试");
+                }
+            });
+
             return true;
         }
         button_shake(sign_up, "请正确填写账号信息");

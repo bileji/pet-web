@@ -7,13 +7,16 @@
  */
 namespace App\Http\Controllers;
 
+use App\Http\Responses\Status;
 use App\Http\Services\UserService;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Request;
 
 class UserController extends Controller
 {
     public function signUp()
     {
-        return UserService::signUp(Request::all());
+        return Response::out(Status::SUCCESS, Request::all());
+//        return UserService::signUp(Request::all());
     }
 }

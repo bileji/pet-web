@@ -25,7 +25,7 @@ Route::group(['prefix' => 'user'], function () {
     });
 
     # API
-    Route::post('signUp', 'UserController@signUp');
+    Route::post('sign_up', 'UserController@signUp');
 });
 
 Route::group(['prefix' => 'qiniu'], function () {
