@@ -272,7 +272,7 @@
 
                 <form name="step2" id="step2" class="relative hide">
                     <div class="table-space">
-                        <input type="text" class="form-control" placeholder="您的昵称(4-16位)" name="nickname" nickname="nickname" ng-model="user.nickname" nickname-wrong="@{{ step2.nickname.$error.wrong || step2.nickname.$error.required }}" required>
+                        <input type="text" class="form-control" placeholder="您的昵称(4-16位)" id="nickname" name="nickname" nickname="nickname" ng-model="user.nickname" nickname-wrong="@{{ step2.nickname.$error.wrong || step2.nickname.$error.required }}" required>
                     </div>
                     <div class="alter alter-first">
                         <span ng-show="!step2.nickname.$error.required && step2.nickname.$error.wrong" class="hide">
@@ -287,7 +287,7 @@
                     </div>
 
                     <div class="table-space">
-                        <input type="password" class="form-control" placeholder="设置密码(6-16位)" name="password" password="password" ng-model="user.password" required>
+                        <input type="password" class="form-control" placeholder="设置密码(6-16位)" id="password" name="password" password="password" ng-model="user.password" required>
                     </div>
                     <div class="alter alter-second">
                         <span ng-show="!step2.password.$error.required && step2.password.$error.less">
@@ -302,7 +302,7 @@
                     </div>
 
                     <div class="table-space">
-                        <input type="text" class="form-control verify-code" placeholder="短信/邮件验证码" name="verify" verify="verify" ng-model="user.verify" required>
+                        <input type="text" class="form-control verify-code" placeholder="短信/邮件验证码" id="verify" name="verify" verify="verify" ng-model="user.verify" required>
                         <button id="resend" type="button" class="btn btn-success verify-btn" ng-click="send_verify()">发送验证码</button>
                     </div>
                     <div class="alter alter-third">

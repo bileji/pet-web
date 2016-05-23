@@ -53,7 +53,7 @@ var verify_handler = function (captcha) {
         container.removeAttr("cache");
     });
 
-    // 点击下一步
+    // 点击下一步step1
     button.click(function () {
         var validate = captcha.getValidate();
         if (!validate || $("#ID").attr("wrong") == "true") {
@@ -97,9 +97,7 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
         }, verify_handler);
     });
 
-    //
-    $scope.user = {};
-
+    // 点击事件
     $scope.send_verify = function () {
         var count_down = 60;
         var button = $("#resend");
@@ -121,6 +119,14 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
             }
         }, 1000);
     };
+
+    $scope.sign_up = function () {
+        var sign_up = $("#user-sign-up"), nickname = $("#nickname"), password = $("#password"), verify = $("#verify");
+
+        if (!(nickname.attr("cache") && password.attr("cache") && verify.attr("cache"))) {
+            button_shake(sign_up, "请正确填写账号信息");
+        }
+    }
 }]).directive('username', function () {
     var progress = $("#progress-bar");
 
