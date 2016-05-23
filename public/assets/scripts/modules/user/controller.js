@@ -281,11 +281,11 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
         link: function (scope, element, attrs, ngModelController) {
             ngModelController.$parsers.push(function (viewValue) {
                 if (verify.test(viewValue)) {
-                    ngModelController.$setValidity("wrong", true);
                     !attrs.cache && progress_plus(progress, length) && save_cache(attrs);
+                    ngModelController.$setValidity("wrong", true);
                 } else {
-                    ngModelController.$setValidity("wrong", false);
                     attrs.cache && progress_reduce(progress, length) && clear_cache(attrs);
+                    ngModelController.$setValidity("wrong", false);
                 }
                 return viewValue;
             });
