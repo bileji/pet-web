@@ -24,9 +24,9 @@ var progress_reduce = function (progress, percent) {
 var button_shake = function (button, message) {
     var times = 4, range = 3, animate_time = 30;
     button.html(message).css({"position": "relative"});
-    for (var time = times; time >= 0 ; time--) {
+    for (var time = times; time >= 0; time--) {
         button.animate({"left": time * range}, animate_time);
-        button.animate({"left": - time * range}, animate_time);
+        button.animate({"left": -time * range}, animate_time);
     }
 };
 
@@ -79,7 +79,6 @@ var verify_handler = function (captcha) {
                 if (object.status == 0) {
                     $("#dot").animate({"left": "70%"}, 1500);
                     step_show_one($("#step2"));
-                    //$("#step1").addClass("hide") && $("#step2").removeClass("hide");
                 } else {
                     button_shake(button, "请刷新重试");
                 }
@@ -126,14 +125,18 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
         }, 1000);
     };
 
+    // 点击下一步step2
     $scope.sign_up = function () {
         var sign_up = $("#user-sign-up"), nickname = $("#nickname"), password = $("#password"), verify = $("#verify");
 
-        if (!(nickname.attr("cache") && password.attr("cache") && verify.attr("cache"))) {
-            button_shake(sign_up, "请正确填写账号信息");
+        if (nickname.attr("cache") && password.attr("cache") && verify.attr("cache")) {
+            $("#dot").css({"display": "none"});
+            step_show_one($("#step3"));
+            progress_plus($("#progress-bar"), 30);
+            return true;
         }
-
-        step_show_one($("#step3"));
+        button_shake(sign_up, "请正确填写账号信息");
+        return false;
     }
 }]).directive('username', function () {
     var progress = $("#progress-bar");
