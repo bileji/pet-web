@@ -29,21 +29,20 @@ var button_shake = function (button) {
 };
 
 var verify_handler = function (captcha) {
-    var percent = 11, button = $('#check-phone'), container = $("#captcha"), html = button.html(), progress = $("#progress_bar");
+    var percent = 11, fade_out_time = 200, button = $('#check-phone'), container = $("#captcha").children("div"), html = button.html(), progress = $("#progress_bar");
 
-    container.css({"position": "absolute", "z-index": -9999}).first().fadeOut(200);
+    container.css({"position": "absolute", "z-index": -9999}).first().fadeOut(fade_out_time);
     captcha.appendTo("#captcha");
 
     captcha.onSuccess(function () {
-        button.html(html);
         if ($("#ID").attr("wrong") != true) {
-            captcha.attr("cache") != true && progress_plus(progress, percent);
+            captcha.attr("cache") != true && progress_plus(progress, percent) && button.html(html);
             captcha.attr("cache", true);
         }
     });
 
     captcha.onFail(function () {
-        progress_reduce(progress, percent);
+        captcha.attr("cache") == true && progress_reduce(progress, percent);
         captcha.removeAttr("cache");
     });
 };
