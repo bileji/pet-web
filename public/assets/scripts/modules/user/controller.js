@@ -1,5 +1,15 @@
 var app = angular.module('user', []);
 
+var progress_bar_plus = function (progress, percent) {
+    var total_width = parseFloat(progress.parent().css("width"));
+    progress.css({"width": parseFloat(progress.css("width")) + total_width * percent / 100});
+};
+
+var progress_bar_reduce = function (progress, percent) {
+    var total_width = parseFloat(progress.parent().css("width"));
+    progress.css({"width": parseFloat(progress.css("width")) - total_width * percent / 100});
+};
+
 app.controller('sign_up', ['$scope', function ($scope) {
     $scope.user = {};
 
@@ -59,16 +69,6 @@ app.controller('sign_up', ['$scope', function ($scope) {
         attrs.$set("cache_nickname", nickname);
     };
 
-    var progress_bar_plus = function (percent) {
-        var total_width = parseFloat(progress_bar.parent().css("width"));
-        progress_bar.css({"width": parseFloat(progress_bar.css("width")) + total_width * percent / 100});
-    };
-
-    var progress_bar_reduce = function (percent) {
-        var total_width = parseFloat(progress_bar.parent().css("width"));
-        progress_bar.css({"width": parseFloat(progress_bar.css("width")) - total_width * percent / 100});
-    };
-
     return {
         restrict: "A",
         require: "ngModel",
@@ -76,10 +76,10 @@ app.controller('sign_up', ['$scope', function ($scope) {
             attrs.cache_nickname = "";
             ngModelController.$parsers.push(function (viewValue) {
                     if (nickname.test(viewValue) && viewValue.length >= 4 && viewValue.length <= 16) {
-                        !attrs.cache_nickname && progress_bar_plus(10);
+                        !attrs.cache_nickname && progress_bar_plus(progress_bar, 10);
                         save_nickname(attrs, viewValue);
                     } else {
-                        attrs.cache_nickname && progress_bar_reduce(10);
+                        attrs.cache_nickname && progress_bar_reduce(progress_bar, 10);
                         clear_nickname(attrs);
                     }
 
