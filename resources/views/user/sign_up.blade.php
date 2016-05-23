@@ -199,6 +199,12 @@
             color: #5cb85c;
             text-decoration: underline;
         }
+
+        footer {
+            width: 100%;
+            height: 200px;
+            background-color: #f0ad4e;
+        }
     </style>
 @stop
 
@@ -340,4 +346,9 @@
             </div>
         </div>
     </div>
+    <footer>
+        <div>
+
+        </div>
+    </footer>
 @stop
