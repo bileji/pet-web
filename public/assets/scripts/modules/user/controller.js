@@ -35,18 +35,18 @@ var verify_handler = function (captcha) {
     captcha.appendTo("#captcha");
 
     captcha.onSuccess(function () {
-        $("#ID").attr("wrong") != true && button.html(html);
-        container.attr("cache") != true && progress_plus(progress, percent);
+        $("#ID").attr("wrong") != "true" && button.html(html);
+        container.attr("cache") != "true" && progress_plus(progress, percent);
         container.attr("cache", true);
     });
 
     captcha.onFail(function () {
-        container.attr("cache") == true && progress_reduce(progress, percent);
+        container.attr("cache") == "true" && progress_reduce(progress, percent);
         container.removeAttr("cache");
     });
 
     captcha.onRefresh(function () {
-        container.attr("cache") == true && progress_reduce(progress, percent);
+        container.attr("cache") == "true" && progress_reduce(progress, percent);
         container.removeAttr("cache");
     });
 
