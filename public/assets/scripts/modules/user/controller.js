@@ -54,7 +54,7 @@ var verify_handler = function (captcha) {
     // 点击下一步
     button.click(function () {
         var validate = captcha.getValidate();
-        if (!validate || ID.attr("wrong") == "true") {
+        if (!validate || $("#ID").attr("wrong") == "true") {
             button_shake(button, "请完成验证");
             return;
         }
