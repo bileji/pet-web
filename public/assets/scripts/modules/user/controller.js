@@ -48,6 +48,7 @@ var verify_handler = function (captcha) {
     });
 
     captcha.onRefresh(function () {
+        console.log("refresh");
         container.attr("cache") == true && progress_reduce(progress, percent);
         container.removeAttr("cache");
     });
