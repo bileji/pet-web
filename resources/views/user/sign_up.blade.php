@@ -312,7 +312,7 @@
                     </div>
 
                     <div class="table-space">
-                        <button id="user-sign-up" type="button" class="btn btn-success more-long">下一步</button>
+                        <button id="user-sign-up" type="button" class="btn btn-success more-long" ng-click="sign_up()">下一步</button>
                     </div>
                 </form>
             </div>
