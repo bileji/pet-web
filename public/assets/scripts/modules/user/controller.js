@@ -132,7 +132,7 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
         if (nickname.attr("cache") && password.attr("cache") && verify.attr("cache")) {
             $("#dot").css({"display": "none"});
             step_show_one($("#step3"));
-            progress_plus($("#progress-bar"), 30);
+            progress_plus($("#progress-bar"), 40);
             return true;
         }
         button_shake(sign_up, "请正确填写账号信息");
