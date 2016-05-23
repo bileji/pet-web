@@ -151,7 +151,7 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
 }).directive('nickname', function () {
     var progress = $("#progress-bar");
 
-    var min = 4, max = 16, length = 13;
+    var min = 4, max = 16, length = 16;
 
     var nickname = /^[\-\w\u4e00-\u9fa5]+$/;
 
@@ -194,7 +194,7 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
 }).directive('password', function () {
     var progress = $("#progress-bar");
 
-    var min = 6, max = 16, length = 10;
+    var min = 6, max = 16, length = 12;
 
     var password = /^(?=.{6,16}$)(?![0-9]+$)[\w!@#$%^&*()-_+=]+$/;
 
@@ -236,7 +236,7 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
 }).directive("verify", function () {
     var progress = $("#progress-bar");
 
-    var length = 10;
+    var length = 12;
 
     var verify = /^\d{6}$/;
 
