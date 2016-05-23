@@ -137,7 +137,7 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
                     !attrs.cache && progress_plus(progress, length);
                     save_cache(attrs);
                     ngModelController.$setValidity("wrong", true);
-                    $("#captcha").attr("cache") && $("#check_phone").html("下一步");
+                    $("#captcha").attr("cache") && $("#check-phone").html("下一步");
                 } else {
                     attrs.cache && progress_reduce(progress, length);
                     clear_cache(attrs);
