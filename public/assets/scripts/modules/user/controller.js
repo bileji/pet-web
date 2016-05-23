@@ -45,6 +45,10 @@ var verify_handler = function (captcha) {
         container.attr("cache") == true && progress_reduce(progress, percent);
         container.removeAttr("cache");
     });
+
+    captcha.refresh(function () {
+        container.removeAttr("cache");
+    });
 };
 
 app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $http, $location) {
@@ -100,10 +104,12 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
         link: function (scope, element, attrs, ngModelController) {
             ngModelController.$parsers.push(function (viewValue) {
                 if (email.test(viewValue) || phone.test(viewValue)) {
-                    progress_plus(progress, length);
+                    !attrs.cache && progress_plus(progress, length);
+                    save_cache(attrs);
                     ngModelController.$setValidity("wrong", true);
                 } else {
-                    progress_reduce(progress, length);
+                    attrs.cache && progress_reduce(progress, length);
+                    clear_cache(attrs);
                     ngModelController.$setValidity("wrong", false);
                 }
                 return viewValue;
@@ -121,7 +127,6 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
         restrict: "A",
         require: "ngModel",
         link: function (scope, element, attrs, ngModelController) {
-            attrs.cache = "";
             ngModelController.$parsers.push(function (viewValue) {
                     if (nickname.test(viewValue) && viewValue.length >= min && viewValue.length <= max) {
                         !attrs.cache && progress_plus(progress, length);
@@ -165,8 +170,6 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
         restrict: "A",
         require: "ngModel",
         link: function (scope, element, attrs, ngModelController) {
-            attrs.cache = "";
-
             ngModelController.$parsers.push(function (viewValue) {
                 if (password.test(viewValue) && viewValue.length >= min && viewValue.length <= max) {
                     !attrs.cache && progress_plus(progress, length);
@@ -209,8 +212,6 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
         restrict: "A",
         require: "ngModel",
         link: function (scope, element, attrs, ngModelController) {
-            attrs.cache = "";
-
             ngModelController.$parsers.push(function (viewValue) {
                 if (verify.test(viewValue)) {
                     ngModelController.$setValidity("wrong", true);
