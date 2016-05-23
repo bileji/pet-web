@@ -19,8 +19,8 @@ var progress_reduce = function (progress, percent) {
     progress.css({"width": width > 0 ? width : 0});
 };
 
-app.controller('sign_up', ['$scope', '$http', function ($scope, $http) {
-    var url = "verify/captcha?rand=" + Math.round(Math.random() * 100);
+app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $http, $location) {
+    var url = $location.host() + "/verify/captcha?rand=" + Math.round(Math.random() * 100);
     console.log("start ajax:" + url);
     $http.get(url).success(function (response) {
 
