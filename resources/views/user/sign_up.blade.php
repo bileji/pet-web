@@ -24,7 +24,6 @@
             height: 100%;
             width: 245px;
             display: block;
-            margin: 0 auto 0 0;
             float: left;
         }
 
@@ -47,8 +46,21 @@
             height: 100%;
             width: 245px;
             display: block;
-            margin: 0 0 0 auto;
-            float: left;
+            float: right;
+        }
+
+        .nav-right li {
+            float: right;
+        }
+
+        .nav-right li div {
+            padding: 10px 4px;
+            line-height: 1em;
+            font-weight: normal;
+        }
+
+        .nav-right li:first-child div {
+            padding-right: 0;
         }
 
         .content {
