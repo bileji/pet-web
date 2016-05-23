@@ -19,9 +19,9 @@ var progress_reduce = function (progress, percent) {
     progress.css({"width": width > 0 ? width : 0});
 };
 
-var button_shake = function (button) {
+var button_shake = function (button, message) {
     var times = 4, range = 3, animate_time = 30;
-    button.html("请完成验证").css({"position": "relative"});
+    button.html(message).css({"position": "relative"});
     for (var time = times; time >= 0 ; time--) {
         button.animate({"left": time * range}, animate_time);
         button.animate({"left": - time * range}, animate_time);
@@ -47,7 +47,36 @@ var verify_handler = function (captcha) {
     });
 
     captcha.refresh(function () {
+        container.attr("cache") == true && progress_reduce(progress, percent);
         container.removeAttr("cache");
+    });
+
+    // 点击下一步
+    button.click(function () {
+        var validate = captcha.getValidate();
+        if (!validate || ID.attr("wrong") == "true") {
+            button_shake(button, "请完成验证");
+            return;
+        }
+        $.ajax({
+            url: "http://www.bileji.com/verify/captcha",
+            type: "post",
+            dataType: "json",
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            data: {
+                geetest_seccode: validate.geetest_seccode,
+                geetest_validate: validate.geetest_validate,
+                geetest_challenge: validate.geetest_challenge
+            },
+            success: function (object) {
+                if (object.status == 0) {
+                    $("#dot").animate({"left": "70%"}, 1500);
+                    $("#step1").addClass("hide") && $("#step2").removeClass("hide");
+                } else {
+                    button_shake(button, "请刷新重试");
+                }
+            }
+        });
     });
 };
 
