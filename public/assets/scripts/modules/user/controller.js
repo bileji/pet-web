@@ -236,7 +236,7 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
 }).directive("verify", function () {
     var progress = $("#progress-bar");
 
-    var length = 11;
+    var length = 12;
 
     var verify = /^\d{6}$/;
 
