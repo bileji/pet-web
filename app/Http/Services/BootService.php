@@ -23,7 +23,7 @@ class BootService
     public function callService($method, $params)
     {
         $client = new Client(config('rpc.service.host') . $this->route);
-        Log::info(json_encode($params));
+        Log::info(var_export($params, true));
         return $client->execute($method, array_shift($params));
     }
 
