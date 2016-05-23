@@ -17,8 +17,19 @@ class UserController extends Controller
 {
     public function signUp()
     {
-        if (Cache::has(Input::get("captcha_token")) && Cache::get(Input::get("captcha_token")) == Input::get("username")) {
-            return UserService::signUp(Input::all());
+        if (Cache::has(Input::get("captcha_token")) && Cache::pull(Input::get("captcha_token")) == Input::get("username")) {
+            // todo 验证验证码
+
+            $request = [
+                "username"  => Input::get('username'),
+                "password"  => Input::get('password'),
+                "extension" => [
+                    "nickname"         => Input::get('nickname'),
+                    "sing_up_platform" => 'web_1.0.0',
+                ],
+            ];
+
+            return UserService::signUp($request);
         } else {
             return Response::out(Status::SIGN_UP_INFO_ILLEGALITY);
         }
