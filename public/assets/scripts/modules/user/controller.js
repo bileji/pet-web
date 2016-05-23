@@ -11,12 +11,14 @@ var save_cache = function (attrs) {
 var progress_plus = function (progress, percent) {
     var total_width = parseFloat(progress.parent().css("width"));
     progress.css({"width": parseFloat(progress.css("width")) + total_width * percent / 100});
+    return true;
 };
 
 var progress_reduce = function (progress, percent) {
     var total_width = parseFloat(progress.parent().css("width"));
     var width = parseFloat(progress.css("width")) - total_width * percent / 100;
     progress.css({"width": width > 0 ? width : 0});
+    return true;
 };
 
 var button_shake = function (button, message) {
@@ -135,6 +137,7 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
                     !attrs.cache && progress_plus(progress, length);
                     save_cache(attrs);
                     ngModelController.$setValidity("wrong", true);
+                    $("#captcha").attr("cache") && $("#check_phone").html("下一步");
                 } else {
                     attrs.cache && progress_reduce(progress, length);
                     clear_cache(attrs);
