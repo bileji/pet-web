@@ -186,13 +186,13 @@
         }
 
         .content .sign-up-body .sign-up-success {
-            height: 250px;
-            line-height: 250px;
+            height: 200px;
         }
 
         .content .sign-up-body .sign-up-success h2 {
             color: black;
             font-weight: 300;
+            line-height: 200px;
         }
 
         .content .sign-up-body .sign-up-success h2 a {
@@ -333,7 +333,7 @@
                 <form name="step3" id="step3" class="relative">
                     <div class="sign-up-success">
                         <h2>
-                            注册成功<a href="">enjoy it!</a>
+                            注册成功, <a href="">enjoy it!</a>
                         </h2>
                     </div>
                 </form>
