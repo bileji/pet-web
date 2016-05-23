@@ -42,6 +42,15 @@
             padding-left: 0;
         }
 
+        .nav-right {
+            padding: 0;
+            height: 100%;
+            width: 245px;
+            display: block;
+            margin: 0 0 0 auto;
+            float: left;
+        }
+
         .content {
             padding: 140px 0;
             min-width: 700px;
@@ -111,11 +120,6 @@
             left: 300px;
         }
 
-        .content .sign-up-body .alter-fourth {
-            top: 127px;
-            left: 300px;
-        }
-
         .content .sign-up-body .alter span {
             color: red;
             padding: 5px 0 0 5px;
@@ -176,6 +180,13 @@
                         <a href="{{url('/')}}">
                             <span class="glyphicon glyphicon-home x"></span> 返回首页
                         </a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav-right">
+                <li>
+                    <div>
+                        己有账号：<a href="{{url('/user/sign_in')}}"> 去登录</a>
                     </div>
                 </li>
             </ul>
