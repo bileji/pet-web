@@ -81,7 +81,7 @@ var verify_handler = function (captcha) {
                     $("#dot").animate({"left": "70%"}, 1500);
                     step_show_one($("#step2"));
                 } else {
-                    button_shake(button, "请刷新重试");
+                    button_shake(button, "网络错误，请刷新重试");
                 }
             }
         });
