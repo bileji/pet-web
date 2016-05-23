@@ -7,7 +7,6 @@
  */
 namespace App\Http\Services;
 
-use Illuminate\Support\Facades\Log;
 use JsonRPC\Client;
 
 class BootService
@@ -23,7 +22,6 @@ class BootService
     public function callService($method, $params)
     {
         $client = new Client(config('rpc.service.host') . $this->route);
-        Log::info(var_export($params, true));
         return $client->execute($method, array_shift($params));
     }
 
