@@ -7,9 +7,9 @@
  */
 namespace App\Http\Controllers;
 
+use App\Http\Responses\Response;
 use App\Http\Responses\Status;
 use App\Http\Services\UserService;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Request;
 
 class UserController extends Controller
