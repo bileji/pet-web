@@ -31,7 +31,7 @@ var button_shake = function (button, message) {
 };
 
 var verify_handler = function (captcha) {
-    var percent = 10, fade_out_time = 200, button = $("#check-phone"), container = $("#captcha"), html = button.html(), progress = $("#progress-bar");
+    var percent = 11, fade_out_time = 200, button = $("#check-phone"), container = $("#captcha"), html = button.html(), progress = $("#progress-bar");
 
     container.children("div").css({"position": "absolute"}).first().fadeOut(fade_out_time);
     captcha.appendTo("#captcha");
