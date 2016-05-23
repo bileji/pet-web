@@ -49,6 +49,7 @@ var verify_handler = function (captcha) {
 
     captcha.onRefresh(function () {
         console.log("refresh");
+        console.log(container.attr("cache") == true);
         container.attr("cache") == true && progress_reduce(progress, percent);
         container.removeAttr("cache");
     });
