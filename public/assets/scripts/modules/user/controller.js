@@ -33,8 +33,9 @@ var button_shake = function (button, message) {
 var verify_handler = function (captcha) {
     var percent = 11, fade_out_time = 200, button = $("#check-phone"), container = $("#captcha"), html = button.html(), progress = $("#progress-bar");
 
-    container.children("div").css({"position": "absolute", "z-index": -9999}).first().fadeOut(fade_out_time);
+    container.children("div").css({"position": "absolute"}).first().fadeOut(fade_out_time);
     captcha.appendTo("#captcha");
+    container.children("div").last().css({"position": "absolute", "z-index": 9999});
 
     captcha.onSuccess(function () {
         !$("#ID").attr("wrong") && button.html(html);
