@@ -198,7 +198,7 @@
             <ul class="nav-right">
                 <li>
                     <div>
-                        己有账号：<a href="{{url('/user/sign_in')}}"> 去登录</a>
+                        己有账号：<a href="{{url('/user/sign_in')}}">去登录</a>
                     </div>
                 </li>
             </ul>
