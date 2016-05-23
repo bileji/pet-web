@@ -19,14 +19,51 @@ var progress_reduce = function (progress, percent) {
     progress.css({"width": width > 0 ? width : 0});
 };
 
-app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $http, $location) {
-    var url = "http://" + $location.host() + "/verify/captcha?rand=" + Math.round(Math.random() * 100);
-    console.log("start ajax:" + url);
-    $http.get(url).success(function (response) {
+var button_shake = function (button) {
+    var times = 4, range = 3, animate_time = 30;
+    button.html("请完成验证").css({"position": "relative"});
+    for (var time = times; time >= 0 ; time--) {
+        button.animate({"left": time * range}, animate_time);
+        button.animate({"left": - time * range}, animate_time);
+    }
+};
 
+var verify_handler = function (captcha) {
+    var percent = 11, button = $('#check-phone'), container = $("#captcha"), html = button.html(), progress = $("#progress_bar");
+
+    container.css({"position": "absolute", "z-index": -9999}).first().fadeOut(200);
+    captcha.appendTo("#captcha");
+
+    captcha.onSuccess(function () {
+        button.html(html);
+        if ($("#ID").attr("wrong") != true) {
+            captcha.attr("cache") != true && progress_plus(progress, percent);
+            captcha.attr("cache", true);
+        }
     });
-    console.log("ajax end!!!");
 
+    captcha.onFail(function () {
+        progress_reduce(progress, percent);
+        captcha.removeAttr("cache");
+    });
+};
+
+app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $http, $location) {
+    // 移除alert的隐藏
+    $(".alter").children('span').removeClass("hide");
+
+    // 验证码相关
+    var verify_url = "http://" + $location.host() + "/verify/captcha?rand=" + Math.round(Math.random() * 100);
+    $http.get(verify_url).success(function (response) {
+        initGeetest({
+            gt: response.gt,
+            challenge: response.challenge,
+            product: "float",
+            offline: !response.success
+        }, verify_handler);
+    });
+
+    //
     $scope.user = {};
 
     $scope.send_verify = function () {

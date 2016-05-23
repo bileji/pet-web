@@ -294,72 +294,72 @@
 
     <script>
         // 移除alert的隐藏
-        $(".alter").children('span').removeClass("hide");
+        {{--$(".alter").children('span').removeClass("hide");--}}
 
-        var handler = function (captchaObj) {
-            var step1 = $("#step1"), step2 = $("#step2"), step3 = $("#step3"), dot = $("#dot"), ID = $("#ID"), captcha = $("#captcha").children("div"), check_phone = $('#check-phone'), progress_bar = $("#progress-bar");
+        {{--var handler = function (captchaObj) {--}}
+            {{--var step1 = $("#step1"), step2 = $("#step2"), step3 = $("#step3"), dot = $("#dot"), ID = $("#ID"), captcha = $("#captcha").children("div"), check_phone = $('#check-phone'), progress_bar = $("#progress-bar");--}}
 
-            var check_phone_html = check_phone.html();
+            {{--var check_phone_html = check_phone.html();--}}
 
-            var shake = function (object) {
-                var times = 4, range = 3;
-                object.html("请完成验证").css({"position": "relative"});
-                for (var time = times; time >= 0 ; time--) {
-                    object.animate({"left": time * range}, 30);
-                    object.animate({"left": - time * range}, 30);
-                }
-            };
+            {{--var shake = function (object) {--}}
+                {{--var times = 4, range = 3;--}}
+                {{--object.html("请完成验证").css({"position": "relative"});--}}
+                {{--for (var time = times; time >= 0 ; time--) {--}}
+                    {{--object.animate({"left": time * range}, 30);--}}
+                    {{--object.animate({"left": - time * range}, 30);--}}
+                {{--}--}}
+            {{--};--}}
 
-            captcha.css({"position": "absolute", "z-index": -9999}).first().fadeOut(200);
+            {{--captcha.css({"position": "absolute", "z-index": -9999}).first().fadeOut(200);--}}
 
-            captchaObj.appendTo("#captcha");
+            {{--captchaObj.appendTo("#captcha");--}}
 
-            // 验证成功
-            captchaObj.onSuccess(function () {
-                check_phone.html(check_phone_html);
-                progress_bar.css({"width": "31%"});
-            });
+            {{--// 验证成功--}}
+            {{--captchaObj.onSuccess(function () {--}}
+                {{--check_phone.html(check_phone_html);--}}
+                {{--progress_bar.css({"width": "31%"});--}}
+            {{--});--}}
 
-            check_phone.click(function () {
-                var validate = captchaObj.getValidate();
-                if (!validate || ID.attr("wrong") == "true") {
-                    shake(check_phone);
-                    return;
-                }
-                $.ajax({
-                    url: "{{asset('verify/captcha')}}",
-                    type: "post",
-                    dataType: "json",
-                    headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-                    data: {
-                        geetest_seccode: validate.geetest_seccode,
-                        geetest_validate: validate.geetest_validate,
-                        geetest_challenge: validate.geetest_challenge
-                    },
-                    success: function (object) {
-                        if (object.status == 0) {
-                            dot.animate({"left": "70%"}, 1500);
-                            step1.addClass("hide");
-                            step2.removeClass("hide");
-                        } else {
-                            console.log('todo');
-                        }
-                    }
-                });
-            });
-        };
-        $.ajax({
-            url: "{{asset("verify/captcha?rand=")}}" + Math.round(Math.random() * 100),
-            type: "get",
-            dataType: "json",
-            success: function (data) {
-                initGeetest({
-                    gt: data.gt,
-                    challenge: data.challenge,
-                    product: "float",
-                    offline: !data.success
-                }, handler);
-            }
-        });
+            {{--check_phone.click(function () {--}}
+                {{--var validate = captchaObj.getValidate();--}}
+                {{--if (!validate || ID.attr("wrong") == "true") {--}}
+                    {{--shake(check_phone);--}}
+                    {{--return;--}}
+                {{--}--}}
+                {{--$.ajax({--}}
+                    {{--url: "{{asset('verify/captcha')}}",--}}
+                    {{--type: "post",--}}
+                    {{--dataType: "json",--}}
+                    {{--headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},--}}
+                    {{--data: {--}}
+                        {{--geetest_seccode: validate.geetest_seccode,--}}
+                        {{--geetest_validate: validate.geetest_validate,--}}
+                        {{--geetest_challenge: validate.geetest_challenge--}}
+                    {{--},--}}
+                    {{--success: function (object) {--}}
+                        {{--if (object.status == 0) {--}}
+                            {{--dot.animate({"left": "70%"}, 1500);--}}
+                            {{--step1.addClass("hide");--}}
+                            {{--step2.removeClass("hide");--}}
+                        {{--} else {--}}
+                            {{--console.log('todo');--}}
+                        {{--}--}}
+                    {{--}--}}
+                {{--});--}}
+            {{--});--}}
+        {{--};--}}
+        {{--$.ajax({--}}
+            {{--url: "{{asset("verify/captcha?rand=")}}" + Math.round(Math.random() * 100),--}}
+            {{--type: "get",--}}
+            {{--dataType: "json",--}}
+            {{--success: function (data) {--}}
+                {{--initGeetest({--}}
+                    {{--gt: data.gt,--}}
+                    {{--challenge: data.challenge,--}}
+                    {{--product: "float",--}}
+                    {{--offline: !data.success--}}
+                {{--}, handler);--}}
+            {{--}--}}
+        {{--});--}}
     </script>
 @stop
