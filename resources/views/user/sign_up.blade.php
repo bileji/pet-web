@@ -63,6 +63,10 @@
             padding-right: 0;
         }
 
+        .nav-right li:first-child div a {
+            text-decoration: underline;
+        }
+
         .content {
             padding: 140px 0;
             min-width: 700px;
