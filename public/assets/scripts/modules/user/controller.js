@@ -1,13 +1,14 @@
 var app = angular.module('user', []);
 
-var progress_bar_plus = function (progress, percent) {
+var progress_plus = function (progress, percent) {
     var total_width = parseFloat(progress.parent().css("width"));
     progress.css({"width": parseFloat(progress.css("width")) + total_width * percent / 100});
 };
 
-var progress_bar_reduce = function (progress, percent) {
+var progress_reduce = function (progress, percent) {
     var total_width = parseFloat(progress.parent().css("width"));
-    progress.css({"width": parseFloat(progress.css("width")) - total_width * percent / 100});
+    var width = parseFloat(progress.css("width")) - total_width * percent / 100;
+    progress.css({"width": width > 0 ? width : 0});
 };
 
 app.controller('sign_up', ['$scope', function ($scope) {
@@ -35,7 +36,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
         }, 1000);
     };
 }]).directive('username', function () {
-    var progress_bar = $("#progress-bar");
+    var progress = $("#progress-bar");
 
     var email = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
     var phone = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
@@ -46,10 +47,10 @@ app.controller('sign_up', ['$scope', function ($scope) {
         link: function (scope, element, attrs, ngModelController) {
             ngModelController.$parsers.push(function (viewValue) {
                 if (email.test(viewValue) || phone.test(viewValue)) {
-                    progress_bar.css({"width": "20%"});
+                    progress_plus(progress, 20);
                     ngModelController.$setValidity("wrong", true);
                 } else {
-                    progress_bar.css({"width": "0"});
+                    progress_reduce(progress, 20);
                     ngModelController.$setValidity("wrong", false);
                 }
                 return viewValue;
@@ -57,7 +58,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
         }
     };
 }).directive('nickname', function () {
-    var progress_bar = $("#progress-bar");
+    var progress = $("#progress-bar");
 
     var nickname = /^[\-\w\u4e00-\u9fa5]+$/;
 
@@ -76,10 +77,10 @@ app.controller('sign_up', ['$scope', function ($scope) {
             attrs.cache_nickname = "";
             ngModelController.$parsers.push(function (viewValue) {
                     if (nickname.test(viewValue) && viewValue.length >= 4 && viewValue.length <= 16) {
-                        !attrs.cache_nickname && progress_bar_plus(progress_bar, 10);
+                        !attrs.cache_nickname && progress_plus(progress, 10);
                         save_nickname(attrs, viewValue);
                     } else {
-                        attrs.cache_nickname && progress_bar_reduce(progress_bar, 10);
+                        attrs.cache_nickname && progress_reduce(progress, 10);
                         clear_nickname(attrs);
                     }
 
@@ -107,7 +108,7 @@ app.controller('sign_up', ['$scope', function ($scope) {
         }
     };
 }).directive('password', function () {
-    var progress_bar = $("#progress-bar");
+    var progress = $("#progress-bar");
 
     var password = /^(?=.{6,16}$)(?![0-9]+$)[\w!@#$%^&*()-_+=]+$/;
 
@@ -119,16 +120,6 @@ app.controller('sign_up', ['$scope', function ($scope) {
         attrs.$set("cache_password", nickname);
     };
 
-    var progress_bar_plus = function (percent) {
-        var total_width = parseFloat(progress_bar.parent().css("width"));
-        progress_bar.css({"width": parseFloat(progress_bar.css("width")) + total_width * percent / 100});
-    };
-
-    var progress_bar_reduce = function (percent) {
-        var total_width = parseFloat(progress_bar.parent().css("width"));
-        progress_bar.css({"width": parseFloat(progress_bar.css("width")) - total_width * percent / 100});
-    };
-
     return {
         restrict: "A",
         require: "ngModel",
@@ -137,10 +128,10 @@ app.controller('sign_up', ['$scope', function ($scope) {
 
             ngModelController.$parsers.push(function (viewValue) {
                 if (password.test(viewValue) && viewValue.length >= 6 && viewValue.length <= 16) {
-                    !attrs.cache_password && progress_bar_plus(10);
+                    !attrs.cache_password && progress_plus(progress, 10);
                     save_password(attrs, "cache");
                 } else {
-                    attrs.cache_password && progress_bar_reduce(10);
+                    attrs.cache_password && progress_reduce(progress, 10);
                     clear_password(attrs);
                 }
 
