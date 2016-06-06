@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cd /website/docker/works/pet-web && git checkout . && git pull origin master
+cd /website/docker/works/web && git checkout . && git pull origin master
