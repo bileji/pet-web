@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://pet-web.bileji.com'),
+    'url' => env('APP_URL', 'http://web.bileji.com'),
 
     /*
     |--------------------------------------------------------------------------
