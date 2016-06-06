@@ -91,6 +91,7 @@ var verify_handler = function (captcha) {
                         url     : "http://web.bileji.com/verify/send",
                         type    : "post",
                         dataType: "json",
+                        headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
                         data    : {
                             account: ID.val()
                         },

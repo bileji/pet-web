@@ -50,6 +50,7 @@ class VerifyController extends Controller
         if ($range_code = VerifyService::generate(Input::get('account'))) {
             // todo add verify code to gearman async
             Log::info(Input::get('account') . ':OO:' . $range_code);
+            // todo check send verify code times
             return Response::out(Status::SUCCESS);
         } else {
             return Response::out(Status::FAILED);
