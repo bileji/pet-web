@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #888;
+    text-align: center;
+    font-family: Arial, sans-serif;;
+}
+
+h1, h2, h3, h4, h5, h6, form, div, p, i, img, ul, li, ol, table, tr, td, th, fieldset, label, legend, button, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+a {
+    color: #888;
+    cursor: pointer;
+}
+
+a:hover {
+    color: orange;
+    text-decoration: none;
+}
+
+header, footer {
+    font-size: 12px;
+    width: 100%;
+    min-width: 1230px;
+    position: relative;
+    background-color: #e8e8e8;
+}
+
+.hide {
+    display: none !important;
+}
+
+.relative {
+    position: relative;
+}
