@@ -75,21 +75,35 @@ var verify_handler = function (captcha) {
             return;
         }
         $.ajax({
-            url: "http://www.bileji.com/verify/captcha",
-            type: "post",
+            url     : "http://web.bileji.com/verify/captcha",
+            type    : "post",
             dataType: "json",
-            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            data: {
-                id: ID.val(),
-                geetest_seccode: validate.geetest_seccode,
-                geetest_validate: validate.geetest_validate,
+            headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            data    : {
+                account          : ID.val(),
+                geetest_seccode  : validate.geetest_seccode,
+                geetest_validate : validate.geetest_validate,
                 geetest_challenge: validate.geetest_challenge
             },
-            success: function (object) {
+            success : function (object) {
                 if (object.code == 0) {
-                    button.attr("captcha_token", object.data.captcha_token);
-                    $("#dot").animate({"left": "70%"}, 1500);
-                    step_show_one($("#step2"));
+                    $.ajax({
+                        url     : "http://web.bileji.com/verify/send",
+                        type    : "post",
+                        dataType: "json",
+                        data    : {
+                            account: ID.val()
+                        },
+                        success : function (object) {
+                            if (object.code == 0) {
+                                button.attr("captcha_token", object.data.captcha_token);
+                                $("#dot").animate({"left": "70%"}, 1500);
+                                step_show_one($("#step2"));
+                            } else {
+                                button_shake(button, "网络错误，请刷新重试");
+                            }
+                        }
+                    });
                 } else {
                     button_shake(button, "网络错误，请刷新重试");
                 }
@@ -98,74 +112,76 @@ var verify_handler = function (captcha) {
     });
 };
 
-app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $http, $location) {
-    // 移除alert的隐藏
-    $(".alter").children('span').removeClass("hide");
+app.controller('sign_up', [
+    '$scope', '$http', '$location', function ($scope, $http, $location) {
+        // 移除alert的隐藏
+        $(".alter").children('span').removeClass("hide");
 
-    // 验证码相关
-    var verify_url = "http://" + $location.host() + "/verify/captcha?rand=" + Math.round(Math.random() * 100);
-    $http.get(verify_url).success(function (response) {
-        initGeetest({
-            gt: response.gt,
-            challenge: response.challenge,
-            product: "float",
-            offline: !response.success
-        }, verify_handler);
-    });
+        // 验证码相关
+        var verify_url = "http://" + $location.host() + "/verify/captcha?rand=" + Math.round(Math.random() * 100);
+        $http.get(verify_url).success(function (response) {
+            initGeetest({
+                gt       : response.gt,
+                challenge: response.challenge,
+                product  : "float",
+                offline  : !response.success
+            }, verify_handler);
+        });
 
-    // 点击事件
-    $scope.send_verify = function () {
-        var count_down = 60;
-        var button = $("#resend");
+        // 点击事件
+        $scope.send_verify = function () {
+            var count_down = 60;
+            var button = $("#resend");
 
-        var able = function () {
-            button.removeAttr("disabled").html("重发验证码");
-        };
-
-        var disable = function (time) {
-            button.attr("disabled", "true").html(time + "s重新发送");
-        };
-
-        var interval = setInterval(function () {
-            if (count_down <= 0) {
-                able();
-                clearInterval(interval);
-            } else {
-                disable(count_down--);
-            }
-        }, 1000);
-    };
-
-    // 点击下一步step2
-    $scope.sign_up = function () {
-        var sign_up = $("#user-sign-up"), ID = $("#ID"), nickname = $("#nickname"), password = $("#password"), verify = $("#verify"), step1_button = $("#check-phone");
-
-        if (nickname.attr("cache") && password.attr("cache") && verify.attr("cache")) {
-
-            var user = {
-                username: ID.val(),
-                verify: verify.val(),
-                nickname: nickname.val(),
-                password: password.val(),
-                captcha_token: step1_button.attr("captcha_token")
+            var able = function () {
+                button.removeAttr("disabled").html("重发验证码");
             };
 
-            $http.post("sign_up", user).success(function (response) {
-                if (response.code == 0) {
-                    $("#dot").css({"display": "none"});
-                    step_show_one($("#step3"));
-                    progress_plus($("#progress-bar"), 40);
-                } else {
-                    button_shake(sign_up, "网络错误，请刷新重试");
-                }
-            });
+            var disable = function (time) {
+                button.attr("disabled", "true").html(time + "s重新发送");
+            };
 
-            return true;
+            var interval = setInterval(function () {
+                if (count_down <= 0) {
+                    able();
+                    clearInterval(interval);
+                } else {
+                    disable(count_down--);
+                }
+            }, 1000);
+        };
+
+        // 点击下一步step2
+        $scope.sign_up = function () {
+            var sign_up = $("#user-sign-up"), ID = $("#ID"), nickname = $("#nickname"), password = $("#password"), verify = $("#verify"), step1_button = $("#check-phone");
+
+            if (nickname.attr("cache") && password.attr("cache") && verify.attr("cache")) {
+
+                var user = {
+                    username     : ID.val(),
+                    verify       : verify.val(),
+                    nickname     : nickname.val(),
+                    password     : password.val(),
+                    captcha_token: step1_button.attr("captcha_token")
+                };
+
+                $http.post("sign_up", user).success(function (response) {
+                    if (response.code == 0) {
+                        $("#dot").css({"display": "none"});
+                        step_show_one($("#step3"));
+                        progress_plus($("#progress-bar"), 40);
+                    } else {
+                        button_shake(sign_up, "网络错误，请刷新重试");
+                    }
+                });
+
+                return true;
+            }
+            button_shake(sign_up, "请正确填写账号信息");
+            return false;
         }
-        button_shake(sign_up, "请正确填写账号信息");
-        return false;
     }
-}]).directive('username', function () {
+]).directive('username', function () {
     var progress = $("#progress-bar");
 
     var length = 20;
@@ -175,8 +191,8 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
 
     return {
         restrict: "A",
-        require: "ngModel",
-        link: function (scope, element, attrs, ngModelController) {
+        require : "ngModel",
+        link    : function (scope, element, attrs, ngModelController) {
             ngModelController.$parsers.push(function (viewValue) {
                 if (email.test(viewValue) || phone.test(viewValue)) {
                     !attrs.cache && progress_plus(progress, length);
@@ -201,8 +217,8 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
 
     return {
         restrict: "A",
-        require: "ngModel",
-        link: function (scope, element, attrs, ngModelController) {
+        require : "ngModel",
+        link    : function (scope, element, attrs, ngModelController) {
             ngModelController.$parsers.push(function (viewValue) {
                     if (nickname.test(viewValue) && viewValue.length >= min && viewValue.length <= max) {
                         !attrs.cache && progress_plus(progress, length);
@@ -244,8 +260,8 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
 
     return {
         restrict: "A",
-        require: "ngModel",
-        link: function (scope, element, attrs, ngModelController) {
+        require : "ngModel",
+        link    : function (scope, element, attrs, ngModelController) {
             ngModelController.$parsers.push(function (viewValue) {
                 if (password.test(viewValue) && viewValue.length >= min && viewValue.length <= max) {
                     !attrs.cache && progress_plus(progress, length);
@@ -286,8 +302,8 @@ app.controller('sign_up', ['$scope', '$http', '$location', function ($scope, $ht
 
     return {
         restrict: "A",
-        require: "ngModel",
-        link: function (scope, element, attrs, ngModelController) {
+        require : "ngModel",
+        link    : function (scope, element, attrs, ngModelController) {
             ngModelController.$parsers.push(function (viewValue) {
                 if (verify.test(viewValue)) {
                     !attrs.cache && progress_plus(progress, length) && save_cache(attrs);

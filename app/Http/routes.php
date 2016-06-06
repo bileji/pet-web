@@ -38,4 +38,6 @@ Route::group(['prefix' => 'verify'], function () {
 
     # API
     Route::post('captcha', 'VerifyController@captcha');
+
+    Route::post('send', 'VerifyController@sendCode');
 });
