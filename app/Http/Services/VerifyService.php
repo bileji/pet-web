@@ -32,15 +32,13 @@ class VerifyService extends BootService
 
         !Cache::has($dailyKey) && Cache::add($dailyKey, 1, 3600 * 24);
 
-        Log::info(var_export(Cache::get($dailyKey), true) . '----' . var_export(Cache::increment($dailyKey), true));
-
         if (Cache::get($dailyKey) > static::DAILY_SEND_VERIFY_CODE_LIMIT) {
             return false;
         }
 
         $range_code = static::rangeCode();
 
-        return (Cache::add(Helper::sendCacheKey($account), static::VERIFY_CODE_EXPIRE_TIME, $range_code) && Cache::increment($dailyKey)) ? $range_code : false;
+        return (Cache::put(Helper::sendCacheKey($account), $range_code, static::VERIFY_CODE_EXPIRE_TIME) && Cache::increment($dailyKey)) ? $range_code : false;
     }
 
     # 验证短信/邮箱验证码
