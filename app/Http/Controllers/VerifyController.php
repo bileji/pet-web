@@ -48,7 +48,7 @@ class VerifyController extends Controller
     public function sendCode()
     {
         $account = Input::get('account');
-        if (Input::get('captcha_token') == Cache::get(Helper::userIdCaptchaCacheKey($account))) {
+        if ($account == Cache::get(Helper::userIdCaptchaCacheKey($account))) {
             if ($range_code = VerifyService::generate($account)) {
                 // todo add verify code to gearman async
                 Log::info('your verify code is' . $range_code);
