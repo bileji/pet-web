@@ -34,9 +34,9 @@ class VerifyController extends Controller
     public function captcha()
     {
         if ($this->captcha->isFromGTServer() && $this->captcha->success()) {
-            $user_id = Input::get("account");
-            $cache_key = Helper::userIdCaptchaCacheKey($user_id);
-            Cache::add($cache_key, $user_id, static::CAPTCHA_CACHE_EXPIRE_TIME);
+            $account = Input::get("account");
+            $cache_key = Helper::userIdCaptchaCacheKey($account);
+            Cache::add($cache_key, $account, static::CAPTCHA_CACHE_EXPIRE_TIME);
 
             return Response::out(Status::SUCCESS, ['captcha_token' => $cache_key]);
         } else {
@@ -47,12 +47,19 @@ class VerifyController extends Controller
     # 发送验证码
     public function sendCode()
     {
-        if ($range_code = VerifyService::generate(Input::get('account'))) {
-            // todo add verify code to gearman async
-            Log::info(Input::get('account') . ':OO:' . $range_code);
-            // todo check send verify code times
-            return Response::out(Status::SUCCESS);
+        $account = Input::get('account');
+        if (Input::get('captcha_token') == Cache::get(Helper::userIdCaptchaCacheKey($account))) {
+            if ($range_code = VerifyService::generate($account)) {
+                // todo add verify code to gearman async
+                Log::info('your verify code is' . $range_code);
+                // 发送成功
+                return Response::out(Status::SUCCESS);
+            } else {
+                // 验证太频繁
+                return Response::out(Status::FAILED);
+            }
         } else {
+            // 图形验证码失效
             return Response::out(Status::FAILED);
         }
     }

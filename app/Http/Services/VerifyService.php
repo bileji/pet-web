@@ -7,18 +7,16 @@
  */
 namespace App\Http\Services;
 
-use Illuminate\Support\Facades\Redis;
+use App\Utils\Helper;
+use Illuminate\Support\Facades\Cache;
 
 class VerifyService extends BootService
 {
     # 短信验证码过期时间
     const VERIFY_CODE_EXPIRE_TIME = 300;
 
-    # 缓存的键名
-    protected static function cacheKey($account)
-    {
-        return 'vc_' . $account;
-    }
+    # 每日发送验证码数量限制
+    const DAILY_SEND_VERIFY_CODE_LIMIT = 15;
 
     # 随机验证码
     protected static function rangeCode()
@@ -29,16 +27,24 @@ class VerifyService extends BootService
     # 生成短信/邮箱验证码
     public static function generate($account)
     {
+        $dailyKey = Helper::dailySendCacheKey($account);
+
+        !Cache::has($dailyKey) && Cache::add($dailyKey, 1, 3600 * 24);
+
+        if (Cache::get($dailyKey) > static::DAILY_SEND_VERIFY_CODE_LIMIT) {
+            return false;
+        }
+
         $range_code = static::rangeCode();
 
-        return Redis::setex(static::cacheKey($account), static::VERIFY_CODE_EXPIRE_TIME, $range_code) ? $range_code : false;
+        return (Cache::add(Helper::sendCacheKey($account), static::VERIFY_CODE_EXPIRE_TIME, $range_code) && Cache::increment($dailyKey)) ? $range_code : false;
     }
 
     # 验证短信/邮箱验证码
     public static function execute($account, $code)
     {
-        $cache_key = static::cacheKey($account);
+        $cache_key = Helper::sendCacheKey($account);
 
-        return (Redis::exists($cache_key) && Redis::get($cache_key) == $code && Redis::delete($cache_key)) ? true : false;
+        return (Cache::has($cache_key) && Cache::pull($cache_key) == $code) ? true : false;
     }
 }
