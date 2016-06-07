@@ -9,6 +9,7 @@ namespace App\Http\Services;
 
 use App\Utils\Helper;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 
 class VerifyService extends BootService
 {
@@ -32,6 +33,7 @@ class VerifyService extends BootService
         !Cache::has($dailyKey) && Cache::add($dailyKey, 1, 3600 * 24);
 
         if (Cache::get($dailyKey) > static::DAILY_SEND_VERIFY_CODE_LIMIT) {
+            Log::info('xxxx');
             return false;
         }
 
