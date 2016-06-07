@@ -37,7 +37,6 @@ class VerifyController extends Controller
             $account = Input::get("account");
             $cache_key = Helper::userIdCaptchaCacheKey($account);
             Cache::add($cache_key, $account, static::CAPTCHA_CACHE_EXPIRE_TIME);
-
             return Response::out(Status::SUCCESS, ['captcha_token' => $cache_key]);
         } else {
             return Response::out(Status::GET_GEE_CAPTCHA_ERROR);
@@ -56,11 +55,11 @@ class VerifyController extends Controller
                 return Response::out(Status::SUCCESS);
             } else {
                 // 验证太频繁
-                return Response::out(Status::FAILED);
+                return Response::out(Status::SEND_VERIFY_FREQUENTLY);
             }
         } else {
             // 图形验证码失效
-            return Response::out(Status::FAILED);
+            return Response::out(Status::GET_GEE_CAPTCHA_INVALID);
         }
     }
 

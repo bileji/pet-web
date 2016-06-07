@@ -16,8 +16,11 @@ class Status
     const BUSINESS_ERROR = 2000;
 
     const GET_GEE_CAPTCHA_ERROR = -30000;
+    const GET_GEE_CAPTCHA_INVALID = -30010;
 
     const SIGN_UP_INFO_ILLEGALITY = -40000;
+
+    const SEND_VERIFY_FREQUENTLY = -50000;
 
     public static $errorMessage = [
         # 系统相关
@@ -28,6 +31,9 @@ class Status
 
         # 极验验证码相关
         self::GET_GEE_CAPTCHA_ERROR   => '获取图形验证码失败',
+        self::GET_GEE_CAPTCHA_INVALID => '无效的图形验证码',
+
+        self::SEND_VERIFY_FREQUENTLY  => '验证码发送过于频繁',
 
         # 注册相关
         self::SIGN_UP_INFO_ILLEGALITY => '非法的注册信息',
