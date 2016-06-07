@@ -11,6 +11,7 @@ use App\Http\Services\VerifyService;
 use App\Utils\Helper;
 use App\Http\Responses\Response;
 use App\Http\Responses\Status;
+use Bileji\Support\Facades\Async;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Log;
@@ -51,6 +52,9 @@ class VerifyController extends Controller
             if ($range_code = VerifyService::generate($account)) {
                 // todo add verify code to gearman async
                 Log::info('your verify code is: ' . Cache::get(Helper::sendCacheKey($account)));
+
+                Async::addSmsWorker(json_encode(['send', [1, 2, 3]]));
+
                 // 发送成功
                 return Response::out(Status::SUCCESS);
             } else {
