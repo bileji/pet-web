@@ -38,6 +38,8 @@ class VerifyService extends BootService
 
         $range_code = static::rangeCode();
 
+        Log::info(Cache::put(Helper::sendCacheKey($account), $range_code, static::VERIFY_CODE_EXPIRE_TIME) . '----' . Cache::increment($dailyKey), true);
+
         return (Cache::put(Helper::sendCacheKey($account), $range_code, static::VERIFY_CODE_EXPIRE_TIME) && Cache::increment($dailyKey)) ? $range_code : false;
     }
 
