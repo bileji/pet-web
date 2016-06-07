@@ -37,8 +37,6 @@ class VerifyService extends BootService
 
         ($range_code = static::rangeCode()) && Cache::put(Helper::sendCacheKey($account), $range_code, static::VERIFY_CODE_EXPIRE_TIME);
 
-        // todo send to phone
-
         return Cache::increment($dailyKey) ? $range_code : false;
     }
 

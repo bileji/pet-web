@@ -50,7 +50,7 @@ class VerifyController extends Controller
         if ($account == Cache::get(Helper::userIdCaptchaCacheKey($account))) {
             if ($range_code = VerifyService::generate($account)) {
                 // todo add verify code to gearman async
-                Log::info('your verify code is' . $range_code);
+                Log::info('your verify code is: ' . Cache::get(Helper::sendCacheKey($account)));
                 // 发送成功
                 return Response::out(Status::SUCCESS);
             } else {
