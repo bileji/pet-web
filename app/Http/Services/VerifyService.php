@@ -9,7 +9,6 @@ namespace App\Http\Services;
 
 use App\Utils\Helper;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Log;
 
 class VerifyService extends BootService
 {
@@ -36,11 +35,11 @@ class VerifyService extends BootService
             return false;
         }
 
-        $range_code = static::rangeCode();
+        ($range_code = static::rangeCode()) && Cache::put(Helper::sendCacheKey($account), $range_code, static::VERIFY_CODE_EXPIRE_TIME);
 
-        Log::info(var_export(Cache::put(Helper::sendCacheKey($account), $range_code, static::VERIFY_CODE_EXPIRE_TIME) . '----' . Cache::increment($dailyKey), true));
+        // todo send to phone
 
-        return (Cache::put(Helper::sendCacheKey($account), $range_code, static::VERIFY_CODE_EXPIRE_TIME) && Cache::increment($dailyKey)) ? $range_code : false;
+        return Cache::increment($dailyKey) ? $range_code : false;
     }
 
     # 验证短信/邮箱验证码
