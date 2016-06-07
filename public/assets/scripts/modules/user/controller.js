@@ -94,7 +94,7 @@ var verify_handler = function (captcha) {
                         headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
                         data    : {
                             account: ID.val(),
-                            captcha_token: object.captcha_token
+                            captcha_token: object.data.captcha_token
                         },
                         success : function (object) {
                             if (object.code == 0) {
