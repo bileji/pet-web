@@ -53,7 +53,7 @@ class VerifyController extends Controller
                 // todo add verify code to gearman async
                 Log::info('your verify code is: ' . Cache::get(Helper::sendCacheKey($account)));
 
-                Async::addSmsWorker('send', [1, 2, 3]);
+                Async::addSmsWorker('send', $account, 'test!!!');
 
                 // 发送成功
                 return Response::out(Status::SUCCESS);
