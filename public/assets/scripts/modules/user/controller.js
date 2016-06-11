@@ -93,7 +93,7 @@ var verify_handler = function (captcha) {
                         dataType: "json",
                         headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
                         data    : {
-                            account: ID.val(),
+                            account      : ID.val(),
                             captcha_token: object.data.captcha_token
                         },
                         success : function (object) {
@@ -101,6 +101,8 @@ var verify_handler = function (captcha) {
                                 button.attr("captcha_token", object.data.captcha_token);
                                 $("#dot").animate({"left": "70%"}, 1500);
                                 step_show_one($("#step2"));
+                            } else if (object.code == -30000) {
+                                button_shake(button, "验证码失效，请刷新重试");
                             } else if (object.code == -50000) {
                                 button_shake(button, "您已耗尽当天短信数");
                             } else {
