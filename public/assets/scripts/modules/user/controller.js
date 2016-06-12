@@ -100,8 +100,8 @@ var verify_handler = function (captcha) {
                             if (object.code == 0) {
                                 button.attr("captcha_token", object.data.captcha_token);
                                 $("#dot").animate({"left": "70%"}, 1500);
-                                step_show_one($("#step2"));
                                 resend_count_down();
+                                step_show_one($("#step2"));
                             } else if (object.code == -50000) {
                                 button_shake(button, "您已耗尽当天短信数");
                             } else {
