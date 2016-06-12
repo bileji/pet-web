@@ -16,7 +16,7 @@ class VerifyService extends BootService
     const VERIFY_CODE_EXPIRE_TIME = 300;
 
     # 每日发送验证码数量限制
-    const DAILY_SEND_VERIFY_CODE_LIMIT = 25;
+    const HOUR_SEND_VERIFY_CODE_LIMIT = 3;
 
     # 随机验证码
     protected static function rangeCode()
@@ -29,9 +29,9 @@ class VerifyService extends BootService
     {
         $dailyKey = Helper::dailySendCacheKey($account);
 
-        !Cache::has($dailyKey) && Cache::add($dailyKey, 1, 3600 * 24);
+        !Cache::has($dailyKey) && Cache::add($dailyKey, 1, 3600);
 
-        if (Cache::get($dailyKey) > static::DAILY_SEND_VERIFY_CODE_LIMIT) {
+        if (Cache::get($dailyKey) > static::HOUR_SEND_VERIFY_CODE_LIMIT) {
             return false;
         }
 

@@ -50,9 +50,6 @@ class VerifyController extends Controller
         $account = Input::get('account');
         if ($account == Cache::get(Helper::userIdCaptchaCacheKey($account))) {
             if ($range_code = VerifyService::generate($account)) {
-                // todo add verify code to gearman async
-                Log::info('your verify code is: ' . Cache::get(Helper::sendCacheKey($account)));
-
                 Async::addSmsWorker('send', $account, '【比乐集】您的验证码是' . $range_code . '，15分钟内有效。');
 
                 // 发送成功
