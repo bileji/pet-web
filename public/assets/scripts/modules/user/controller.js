@@ -101,6 +101,7 @@ var verify_handler = function (captcha) {
                                 button.attr("captcha_token", object.data.captcha_token);
                                 $("#dot").animate({"left": "70%"}, 1500);
                                 step_show_one($("#step2"));
+                                resend_count_down();
                             } else if (object.code == -50000) {
                                 button_shake(button, "您已耗尽当天短信数");
                             } else {
@@ -116,6 +117,28 @@ var verify_handler = function (captcha) {
             }
         });
     });
+};
+
+var resend_count_down = function () {
+    var count_down = 60;
+    var button = $("#resend");
+
+    var able = function () {
+        button.removeAttr("disabled").html("重发验证码");
+    };
+
+    var disable = function (time) {
+        button.attr("disabled", "true").html(time + "s重新发送");
+    };
+
+    var interval = setInterval(function () {
+        if (count_down <= 0) {
+            able();
+            clearInterval(interval);
+        } else {
+            disable(count_down--);
+        }
+    }, 1000);
 };
 
 app.controller('sign_up', [
@@ -136,25 +159,9 @@ app.controller('sign_up', [
 
         // 点击事件
         $scope.send_verify = function () {
-            var count_down = 60;
-            var button = $("#resend");
+            // todo 发送验证码
 
-            var able = function () {
-                button.removeAttr("disabled").html("重发验证码");
-            };
-
-            var disable = function (time) {
-                button.attr("disabled", "true").html(time + "s重新发送");
-            };
-
-            var interval = setInterval(function () {
-                if (count_down <= 0) {
-                    able();
-                    clearInterval(interval);
-                } else {
-                    disable(count_down--);
-                }
-            }, 1000);
+            resend_count_down();
         };
 
         // 点击下一步step2

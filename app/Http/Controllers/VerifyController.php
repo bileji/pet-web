@@ -51,7 +51,6 @@ class VerifyController extends Controller
         if ($account == Cache::get(Helper::userIdCaptchaCacheKey($account))) {
             if ($range_code = VerifyService::generate($account)) {
                 Async::addSmsWorker('send', $account, '【比乐集】您的验证码是' . $range_code . '，15分钟内有效。');
-
                 // 发送成功
                 return Response::out(Status::SUCCESS);
             } else {
