@@ -110,7 +110,7 @@ var verify_handler = function (captcha) {
                         }
                     });
                 } else if (object.code == -30000) {
-                    button_shake(button, "验证码失效，请刷新重试");
+                    button_shake(button, "图形验证码失效，请刷新重试");
                 } else {
                     button_shake(button, "网络错误，请刷新重试");
                 }
