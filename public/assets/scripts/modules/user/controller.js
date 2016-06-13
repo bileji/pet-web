@@ -87,6 +87,7 @@ var verify_handler = function (captcha) {
             },
             success : function (object) {
                 if (object.code == 0) {
+                    $("#captcha_token").val(object.data.captcha_token);
                     $.ajax({
                         url     : "http://web.bileji.com/verify/send",
                         type    : "post",
@@ -98,8 +99,6 @@ var verify_handler = function (captcha) {
                         },
                         success : function (object) {
                             if (object.code == 0) {
-                                $("#captcha_token").val(object.data.captcha_token);
-                                console.log(object.data.captcha_token);
                                 $("#dot").animate({"left": "70%"}, 1500);
                                 resend_count_down();
                                 step_show_one($("#step2"));
