@@ -103,7 +103,7 @@ var verify_handler = function (captcha) {
                                 resend_count_down();
                                 step_show_one($("#step2"));
                             } else if (object.code == -50000) {
-                                button_shake(button, "您已耗尽当天短信数");
+                                button_shake(button, "每小时最多发送3条验证短信，请稍后重试");
                             } else {
                                 button_shake(button, "网络错误，请刷新重试");
                             }
@@ -159,10 +159,13 @@ app.controller('sign_up', [
 
         // 点击事件
         $scope.send_verify = function () {
-            // todo 发送验证码
-            $http.post("http://" + $location.host() + "/verify/send").success(function(response) {
-                 console.log(response);
-                resend_count_down();
+            $http.post("http://" + $location.host() + "/verify/send").success(function (response) {
+                if (response.code == 0) {
+                    resend_count_down();
+                } else {
+                    var sign_up = $("#user-sign-up");
+                    response.code == -50000 ? button_shake(sign_up, "每小时最多发送3条验证短信，请稍后重试") : button_shake(sign_up, "网络错误，请刷新重试");
+                }
             });
         };
 
