@@ -20,7 +20,7 @@ class UserController extends Controller
     {
         if (Cache::has(Input::get("captcha_token")) && Cache::pull(Input::get("captcha_token")) == Input::get("username")) {
             // 验证验证码
-            if (Cache::pull(Helper::sendCacheKey(Input::get("username"))) != Input::get('verify')) {
+            if (empty(Input::get('verify')) || Cache::pull(Helper::sendCacheKey(Input::get("username"))) != Input::get('verify')) {
                 return Response::out(Status::VERIFY_ERROR);
             }
             $request = [
