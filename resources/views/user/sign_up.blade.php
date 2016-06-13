@@ -68,7 +68,7 @@
         }
 
         .content {
-            padding: 240px 0;
+            padding: 180px 0;
             min-width: 700px;
         }
 
