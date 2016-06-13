@@ -31,7 +31,7 @@ class VerifyService extends BootService
 
         !Cache::has($dailyKey) && Cache::add($dailyKey, 1, 3600);
 
-        if (Cache::get($dailyKey) > static::HOUR_SEND_VERIFY_CODE_LIMIT) {
+        if (Cache::get($dailyKey) >= static::HOUR_SEND_VERIFY_CODE_LIMIT) {
             return false;
         }
 
