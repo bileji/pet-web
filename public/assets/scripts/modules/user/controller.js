@@ -160,7 +160,9 @@ app.controller('sign_up', [
         // 点击事件
         $scope.send_verify = function () {
             // todo 发送验证码
-
+            $http.post("http://" + $location.host() + "/verify/send").success(function(response) {
+                 console.log(response);
+            });
             resend_count_down();
         };
 
