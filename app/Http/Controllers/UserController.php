@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 use App\Http\Responses\Response;
 use App\Http\Responses\Status;
 use App\Http\Services\UserService;
+use App\Utils\Helper;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Input;
 
@@ -18,8 +19,10 @@ class UserController extends Controller
     public function signUp()
     {
         if (Cache::has(Input::get("captcha_token")) && Cache::pull(Input::get("captcha_token")) == Input::get("username")) {
-            // todo 验证验证码
-
+            // 验证验证码
+            if (Cache::pull(Helper::sendCacheKey(Input::get("username"))) != Input::get('verify')) {
+                return Response::out(Status::VERIFY_ERROR);
+            }
             $request = [
                 "username"  => Input::get('username'),
                 "password"  => Input::get('password'),

@@ -14,7 +14,6 @@ use App\Http\Responses\Status;
 use Bileji\Support\Facades\Async;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Input;
-use Illuminate\Support\Facades\Log;
 use Laravist\GeeCaptcha\GeeCaptcha;
 
 class VerifyController extends Controller
@@ -61,11 +60,5 @@ class VerifyController extends Controller
             // 图形验证码失效
             return Response::out(Status::GET_GEE_CAPTCHA_INVALID);
         }
-    }
-
-    # 验证验证码 todo
-    public function checkCode()
-    {
-
     }
 }

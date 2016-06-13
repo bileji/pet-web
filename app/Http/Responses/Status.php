@@ -19,6 +19,7 @@ class Status
     const GET_GEE_CAPTCHA_INVALID = -30010;
 
     const SIGN_UP_INFO_ILLEGALITY = -40000;
+    const VERIFY_ERROR = -40010;
 
     const SEND_VERIFY_FREQUENTLY = -50000;
 
@@ -34,6 +35,8 @@ class Status
         self::GET_GEE_CAPTCHA_INVALID => '无效的图形验证码',
 
         self::SEND_VERIFY_FREQUENTLY  => '验证码发送过于频繁',
+
+        self::VERIFY_ERROR            => '验证码错误',
 
         # 注册相关
         self::SIGN_UP_INFO_ILLEGALITY => '非法的注册信息',
