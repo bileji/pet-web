@@ -28,7 +28,7 @@ class UserController extends Controller
                 "password"  => Input::get('password'),
                 "extension" => [
                     "nickname"         => Input::get('nickname'),
-                    "sign_up_platform" => 'web_1.0.0',
+                    "sign_up_platform" => 'web 1.0.0',
                 ],
             ];
 
