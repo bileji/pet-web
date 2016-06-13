@@ -162,8 +162,8 @@ app.controller('sign_up', [
             // todo 发送验证码
             $http.post("http://" + $location.host() + "/verify/send").success(function(response) {
                  console.log(response);
+                resend_count_down();
             });
-            resend_count_down();
         };
 
         // 点击下一步step2
