@@ -16,7 +16,7 @@ class VerifyService extends BootService
     const VERIFY_CODE_EXPIRE_TIME = 300;
 
     # 每日发送验证码数量限制
-    const HOUR_SEND_VERIFY_CODE_LIMIT = 10;
+    const HOUR_SEND_VERIFY_CODE_LIMIT = 100;
 
     # 随机验证码
     protected static function rangeCode()
