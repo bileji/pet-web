@@ -98,7 +98,7 @@ var verify_handler = function (captcha) {
                         },
                         success : function (object) {
                             if (object.code == 0) {
-                                button.attr("captcha_token", object.data.captcha_token);
+                                $("#captcha_token").val(object.data.captcha_token);
                                 $("#dot").animate({"left": "70%"}, 1500);
                                 resend_count_down();
                                 step_show_one($("#step2"));
@@ -180,7 +180,7 @@ app.controller('sign_up', [
                     verify       : verify.val(),
                     nickname     : nickname.val(),
                     password     : password.val(),
-                    captcha_token: step1_button.attr("captcha_token")
+                    captcha_token: $("#captcha_token").val()
                 };
 
                 $http.post("sign_up", user).success(function (response) {

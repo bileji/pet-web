@@ -256,6 +256,7 @@
 
             <div ng-controller="sign_up" class="sign-up-body">
                 <form name="step1" id="step1" class="relative">
+                    <input type="hidden" id="captcha_token" value="">
                     <div>
                         <input type="text" class="form-control" placeholder="手机号或邮箱" name="ID" username="ID" ng-model="user.ID" id="ID" wrong="@{{ step1.ID.$error.wrong || step1.ID.$error.required }}" required>
                     </div>
