@@ -50,7 +50,7 @@ class VerifyController extends Controller
         $account = Input::get('account');
         if ($account == Cache::get(Helper::userIdCaptchaCacheKey($account))) {
             if ($range_code = VerifyService::generate($account)) {
-                Async::addMessage('send', $account, (new Template(Template::VERIFY, ['code' => $range_code]))->get());
+                Async::addMessage('send', $account, (new Template(Template::VERIFY, ['code' => $range_code]))->get(), "邮件验证码-新用户注册");
                 // 发送成功
                 return Response::out(Status::SUCCESS);
             } else {
