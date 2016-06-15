@@ -13,8 +13,13 @@ class Template
 
     public function __construct($template, array $replace)
     {
-        return str_replace(array_map(function ($item) {
+        $this->template = str_replace(array_map(function ($item) {
             return '#' . $item . '#';
         }, array_keys($replace)), array_values($replace), $template);
+    }
+
+    public function get()
+    {
+        return $this->template;
     }
 }
