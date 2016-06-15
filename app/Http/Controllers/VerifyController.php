@@ -11,6 +11,7 @@ use App\Http\Services\VerifyService;
 use App\Utils\Helper;
 use App\Http\Responses\Response;
 use App\Http\Responses\Status;
+use App\Utils\Template;
 use Bileji\Support\Facades\Async;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Input;
@@ -49,7 +50,7 @@ class VerifyController extends Controller
         $account = Input::get('account');
         if ($account == Cache::get(Helper::userIdCaptchaCacheKey($account))) {
             if ($range_code = VerifyService::generate($account)) {
-                Async::addMessage('send', $account, '【比乐集】您的验证码是' . $range_code . '，15分钟内有效。');
+                Async::addMessage('send', $account, new Template(Template::VERIFY, ['code' => $range_code]));
                 // 发送成功
                 return Response::out(Status::SUCCESS);
             } else {
