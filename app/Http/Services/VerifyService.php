@@ -16,6 +16,7 @@ class VerifyService extends BootService
     const VERIFY_CODE_EXPIRE_TIME = 300;
 
     # 每日发送验证码数量限制
+    // todo modify to 3
     const HOUR_SEND_VERIFY_CODE_LIMIT = 100;
 
     # 随机验证码
@@ -27,7 +28,7 @@ class VerifyService extends BootService
     # 生成短信/邮箱验证码
     public static function generate($account)
     {
-        $dailyKey = Helper::dailySendCacheKey($account);
+        $dailyKey = Helper::hourUnique($account);
 
         !Cache::has($dailyKey) && Cache::add($dailyKey, 1, 3600);
 

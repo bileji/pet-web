@@ -23,12 +23,14 @@ class UserController extends Controller
             if (empty(Input::get('verify')) || Cache::pull(Helper::sendCacheKey(Input::get("username"))) != Input::get('verify')) {
                 return Response::out(Status::VERIFY_ERROR);
             }
+            $client_ip = Helper::clientIP();
             $request = [
                 "username"  => Input::get('username'),
                 "password"  => Input::get('password'),
                 "extension" => [
                     "nickname"         => Input::get('nickname'),
                     "sign_up_platform" => 'web 1.0.0',
+                    "sign_up_ip"       => empty($client_ip) ? '' : $client_ip
                 ],
             ];
 
