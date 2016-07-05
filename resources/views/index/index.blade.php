@@ -19,7 +19,7 @@
         }
 
         .nav-pull {
-            height: 80px;
+            height: 0px;
             background-size: 100%;
             background-image: url('http://web.bileji.com/assets/images/banner_background.png');
         }
