@@ -96,20 +96,16 @@
             var dom = $("#nav-pull");
             var delta = event.originalEvent.wheelDelta || event.originalEvent.detail;
 
-            if (delta === 0) {
-                if (window.last < 0 && dom.height() === 80) {
-                    dom.animate({
-                        height: 0
-                    }, 600, "swing");
-                }
-                if (window.last > 0 && $(document).scrollTop() === 0 && dom.height() === 0) {
-                    dom.animate({
-                        height: 80
-                    }, 600, "swing");
-                }
+            if (delta < 0 && dom.height() === 80) {
+                dom.animate({
+                    height: 0
+                }, 600, "swing");
             }
-
-            window.last = delta;
+            if (delta > 0 && $(document).scrollTop() === 0 && dom.height() === 0) {
+                dom.animate({
+                    height: 80
+                }, 600, "swing");
+            }
         });
     </script>
 @stop
