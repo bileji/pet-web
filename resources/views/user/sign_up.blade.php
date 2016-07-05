@@ -4,7 +4,6 @@
 
 @section('modules')
     <script src="{{asset('assets/scripts/modules/user/controller.js')}}"></script>
-    <script src="{{'http://libs.baidu.com/jquery/1.9.0/jquery.js'}}"></script>
     <script src="{{'http://static.geetest.com/static/tools/gt.js'}}"></script>
     <style type="text/css">
         header, .container {
