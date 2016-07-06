@@ -96,15 +96,21 @@
             var dom = $("#nav-pull");
             var delta = event.originalEvent.wheelDelta || event.originalEvent.detail;
 
-            if (delta < 0 && dom.height() === 80) {
+            if (delta < 0 && dom.height() === 80 && (window.wheel_pull === true || window.wheel_pull === undefined)) {
+                window.wheel_pull = false;
                 dom.animate({
                     height: 0
-                }, 600, "swing");
+                }, 600, "swing", function () {
+                    window.wheel_pull = true;
+                });
             }
-            if (delta > 0 && $(document).scrollTop() === 0 && dom.height() === 0) {
+            if (delta > 0 && $(document).scrollTop() === 0 && dom.height() === 0 && (window.wheel_push === true || window.wheel_push === undefined)) {
+                window.wheel_push = false;
                 dom.animate({
                     height: 80
-                }, 600, "swing");
+                }, 600, "swing", function () {
+                    window.wheel_push = true;
+                });
             }
         });
     </script>
