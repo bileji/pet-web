@@ -208,8 +208,7 @@
 
         .links {
             width: 446px;
-            height: 20px;
-            line-height: 20px;
+            height: 28px;
             margin: 0 auto;
         }
 
@@ -229,13 +228,13 @@
 
         .links li div {
             padding: 0 4px;
-            line-height: 28px;
+            line-height: 20px;
             font-weight: normal;
         }
 
         .copyright {
-            height: 28px;
-            line-height: 28px;
+            height: 20px;
+            line-height: 20px;
             text-align: center;
         }
     </style>
