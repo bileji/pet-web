@@ -214,8 +214,8 @@
 
         .links .separator {
             width: 0;
-            height: 14px;
-            margin: 7px 4px;
+            height: 12px;
+            margin: 8px 4px;
             border-left: 1px solid #ccc;
             display: inline-block;
         }
