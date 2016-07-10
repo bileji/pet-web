@@ -319,9 +319,9 @@
                     <div class="protocol">
                         <p>
                             己阅读并同意
-                            <a class="legal-link" target="_blank">服务条款</a>
+                            <a class="legal-link" target="_blank">《比乐集服务条款》</a>
                             与
-                            <a class="legal-link" target="_blank">隐私政策</a>
+                            <a class="legal-link" target="_blank">《隐私政策》</a>
                             。
                         </p>
                     </div>
