@@ -152,7 +152,7 @@
             height: 28px;
             position: relative;
         }
-        
+
         .content .sign-up-body .more-long {
             width: 100%;
             outline: none;
@@ -205,6 +205,16 @@
             position: absolute;
             bottom: 0;
         }
+
+        .links li {
+            float: right;
+        }
+
+        .links li div {
+            padding: 10px 4px;
+            line-height: 1em;
+            font-weight: normal;
+        }
     </style>
 @stop
 
@@ -230,7 +240,7 @@
         </div>
     </header>
     <div class="container">
-        <div class="content"  ng-app="user">
+        <div class="content" ng-app="user">
             <div class="sign-up-header">
                 <div class="progress-title">
                     <div>
@@ -245,11 +255,13 @@
                 </div>
                 <div>
                     <div class="progress fine">
-                        <div id="progress-bar" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
+                        <div id="progress-bar" class="progress-bar progress-bar-success progress-bar-striped active"
+                             role="progressbar" style="width: 0;"></div>
                     </div>
                     <div class="progress-bar-dot">
                         <div class="progress fine dot" id="dot">
-                            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: 0;"></div>
+                            <div class="progress-bar progress-bar-success progress-bar-striped active"
+                                 role="progressbar" style="width: 0;"></div>
                         </div>
                     </div>
                 </div>
@@ -259,7 +271,9 @@
                 <form name="step1" id="step1" class="relative">
                     <input type="hidden" id="captcha_token" value="">
                     <div>
-                        <input type="text" class="form-control" placeholder="手机号或邮箱" name="ID" username="ID" ng-model="user.ID" id="ID" wrong="@{{ step1.ID.$error.wrong || step1.ID.$error.required }}" required>
+                        <input type="text" class="form-control" placeholder="手机号或邮箱" name="ID" username="ID"
+                               ng-model="user.ID" id="ID"
+                               wrong="@{{ step1.ID.$error.wrong || step1.ID.$error.required }}" required>
                     </div>
                     <div class="alter alter-first">
                         <span ng-show="!step1.ID.$error.required && step1.ID.$error.wrong" class="hide">
@@ -270,7 +284,8 @@
                     <div class="verify">
                         <div id="div_geetest_lib">
                             <div id="captcha" class="captcha">
-                                <script src="http://api.geetest.com/get.php?gt=4f80a638af7e2350b04b7d2ce0508386" async></script>
+                                <script src="http://api.geetest.com/get.php?gt=4f80a638af7e2350b04b7d2ce0508386"
+                                        async></script>
                             </div>
                         </div>
                     </div>
@@ -294,7 +309,10 @@
 
                 <form name="step2" id="step2" class="relative hide">
                     <div class="table-space">
-                        <input type="text" class="form-control" placeholder="您的昵称(4-16位)" id="nickname" name="nickname" nickname="nickname" ng-model="user.nickname" nickname-wrong="@{{ step2.nickname.$error.wrong || step2.nickname.$error.required }}" required>
+                        <input type="text" class="form-control" placeholder="您的昵称(4-16位)" id="nickname" name="nickname"
+                               nickname="nickname" ng-model="user.nickname"
+                               nickname-wrong="@{{ step2.nickname.$error.wrong || step2.nickname.$error.required }}"
+                               required>
                     </div>
                     <div class="alter alter-first">
                         <span ng-show="!step2.nickname.$error.required && step2.nickname.$error.wrong" class="hide">
@@ -309,7 +327,8 @@
                     </div>
 
                     <div class="table-space">
-                        <input type="password" class="form-control" placeholder="设置密码(6-16位)" id="password" name="password" password="password" ng-model="user.password" required>
+                        <input type="password" class="form-control" placeholder="设置密码(6-16位)" id="password"
+                               name="password" password="password" ng-model="user.password" required>
                     </div>
                     <div class="alter alter-second">
                         <span ng-show="!step2.password.$error.required && step2.password.$error.less">
@@ -324,8 +343,11 @@
                     </div>
 
                     <div class="table-space">
-                        <input type="text" class="form-control verify-code" placeholder="短信/邮件验证码" id="verify" name="verify" verify="verify" ng-model="user.verify" required>
-                        <button id="resend" type="button" class="btn btn-success verify-btn" ng-click="send_verify()">重发验证码</button>
+                        <input type="text" class="form-control verify-code" placeholder="短信/邮件验证码" id="verify"
+                               name="verify" verify="verify" ng-model="user.verify" required>
+                        <button id="resend" type="button" class="btn btn-success verify-btn" ng-click="send_verify()">
+                            重发验证码
+                        </button>
                     </div>
                     <div class="alter alter-third">
                         <span ng-show="!step2.verify.$error.required && step2.verify.$error.wrong">
@@ -334,7 +356,9 @@
                     </div>
 
                     <div class="table-space">
-                        <button id="user-sign-up" type="button" class="btn btn-success more-long" ng-click="sign_up()">下一步</button>
+                        <button id="user-sign-up" type="button" class="btn btn-success more-long" ng-click="sign_up()">
+                            下一步
+                        </button>
                     </div>
                 </form>
                 <form name="step3" id="step3" class="relative hide">
@@ -348,8 +372,47 @@
         </div>
     </div>
     <footer>
+        <div class="links">
+            <ul>
+                <li>
+                    <div>
+                        <a>关于我们</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a>人才招聘</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a>比乐菜谱</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a>商家入驻</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a>网站合作</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a>法律合作</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a>联系我们</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
         <div>
-
+            <span>Copyright©2016-2016  比乐集 bileji.com 版权所有</span>
         </div>
     </footer>
 @stop
