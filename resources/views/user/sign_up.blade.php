@@ -159,7 +159,7 @@
         }
 
         .content .sign-up-body .protocol {
-            margin-top: 20px;
+            margin: 15px 0;
             font-size: 10px;
             text-align: left;
         }
@@ -313,10 +313,15 @@
                     </div>
 
                     <div class="protocol">
-                        <p>
-                            己阅读并同意
-                            <a class="legal-link" target="_blank">《比乐集服务条款》</a>
-                        </p>
+                        <div>
+                            <input type="checkbox" checked="checked"/>
+                        </div>
+                        <div>
+                            <p>
+                                己阅读并同意
+                                <a class="legal-link" target="_blank">《比乐集服务条款》</a>
+                            </p>
+                        </div>
                     </div>
 
                     <div>
