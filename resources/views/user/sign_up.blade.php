@@ -159,7 +159,7 @@
         }
 
         .content .sign-up-body .protocol {
-            margin: 5px 0 15px;
+            margin: 0 0 18px;
             font-size: 10px;
             text-align: left;
             float: left;
@@ -169,7 +169,7 @@
             width: 22px;
             float: left;
             position: relative;
-            top: -1px;
+            top: -2px;
             left: 2px;
         }
 
