@@ -201,7 +201,7 @@
 
         footer {
             width: 100%;
-            height: 40px;
+            height: 56px;
             position: absolute;
             bottom: 0;
         }
@@ -216,25 +216,26 @@
         .links .separator {
             width: 0;
             height: 14px;
-            margin: 3px 4px;
+            margin: 7px 4px;
             border-left: 1px solid #ccc;
             display: inline-block;
         }
 
         .links li {
             float: left;
-            height: 20px;
+            height: 28px;
+            padding: 4px 0;
         }
 
         .links li div {
             padding: 0 4px;
-            line-height: 20px;
+            line-height: 28px;
             font-weight: normal;
         }
 
         .copyright {
-            height: 20px;
-            line-height: 20px;
+            height: 28px;
+            line-height: 28px;
             text-align: center;
         }
     </style>
