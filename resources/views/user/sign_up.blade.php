@@ -206,8 +206,24 @@
             bottom: 0;
         }
 
+        .links {
+            width: 420px;
+            height: 20px;
+            line-height: 20px;
+            margin: 0 auto;
+        }
+
+        .links .separator {
+            width: 0;
+            height: 14px;
+            margin: 9px 4px;
+            border-left: 1px solid #ccc;
+            display: inline-block;
+        }
+
         .links li {
-            float: right;
+            float: left;
+            height: 20px;
         }
 
         .links li div {
@@ -379,31 +395,37 @@
                         <a>关于我们</a>
                     </div>
                 </li>
+                <li class="separator"></li>
                 <li>
                     <div>
                         <a>人才招聘</a>
                     </div>
                 </li>
+                <li class="separator"></li>
                 <li>
                     <div>
                         <a>比乐菜谱</a>
                     </div>
                 </li>
+                <li class="separator"></li>
                 <li>
                     <div>
                         <a>商家入驻</a>
                     </div>
                 </li>
+                <li class="separator"></li>
                 <li>
                     <div>
                         <a>网站合作</a>
                     </div>
                 </li>
+                <li class="separator"></li>
                 <li>
                     <div>
                         <a>法律合作</a>
                     </div>
                 </li>
+                <li class="separator"></li>
                 <li>
                     <div>
                         <a>联系我们</a>
