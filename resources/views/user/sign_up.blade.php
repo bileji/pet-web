@@ -166,7 +166,7 @@
 
         .content .sign-up-body .protocol a {
             color: #337ab7;
-            text-decoration: underline;
+            text-decoration: none;
         }
 
         .content .sign-up-body .table-space {
