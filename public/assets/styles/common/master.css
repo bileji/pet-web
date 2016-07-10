@@ -32,7 +32,15 @@ a:hover {
     text-decoration: none;
 }
 
-header, footer {
+header {
+    font-size: 12px;
+    width: 100%;
+    min-width: 1230px;
+    position: relative;
+    background-color: #e8e8e8;
+}
+
+footer {
     font-size: 12px;
     width: 100%;
     min-width: 1230px;
