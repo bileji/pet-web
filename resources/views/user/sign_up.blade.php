@@ -312,18 +312,15 @@
                         </div>
                     </div>
 
-                    <div>
-                        <button id="check-phone" type="button" class="btn btn-success more-long">下一步</button>
-                    </div>
-
                     <div class="protocol">
                         <p>
                             己阅读并同意
                             <a class="legal-link" target="_blank">《比乐集服务条款》</a>
-                            与
-                            <a class="legal-link" target="_blank">《隐私政策》</a>
-                            。
                         </p>
+                    </div>
+
+                    <div>
+                        <button id="check-phone" type="button" class="btn btn-success more-long">下一步</button>
                     </div>
                 </form>
 
