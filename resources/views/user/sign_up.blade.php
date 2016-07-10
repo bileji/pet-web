@@ -318,13 +318,11 @@
 
                     <div class="protocol">
                         <p>
-                            注册意味着你同意
+                            己阅读并同意
                             <a class="legal-link" target="_blank">服务条款</a>
                             与
                             <a class="legal-link" target="_blank">隐私政策</a>
-                            ，包括
-                            <a class="legal-link" target="_blank">Cookie 使用条款</a>
-                            。其他用户将可以通过你所提供的邮件地址或手机号码找到你。
+                            。
                         </p>
                     </div>
                 </form>
