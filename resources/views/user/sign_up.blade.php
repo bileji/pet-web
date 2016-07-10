@@ -207,7 +207,7 @@
         }
 
         .links {
-            width: 420px;
+            width: 446px;
             height: 20px;
             line-height: 20px;
             margin: 0 auto;
@@ -216,7 +216,7 @@
         .links .separator {
             width: 0;
             height: 14px;
-            margin: 9px 4px;
+            margin: 0 4px;
             border-left: 1px solid #ccc;
             display: inline-block;
         }
@@ -230,6 +230,12 @@
             padding: 10px 4px;
             line-height: 1em;
             font-weight: normal;
+        }
+
+        .copyright {
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
         }
     </style>
 @stop
@@ -433,7 +439,7 @@
                 </li>
             </ul>
         </div>
-        <div>
+        <div class="copyright">
             <span>Copyright©2016-2016  比乐集 bileji.com 版权所有</span>
         </div>
     </footer>
