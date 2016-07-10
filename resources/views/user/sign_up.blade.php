@@ -159,9 +159,23 @@
         }
 
         .content .sign-up-body .protocol {
-            margin: 15px 0;
+            margin: 5px 0 15px;
             font-size: 10px;
             text-align: left;
+            float: left;
+        }
+
+        .content .sign-up-body .protocol div:first-child {
+            width: 22px;
+            float: left;
+            position: relative;
+            top: -1px;
+            left: 2px;
+        }
+
+        .content .sign-up-body .protocol div:last-child {
+            width: 278px;
+            float: left;
         }
 
         .content .sign-up-body .protocol a {
@@ -318,7 +332,7 @@
                         </div>
                         <div>
                             <p>
-                                己阅读并同意
+                                我己阅读并同意
                                 <a class="legal-link" target="_blank">《比乐集服务条款》</a>
                             </p>
                         </div>
