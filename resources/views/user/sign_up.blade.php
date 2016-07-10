@@ -216,7 +216,7 @@
         .links .separator {
             width: 0;
             height: 14px;
-            margin: 0 4px;
+            margin: 3px 4px;
             border-left: 1px solid #ccc;
             display: inline-block;
         }
@@ -227,8 +227,8 @@
         }
 
         .links li div {
-            padding: 10px 4px;
-            line-height: 1em;
+            padding: 0 4px;
+            line-height: 20px;
             font-weight: normal;
         }
 
