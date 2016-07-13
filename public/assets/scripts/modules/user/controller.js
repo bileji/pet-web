@@ -75,7 +75,7 @@ var verify_handler = function (captcha) {
             return;
         }
         $.ajax({
-            url     : "http://web.bileji.com/verify/captcha",
+            url     : "https://web.bileji.com/verify/captcha",
             type    : "post",
             dataType: "json",
             headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -89,7 +89,7 @@ var verify_handler = function (captcha) {
                 if (object.code == 0) {
                     $("#captcha_token").val(object.data.captcha_token);
                     $.ajax({
-                        url     : "http://web.bileji.com/verify/send",
+                        url     : "https://web.bileji.com/verify/send",
                         type    : "post",
                         dataType: "json",
                         headers : {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -147,7 +147,7 @@ app.controller('sign_up', [
         $(".alter").children('span').removeClass("hide");
 
         // 验证码相关
-        var verify_url = "http://" + $location.host() + "/verify/captcha?rand=" + Math.round(Math.random() * 100);
+        var verify_url = "https://" + $location.host() + "/verify/captcha?rand=" + Math.round(Math.random() * 100);
         $http.get(verify_url).success(function (response) {
             initGeetest({
                 gt       : response.gt,
@@ -159,7 +159,7 @@ app.controller('sign_up', [
 
         // 点击事件
         $scope.send_verify = function () {
-            $http.post("http://" + $location.host() + "/verify/send").success(function (response) {
+            $http.post("https://" + $location.host() + "/verify/send").success(function (response) {
                 if (response.code == 0) {
                     resend_count_down();
                 } else {

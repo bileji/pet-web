@@ -7,7 +7,6 @@
     <script src="{{'https://static.geetest.com/static/tools/gt.js'}}"></script>
     <style type="text/css">
         body {
-            min-height: 100%;
             position: absolute;
         }
 
