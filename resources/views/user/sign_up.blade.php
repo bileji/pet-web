@@ -6,6 +6,11 @@
     <script src="{{asset('assets/scripts/modules/user/controller.js')}}"></script>
     <script src="{{'http://static.geetest.com/static/tools/gt.js'}}"></script>
     <style type="text/css">
+        body {
+            min-height: 100%;
+            position: absolute;
+        }
+
         header, .container {
             padding: 0;
             min-width: 1230px;
