@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{asset('node_modules/bootstrap/dist/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/styles/common/master.css')}}">
     <script src="{{asset('node_modules/angular/angular.min.js')}}"></script>
-    <script src="{{'http://libs.baidu.com/jquery/1.9.0/jquery.js'}}"></script>
+    <script src="{{asset('scripts/jquery-3.0.0.min.js')}}"></script>
     @yield('modules')
 </head>
 

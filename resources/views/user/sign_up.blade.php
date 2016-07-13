@@ -4,7 +4,7 @@
 
 @section('modules')
     <script src="{{asset('assets/scripts/modules/user/controller.js')}}"></script>
-    <script src="{{'http://static.geetest.com/static/tools/gt.js'}}"></script>
+    <script src="{{'https://static.geetest.com/static/tools/gt.js'}}"></script>
     <style type="text/css">
         body {
             min-height: 100%;
@@ -325,7 +325,7 @@
                     <div class="verify">
                         <div id="div_geetest_lib">
                             <div id="captcha" class="captcha">
-                                <script src="http://api.geetest.com/get.php?gt=4f80a638af7e2350b04b7d2ce0508386"
+                                <script src="https://api.geetest.com/get.php?gt=4f80a638af7e2350b04b7d2ce0508386"
                                         async></script>
                             </div>
                         </div>
