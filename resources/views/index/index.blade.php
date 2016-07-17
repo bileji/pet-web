@@ -128,11 +128,11 @@
                     height: 0
                 }, 600, "swing", function () {
                     window.wheel_pull = true;
-                }).style({display: 'none'});
+                }).hide();
             }
             if (window.close !== true && delta > 0 && $(document).scrollTop() === 0 && dom.height() === 0 && (window.wheel_push === true || window.wheel_push === undefined)) {
                 window.wheel_push = false;
-                dom.style({display: ''}).animate({
+                dom.show().animate({
                     height: 80
                 }, 600, "swing", function () {
                     window.wheel_push = true;
