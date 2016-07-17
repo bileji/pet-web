@@ -25,7 +25,9 @@
         }
 
         .nav-pull .close {
-            background-image: url('https://web.bileji.com/assets/images/close.png');
+            width: 15px;
+            height: 15px;
+            background: url('https://web.bileji.com/assets/images/close.png') no-repeat -1px 55px;
         }
 
         .nav-banner {
