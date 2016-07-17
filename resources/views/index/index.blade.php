@@ -104,7 +104,7 @@
 
         header .layer {
             height: 180px;
-            background: url('https://web.bileji.com/assets/images/layer.png') center;
+            background: #ffffff url('https://web.bileji.com/assets/images/layer.png') center;
         }
 
         .container {
