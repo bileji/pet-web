@@ -10,7 +10,7 @@
             font-family: Cambria, Georgia, sans-serif;
         }
 
-        .separator {
+        header .separator {
             width: 0;
             height: 14px;
             margin: 9px 4px;
@@ -18,27 +18,27 @@
             display: inline-block;
         }
 
-        .pull {
+        header .pull {
             height: 0;
             display: none;
             background-size: 100%;
-            background-image: url('https://web.bileji.com/assets/images/banner_background.png');
+            background-image: url('https://web.bileji.com/assets/images/pull.png');
         }
 
-        .pull .close {
+        header .pull .close {
             width: 15px;
             height: 15px;
             background: url('https://web.bileji.com/assets/images/close.png') -1px 55px;
         }
 
-        .banner {
+        header .banner {
             height: 32px;
             width: 1230px;
             margin: auto;
             background-color: #e8e8e8;
         }
 
-        .banner .left {
+        header .banner .left {
             padding: 0;
             height: 100%;
             width: 245px;
@@ -47,21 +47,21 @@
             float: left;
         }
 
-        .banner .left li {
+        header .banner .left li {
             float: left;
         }
 
-        .banner .left li div {
+        header .banner .left li div {
             padding: 10px 4px;
             line-height: 1em;
             font-weight: normal;
         }
 
-        .banner .left li:first-child div {
+        header .banner .left li:first-child div {
             padding-left: 0;
         }
 
-        .banner .right {
+        header .banner .right {
             padding: 0;
             height: 100%;
             width: 320px;
@@ -69,7 +69,7 @@
             margin: 0 0 0 auto;
         }
 
-        .banner .right .contribute {
+        header .banner .right .contribute {
             width: 60px;
             height: 40px;
             position: relative;
@@ -83,23 +83,28 @@
             margin-left: 12px;
         }
 
-        .banner .right .contribute a {
+        header .banner .right .contribute a {
             font-size: 14px;
             color: #fff !important;
         }
 
-        .banner .right li {
+        header .banner .right li {
             float: right;
         }
 
-        .banner .right li div {
+        header .banner .right li div {
             padding: 10px 4px;
             line-height: 1em;
             font-weight: normal;
         }
 
-        .banner .right li:first-child div {
+        header .banner .right li:first-child div {
             padding-right: 0;
+        }
+
+        header .layer {
+            height: 100px;
+            background-image: url('https://web.bileji.com/assets/images/layer.png');
         }
 
         .container {
@@ -203,6 +208,7 @@
                 </li>
             </ul>
         </div>
+        <div class="layer"></div>
     </header>
     <div class="container">
         <div class="content">
