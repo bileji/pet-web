@@ -31,14 +31,19 @@
             background: url('https://web.bileji.com/assets/images/close.png') -1px 55px;
         }
 
-        header .banner {
+        header .header-blur {
+            width: 100%;
+            background-color: transparent;
+        }
+
+        header .header-blur .header-wrap {
             height: 32px;
             width: 1230px;
             margin: auto;
             background-color: #e8e8e8;
         }
 
-        header .banner .left {
+        header .header-blur .header-wrap .left {
             padding: 0;
             height: 100%;
             width: 245px;
@@ -47,21 +52,21 @@
             float: left;
         }
 
-        header .banner .left li {
+        header .header-blur .header-wrap .left li {
             float: left;
         }
 
-        header .banner .left li div {
+        header .header-blur .header-wrap .left li div {
             padding: 10px 4px;
             line-height: 1em;
             font-weight: normal;
         }
 
-        header .banner .left li:first-child div {
+        header .header-blur .header-wrap .left li:first-child div {
             padding-left: 0;
         }
 
-        header .banner .right {
+        header .header-blur .header-wrap .right {
             padding: 0;
             height: 100%;
             width: 320px;
@@ -69,7 +74,7 @@
             margin: 0 0 0 auto;
         }
 
-        header .banner .right .contribute {
+        header .header-blur .header-wrap .right .contribute {
             width: 60px;
             height: 40px;
             position: relative;
@@ -83,22 +88,22 @@
             margin-left: 12px;
         }
 
-        header .banner .right .contribute a {
+        header .header-blur .header-wrap .right .contribute a {
             font-size: 14px;
             color: #fff !important;
         }
 
-        header .banner .right li {
+        header .header-blur .header-wrap .right li {
             float: right;
         }
 
-        header .banner .right li div {
+        header .header-blur .header-wrap .right li div {
             padding: 10px 4px;
             line-height: 1em;
             font-weight: normal;
         }
 
-        header .banner .right li:first-child div {
+        header .header-blur .header-wrap .right li:first-child div {
             padding-right: 0;
         }
 
@@ -165,47 +170,49 @@
         <div class="pull" id="pull">
             <div class="close" id="close"></div>
         </div>
-        <div class="banner">
-            <ul class="left">
-                <li>
-                    <div>
-                        <a>嗨~，欢迎来到比乐集！</a>
-                    </div>
-                </li>
-            </ul>
-            <ul class="right">
-                <li>
-                    <div class="contribute">
-                        <a>投稿</a>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <a>站内导航</a>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <a>商家支持</a>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <a>我的菜谱</a>
-                    </div>
-                </li>
-                <li class="separator"></li>
-                <li>
-                    <div>
-                        <a href="{{url('user/sign_up')}}">注册</a>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <a href="{{url('user/sign_in')}}">登录</a>
-                    </div>
-                </li>
-            </ul>
+        <div class="header-blur">
+            <div class="header-wrap">
+                <ul class="left">
+                    <li>
+                        <div>
+                            <a>嗨~，欢迎来到比乐集！</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="right">
+                    <li>
+                        <div class="contribute">
+                            <a>投稿</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a>站内导航</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a>商家支持</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a>我的菜谱</a>
+                        </div>
+                    </li>
+                    <li class="separator"></li>
+                    <li>
+                        <div>
+                            <a href="{{url('user/sign_up')}}">注册</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="{{url('user/sign_in')}}">登录</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="layer"></div>
     </header>
