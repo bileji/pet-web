@@ -128,7 +128,8 @@
                     height: 0
                 }, 600, "swing", function () {
                     window.wheel_pull = true;
-                }).hide();
+                    this.hide();
+                });
             }
             if (window.close !== true && delta > 0 && $(document).scrollTop() === 0 && dom.height() === 0 && (window.wheel_push === true || window.wheel_push === undefined)) {
                 window.wheel_push = false;
@@ -146,8 +147,8 @@
                     height: 0
                 }, 600, "swing", function () {
                     window.wheel_pull = true;
-                    console.log(this);
-                }).hide();
+                    this.hide();
+                });
             });
         });
     </script>
