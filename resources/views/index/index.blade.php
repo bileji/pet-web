@@ -40,7 +40,6 @@
             height: 32px;
             width: 1230px;
             margin: auto;
-            background-color: #e8e8e8;
         }
 
         header .header-blur .header-wrap .left {
