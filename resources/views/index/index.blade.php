@@ -62,6 +62,24 @@
             margin: 0 0 0 auto;
         }
 
+        .nav-right .contribute {
+            width: 60px;
+            height: 40px;
+            position: relative;
+            z-index: 10;
+            border-radius: 0 0 5px 5px;
+            -moz-border-radius: 0 0 5px 5px;
+            -webkit-border-radius: 0 0 5px 5px;
+            padding: 0;
+            line-height: 38px;
+            background-color: #f25d8e;
+        }
+
+        .nav-right .contribute a {
+            font-size: 14px;
+            color: #fff !important;
+        }
+
         .nav-right li {
             float: right;
         }
@@ -130,7 +148,7 @@
             </ul>
             <ul class="nav-right">
                 <li>
-                    <div>
+                    <div class="contribute">
                         <a>投稿</a>
                     </div>
                 </li>
