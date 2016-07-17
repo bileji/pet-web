@@ -3,7 +3,7 @@ body {
     padding: 0;
     color: #888;
     text-align: center;
-    font-family: 'Microsoft YaHei', tahoma, arial, 'Hiragino Sans GB', 宋体, sans-serif;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
     width: 100%;
     min-height: 100%;
 }
