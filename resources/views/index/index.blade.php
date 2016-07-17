@@ -27,7 +27,7 @@
         .nav-pull .close {
             width: 15px;
             height: 15px;
-            background: url('https://web.bileji.com/assets/images/close.png') no-repeat -1px 55px;
+            background: url('https://web.bileji.com/assets/images/close.png') -1px 55px;
         }
 
         .nav-banner {
@@ -121,7 +121,7 @@
             var dom = $("#nav-pull");
             var delta = event.originalEvent.wheelDelta || event.originalEvent.detail;
 
-            if (delta < 0 && dom.height() === 80 && (window.wheel_pull === true || window.wheel_pull === undefined)) {
+            if (window.close !== true && delta < 0 && dom.height() === 80 && (window.wheel_pull === true || window.wheel_pull === undefined)) {
                 window.wheel_pull = false;
                 dom.animate({
                     height: 0
@@ -138,13 +138,17 @@
                 });
             }
         });
+        
+        $("#close").click(function () {
+            window.close = true;
+        });
     </script>
 @stop
 
 @section('container')
     <header>
         <div class="nav-pull" id="nav-pull">
-            <div class="close"></div>
+            <div class="close" id="close"></div>
         </div>
         <div class="nav-banner">
             <ul class="nav-left">
