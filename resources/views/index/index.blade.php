@@ -18,27 +18,27 @@
             display: inline-block;
         }
 
-        .nav-pull {
+        .pull {
             height: 0;
             display: none;
             background-size: 100%;
             background-image: url('https://web.bileji.com/assets/images/banner_background.png');
         }
 
-        .nav-pull .close {
+        .pull .close {
             width: 15px;
             height: 15px;
             background: url('https://web.bileji.com/assets/images/close.png') -1px 55px;
         }
 
-        .nav-banner {
+        .banner {
             height: 32px;
             width: 1230px;
             margin: auto;
             background-color: #e8e8e8;
         }
 
-        .nav-left {
+        .banner .left {
             padding: 0;
             height: 100%;
             width: 245px;
@@ -47,21 +47,21 @@
             float: left;
         }
 
-        .nav-left li {
+        .banner .left li {
             float: left;
         }
 
-        .nav-left li div {
+        .banner .left li div {
             padding: 10px 4px;
             line-height: 1em;
             font-weight: normal;
         }
 
-        .nav-left li:first-child div {
+        .banner .left li:first-child div {
             padding-left: 0;
         }
 
-        .nav-right {
+        .banner .right {
             padding: 0;
             height: 100%;
             width: 320px;
@@ -69,7 +69,7 @@
             margin: 0 0 0 auto;
         }
 
-        .nav-right .contribute {
+        .banner .right .contribute {
             width: 60px;
             height: 40px;
             position: relative;
@@ -83,22 +83,22 @@
             margin-left: 12px;
         }
 
-        .nav-right .contribute a {
+        .banner .right .contribute a {
             font-size: 14px;
             color: #fff !important;
         }
 
-        .nav-right li {
+        .banner .right li {
             float: right;
         }
 
-        .nav-right li div {
+        .banner .right li div {
             padding: 10px 4px;
             line-height: 1em;
             font-weight: normal;
         }
 
-        .nav-right li:first-child div {
+        .banner .right li:first-child div {
             padding-right: 0;
         }
 
@@ -119,7 +119,7 @@
 
     <script type="text/javascript">
         $(document).on("mousewheel DOMMouseScroll", function (event) {
-            var dom = $("#nav-pull");
+            var dom = $("#pull");
             var delta = event.originalEvent.wheelDelta || event.originalEvent.detail;
 
             if (delta < 0 && dom.height() === 80 && (window.wheel_pull === true || window.wheel_pull === undefined)) {
@@ -141,7 +141,7 @@
             }
         });
         $(document).ready(function () {
-            var dom = $("#nav-pull");
+            var dom = $("#pull");
             $("#close").click(function () {
                 window.close = true;
                 dom.animate({
@@ -157,11 +157,11 @@
 
 @section('container')
     <header>
-        <div class="nav-pull" id="nav-pull">
+        <div class="pull" id="pull">
             <div class="close" id="close"></div>
         </div>
-        <div class="nav-banner">
-            <ul class="nav-left">
+        <div class="banner">
+            <ul class="left">
                 <li>
                     <div>
                         <a>所在城市:</a>
@@ -169,7 +169,7 @@
                     </div>
                 </li>
             </ul>
-            <ul class="nav-right">
+            <ul class="right">
                 <li>
                     <div class="contribute">
                         <a>投稿</a>
