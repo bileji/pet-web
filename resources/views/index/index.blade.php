@@ -146,6 +146,7 @@
                     height: 0
                 }, 600, "swing", function () {
                     window.wheel_pull = true;
+                    console.log(this);
                 }).hide();
             });
         });
