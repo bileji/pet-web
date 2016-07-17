@@ -103,8 +103,8 @@
         }
 
         header .layer {
-            height: 100px;
-            background-image: url('https://web.bileji.com/assets/images/layer.png');
+            height: 180px;
+            background: url('https://web.bileji.com/assets/images/layer.png') no-repeat;
         }
 
         .container {
