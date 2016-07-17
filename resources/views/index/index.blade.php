@@ -128,7 +128,7 @@
                     height: 0
                 }, 600, "swing", function () {
                     window.wheel_pull = true;
-                    this.hide();
+                    dom.hide();
                 });
             }
             if (window.close !== true && delta > 0 && $(document).scrollTop() === 0 && dom.height() === 0 && (window.wheel_push === true || window.wheel_push === undefined)) {
@@ -141,13 +141,14 @@
             }
         });
         $(document).ready(function () {
+            var dom = $("#nav-pull");
             $("#close").click(function () {
                 window.close = true;
-                $("#nav-pull").animate({
+                dom.animate({
                     height: 0
                 }, 600, "swing", function () {
                     window.wheel_pull = true;
-                    this.hide();
+                    dom.hide();
                 });
             });
         });
