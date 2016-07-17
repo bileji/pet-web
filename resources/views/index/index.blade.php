@@ -118,6 +118,14 @@
     </style>
 
     <script type="text/javascript">
+        $("#close").click(function () {
+            window.close = true;
+            $("#nav-pull").animate({
+                height: 0
+            }, 600, "swing", function () {
+                window.wheel_pull = true;
+            }).hide();
+        });
         $(document).on("mousewheel DOMMouseScroll", function (event) {
             var dom = $("#nav-pull");
             var delta = event.originalEvent.wheelDelta || event.originalEvent.detail;
@@ -138,15 +146,6 @@
                     window.wheel_push = true;
                 });
             }
-        });
-
-        $("#close").click(function () {
-            window.close = true;
-            $("#nav-pull").animate({
-                height: 0
-            }, 600, "swing", function () {
-                window.wheel_pull = true;
-            });
         });
     </script>
 @stop
