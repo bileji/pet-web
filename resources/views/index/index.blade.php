@@ -20,6 +20,7 @@
 
         .nav-pull {
             height: 0;
+            display: none;
             background-size: 100%;
             background-image: url('https://web.bileji.com/assets/images/banner_background.png');
         }
@@ -121,26 +122,31 @@
             var dom = $("#nav-pull");
             var delta = event.originalEvent.wheelDelta || event.originalEvent.detail;
 
-            if (window.close !== true && delta < 0 && dom.height() === 80 && (window.wheel_pull === true || window.wheel_pull === undefined)) {
+            if (delta < 0 && dom.height() === 80 && (window.wheel_pull === true || window.wheel_pull === undefined)) {
                 window.wheel_pull = false;
                 dom.animate({
                     height: 0
                 }, 600, "swing", function () {
                     window.wheel_pull = true;
-                });
+                }).style({display: 'none'});
             }
-            if (delta > 0 && $(document).scrollTop() === 0 && dom.height() === 0 && (window.wheel_push === true || window.wheel_push === undefined)) {
+            if (window.close !== true && delta > 0 && $(document).scrollTop() === 0 && dom.height() === 0 && (window.wheel_push === true || window.wheel_push === undefined)) {
                 window.wheel_push = false;
-                dom.animate({
+                dom.style({display: ''}).animate({
                     height: 80
                 }, 600, "swing", function () {
                     window.wheel_push = true;
                 });
             }
         });
-        
+
         $("#close").click(function () {
             window.close = true;
+            $("#nav-pull").animate({
+                height: 0
+            }, 600, "swing", function () {
+                window.wheel_pull = true;
+            });
         });
     </script>
 @stop
