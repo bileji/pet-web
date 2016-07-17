@@ -10,6 +10,10 @@
             font-family: Cambria, Georgia, sans-serif;
         }
 
+        header {
+            background-color: #ffffff;
+        }
+
         header .separator {
             width: 0;
             height: 14px;
@@ -108,7 +112,7 @@
 
         header .layer {
             height: 180px;
-            background: #ffffff url('https://web.bileji.com/assets/images/layer.png') center;
+            background: url('https://web.bileji.com/assets/images/layer.png') center;
         }
 
         .container {
