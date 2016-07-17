@@ -21,7 +21,11 @@
         .nav-pull {
             height: 0;
             background-size: 100%;
-            background-image: url('http://web.bileji.com/assets/images/banner_background.png');
+            background-image: url('https://web.bileji.com/assets/images/banner_background.png');
+        }
+
+        .nav-pull .close {
+            background-image: url('https://web.bileji.com/assets/images/close.png');
         }
 
         .nav-banner {
@@ -137,7 +141,9 @@
 
 @section('container')
     <header>
-        <div class="nav-pull" id="nav-pull"></div>
+        <div class="nav-pull" id="nav-pull">
+            <div class="close"></div>
+        </div>
         <div class="nav-banner">
             <ul class="nav-left">
                 <li>
