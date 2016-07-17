@@ -73,6 +73,7 @@
             padding: 0;
             line-height: 38px;
             background-color: #f25d8e;
+            margin-left: 12px;
         }
 
         .nav-right .contribute a {
