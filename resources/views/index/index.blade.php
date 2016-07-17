@@ -19,7 +19,7 @@
         }
 
         .nav-pull {
-            height: 0px;
+            height: 0;
             background-size: 100%;
             background-image: url('http://web.bileji.com/assets/images/banner_background.png');
         }
@@ -57,7 +57,7 @@
         .nav-right {
             padding: 0;
             height: 100%;
-            width: 245px;
+            width: 320px;
             display: block;
             margin: 0 0 0 auto;
         }
@@ -152,7 +152,6 @@
                         <a>投稿</a>
                     </div>
                 </li>
-                <li class="separator"></li>
                 <li>
                     <div>
                         <a>站内导航</a>
