@@ -345,6 +345,22 @@
                         <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;甜品点心</a></li>
                     </ul>
                 </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-title">特色小吃</a>
+                    <ul class="menu-child-wrapper">
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;蛋糕面包</a></li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;饼干配方</a></li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;甜品点心</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-title">黑暗料理</a>
+                    <ul class="menu-child-wrapper">
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;蛋糕面包</a></li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;饼干配方</a></li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;甜品点心</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
