@@ -163,6 +163,12 @@
             height: 100%;
             line-height: 35px;
             padding: 0 0 0 12px;
+            border: 0;
+            border-radius: 0;
+        }
+
+        .container .menu-wrapper .menu-child-wrapper li:last-child a {
+            border-radius: 0 0 4px 4px;
         }
 
         .container .content {
@@ -263,16 +269,16 @@
         <div class="layer"></div>
     </header>
     <div class="container">
-        <div class="menu-wrapper">
+        <div class="list-group menu-wrapper">
             <ul>
                 <li>
                     <a href="#">家常菜</a>
                     <ul class="menu-child-wrapper">
                         <li>
-                            <a href="#">热菜</a>
+                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp; 热菜</a>
                         </li>
                         <li>
-                            <a href="#">凉菜</a>
+                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp; 凉菜</a>
                         </li>
                     </ul>
                 </li>
