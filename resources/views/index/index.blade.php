@@ -143,11 +143,13 @@
         }
 
         .container .menu-wrapper .menu-child-wrapper {
-
+            width: 120px;
         }
 
         .container .menu-wrapper .menu-child-wrapper li {
             width: auto;
+            height: 35px;
+            line-height: 35px;
         }
 
         .container .content {
