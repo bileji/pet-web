@@ -238,6 +238,12 @@
                     dom.hide();
                 });
             });
+
+            $(".menu-item").mouseover(function () {
+                $("ul", this).show();
+            }).mouseleave(function () {
+                $("ul", this).hide();
+            });
         });
     </script>
 @stop
