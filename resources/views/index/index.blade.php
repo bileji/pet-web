@@ -155,18 +155,18 @@
 
         .container .menu-wrapper .menu-child-wrapper li {
             height: 30px;
-            line-height: 30px;
         }
 
         .container .menu-wrapper .menu-child-wrapper li a {
+            border: 0;
             width: 100%;
             height: 100%;
             padding: 0 0 0 12px;
-            border: 0;
             border-radius: 0;
             white-space: nowrap;
             transition: .2s all;
             font-size: 12px;
+            line-height: 30px;
         }
 
         .container .menu-wrapper .menu-child-wrapper li a:hover {
