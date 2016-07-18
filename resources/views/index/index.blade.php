@@ -135,7 +135,7 @@
 
         .container .menu-wrapper .menu-item {
             float: left;
-            width: 65px;
+            width: 92px;
         }
 
         .container .menu-wrapper ul li {
@@ -331,27 +331,18 @@
                 <li class="menu-item">
                     <a href="#" class="menu-title">外国料理</a>
                     <ul class="menu-child-wrapper">
-                        <li>
-                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
-                                                                   aria-hidden="true"></i>&nbsp;热菜</a>
-                        </li>
-                        <li>
-                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
-                                                                   aria-hidden="true"></i>&nbsp;凉菜</a>
-                        </li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;韩国料理</a></li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;日本料理</a></li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;法国大餐</a></li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;意大利美食</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
                     <a href="#" class="menu-title">西式糕点</a>
                     <ul class="menu-child-wrapper">
-                        <li>
-                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
-                                                                   aria-hidden="true"></i>&nbsp;热菜</a>
-                        </li>
-                        <li>
-                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
-                                                                   aria-hidden="true"></i>&nbsp;凉菜</a>
-                        </li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;蛋糕面包</a></li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;饼干配方</a></li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;甜品点心</a></li>
                     </ul>
                 </li>
             </ul>
