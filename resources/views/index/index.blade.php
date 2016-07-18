@@ -313,7 +313,7 @@
             <ul>
                 <li class="menu-item">
                     <a href="#" class="menu-title">
-                        <i class="fa fa-joomla" aria-hidden="true"></i>&nbsp;首页
+                        <i class="fa fa-joomla" aria-hidden="true"></i>&nbsp;  比乐集
                     </a>
                 </li>
                 <li class="menu-item">
