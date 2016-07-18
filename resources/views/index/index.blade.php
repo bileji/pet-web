@@ -169,6 +169,9 @@
             border-radius: 0;
             white-space: nowrap;
             transition: .2s all;
+            -webkit-transition: .2s all;
+            -moz-transition: .2s all;
+            -o-transition: .2s all;
             font-size: 12px;
             line-height: 30px;
         }
