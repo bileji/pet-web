@@ -308,16 +308,24 @@
         <div class="list-group menu-wrapper">
             <ul>
                 <li class="menu-item">
-                    <a href="#" class="menu-title">家常菜</a>
+                    <a href="#" class="menu-title">国菜</a>
                     <ul class="menu-child-wrapper">
-                        <li>
-                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
-                                                                   aria-hidden="true"></i>&nbsp;热菜</a>
-                        </li>
-                        <li>
-                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
-                                                                   aria-hidden="true"></i>&nbsp;凉菜</a>
-                        </li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
+                                                                   aria-hidden="true"></i>&nbsp;鲁菜</a></li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
+                                                                   aria-hidden="true"></i>&nbsp;川菜</a></li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
+                                                                   aria-hidden="true"></i>&nbsp;粤菜</a></li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
+                                                                   aria-hidden="true"></i>&nbsp;闽菜</a></li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
+                                                                   aria-hidden="true"></i>&nbsp;苏菜</a></li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
+                                                                   aria-hidden="true"></i>&nbsp;浙菜</a></li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
+                                                                   aria-hidden="true"></i>&nbsp;湘菜</a></li>
+                        <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
+                                                                   aria-hidden="true"></i>&nbsp;徽菜</a></li>
                     </ul>
                 </li>
                 <li class="menu-item">
