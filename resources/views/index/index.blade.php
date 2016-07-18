@@ -171,6 +171,7 @@
 
         .container .menu-wrapper .menu-child-wrapper li a:hover {
             padding: 0 0 0 16px;
+            color: orange;
         }
 
         .container .menu-wrapper .menu-child-wrapper li:last-child a {
