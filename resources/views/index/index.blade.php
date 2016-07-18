@@ -132,6 +132,7 @@
 
         .container .menu-wrapper .menu-item {
             float: left;
+            width: 65px;
         }
 
         .container .menu-wrapper ul li {
@@ -141,7 +142,7 @@
         .container .menu-wrapper ul li .menu-title {
             line-height: 62px;
             display: block;
-            width: 60px;
+            width: 100%;
             font-size: 14px;
             color: #222;
             border-bottom: 2px solid white;
