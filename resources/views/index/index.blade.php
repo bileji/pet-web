@@ -308,7 +308,7 @@
         <div class="list-group menu-wrapper">
             <ul>
                 <li class="menu-item">
-                    <a href="#" class="menu-title">国菜</a>
+                    <a href="#" class="menu-title">中国菜谱</a>
                     <ul class="menu-child-wrapper">
                         <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
                                                                    aria-hidden="true"></i>&nbsp;鲁菜</a></li>
@@ -329,7 +329,7 @@
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-title">川菜</a>
+                    <a href="#" class="menu-title">外国料理</a>
                     <ul class="menu-child-wrapper">
                         <li>
                             <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
@@ -342,7 +342,7 @@
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-title">湘菜</a>
+                    <a href="#" class="menu-title">西式糕点</a>
                     <ul class="menu-child-wrapper">
                         <li>
                             <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
