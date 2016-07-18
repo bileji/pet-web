@@ -138,7 +138,7 @@
             width: auto;
         }
 
-        .container .menu-wrapper ul li .menu-titlea {
+        .container .menu-wrapper ul li .menu-title {
             line-height: 62px;
             display: block;
             width: 60px;
