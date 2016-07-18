@@ -141,12 +141,12 @@
         .container .menu-wrapper ul li a {
             line-height: 62px;
             display: block;
-            width: 80px;
+            width: 100%;
             font-size: 14px;
             color: #222;
         }
 
-        .container .menu-wrapper ul li a:hover {
+        .container .menu-wrapper ul li .menu-title:hover {
             color: #00a1d6;
             border-bottom: 2px solid orange;
             text-underline: none;
@@ -292,7 +292,7 @@
         <div class="list-group menu-wrapper">
             <ul>
                 <li class="menu-item">
-                    <a href="#">家常菜</a>
+                    <a href="#" class="menu-title">家常菜</a>
                     <ul class="menu-child-wrapper">
                         <li>
                             <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
@@ -305,7 +305,7 @@
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#">川菜</a>
+                    <a href="#" class="menu-title">川菜</a>
                     <ul class="menu-child-wrapper">
                         <li>
                             <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
@@ -318,7 +318,7 @@
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#">湘菜</a>
+                    <a href="#" class="menu-title">湘菜</a>
                     <ul class="menu-child-wrapper">
                         <li>
                             <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
