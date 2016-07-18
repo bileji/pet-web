@@ -153,7 +153,7 @@
             background-color: #ffffff;
             border: 1px solid #e5e9ef \9;
             border-top: 0;
-            box-shadow: rgba(0,0,0,0.16) 0 2px 4px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0 2px 4px;
             border-radius: 0 0 4px 4px;
         }
 
@@ -286,10 +286,12 @@
                     <a href="#">家常菜</a>
                     <ul class="menu-child-wrapper">
                         <li>
-                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;热菜</a>
+                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
+                                                                   aria-hidden="true"></i>&nbsp;热菜</a>
                         </li>
                         <li>
-                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;凉菜</a>
+                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
+                                                                   aria-hidden="true"></i>&nbsp;凉菜</a>
                         </li>
                     </ul>
                 </li>
@@ -297,10 +299,12 @@
                     <a href="#">川菜</a>
                     <ul class="menu-child-wrapper">
                         <li>
-                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;热菜</a>
+                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
+                                                                   aria-hidden="true"></i>&nbsp;热菜</a>
                         </li>
                         <li>
-                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;凉菜</a>
+                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
+                                                                   aria-hidden="true"></i>&nbsp;凉菜</a>
                         </li>
                     </ul>
                 </li>
@@ -308,10 +312,12 @@
                     <a href="#">湘菜</a>
                     <ul class="menu-child-wrapper">
                         <li>
-                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;热菜</a>
+                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
+                                                                   aria-hidden="true"></i>&nbsp;热菜</a>
                         </li>
                         <li>
-                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;凉菜</a>
+                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
+                                                                   aria-hidden="true"></i>&nbsp;凉菜</a>
                         </li>
                     </ul>
                 </li>
