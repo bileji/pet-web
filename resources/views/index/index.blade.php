@@ -167,6 +167,7 @@
             border-top: 0;
             box-shadow: rgba(0, 0, 0, 0.16) 0 2px 4px;
             border-radius: 0 0 4px 4px;
+            display: none;
         }
 
         .container .menu-wrapper .menu-child-wrapper li {
