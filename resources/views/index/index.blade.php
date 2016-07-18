@@ -143,6 +143,10 @@
             display: block;
             width: 100%;
             font-size: 14px;
+            transition: .2s all;
+            -webkit-transition: .2s all;
+            -moz-transition: .2s all;
+            -o-transition: .2s all;
             color: #222;
         }
 
