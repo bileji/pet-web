@@ -40,13 +40,13 @@
             background-color: transparent;
         }
 
-        header .header-blur .header-wrap {
+        header .header-blur .header-wrapper {
             height: 32px;
             width: 1230px;
             margin: auto;
         }
 
-        header .header-blur .header-wrap .left {
+        header .header-blur .header-wrapper .left {
             padding: 0;
             height: 100%;
             width: 245px;
@@ -55,21 +55,21 @@
             float: left;
         }
 
-        header .header-blur .header-wrap .left li {
+        header .header-blur .header-wrapper .left li {
             float: left;
         }
 
-        header .header-blur .header-wrap .left li div {
+        header .header-blur .header-wrapper .left li div {
             padding: 10px 4px;
             line-height: 1em;
             font-weight: normal;
         }
 
-        header .header-blur .header-wrap .left li:first-child div {
+        header .header-blur .header-wrapper .left li:first-child div {
             padding-left: 0;
         }
 
-        header .header-blur .header-wrap .right {
+        header .header-blur .header-wrapper .right {
             padding: 0;
             height: 100%;
             width: 320px;
@@ -77,7 +77,7 @@
             margin: 0 0 0 auto;
         }
 
-        header .header-blur .header-wrap .right .contribute {
+        header .header-blur .header-wrapper .right .contribute {
             width: 60px;
             height: 40px;
             position: relative;
@@ -91,22 +91,22 @@
             margin-left: 12px;
         }
 
-        header .header-blur .header-wrap .right .contribute a {
+        header .header-blur .header-wrapper .right .contribute a {
             font-size: 14px;
             color: #fff !important;
         }
 
-        header .header-blur .header-wrap .right li {
+        header .header-blur .header-wrapper .right li {
             float: right;
         }
 
-        header .header-blur .header-wrap .right li div {
+        header .header-blur .header-wrapper .right li div {
             padding: 10px 4px;
             line-height: 1em;
             font-weight: normal;
         }
 
-        header .header-blur .header-wrap .right li:first-child div {
+        header .header-blur .header-wrapper .right li:first-child div {
             padding-right: 0;
         }
 
@@ -120,6 +120,12 @@
             width: 100%;
             min-width: 1230px;
             position: relative;
+        }
+
+        .container .menu-wrapper {
+            width: 100%;
+            float: left;
+            height: 62px;
         }
 
         .container .content {
@@ -174,7 +180,7 @@
             <div class="close" id="close"></div>
         </div>
         <div class="header-blur">
-            <div class="header-wrap">
+            <div class="header-wrapper">
                 <ul class="left">
                     <li>
                         <div>
@@ -220,6 +226,22 @@
         <div class="layer"></div>
     </header>
     <div class="container">
+        <div class="menu-wrapper">
+            <ul>
+                <li>
+                    <a href="#">家常菜系</a>
+                    <ul class="menu-child-wrapper">
+                        <li>
+                            <a href="#">热菜</a>
+                        </li>
+                        <li>
+                            <a href="#">凉菜</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
         <div class="content">
 
         </div>
