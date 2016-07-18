@@ -165,6 +165,12 @@
             padding: 0 0 0 12px;
             border: 0;
             border-radius: 0;
+            white-space: nowrap;
+            transition: .2s all;
+        }
+
+        .container .menu-wrapper .menu-child-wrapper li a:hover {
+            padding: 0 0 0 24px;
         }
 
         .container .menu-wrapper .menu-child-wrapper li:last-child a {
