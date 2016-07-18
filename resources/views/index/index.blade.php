@@ -146,6 +146,12 @@
             color: #222;
         }
 
+        .container .menu-wrapper ul li a:hover {
+            color: #00a1d6;
+            border-bottom: 2px solid orange;
+            text-underline: none;
+        }
+
         .container .menu-wrapper .menu-child-wrapper {
             width: 120px;
             position: relative;
