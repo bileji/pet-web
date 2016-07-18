@@ -123,15 +123,31 @@
         }
 
         .container .menu-wrapper {
-            width: 100%;
-            float: left;
+            width: 1230px;
             height: 62px;
             background-color: #ffffff;
             text-align: left;
+            margin: auto;
+        }
+
+        .container .menu-wrapper ul li {
+            width: auto;
         }
 
         .container .menu-wrapper ul li a {
             line-height: 62px;
+            display: block;
+            width: 80px;
+            font-size: 14px;
+            color: #222;
+        }
+
+        .container .menu-wrapper .menu-child-wrapper {
+
+        }
+
+        .container .menu-wrapper .menu-child-wrapper li {
+            width: auto;
         }
 
         .container .content {
@@ -235,7 +251,7 @@
         <div class="menu-wrapper">
             <ul>
                 <li>
-                    <a href="#">家常菜系</a>
+                    <a href="#">家常菜</a>
                     <ul class="menu-child-wrapper">
                         <li>
                             <a href="#">热菜</a>
