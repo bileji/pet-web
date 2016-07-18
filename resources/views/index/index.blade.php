@@ -144,6 +144,9 @@
 
         .container .menu-wrapper .menu-child-wrapper {
             width: 120px;
+            position: relative;
+            z-index: 1000;
+            background-color: #ffffff;
         }
 
         .container .menu-wrapper .menu-child-wrapper li {
