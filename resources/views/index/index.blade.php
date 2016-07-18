@@ -168,10 +168,10 @@
             padding: 0 0 0 12px;
             border-radius: 0;
             white-space: nowrap;
-            transition: .2s all;
-            -webkit-transition: .2s all;
-            -moz-transition: .2s all;
-            -o-transition: .2s all;
+            transition: .25s all;
+            -webkit-transition: .25s all;
+            -moz-transition: .25s all;
+            -o-transition: .25s all;
             font-size: 12px;
             line-height: 30px;
         }
