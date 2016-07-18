@@ -152,7 +152,10 @@
         }
 
         .container .menu-wrapper .menu-child-wrapper li a {
+            width: 100%;
             height: 100%;
+            line-height: 35px;
+            padding: 0 0 0 12px;
         }
 
         .container .content {
