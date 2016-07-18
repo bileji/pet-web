@@ -138,10 +138,10 @@
             width: auto;
         }
 
-        .container .menu-wrapper ul li a {
+        .container .menu-wrapper ul li .menu-titlea {
             line-height: 62px;
             display: block;
-            width: 100%;
+            width: 60px;
             font-size: 14px;
             color: #222;
             border-bottom: 2px solid white;
