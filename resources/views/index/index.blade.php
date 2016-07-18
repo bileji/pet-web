@@ -127,7 +127,7 @@
 
         .container .menu-wrapper {
             width: 1230px;
-            height: 62px;
+            height: 42px;
             background-color: #ffffff;
             text-align: left;
             margin: auto;
@@ -143,7 +143,7 @@
         }
 
         .container .menu-wrapper ul li .menu-title {
-            line-height: 62px;
+            line-height: 36px;
             display: block;
             width: 100%;
             font-size: 14px;
@@ -153,6 +153,7 @@
             -webkit-transition: .3s all;
             -moz-transition: .3s all;
             -o-transition: .3s all;
+            padding: 6px 0 0 0;
         }
 
         .container .menu-wrapper ul li .menu-title:hover {
@@ -313,7 +314,7 @@
             <ul>
                 <li class="menu-item">
                     <a href="#" class="menu-title">
-                        <i class="fa fa-joomla" aria-hidden="true"></i>&nbsp;  比乐集
+                        <i class="fa fa-joomla" aria-hidden="true"></i>&nbsp; 比乐集
                     </a>
                 </li>
                 <li class="menu-item">
