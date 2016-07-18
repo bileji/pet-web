@@ -143,11 +143,12 @@
             display: block;
             width: 100%;
             font-size: 14px;
-            transition: .2s all;
-            -webkit-transition: .2s all;
-            -moz-transition: .2s all;
-            -o-transition: .2s all;
             color: #222;
+            border-bottom: 2px solid white;
+            transition: .3s all;
+            -webkit-transition: .3s all;
+            -moz-transition: .3s all;
+            -o-transition: .3s all;
         }
 
         .container .menu-wrapper ul li .menu-title:hover {
