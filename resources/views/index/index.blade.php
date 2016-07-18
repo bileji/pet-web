@@ -126,6 +126,12 @@
             width: 100%;
             float: left;
             height: 62px;
+            background-color: #ffffff;
+            text-align: left;
+        }
+
+        .container .menu-wrapper ul li a {
+            line-height: 62px;
         }
 
         .container .content {
