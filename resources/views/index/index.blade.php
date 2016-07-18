@@ -275,10 +275,10 @@
                     <a href="#">家常菜</a>
                     <ul class="menu-child-wrapper">
                         <li>
-                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp; 热菜</a>
+                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;热菜</a>
                         </li>
                         <li>
-                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp; 凉菜</a>
+                            <a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>&nbsp;凉菜</a>
                         </li>
                     </ul>
                 </li>
