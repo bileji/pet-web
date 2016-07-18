@@ -147,6 +147,10 @@
             position: relative;
             z-index: 1000;
             background-color: #ffffff;
+            border: 1px solid #e5e9ef \9;
+            border-top: 0;
+            box-shadow: rgba(0,0,0,0.16) 0 2px 4px;
+            border-radius: 0 0 4px 4px;
         }
 
         .container .menu-wrapper .menu-child-wrapper li {
