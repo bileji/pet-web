@@ -92,7 +92,10 @@
         }
 
         header .header-blur .header-wrapper .right .contribute a {
+            width: 100%;
+            height: 100%;
             font-size: 14px;
+            display: block;
             color: #fff !important;
         }
 
