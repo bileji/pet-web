@@ -147,9 +147,12 @@
         }
 
         .container .menu-wrapper .menu-child-wrapper li {
-            width: auto;
             height: 35px;
             line-height: 35px;
+        }
+
+        .container .menu-wrapper .menu-child-wrapper li a {
+            height: 100%;
         }
 
         .container .content {
