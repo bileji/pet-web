@@ -130,6 +130,10 @@
             margin: auto;
         }
 
+        .container .menu-wrapper .menu-item {
+            float: left;
+        }
+
         .container .menu-wrapper ul li {
             width: auto;
         }
@@ -278,7 +282,7 @@
     <div class="container">
         <div class="list-group menu-wrapper">
             <ul>
-                <li>
+                <li class="menu-item">
                     <a href="#">家常菜</a>
                     <ul class="menu-child-wrapper">
                         <li>
@@ -289,7 +293,7 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li class="menu-item">
                     <a href="#">川菜</a>
                     <ul class="menu-child-wrapper">
                         <li>
@@ -300,7 +304,7 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li class="menu-item">
                     <a href="#">湘菜</a>
                     <ul class="menu-child-wrapper">
                         <li>
