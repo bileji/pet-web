@@ -3,6 +3,9 @@
 @section('title', '首页-比乐集')
 
 @section('modules')
+    <link rel="stylesheet" href="{{asset('node_modules/owl-carousel-2/assets/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('node_modules/owl-carousel-2/assets/owl.theme.default.min.css')}}">
+    <script src="{{asset('node_modules/owl-carousel-2/owl.carousel.min.js')}}"></script>
     <style type="text/css">
         input[text], button {
             margin: 0;
@@ -254,6 +257,9 @@
             }).mouseleave(function () {
                 $("ul", this).hide();
             });
+
+            // 轮播
+            $(".owl-carousel").owlCarousel();
         });
     </script>
 @stop
@@ -442,7 +448,15 @@
         </div>
 
         <div class="content">
-
+            <div class="owl-carousel">
+                <div> Your Content</div>
+                <div> Your Content</div>
+                <div> Your Content</div>
+                <div> Your Content</div>
+                <div> Your Content</div>
+                <div> Your Content</div>
+                <div> Your Content</div>
+            </div>
         </div>
     </div>
     <footer>
