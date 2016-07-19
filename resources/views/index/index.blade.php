@@ -217,8 +217,8 @@
         }
 
         .container .content .carousel-wrapper {
-            height: 150px;
-            width: 300px;
+            height: 300px;
+            width: 549px;
             border-radius: 5px;
         }
     </style>
