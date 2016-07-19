@@ -8,6 +8,7 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.5",
+    "blueimp-gallery": "^2.21.3",
     "bootstrap": "^3.3.6",
     "font-awesome": "^4.6.3",
     "jquery": "^2.1.0",

@@ -215,6 +215,12 @@
             margin: auto;
             background-color: #f8f8f8;
         }
+
+        .container .content .carousel-wrapper {
+            height: 150px;
+            width: 300px;
+            border-radius: 5px;
+        }
     </style>
 
     <script type="text/javascript">
@@ -464,23 +470,21 @@
         </div>
 
         <div class="content">
-            <div class="owl-carousel owl-theme">
-                <div class="item-video" data-merge="3"><a class="owl-video" href="http://vimeo.com/23924346"></a></div>
-                <div class="item-video" data-merge="1"><a class="owl-video"
-                                                          href="https://www.youtube.com/watch?v=JpxsRwnRwCQ"></a></div>
-                <div class="item-video" data-merge="2"><a class="owl-video"
-                                                          href="http://www.youtube.com/watch?v=FBu_jxT1PkA"></a></div>
-                <div class="item-video" data-merge="1"><a class="owl-video"
-                                                          href="http://www.youtube.com/watch?v=oy18DJwy5lI"></a></div>
-                <div class="item-video" data-merge="2"><a class="owl-video"
-                                                          href="http://www.youtube.com/watch?v=H3jLkJrhHKQ"></a></div>
-                <div class="item-video" data-merge="3"><a class="owl-video"
-                                                          href="https://www.youtube.com/watch?v=g3J4VxWIM6s"></a></div>
-                <div class="item-video" data-merge="1"><a class="owl-video"
-                                                          href="http://www.youtube.com/watch?v=0fhoIate4qI"></a></div>
-                <div class="item-video" data-merge="2"><a class="owl-video"
-                                                          href="https://www.youtube.com/watch?v=EF_kj2ojZaE"></a></div>
-            </div>
+            <section>
+                <div class="carousel-wrapper">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item-video" data-merge="3">
+                            <img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage1.jpg" alt="The Last of us">
+                        </div>
+                        <div class="item-video" data-merge="1">
+                            <img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage2.jpg" alt="The Last of us">
+                        </div>
+                        <div class="item-video" data-merge="2">
+                            <img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage3.jpg" alt="The Last of us">
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
     <footer>
