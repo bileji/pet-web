@@ -217,8 +217,13 @@
         }
 
         .container .content .carousel-wrapper {
-            height: 300px;
+            height: 200px;
             width: 549px;
+            border-radius: 5px;
+        }
+
+        .container .content .carousel-wrapper img {
+            height: 200px;
             border-radius: 5px;
         }
     </style>
