@@ -3,9 +3,9 @@
 @section('title', '首页-比乐集')
 
 @section('modules')
-    <link rel="stylesheet" href="{{asset('node_modules/owl-carousel-2/assets/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('node_modules/owl-carousel-2/assets/owl.theme.default.min.css')}}">
-    <script src="{{asset('node_modules/owl-carousel-2/owl.carousel.min.js')}}"></script>
+    <link href="{{asset('node_modules/owlcarousel/owl-carousel/owl.carousel.css')}}" rel="stylesheet">
+    <link href="{{asset('node_modules/owlcarousel/owl-carousel/owl.theme.css')}}" rel="stylesheet">
+    <script src="{{asset('node_modules/owlcarousel/owl-carousel/owl.carousel.min.js')}}"></script>
     <style type="text/css">
         input[text], button {
             margin: 0;
