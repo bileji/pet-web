@@ -286,11 +286,12 @@
 
             // 轮播
             $(".owl-carousel").owlCarousel({
-                items   : 1,
+                items     : 1,
 //                loop    : true,
-                margin  : -28,
+                margin    : -28,
 //                center  : true,
-                autoPlay: true
+                autoPlay  : true,
+                singleItem: true
             });
         });
     </script>
