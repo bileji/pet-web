@@ -228,10 +228,6 @@
             height: 200px;
         }
 
-        .container .content .top-wrapper .carousel-wrapper .owl-carousel .item {
-
-        }
-
         .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-wrapper-outer img {
             height: 200px;
             width: 400px;
