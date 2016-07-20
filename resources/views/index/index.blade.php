@@ -223,9 +223,18 @@
             border-radius: 5px;
         }
 
-        .container .content .top-wrapper .carousel-wrapper img {
+        .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-wrapper-outer img {
             height: 200px;
             border-radius: 5px;
+        }
+
+        .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls {
+            margin-top: -28px;
+            position: relative;
+        }
+
+        .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls .owl-page span{
+            color: #ffffff;
         }
     </style>
 
