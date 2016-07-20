@@ -239,11 +239,8 @@
 
         .container .content .top-wrapper .carousel-wrapper .owl-theme .owl-controls {
             margin-top: -28px;
+            position: relative;
         }
-
-        /*.container .content .top-wrapper .carousel-wrapper .owl-theme .owl-controls .owl-pagination .active {*/
-        /*color: rebeccapurple;*/
-        /*}*/
 
         .container .content .top-wrapper .carousel-wrapper {
             width: 400px;
