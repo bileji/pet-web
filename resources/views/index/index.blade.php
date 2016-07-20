@@ -264,6 +264,10 @@
         .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls .owl-page span {
             background-color: #ffffff;
         }
+
+        .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls .active span {
+            background-color: #00b3ee;
+        }
     </style>
 
     <script type="text/javascript">
