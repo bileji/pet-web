@@ -165,6 +165,10 @@
             text-underline: none;
         }
 
+        .container .menu-wrapper ul li:first-child a:hover {
+            border-bottom: 2px solid white;
+        }
+
         .container .menu-wrapper ul li .menu-title i {
             color: orange;
         }
@@ -215,7 +219,7 @@
         }
 
         .container .content .top-wrapper {
-            margin-top: 2px;
+            margin-top: 6px;
             background-color: #f8f8f8;
         }
 
