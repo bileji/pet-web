@@ -81,6 +81,7 @@
         }
 
         header .header-blur .header-wrapper .right .contribute {
+            padding: 0;
             width: 60px;
             height: 40px;
             position: relative;
@@ -88,7 +89,6 @@
             border-radius: 0 0 5px 5px;
             -moz-border-radius: 0 0 5px 5px;
             -webkit-border-radius: 0 0 5px 5px;
-            padding: 0;
             line-height: 38px;
             background-color: #f25d8e;
             margin-left: 12px;
@@ -182,6 +182,8 @@
             border-top: 0;
             box-shadow: rgba(0, 0, 0, 0.16) 0 2px 4px;
             border-radius: 0 0 4px 4px;
+            -moz-border-radius: 0 0 4px 4px;
+            -webkit-border-radius: 0 0 4px 4px;
             display: none;
         }
 
@@ -195,6 +197,8 @@
             height: 100%;
             padding: 0 0 0 12px;
             border-radius: 0;
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
             white-space: nowrap;
             transition: .25s all;
             -webkit-transition: .25s all;
@@ -211,6 +215,8 @@
 
         .container .menu-wrapper .menu-child-wrapper li:last-child a {
             border-radius: 0 0 4px 4px;
+            -moz-border-radius: 0 0 4px 4px;
+            -webkit-border-radius: 0 0 4px 4px;
         }
 
         .container .content {
@@ -226,16 +232,17 @@
         .container .content .top-wrapper .carousel-wrapper {
             width: 400px;
             height: 200px;
-        }
-
-        .container .content .top-wrapper .carousel-wrapper .owl-carousel .item {
-
+            overflow: hidden;
+            position: relative;
+            z-index: 1000;
+            border-radius: 5px;
+            -moz-border-radius: 0 0 5px 5px;
+            -webkit-border-radius: 0 0 5px 5px;
         }
 
         .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-wrapper-outer img {
-            height: 200px;
             width: 400px;
-            border-radius: 5px;
+            height: 200px;
         }
 
         .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls .owl-page span {
