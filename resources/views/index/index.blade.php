@@ -213,7 +213,7 @@
             color: orange;
         }
 
-        .container .menu-wrapper .menu-child-wrapper li:first-child a:hover {
+        .container .menu-wrapper .menu-child-wrapper ul:first-child a:hover {
             color: orange;
         }
 
