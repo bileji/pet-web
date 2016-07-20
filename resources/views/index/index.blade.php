@@ -192,7 +192,7 @@
             border-radius: 0 0 4px 4px;
             -moz-border-radius: 0 0 4px 4px;
             -webkit-border-radius: 0 0 4px 4px;
-            display: none;
+            /*display: none;*/
         }
 
         .container .menu-wrapper .menu-child-wrapper li {
@@ -217,9 +217,8 @@
         }
 
         .container .menu-wrapper .menu-child-wrapper li a:hover {
-            /*border: 0;*/
             padding: 0 0 0 16px;
-            /*color: orange;*/
+            color: orange;
         }
 
         .container .menu-wrapper .menu-child-wrapper li:last-child a {
@@ -311,11 +310,11 @@
                 });
             });
 
-            $(".menu-item").mouseover(function () {
-                $("ul", this).show();
-            }).mouseleave(function () {
-                $("ul", this).hide();
-            });
+//            $(".menu-item").mouseover(function () {
+//                $("ul", this).show();
+//            }).mouseleave(function () {
+//                $("ul", this).hide();
+//            });
 
             // 轮播
             $(".owl-carousel").owlCarousel({
