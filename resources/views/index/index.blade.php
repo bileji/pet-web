@@ -203,7 +203,7 @@
         .container .menu-wrapper .menu-child-wrapper li a {
             border: 0;
             width: 100%;
-            height: 100%;
+            height: 102%;
             padding: 0 0 0 12px;
             border-radius: 0;
             -moz-border-radius: 0;
