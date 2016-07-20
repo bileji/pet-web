@@ -265,7 +265,7 @@
             background-color: #ffffff;
         }
 
-        .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls .active span {
+        .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls .owl-page.active span,.container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls.clickable .owl-page:hover span {
             background-color: #00b3ee;
         }
     </style>
