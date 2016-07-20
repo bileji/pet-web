@@ -233,7 +233,7 @@
             cursor: pointer;
         }
 
-        .container .content .top-wrapper .carousel-wrapper .owl-theme:last-child {
+        .container .content .top-wrapper .carousel-wrapper .owl-theme .owl-controls {
             margin-top: -28px;
         }
 
