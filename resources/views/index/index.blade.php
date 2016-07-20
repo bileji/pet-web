@@ -224,6 +224,10 @@
             border-radius: 5px;
         }
 
+        .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-wrapper-outer {
+            top: -2px;
+        }
+
         .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-wrapper-outer img {
             height: 200px;
             width: 400px;
