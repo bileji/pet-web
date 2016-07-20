@@ -485,6 +485,7 @@
         </div>
 
         <div class="content">
+            <section class="top-wrapper">
                 <div class="carousel-wrapper">
                     <div class="owl-carousel owl-theme">
                         <div class="item">
@@ -501,6 +502,7 @@
                         </div>
                     </div>
                 </div>
+            </section>
         </div>
     </div>
     <footer></footer>
