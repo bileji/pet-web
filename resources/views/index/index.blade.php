@@ -171,7 +171,7 @@
 
         .container .menu-wrapper .menu-child-wrapper {
             width: 120px;
-            position: relative;
+            position: absolute;
             z-index: 1000;
             background-color: #ffffff;
             border: 1px solid #e5e9ef \9;
