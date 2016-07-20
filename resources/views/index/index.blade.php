@@ -287,9 +287,6 @@
             // 轮播
             $(".owl-carousel").owlCarousel({
                 items     : 1,
-//                loop    : true,
-                margin    : -28,
-//                center  : true,
                 autoPlay  : true,
                 singleItem: true
             });
