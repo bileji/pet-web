@@ -217,6 +217,35 @@
             width: 1230px;
             margin: auto;
         }
+
+        .container .content .top-wrapper {
+            margin-top: 6px;
+            background-color: #f8f8f8;
+        }
+
+        .container .content .top-wrapper .carousel-wrapper {
+            width: 400px;
+            height: 200px;
+        }
+
+        .container .content .top-wrapper .carousel-wrapper .owl-carousel .item {
+
+        }
+
+        .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-wrapper-outer img {
+            height: 200px;
+            width: 400px;
+            border-radius: 5px;
+        }
+
+        .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls {
+            margin-top: -28px;
+            position: relative;
+        }
+
+        .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls .owl-page span {
+            background-color: #ffffff;
+        }
     </style>
 
     <script type="text/javascript">
@@ -456,7 +485,6 @@
         </div>
 
         <div class="content">
-            <section class="top-wrapper">
                 <div class="carousel-wrapper">
                     <div class="owl-carousel owl-theme">
                         <div class="item">
@@ -473,7 +501,6 @@
                         </div>
                     </div>
                 </div>
-            </section>
         </div>
     </div>
     <footer></footer>
