@@ -219,7 +219,8 @@
         }
 
         .container .content .top-wrapper .carousel-wrapper {
-            width: 549px;
+            width: 323px;
+            height: 200px;
             border-radius: 5px;
         }
 
