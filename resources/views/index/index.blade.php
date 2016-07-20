@@ -234,7 +234,7 @@
         }
 
         .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls .owl-page span{
-            color: #ffffff;
+            background-color: #ffffff;
         }
     </style>
 
