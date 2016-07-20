@@ -169,6 +169,10 @@
             text-underline: none;
         }
 
+        .container .menu-wrapper ul li .menu-title:visited {
+            text-underline: none;
+        }
+
         .container .menu-wrapper ul li:first-child a:hover {
             border-bottom: 2px solid white;
         }
@@ -266,7 +270,7 @@
             background-color: #ffffff;
         }
 
-        .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls .owl-page.active span,.container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls.clickable .owl-page:hover span {
+        .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls .owl-page.active span, .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls.clickable .owl-page:hover span {
             background-color: #ffffff;
         }
     </style>
