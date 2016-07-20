@@ -210,19 +210,20 @@
         }
 
         .container .content {
-            height: 800px;
             width: 1230px;
             margin: auto;
+        }
+
+        .container .content .top-wrapper {
             background-color: #f8f8f8;
         }
 
-        .container .content .carousel-wrapper {
-            height: 200px;
+        .container .content .top-wrapper .carousel-wrapper {
             width: 549px;
             border-radius: 5px;
         }
 
-        .container .content .carousel-wrapper img {
+        .container .content .top-wrapper .carousel-wrapper img {
             height: 200px;
             border-radius: 5px;
         }
@@ -475,24 +476,25 @@
         </div>
 
         <div class="content">
-            <section>
+            <section class="top-wrapper">
                 <div class="carousel-wrapper">
                     <div class="owl-carousel owl-theme">
                         <div class="item-video" data-merge="3">
-                            <img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage1.jpg" alt="The Last of us">
+                            <img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage1.jpg"
+                                 alt="The Last of us">
                         </div>
                         <div class="item-video" data-merge="1">
-                            <img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage2.jpg" alt="The Last of us">
+                            <img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage2.jpg"
+                                 alt="The Last of us">
                         </div>
                         <div class="item-video" data-merge="2">
-                            <img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage3.jpg" alt="The Last of us">
+                            <img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage3.jpg"
+                                 alt="The Last of us">
                         </div>
                     </div>
                 </div>
             </section>
         </div>
     </div>
-    <footer>
-        i am footer
-    </footer>
+    <footer></footer>
 @stop
