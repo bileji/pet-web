@@ -229,6 +229,14 @@
             background-color: #f8f8f8;
         }
 
+        .container .content .top-wrapper .carousel-wrapper:hover {
+            cursor: pointer;
+        }
+
+        .container .content .top-wrapper .carousel-wrapper .owl-theme .owl-controls {
+            margin-top: -28px;
+        }
+
         .container .content .top-wrapper .carousel-wrapper {
             width: 400px;
             height: 200px;
