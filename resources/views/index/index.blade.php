@@ -165,6 +165,10 @@
             text-underline: none;
         }
 
+        .container .menu-wrapper ul li .menu-title:active {
+            text-underline: none;
+        }
+
         .container .menu-wrapper ul li:first-child a:hover {
             border-bottom: 2px solid white;
         }
@@ -210,10 +214,6 @@
 
         .container .menu-wrapper .menu-child-wrapper li a:hover {
             padding: 0 0 0 16px;
-            color: orange;
-        }
-
-        .container .menu-wrapper .menu-child-wrapper ul:first-child a:hover {
             color: orange;
         }
 
