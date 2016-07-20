@@ -223,11 +223,6 @@
             background-color: #f8f8f8;
         }
 
-        .container .content .top-wrapper .carousel-wrapper {
-            width: 400px;
-            height: 200px;
-        }
-
         .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-wrapper-outer img {
             height: 200px;
             width: 400px;
