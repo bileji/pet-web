@@ -217,12 +217,6 @@
             width: 1230px;
             margin: auto;
         }
-
-        .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-wrapper-outer img {
-            height: 200px;
-            width: 400px;
-            border-radius: 5px;
-        }
     </style>
 
     <script type="text/javascript">
