@@ -229,8 +229,7 @@
         }
 
         .container .content .top-wrapper .carousel-wrapper .owl-carousel .item {
-            border-radius: 5px;
-            overflow: hidden;
+
         }
 
         .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-wrapper-outer img {
