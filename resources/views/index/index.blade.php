@@ -141,6 +141,10 @@
             width: 92px;
         }
 
+        .container .menu-wrapper ul:first-child {
+            width: 68px;
+        }
+
         .container .menu-wrapper ul li {
             width: auto;
         }
