@@ -215,6 +215,7 @@
         }
 
         .container .content .top-wrapper {
+            margin-top: 2px;
             background-color: #f8f8f8;
         }
 
@@ -222,10 +223,6 @@
             width: 400px;
             height: 200px;
             border-radius: 5px;
-        }
-
-        .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-wrapper-outer {
-            top: -2px;
         }
 
         .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-wrapper-outer img {
