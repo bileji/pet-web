@@ -239,7 +239,7 @@
             position: relative;
         }
 
-        .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls .owl-page span{
+        .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls .owl-page span {
             background-color: #ffffff;
         }
     </style>
@@ -287,21 +287,11 @@
 
             // 轮播
             $(".owl-carousel").owlCarousel({
-                items     : 1,
-                merge     : true,
-                loop      : true,
-                margin    : 10,
-                video     : true,
-                lazyLoad  : true,
-                center    : true,
-                responsive: {
-                    480: {
-                        items: 2
-                    },
-                    600: {
-                        items: 4
-                    }
-                }
+                items   : 1,
+                loop    : true,
+                margin  : 10,
+                center  : true,
+                autoPlay: true
             });
         });
     </script>
@@ -494,15 +484,15 @@
             <section class="top-wrapper">
                 <div class="carousel-wrapper">
                     <div class="owl-carousel owl-theme">
-                        <div class="item-video" data-merge="3">
+                        <div class="item">
                             <img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage1.jpg"
                                  alt="The Last of us">
                         </div>
-                        <div class="item-video" data-merge="1">
+                        <div class="item">
                             <img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage2.jpg"
                                  alt="The Last of us">
                         </div>
-                        <div class="item-video" data-merge="2">
+                        <div class="item">
                             <img src="http://owlgraphic.com/owlcarousel/demos/assets/fullimage3.jpg"
                                  alt="The Last of us">
                         </div>
