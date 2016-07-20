@@ -219,13 +219,14 @@
         }
 
         .container .content .top-wrapper .carousel-wrapper {
-            width: 323px;
+            width: 400px;
             height: 200px;
             border-radius: 5px;
         }
 
         .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-wrapper-outer img {
             height: 200px;
+            width: 400px;
             border-radius: 5px;
         }
 
