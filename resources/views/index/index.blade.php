@@ -217,6 +217,7 @@
         }
 
         .container .menu-wrapper .menu-child-wrapper li a:hover {
+            border: 0;
             padding: 0 0 0 16px;
             color: orange;
         }
