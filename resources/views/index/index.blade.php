@@ -226,6 +226,9 @@
         .container .content .top-wrapper .carousel-wrapper {
             width: 400px;
             height: 200px;
+        }
+
+        .container .content .top-wrapper .carousel-wrapper .owl-carousel .item {
             border-radius: 5px;
             overflow: hidden;
         }
