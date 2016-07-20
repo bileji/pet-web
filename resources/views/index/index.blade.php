@@ -219,7 +219,7 @@
         }
 
         .container .content .top-wrapper {
-            margin-top: 6px;
+            margin-top: 4px;
             background-color: #f8f8f8;
         }
 
@@ -236,11 +236,6 @@
             height: 200px;
             width: 400px;
             border-radius: 5px;
-        }
-
-        .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls {
-            margin-top: -28px;
-            position: relative;
         }
 
         .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls .owl-page span {
@@ -292,9 +287,9 @@
             // 轮播
             $(".owl-carousel").owlCarousel({
                 items   : 1,
-                loop    : true,
-                margin  : 10,
-                center  : true,
+//                loop    : true,
+                margin  : -28,
+//                center  : true,
                 autoPlay: true
             });
         });
