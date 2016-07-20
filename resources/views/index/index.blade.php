@@ -192,11 +192,12 @@
             border-radius: 0 0 4px 4px;
             -moz-border-radius: 0 0 4px 4px;
             -webkit-border-radius: 0 0 4px 4px;
-            /*display: none;*/
+            display: none;
         }
 
         .container .menu-wrapper .menu-child-wrapper li {
             height: 30px;
+            overflow: hidden;
         }
 
         .container .menu-wrapper .menu-child-wrapper li a {
@@ -310,11 +311,11 @@
                 });
             });
 
-//            $(".menu-item").mouseover(function () {
-//                $("ul", this).show();
-//            }).mouseleave(function () {
-//                $("ul", this).hide();
-//            });
+            $(".menu-item").mouseover(function () {
+                $("ul", this).show();
+            }).mouseleave(function () {
+                $("ul", this).hide();
+            });
 
             // 轮播
             $(".owl-carousel").owlCarousel({
