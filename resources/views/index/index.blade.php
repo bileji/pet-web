@@ -236,8 +236,8 @@
             position: relative;
             z-index: 1000;
             border-radius: 5px;
-            -moz-border-radius: 0 0 5px 5px;
-            -webkit-border-radius: 0 0 5px 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
         }
 
         .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-wrapper-outer img {
