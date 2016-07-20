@@ -141,12 +141,12 @@
             width: 92px;
         }
 
-        .container .menu-wrapper ul li {
-            width: auto;
+        .container .menu-wrapper .menu-item:first-child {
+            width: 76px;
         }
 
-        .container .menu-wrapper ul li:first-child {
-            width: 76px;
+        .container .menu-wrapper ul li {
+            width: auto;
         }
 
         .container .menu-wrapper ul li .menu-title {
