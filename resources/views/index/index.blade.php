@@ -229,12 +229,12 @@
             background-color: #f8f8f8;
         }
 
-        .container .content .top-wrapper .carousel-wrapper {
-            height: 100%;
-        }
-
         .container .content .top-wrapper .carousel-wrapper:hover {
             cursor: pointer;
+        }
+
+        .container .content .top-wrapper .carousel-wrapper .owl-theme {
+            height: 100%;
         }
 
         .container .content .top-wrapper .carousel-wrapper .owl-theme .owl-controls {
