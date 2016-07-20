@@ -213,6 +213,10 @@
             color: orange;
         }
 
+        .container .menu-wrapper .menu-child-wrapper li:first-child a:hover {
+            color: orange;
+        }
+
         .container .menu-wrapper .menu-child-wrapper li:last-child a {
             border-radius: 0 0 4px 4px;
             -moz-border-radius: 0 0 4px 4px;
@@ -247,7 +251,7 @@
             height: 200px;
             overflow: hidden;
             position: relative;
-            z-index: 1000;
+            z-index: 100;
             border-radius: 5px;
             -moz-border-radius: 5px;
             -webkit-border-radius: 5px;
