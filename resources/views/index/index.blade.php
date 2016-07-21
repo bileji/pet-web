@@ -130,7 +130,7 @@
 
         .container .menu-wrapper {
             width: 1230px;
-            height: 50px;
+            height: 46px;
             background-color: #ffffff;
             text-align: left;
             margin: auto;
@@ -199,7 +199,7 @@
         }
 
         .container .menu-wrapper ul li .menu-title-wrapper .menu-title-chunk {
-            width: 72px;
+            width: 74px;
             height: 40px;
             overflow: hidden;
         }
