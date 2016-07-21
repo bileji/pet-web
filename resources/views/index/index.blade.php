@@ -307,7 +307,19 @@
 
         .container .content .top-wrapper .priority-list-wrapper {
             width: 830px;
-            height: 100%;
+            height: 200px;
+            float: left;
+        }
+
+        .container .content .top-wrapper .priority-list-wrapper .priority-list {
+            height: 200px;
+            width: 100%;
+            padding: 0 0 0 30px;
+        }
+
+        .container .content .top-wrapper .priority-list-wrapper .priority-list .priority-item {
+            width: 200px;
+            height: 100px;
             float: left;
         }
     </style>
@@ -630,7 +642,16 @@
                 </div>
 
                 <div class="priority-list-wrapper">
-
+                    <ul class="priority-list">
+                        <li class="priority-item"></li>
+                        <li class="priority-item"></li>
+                        <li class="priority-item"></li>
+                        <li class="priority-item"></li>
+                        <li class="priority-item"></li>
+                        <li class="priority-item"></li>
+                        <li class="priority-item"></li>
+                        <li class="priority-item"></li>
+                    </ul>
                 </div>
             </section>
         </div>
