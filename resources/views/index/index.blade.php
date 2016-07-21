@@ -166,15 +166,6 @@
         .container .menu-wrapper ul li .menu-title:hover {
             color: #00a1d6;
             border-bottom: 2px solid orange;
-            text-underline: none;
-        }
-
-        .container .menu-wrapper ul li .menu-title:active {
-            text-underline: none;
-        }
-
-        .container .menu-wrapper ul li .menu-title:visited {
-            text-underline: none;
         }
 
         .container .menu-wrapper ul li:first-child a:hover {
@@ -394,7 +385,11 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-title">中国菜谱</a>
+                    <div class="menu-title">
+                        <div></div>
+                        <div></div>
+                        中国菜谱
+                    </div>
                     <ul class="menu-child-wrapper">
                         <li>
                             <a href="#" class="list-group-item">
