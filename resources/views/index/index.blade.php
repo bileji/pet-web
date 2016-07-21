@@ -384,7 +384,7 @@
                 <li class="menu-item">
                     <div class="menu-title-wrapper">
                         <div class="menu-title-image">
-                            <img src="{{ assert('assets/images/menu_pic') }}">
+                            <img src="{{ asset('assets/images/menu_pic.jpg') }}">
                         </div>
                         <div class="menu-title-chunk">
                             <div class="menu-title-master">
