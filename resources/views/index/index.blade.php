@@ -358,9 +358,11 @@
                 $("ul", this).hide();
             });
             $(".slider").mouseover(function () {
-                $("ul", $(".menu-item")).show();
+                var index = this.position().left / 76;
+                $(".menu-item:eq(" + index + ")").show();
             }).mouseleave(function () {
-                $("ul", $(".menu-item")).hide();
+                var index = this.position().left / 76;
+                $(".menu-item:eq(" + index + ")").hide();
             });
 
             // 轮播
