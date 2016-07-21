@@ -357,6 +357,11 @@
             }).mouseleave(function () {
                 $("ul", this).hide();
             });
+            $(".slider").mouseover(function () {
+                this.parent().show();
+            }).mouseleave(function () {
+                this.parent().show();
+            });
 
             // 轮播
             $(".owl-carousel").owlCarousel({
