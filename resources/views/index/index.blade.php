@@ -351,7 +351,9 @@
 
             // 菜单栏
             $(".menu-item").mouseover(function () {
-                console.log($(this).index());
+                $(".slider").css({
+                    left: $(this).index() * 76 + "px"
+                });
                 $("ul", this).show();
             }).mouseleave(function () {
                 $("ul", this).hide();
