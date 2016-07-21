@@ -136,6 +136,18 @@
             margin: auto;
         }
 
+        .container .menu-wrapper .slider {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: #46CFB0;
+            transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+        }
+
         .container .menu-wrapper .menu-item {
             float: left;
             width: auto;
@@ -603,6 +615,7 @@
                         </li>
                     </ul>
                 </li>
+                <li class="slider"></li>
             </ul>
         </div>
 
