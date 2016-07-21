@@ -130,7 +130,7 @@
 
         .container .menu-wrapper {
             width: 1230px;
-            height: 44px;
+            height: 50px;
             background-color: #ffffff;
             text-align: left;
             margin: auto;
@@ -154,16 +154,15 @@
             float: left;
             width: auto;
             padding: 0 10px 0 0;
-            border-bottom: 2px solid white;
             transition: .3s all;
             -moz-transition: .3s all;
             -webkit-transition: .3s all;
         }
 
         /*.container .menu-wrapper .menu-item:hover {*/
-            /*color: #00a1d6;*/
-            /*border-bottom: 2px solid orange;*/
-            /*cursor: pointer;*/
+        /*color: #00a1d6;*/
+        /*border-bottom: 2px solid orange;*/
+        /*cursor: pointer;*/
         /*}*/
 
         .container .menu-wrapper .menu-item:first-child {
@@ -219,14 +218,11 @@
             color: gray;
         }
 
-        .container .menu-wrapper ul li:first-child .menu-title-wrapper:hover {
-            border-bottom: 2px solid white;
-        }
-
         .container .menu-wrapper .menu-child-wrapper {
             width: 120px;
             position: absolute;
             z-index: 1000;
+            top: 100%;
             background-color: #ffffff;
             border: 1px solid #e5e9ef \9;
             border-top: 0;
@@ -357,7 +353,7 @@
 
             // 菜单栏
             $(".menu-item").mouseover(function () {
-                $("ul", this).css({'border-top': '2px solid orange'}).show();
+                $("ul", this).show();
             }).mouseleave(function () {
                 $("ul", this).hide();
             });
