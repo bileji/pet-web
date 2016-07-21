@@ -330,13 +330,18 @@
             width: 180px;
             height: 90px;
             border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
             overflow: hidden;
-            background-color: #8c8c8c;
             position: absolute;
             top: 50%;
             left: 50%;
             margin-top: -45px;
             margin-left: -90px
+        }
+
+        .container .content .top-wrapper .priority-list-wrapper .priority-list .priority-item div:hover {
+            cursor: pointer;
         }
 
         .container .content .top-wrapper .priority-list-wrapper .priority-list .priority-item div img {
@@ -664,14 +669,30 @@
 
                 <div class="priority-list-wrapper">
                     <ul class="priority-list">
-                        <li class="priority-item"><div><img src="{{ asset('assets/images/exc.jpg') }}"></div></li>
-                        <li class="priority-item"><div><img src="{{ asset('assets/images/exc.jpg') }}"></div></li>
-                        <li class="priority-item"><div><img src="{{ asset('assets/images/exc.jpg') }}"></div></li>
-                        <li class="priority-item"><div><img src="{{ asset('assets/images/exc.jpg') }}"></div></li>
-                        <li class="priority-item"><div><img src="{{ asset('assets/images/exc.jpg') }}"></div></li>
-                        <li class="priority-item"><div><img src="{{ asset('assets/images/exc.jpg') }}"></div></li>
-                        <li class="priority-item"><div><img src="{{ asset('assets/images/exc.jpg') }}"></div></li>
-                        <li class="priority-item"><div><img src="{{ asset('assets/images/exc.jpg') }}"></div></li>
+                        <li class="priority-item">
+                            <div><img src="{{ asset('assets/images/exc.jpg') }}"></div>
+                        </li>
+                        <li class="priority-item">
+                            <div><img src="{{ asset('assets/images/exc.jpg') }}"></div>
+                        </li>
+                        <li class="priority-item">
+                            <div><img src="{{ asset('assets/images/exc.jpg') }}"></div>
+                        </li>
+                        <li class="priority-item">
+                            <div><img src="{{ asset('assets/images/exc.jpg') }}"></div>
+                        </li>
+                        <li class="priority-item">
+                            <div><img src="{{ asset('assets/images/exc.jpg') }}"></div>
+                        </li>
+                        <li class="priority-item">
+                            <div><img src="{{ asset('assets/images/exc.jpg') }}"></div>
+                        </li>
+                        <li class="priority-item">
+                            <div><img src="{{ asset('assets/images/exc.jpg') }}"></div>
+                        </li>
+                        <li class="priority-item">
+                            <div><img src="{{ asset('assets/images/exc.jpg') }}"></div>
+                        </li>
                     </ul>
                 </div>
             </section>
