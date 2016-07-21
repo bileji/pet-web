@@ -314,12 +314,13 @@
 
         .container .content .top-wrapper .priority-list-wrapper .priority-list {
             height: 200px;
-            width: 100%;
+            width: 844px;
+            margin-top: -8px;
         }
 
         .container .content .top-wrapper .priority-list-wrapper .priority-list .priority-item {
-            width: 200px;
-            height: 100px;
+            width: 210px;
+            height: 108px;
             float: left;
             position: relative;
         }
