@@ -353,7 +353,7 @@
                     left: $(this).index() * 118 + "px"
                 });
                 $("ul", this).show(200, function () {
-                    console.log($(this).parent().index());
+                    $("ul", $(".menu-item:lt(" + $(this).parent().index() + "), .menu-item:gt(" + $(this).parent().index() + ")")).show();
                 });
             }).mouseleave(function () {
                 $("ul", this).hide();
