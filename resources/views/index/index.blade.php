@@ -149,6 +149,10 @@
             -webkit-transition: all 0.2s;
         }
 
+        .container .menu-wrapper .slider:hover {
+            cursor: pointer;
+        }
+
         .container .menu-wrapper .menu-item {
             float: left;
             width: auto;
