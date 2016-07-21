@@ -141,7 +141,6 @@
             display: block;
             position: absolute;
             bottom: 0;
-            left: 76px;
             width: 118px;
             height: 4px;
             background: #46CFB0;
@@ -164,7 +163,6 @@
         }
 
         .container .menu-wrapper .menu-item:first-child {
-            width: 76px;
         }
 
         .container .menu-wrapper ul li {
@@ -354,15 +352,17 @@
                 $(".slider").css({
                     left: $(this).index() * 118 + "px"
                 });
-                $("ul", this).show(200);
+                $("ul", this).show(200, function () {
+                    console.log($(this).index());
+                });
             }).mouseleave(function () {
                 $("ul", this).hide();
             });
             $(".slider").mouseover(function () {
-                var index = $(".slider").position().left / 76;
+                var index = $(this).position().left / 118;
                 $("ul", $(".menu-item:eq(" + index + ")")).show();
             }).mouseleave(function () {
-                var index = $(".slider").position().left / 76;
+                var index = $(this).position().left / 118;
                 $("ul", $(".menu-item:eq(" + index + ")")).hide();
             });
 
@@ -430,11 +430,6 @@
     <div class="container">
         <div class="list-group menu-wrapper">
             <ul>
-                <li class="menu-item">
-                    <a href="#" class="menu-title-wrapper">
-                        <i class="fa fa-joomla" aria-hidden="true"></i>&nbsp; 比乐集
-                    </a>
-                </li>
                 <li class="menu-item">
                     <div class="menu-title-wrapper">
                         <div class="menu-title-image">
