@@ -139,6 +139,7 @@
         .container .menu-wrapper .menu-item {
             float: left;
             width: auto;
+            padding: 0 10px 0 0;
         }
 
         .container .menu-wrapper .menu-item:first-child {
