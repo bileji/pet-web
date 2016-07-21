@@ -358,9 +358,9 @@
                 $("ul", this).hide();
             });
             $(".slider").mouseover(function () {
-                this.parent().show();
+                $("ul", $(".menu-item")).show();
             }).mouseleave(function () {
-                this.parent().show();
+                $("ul", $(".menu-item")).hide();
             });
 
             // 轮播
