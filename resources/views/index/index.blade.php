@@ -351,6 +351,7 @@
 
             // 菜单栏
             $(".menu-item").mouseover(function () {
+                console.log((this).index());
                 $("ul", this).show();
             }).mouseleave(function () {
                 $("ul", this).hide();
