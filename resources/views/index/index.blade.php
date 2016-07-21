@@ -315,21 +315,26 @@
         .container .content .top-wrapper .priority-list-wrapper .priority-list {
             height: 200px;
             width: 100%;
-            padding: 0 0 0 6px;
         }
 
         .container .content .top-wrapper .priority-list-wrapper .priority-list .priority-item {
-            width: 206px;
+            width: 200px;
             height: 100px;
             float: left;
+            position: relative;
         }
 
         .container .content .top-wrapper .priority-list-wrapper .priority-list .priority-item div {
-            width: 160px;
-            height: 80px;
+            width: 180px;
+            height: 90px;
             border-radius: 4px;
             overflow: hidden;
             background-color: #8c8c8c;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -45px;
+            margin-left: -90px
         }
     </style>
 
