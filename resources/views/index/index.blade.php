@@ -166,6 +166,7 @@
             height: 36px;
             float: left;
             overflow: hidden;
+            margin: 2px 0 0 0;
             border-radius: 4px;
             -moz-border-radius: 4px;
             -webkit-border-radius: 4px;
@@ -178,21 +179,23 @@
 
         .container .menu-wrapper ul li .menu-title-wrapper .menu-title-chunk {
             width: 72px;
-            height: 60px;
+            height: 40px;
             overflow: hidden;
         }
 
         .container .menu-wrapper ul li .menu-title-wrapper .menu-title-chunk .menu-title-master {
             width: 100%;
-            height: 40px;
-            line-height: 40px;
+            height: 24px;
+            font-size: 16px;
+            padding: 0 0 0 8px;
         }
 
         .container .menu-wrapper ul li .menu-title-wrapper .menu-title-chunk .menu-title-note {
             width: 100%;
-            height: 20px;
-            line-height: 20px;
+            height: 16px;
             font-size: 10px;
+            padding: 0 0 0 8px;
+            color: gray;
         }
 
         .container .menu-wrapper ul li .menu-title-wrapper:hover {
