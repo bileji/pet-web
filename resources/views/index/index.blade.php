@@ -354,7 +354,7 @@
                 $(".slider").css({
                     left: $(this).index() * 118 + "px"
                 });
-                $("ul", this).show();
+                $("ul", this).show(400);
             }).mouseleave(function () {
                 $("ul", this).hide();
             });
