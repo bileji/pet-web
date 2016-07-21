@@ -140,7 +140,8 @@
             display: block;
             position: absolute;
             bottom: 0;
-            left: 0;
+            left: 76px;
+            width: 118px;
             height: 4px;
             background: #46CFB0;
             transition: all 0.5s;
