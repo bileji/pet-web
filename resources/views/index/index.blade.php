@@ -167,6 +167,9 @@
             width: 36px;
             height: 36px;
             overflow: hidden;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
         }
 
         .container .menu-wrapper ul li .menu-title-wrapper .menu-title-image img {
