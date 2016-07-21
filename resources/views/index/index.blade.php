@@ -300,6 +300,11 @@
         .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls .owl-page.active span, .container .content .top-wrapper .carousel-wrapper .owl-carousel .owl-controls.clickable .owl-page:hover span {
             background-color: #ffffff;
         }
+
+        .container .content .top-wrapper .priority-list-wrapper {
+            width: 830px;
+            height: 100%;
+        }
     </style>
 
     <script type="text/javascript">
@@ -617,6 +622,10 @@
                                  alt="The Last of us">
                         </div>
                     </div>
+                </div>
+
+                <div class="priority-list-wrapper">
+
                 </div>
             </section>
         </div>
