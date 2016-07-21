@@ -130,7 +130,7 @@
 
         .container .menu-wrapper {
             width: 1230px;
-            height: 60px;
+            height: 44px;
             background-color: #ffffff;
             text-align: left;
             margin: auto;
@@ -475,7 +475,20 @@
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-title-wrapper">外国料理</a>
+                    <div class="menu-title-wrapper">
+                        <div class="menu-title-image">
+                            <img src="{{ asset('assets/images/menu_pic.jpg') }}">
+                        </div>
+                        <div class="menu-title-chunk">
+                            <div class="menu-title-master">
+                                外国料理
+                            </div>
+                            <div class="menu-title-note">
+                                八大菜系
+                            </div>
+                        </div>
+                        <div class="menu-title-row"></div>
+                    </div>
                     <ul class="menu-child-wrapper">
                         <li>
                             <a href="#" class="list-group-item">
@@ -500,7 +513,20 @@
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-title-wrapper">西式糕点</a>
+                    <div class="menu-title-wrapper">
+                        <div class="menu-title-image">
+                            <img src="{{ asset('assets/images/menu_pic.jpg') }}">
+                        </div>
+                        <div class="menu-title-chunk">
+                            <div class="menu-title-master">
+                                西式糕点
+                            </div>
+                            <div class="menu-title-note">
+                                八大菜系
+                            </div>
+                        </div>
+                        <div class="menu-title-row"></div>
+                    </div>
                     <ul class="menu-child-wrapper">
                         <li><a href="#" class="list-group-item"><i class="fa fa-angle-right fa-fw"
                                                                    aria-hidden="true"></i>&nbsp;蛋糕面包</a></li>
@@ -511,7 +537,20 @@
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-title-wrapper">特色小吃</a>
+                    <div class="menu-title-wrapper">
+                        <div class="menu-title-image">
+                            <img src="{{ asset('assets/images/menu_pic.jpg') }}">
+                        </div>
+                        <div class="menu-title-chunk">
+                            <div class="menu-title-master">
+                                特色小吃
+                            </div>
+                            <div class="menu-title-note">
+                                八大菜系
+                            </div>
+                        </div>
+                        <div class="menu-title-row"></div>
+                    </div>
                     <ul class="menu-child-wrapper">
                         <li>
                             <a href="#" class="list-group-item">
@@ -531,7 +570,20 @@
                     </ul>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-title-wrapper">黑暗料理</a>
+                    <div class="menu-title-wrapper">
+                        <div class="menu-title-image">
+                            <img src="{{ asset('assets/images/menu_pic.jpg') }}">
+                        </div>
+                        <div class="menu-title-chunk">
+                            <div class="menu-title-master">
+                                黑暗料理
+                            </div>
+                            <div class="menu-title-note">
+                                八大菜系
+                            </div>
+                        </div>
+                        <div class="menu-title-row"></div>
+                    </div>
                     <ul class="menu-child-wrapper">
                         <li>
                             <a href="#" class="list-group-item">
