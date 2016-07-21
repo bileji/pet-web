@@ -147,7 +147,7 @@
             background: #46CFB0;
             transition: all 0.2s;
             -moz-transition: all 0.2s;
-            -webkit-transition: all 0.5s;
+            -webkit-transition: all 0.2s;
         }
 
         .container .menu-wrapper .menu-item {
