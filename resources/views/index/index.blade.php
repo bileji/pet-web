@@ -359,10 +359,10 @@
             });
             $(".slider").mouseover(function () {
                 var index = $(".slider").position().left / 76;
-                $(".menu-item:eq(" + index + ")").show();
+                $("ul", $(".menu-item:eq(" + index + ")")).show();
             }).mouseleave(function () {
                 var index = $(".slider").position().left / 76;
-                $(".menu-item:eq(" + index + ")").hide();
+                $("ul", $(".menu-item:eq(" + index + ")")).hide();
             });
 
             // 轮播
