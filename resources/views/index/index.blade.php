@@ -359,6 +359,7 @@
                 $("ul", this).hide();
             });
             $(".slider").mouseover(function () {
+                console.log($(this).position().left);
                 var index = $(this).position().left / 118;
                 $("ul", $(".menu-item:eq(" + index + ")")).show();
             }).mouseleave(function () {
