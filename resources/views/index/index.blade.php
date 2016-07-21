@@ -130,7 +130,7 @@
 
         .container .menu-wrapper {
             width: 1230px;
-            height: 48px;
+            height: 50px;
             background-color: #ffffff;
             text-align: left;
             margin: auto;
@@ -148,6 +148,7 @@
             -moz-transition: all 0.2s;
             -webkit-transition: all 0.2s;
             cursor: pointer;
+            z-index: 1000;
         }
 
         .container .menu-wrapper .slider:hover {
