@@ -156,9 +156,8 @@
             color: #222;
             border-bottom: 2px solid white;
             transition: .3s all;
-            -webkit-transition: .3s all;
             -moz-transition: .3s all;
-            -o-transition: .3s all;
+            -webkit-transition: .3s all;
             padding: 6px 0 0 0;
         }
 
