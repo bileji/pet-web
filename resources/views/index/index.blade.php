@@ -134,6 +134,7 @@
             background-color: #ffffff;
             text-align: left;
             margin: auto;
+            position: relative;
         }
 
         .container .menu-wrapper .slider {
