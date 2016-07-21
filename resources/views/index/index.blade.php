@@ -159,11 +159,9 @@
             -webkit-transition: .3s all;
         }
 
-        /*.container .menu-wrapper .menu-item:hover {*/
-        /*color: #00a1d6;*/
-        /*border-bottom: 2px solid orange;*/
-        /*cursor: pointer;*/
-        /*}*/
+        .container .menu-wrapper .menu-item:hover {
+            cursor: pointer;
+        }
 
         .container .menu-wrapper .menu-item:first-child {
             width: 76px;
