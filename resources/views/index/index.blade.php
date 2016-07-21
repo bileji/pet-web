@@ -316,10 +316,11 @@
             height: 200px;
             width: 844px;
             margin-top: -8px;
+            padding: 0 0 0 16px;
         }
 
         .container .content .top-wrapper .priority-list-wrapper .priority-list .priority-item {
-            width: 210px;
+            width: 206px;
             height: 108px;
             float: left;
             position: relative;
