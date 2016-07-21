@@ -309,18 +309,27 @@
             width: 830px;
             height: 200px;
             float: left;
+            overflow: hidden;
         }
 
         .container .content .top-wrapper .priority-list-wrapper .priority-list {
             height: 200px;
             width: 100%;
-            padding: 0 0 0 30px;
+            padding: 0 0 0 6px;
         }
 
         .container .content .top-wrapper .priority-list-wrapper .priority-list .priority-item {
-            width: 200px;
+            width: 206px;
             height: 100px;
             float: left;
+        }
+
+        .container .content .top-wrapper .priority-list-wrapper .priority-list .priority-item div {
+            width: 160px;
+            height: 80px;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #8c8c8c;
         }
     </style>
 
@@ -643,14 +652,30 @@
 
                 <div class="priority-list-wrapper">
                     <ul class="priority-list">
-                        <li class="priority-item"></li>
-                        <li class="priority-item"></li>
-                        <li class="priority-item"></li>
-                        <li class="priority-item"></li>
-                        <li class="priority-item"></li>
-                        <li class="priority-item"></li>
-                        <li class="priority-item"></li>
-                        <li class="priority-item"></li>
+                        <li class="priority-item">
+                            <div></div>
+                        </li>
+                        <li class="priority-item">
+                            <div></div>
+                        </li>
+                        <li class="priority-item">
+                            <div></div>
+                        </li>
+                        <li class="priority-item">
+                            <div></div>
+                        </li>
+                        <li class="priority-item">
+                            <div></div>
+                        </li>
+                        <li class="priority-item">
+                            <div></div>
+                        </li>
+                        <li class="priority-item">
+                            <div></div>
+                        </li>
+                        <li class="priority-item">
+                            <div></div>
+                        </li>
                     </ul>
                 </div>
             </section>
