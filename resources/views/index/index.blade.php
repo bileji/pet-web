@@ -281,6 +281,7 @@
     </style>
 
     <script type="text/javascript">
+        // 顶部下拉
         $(document).on("mousewheel DOMMouseScroll", function (event) {
             var dom = $("#pull");
             var delta = event.originalEvent.wheelDelta || event.originalEvent.detail;
@@ -304,6 +305,7 @@
             }
         });
         $(document).ready(function () {
+            // 关闭顶部下拉
             var dom = $("#pull");
             $("#close").click(function () {
                 window.close = true;
@@ -315,6 +317,7 @@
                 });
             });
 
+            // 菜单栏
             $(".menu-item").mouseover(function () {
                 $("ul", this).show();
             }).mouseleave(function () {
