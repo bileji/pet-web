@@ -145,8 +145,8 @@
             width: 118px;
             height: 4px;
             background: #46CFB0;
-            transition: all 0.5s;
-            -moz-transition: all 0.5s;
+            transition: all 0.2s;
+            -moz-transition: all 0.2s;
             -webkit-transition: all 0.5s;
         }
 
@@ -354,7 +354,7 @@
                 $(".slider").css({
                     left: $(this).index() * 118 + "px"
                 });
-                $("ul", this).show(500);
+                $("ul", this).show(200);
             }).mouseleave(function () {
                 $("ul", this).hide();
             });
