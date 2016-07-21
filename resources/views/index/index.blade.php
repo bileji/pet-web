@@ -163,6 +163,17 @@
             padding: 6px 0 0 0;
         }
 
+        .container .menu-wrapper ul li .menu-title-wrapper .menu-title-image {
+            width: 36px;
+            height: 36px;
+            overflow: hidden;
+        }
+
+        .container .menu-wrapper ul li .menu-title-wrapper .menu-title-image img {
+            width: 100%;
+            height: 100%;
+        }
+
         .container .menu-wrapper ul li .menu-title-wrapper:hover {
             color: #00a1d6;
             border-bottom: 2px solid orange;
