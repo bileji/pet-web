@@ -130,7 +130,7 @@
 
         .container .menu-wrapper {
             width: 1230px;
-            height: 42px;
+            height: 60px;
             background-color: #ffffff;
             text-align: left;
             margin: auto;
@@ -138,7 +138,7 @@
 
         .container .menu-wrapper .menu-item {
             float: left;
-            width: 92px;
+            width: auto;
         }
 
         .container .menu-wrapper .menu-item:first-child {
@@ -150,7 +150,6 @@
         }
 
         .container .menu-wrapper ul li .menu-title-wrapper {
-            line-height: 36px;
             display: block;
             width: 100%;
             font-size: 14px;
@@ -166,6 +165,7 @@
         .container .menu-wrapper ul li .menu-title-wrapper .menu-title-image {
             width: 36px;
             height: 36px;
+            float: left;
             overflow: hidden;
             border-radius: 4px;
             -moz-border-radius: 4px;
@@ -175,6 +175,25 @@
         .container .menu-wrapper ul li .menu-title-wrapper .menu-title-image img {
             width: 100%;
             height: 100%;
+        }
+
+        .container .menu-wrapper ul li .menu-title-wrapper .menu-title-chunk {
+            width: 72px;
+            height: 60px;
+            overflow: hidden;
+        }
+
+        .container .menu-wrapper ul li .menu-title-wrapper .menu-title-chunk .menu-title-master {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .container .menu-wrapper ul li .menu-title-wrapper .menu-title-chunk .menu-title-note {
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            font-size: 10px;
         }
 
         .container .menu-wrapper ul li .menu-title-wrapper:hover {
