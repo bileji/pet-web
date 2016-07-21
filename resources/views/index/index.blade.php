@@ -343,7 +343,7 @@
 
             // 菜单栏
             $(".menu-item").mouseover(function () {
-                $("ul", this).show();
+                $("ul", this).css({'border-top': '2px solid orange'}).show();
             }).mouseleave(function () {
                 $("ul", this).hide();
             });
