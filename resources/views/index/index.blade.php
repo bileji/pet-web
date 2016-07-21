@@ -261,7 +261,11 @@
 
         .container .content .top-wrapper {
             margin-top: 4px;
-            background-color: #f8f8f8;
+            height: 200px;
+        }
+
+        .container .content .top-wrapper .carousel-wrapper {
+            float: left;
         }
 
         .container .content .top-wrapper .carousel-wrapper:hover {
@@ -304,6 +308,7 @@
         .container .content .top-wrapper .priority-list-wrapper {
             width: 830px;
             height: 100%;
+            float: left;
         }
     </style>
 
