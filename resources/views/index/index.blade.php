@@ -130,7 +130,7 @@
 
         .container .menu-wrapper {
             width: 1230px;
-            height: 50px;
+            height: 48px;
             background-color: #ffffff;
             text-align: left;
             margin: auto;
@@ -353,24 +353,23 @@
 
             // 菜单栏
             $(".menu-item").mouseover(function () {
-//                $(".slider").css({
-//                    left: $(this).index() * 118 + "px"
-//                });
-//                $("ul", this).show(200, function () {
-//                    $("ul", $(".menu-item:lt(" + $(this).parent().index() + "), .menu-item:gt(" + $(this).parent().index() + ")")).hide();
-//                });
-                $("ul", this).show();
+                $(".slider").css({
+                    left: $(this).index() * 118 + "px"
+                });
+                $("ul", this).show(200, function () {
+                    $("ul", $(".menu-item:lt(" + $(this).parent().index() + "), .menu-item:gt(" + $(this).parent().index() + ")")).hide();
+                });
             }).mouseleave(function () {
                 $("ul", this).hide();
             });
-//            $(".slider").mouseover(function () {
-//                console.log($(this).position().left);
-//                var index = $(this).position().left / 118;
-//                $("ul", $(".menu-item:eq(" + index + ")")).show();
-//            }).mouseleave(function () {
-//                var index = $(this).position().left / 118;
-//                $("ul", $(".menu-item:eq(" + index + ")")).hide();
-//            });
+            $(".slider").mouseover(function () {
+                console.log($(this).position().left);
+                var index = $(this).position().left / 118;
+                $("ul", $(".menu-item:eq(" + index + ")")).show();
+            }).mouseleave(function () {
+                var index = $(this).position().left / 118;
+                $("ul", $(".menu-item:eq(" + index + ")")).hide();
+            });
 
             // 轮播
             $(".owl-carousel").owlCarousel({
@@ -622,7 +621,7 @@
                         </li>
                     </ul>
                 </li>
-                {{--<li class="slider"></li>--}}
+                <li class="slider"></li>
             </ul>
         </div>
 
