@@ -137,22 +137,22 @@
             position: relative;
         }
 
-        .container .menu-wrapper .slider {
-            display: block;
-            position: absolute;
-            bottom: 0;
-            width: 118px;
-            height: 4px;
-            background: #46CFB0;
-            transition: all 0.2s;
-            -moz-transition: all 0.2s;
-            -webkit-transition: all 0.2s;
-            cursor: pointer;
-            z-index: 1000;
-        }
+        /*.container .menu-wrapper .slider {*/
+            /*display: block;*/
+            /*position: absolute;*/
+            /*bottom: 0;*/
+            /*width: 118px;*/
+            /*height: 4px;*/
+            /*background: #46CFB0;*/
+            /*transition: all 0.2s;*/
+            /*-moz-transition: all 0.2s;*/
+            /*-webkit-transition: all 0.2s;*/
+            /*cursor: pointer;*/
+            /*z-index: 1000;*/
+        /*}*/
 
-        .container .menu-wrapper .slider:hover {
-        }
+        /*.container .menu-wrapper .slider:hover {*/
+        /*}*/
 
         .container .menu-wrapper .menu-item {
             float: left;
@@ -354,23 +354,24 @@
 
             // 菜单栏
             $(".menu-item").mouseover(function () {
-                $(".slider").css({
-                    left: $(this).index() * 118 + "px"
-                });
-                $("ul", this).show(200, function () {
-                    $("ul", $(".menu-item:lt(" + $(this).parent().index() + "), .menu-item:gt(" + $(this).parent().index() + ")")).hide();
-                });
+//                $(".slider").css({
+//                    left: $(this).index() * 118 + "px"
+//                });
+//                $("ul", this).show(200, function () {
+//                    $("ul", $(".menu-item:lt(" + $(this).parent().index() + "), .menu-item:gt(" + $(this).parent().index() + ")")).hide();
+//                });
+                $("ul", this).show();
             }).mouseleave(function () {
                 $("ul", this).hide();
             });
-            $(".slider").mouseover(function () {
-                console.log($(this).position().left);
-                var index = $(this).position().left / 118;
-                $("ul", $(".menu-item:eq(" + index + ")")).show();
-            }).mouseleave(function () {
-                var index = $(this).position().left / 118;
-                $("ul", $(".menu-item:eq(" + index + ")")).hide();
-            });
+//            $(".slider").mouseover(function () {
+//                console.log($(this).position().left);
+//                var index = $(this).position().left / 118;
+//                $("ul", $(".menu-item:eq(" + index + ")")).show();
+//            }).mouseleave(function () {
+//                var index = $(this).position().left / 118;
+//                $("ul", $(".menu-item:eq(" + index + ")")).hide();
+//            });
 
             // 轮播
             $(".owl-carousel").owlCarousel({
