@@ -358,10 +358,10 @@
                 $("ul", this).hide();
             });
             $(".slider").mouseover(function () {
-                var index = this.position().left / 76;
+                var index = $(".slider").position().left / 76;
                 $(".menu-item:eq(" + index + ")").show();
             }).mouseleave(function () {
-                var index = this.position().left / 76;
+                var index = $(".slider").position().left / 76;
                 $(".menu-item:eq(" + index + ")").hide();
             });
 
