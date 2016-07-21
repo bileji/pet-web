@@ -147,10 +147,10 @@
             transition: all 0.2s;
             -moz-transition: all 0.2s;
             -webkit-transition: all 0.2s;
+            cursor: pointer;
         }
 
         .container .menu-wrapper .slider:hover {
-            cursor: pointer;
         }
 
         .container .menu-wrapper .menu-item {
