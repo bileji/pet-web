@@ -355,9 +355,6 @@
             margin-top: 10px;
             overflow: hidden;
             clear: both;
-            border-radius: 4px;
-            -moz-border-radius: 4px;
-            -webkit-border-radius: 4px;
         }
 
         .container .content .module-container .module-row .module-wrapper {
@@ -729,26 +726,24 @@
             </section>
 
             <section class="module-container">
-                <div class="module-row">
+                <div class="module-row fillet">
                     <div class="module-wrapper">
-                        <div class="module-left">
+                        <div class="module-left fillet">
 
                         </div>
-                        <div class="module-right">
+                        <div class="module-right fillet">
 
                         </div>
-
                     </div>
                 </div>
-                <div class="module-row">
+                <div class="module-row fillet">
                     <div class="module-wrapper">
-                        <div class="module-left">
+                        <div class="module-left fillet">
 
                         </div>
-                        <div class="module-right">
+                        <div class="module-right fillet">
 
                         </div>
-
                     </div>
                 </div>
             </section>
