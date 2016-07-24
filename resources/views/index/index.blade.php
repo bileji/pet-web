@@ -781,7 +781,7 @@
                                 <ul class="module-tab">
                                     <li class="module-tab-item">选项1</li>
                                     <li class="module-tab-item">选项2</li>
-                                    <li class="module-tab-item">选项2</li>
+                                    <li class="module-tab-item">选项3</li>
                                     <li class="module-tab-slider"></li>
                                 </ul>
                             </div>
