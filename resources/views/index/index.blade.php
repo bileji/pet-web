@@ -364,19 +364,17 @@
         .container .content .module-container .module-row .module-wrapper {
             height: 100%;
             width: 100%;
-            float: left;
-            background-color: #2ca02c;
         }
 
         .container .content .module-container .module-row .module-left {
-            height: 200px;
+            height: 100%;
             width: 940px;
             float: left;
             background-color: #7a43b6;
         }
 
         .container .content .module-container .module-row .module-right {
-            height: 200px;
+            height: 100%;
             width: 280px;
             margin-left: 10px;
             float: right;
