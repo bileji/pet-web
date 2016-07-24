@@ -377,6 +377,7 @@
         .container .content .module-container .module-row .module-left .module-header .module-title {
             height: 100%;
             width: 100px;
+            float: left;
         }
 
         .container .content .module-container .module-row .module-left .module-header .module-title .module-title-i {
