@@ -470,6 +470,7 @@
             line-height: 40px;
             display: block;
             float: left;
+            line-height: 44px;
             font-size: 20px;
             color: #222;
         }
