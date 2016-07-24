@@ -452,6 +452,83 @@
             float: right;
             background-color: pink;
         }
+
+        .container .content .module-container .module-row .module-right .module-header {
+            height: 40px;
+            width: 100%;
+            float: left;
+        }
+
+        .container .content .module-container .module-row .module-right .module-header .module-title {
+            height: 100%;
+            width: 100px;
+            float: left;
+        }
+
+        .container .content .module-container .module-row .module-right .module-header .module-title .module-title-i {
+            width: 40px;
+            height: 40px;
+            display: block;
+            float: left;
+            background: url('https://web.bileji.com/assets/images/icons.png') no-repeat -141px -461px;;
+        }
+
+        .container .content .module-container .module-row .module-right .module-header .module-title .module-title-t {
+            width: 60px;
+            height: 100%;
+            line-height: 40px;
+            display: block;
+            float: left;
+            font-size: 24px;
+            color: #222;
+        }
+
+        .container .content .module-container .module-row .module-right .module-header .module-tab {
+            height: 100%;
+            width: auto;
+            float: left;
+            padding: 0 5px;
+            position: relative;
+        }
+
+        .container .content .module-container .module-row .module-right .module-header .module-tab li {
+            width: 40px;
+            cursor: pointer;
+        }
+
+        .container .content .module-container .module-row .module-right .module-header .module-tab .module-tab-item {
+            height: 100%;
+            float: left;
+            line-height: 42px;
+            margin: 0 10px;
+        }
+
+        .container .content .module-container .module-row .module-right .module-header .module-tab .module-tab-item:hover {
+            color: orange;
+        }
+
+        .container .content .module-container .module-row .module-right .module-header .module-tab .module-tab-slider {
+            height: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 15px;
+            top: 24px;
+            border-bottom: 3px solid lightblue;
+            transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -webkit-transition: all 0.2s;
+        }
+
+        .container .content .module-container .module-row .module-right .module-header .module-tab .module-tab-slider span {
+            display: block;
+            margin: 0 auto;
+            width: 0;
+            height: 0;
+            border: 4px solid white;
+            border-bottom: 4px solid lightblue;
+            position: relative;
+            z-index: -10;
+        }
     </style>
 
     <script type="text/javascript">
@@ -830,7 +907,22 @@
                             </ul>
                         </div>
                         <div class="module-right fillet">
+                            <div class="module-header">
+                                <div class="module-title">
+                                    <span class="module-title-i fillet"></span>
+                                    <span class="module-title-t">排行榜</span>
+                                </div>
+                                <ul class="module-tab">
+                                    <li class="module-tab-item">选项1</li>
+                                    <li class="module-tab-item">选项2</li>
+                                    <li class="module-tab-slider">
+                                        <span></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="module-body">
 
+                            </ul>
                         </div>
                     </div>
                 </div>
