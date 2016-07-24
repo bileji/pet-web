@@ -350,7 +350,7 @@
         }
 
         .container .content .module-container .module-row {
-            height: 240px;
+            height: 380px;
             width: 100%;
             background-color: #00b3ee;
             margin-top: 10px;
