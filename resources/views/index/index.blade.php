@@ -909,8 +909,7 @@
                         <div class="module-right fillet">
                             <div class="module-header">
                                 <div class="module-title">
-                                    <span class="module-title-i fillet"></span>
-                                    <span class="module-title-t">排行榜</span>
+                                    <span class="module-title-t">排行</span>
                                 </div>
                                 <ul class="module-tab">
                                     <li class="module-tab-item">选项1</li>
