@@ -729,7 +729,17 @@
                 <div class="module-row fillet">
                     <div class="module-wrapper">
                         <div class="module-left fillet">
+                            <div class="module-header">
+                                <div class="module-title">
+                                    大厨
+                                </div>
+                                <ul class="module-tab">
 
+                                </ul>
+                            </div>
+                            <ul class="module-body">
+
+                            </ul>
                         </div>
                         <div class="module-right fillet">
 
