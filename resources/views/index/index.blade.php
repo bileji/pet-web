@@ -506,12 +506,10 @@
             });
 
             // 模块tab
-            $(".module-tab-item").mouseover(function () {
+            $(".module-tab-item").click(function () {
                 var left = 15 + $(this).index() * ($(this).width() + 20);
                 $(this).parent().find(".module-tab-slider").css({left: left});
-            }).mouseleave(function () {
-
-            })
+            });
         });
     </script>
 @stop
