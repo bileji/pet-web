@@ -429,6 +429,9 @@
             left: 15px;
             top: 24px;
             border-bottom: 3px solid lightblue;
+            transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -webkit-transition: all 0.2s;
         }
 
         .container .content .module-container .module-row .module-left .module-header .module-tab .module-tab-slider span {
