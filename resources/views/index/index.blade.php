@@ -415,12 +415,12 @@
         }
 
         .container .content .module-container .module-row .module-left .module-header .module-tab .module-tab-slider {
-            height: 2px;
+            height: 10px;
             width: 40px;
             position: absolute;
             bottom: 0;
             left: 15px;
-            top: 34px;
+            top: 24px;
             border-bottom: 3px solid lightblue;
         }
 
@@ -429,10 +429,10 @@
             margin: 0 auto;
             width: 0;
             height: 0;
-            border-top: 4px solid red;
-            border-right: 4px solid blue;
-            border-bottom: 4px solid green;
-            border-left: 4px solid yellow;
+            border-top: 4px solid white;
+            border-right: 4px solid white;
+            border-left: 4px solid white;
+            border-bottom: 4px solid lightblue;
         }
 
         .container .content .module-container .module-row .module-right {
