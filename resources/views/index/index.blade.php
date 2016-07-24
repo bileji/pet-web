@@ -352,7 +352,6 @@
         .container .content .module-container .module-row {
             height: 380px;
             width: 100%;
-            background-color: #00b3ee;
             margin-top: 10px;
             overflow: hidden;
             clear: both;
@@ -743,9 +742,12 @@
                 </div>
                 <div class="module-row">
                     <div class="module-wrapper">
+                        <div class="module-left">
 
-                    </div>
-                    <div class="rank-wrapper">
+                        </div>
+                        <div class="module-right">
+
+                        </div>
 
                     </div>
                 </div>
