@@ -429,7 +429,7 @@
             margin: 0 auto;
             width: 0;
             height: 0;
-            border-top: 4px solid white;
+            border: 4px solid white;
             border-bottom: 4px solid lightblue;
             position: relative;
             z-index: -10;
