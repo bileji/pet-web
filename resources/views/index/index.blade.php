@@ -408,6 +408,7 @@
 
         .container .content .module-container .module-row .module-left .module-header .module-tab li {
             width: 40px;
+            cursor: pointer;
         }
 
         .container .content .module-container .module-row .module-left .module-header .module-tab .module-tab-item {
