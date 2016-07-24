@@ -430,9 +430,9 @@
             width: 0;
             height: 0;
             border-top: 4px solid white;
-            border-right: 4px solid white;
-            border-left: 4px solid white;
             border-bottom: 4px solid lightblue;
+            position: relative;
+            z-index: -10;
         }
 
         .container .content .module-container .module-row .module-right {
