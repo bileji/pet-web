@@ -354,6 +354,11 @@
             height: 200px;
             background-color: #00b3ee;
             margin-top: 10px;
+            overflow: hidden;
+            clear: both;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
         }
 
         .container .content .module-container .module-row .module-wrapper {
