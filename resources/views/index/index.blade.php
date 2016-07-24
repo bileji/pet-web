@@ -402,13 +402,15 @@
             height: 100%;
             width: auto;
             float: left;
-            padding: 0 10px;
+            padding: 0 5px;
         }
 
         .container .content .module-container .module-row .module-left .module-header .module-tab .module-tab-item {
             height: 100%;
             width: auto;
             float: left;
+            line-height: 42px;
+            margin: 0 10px;
         }
 
         .container .content .module-container .module-row .module-right {
