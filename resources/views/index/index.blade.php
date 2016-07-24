@@ -418,6 +418,10 @@
             margin: 0 10px;
         }
 
+        .container .content .module-container .module-row .module-left .module-header .module-tab .module-tab-item:hover {
+            color: orange;
+        }
+
         .container .content .module-container .module-row .module-left .module-header .module-tab .module-tab-slider {
             height: 10px;
             position: absolute;
