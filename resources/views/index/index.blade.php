@@ -501,6 +501,15 @@
                 autoPlay  : true,
                 singleItem: true
             });
+
+            // 模块tab
+            $(".module-tab-item").mouseover(function () {
+                var left = (10 + $(this).index() * $(this).width() + 20);
+                console.log(left);
+                console.log($(this).parent());
+            }).mouseleave(function () {
+
+            })
         });
     </script>
 @stop
