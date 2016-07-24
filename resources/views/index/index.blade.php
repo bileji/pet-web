@@ -403,14 +403,24 @@
             width: auto;
             float: left;
             padding: 0 5px;
+            position: relative;
         }
 
         .container .content .module-container .module-row .module-left .module-header .module-tab .module-tab-item {
             height: 100%;
-            width: auto;
+            width: 40px;
             float: left;
             line-height: 42px;
             margin: 0 10px;
+        }
+
+        .container .content .module-container .module-row .module-left .module-header .module-tab .module-tab-slider {
+            height: 0;
+            width: 40px;
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+            border: 1px solid lightblue;
         }
 
         .container .content .module-container .module-row .module-right {
