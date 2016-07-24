@@ -350,7 +350,7 @@
         }
 
         .container .content .module-container .module-row {
-            height: 200px;
+            height: 240px;
             width: 100%;
             background-color: #00b3ee;
             margin-top: 10px;
@@ -369,12 +369,14 @@
         }
 
         .container .content .module-container .module-row .module-left {
+            height: 200px;
             width: 940px;
             background-color: #7a43b6;
             float: left;
         }
 
         .container .content .module-container .module-row .module-right {
+            height: 200px;
             width: 280px;
             margin-left: 10px;
             float: right;
