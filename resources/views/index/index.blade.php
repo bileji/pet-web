@@ -371,6 +371,7 @@
         .container .content .module-container .module-row .module-left .module-header {
             height: 40px;
             width: 100%;
+            float: left;
         }
 
         .container .content .module-container .module-row .module-left .module-header .module-title {
@@ -394,6 +395,19 @@
             float: left;
             font-size: 24px;
             color: #222;
+        }
+
+        .container .content .module-container .module-row .module-left .module-header .module-tab {
+            height: 100%;
+            width: auto;
+            float: left;
+            padding: 0 10px;
+        }
+
+        .container .content .module-container .module-row .module-left .module-header .module-tab .module-tab-item {
+            height: 100%;
+            width: auto;
+            float: left;
         }
 
         .container .content .module-container .module-row .module-right {
@@ -758,13 +772,14 @@
                         <div class="module-left fillet">
                             <div class="module-header">
                                 <div class="module-title">
-                                    <span class="module-title-i fillet">
-                                        <img src="">
-                                    </span>
+                                    <span class="module-title-i fillet"></span>
                                     <span class="module-title-t">厨神</span>
                                 </div>
                                 <ul class="module-tab">
-
+                                    <li class="module-tab-item">选项1</li>
+                                    <li class="module-tab-item">选项2</li>
+                                    <li class="module-tab-item">选项2</li>
+                                    <li class="module-tab-slider"></li>
                                 </ul>
                             </div>
                             <ul class="module-body">
