@@ -361,8 +361,8 @@
             -webkit-border-radius: 4px;
         }
 
-        .container .content .module-container .module-row .module-top {
-            height: 40px;
+        .container .content .module-container .module-row .module-wrapper {
+            height: 100%;
             width: 100%;
             float: left;
             background-color: #2ca02c;
@@ -371,8 +371,8 @@
         .container .content .module-container .module-row .module-left {
             height: 200px;
             width: 940px;
-            background-color: #7a43b6;
             float: left;
+            background-color: #7a43b6;
         }
 
         .container .content .module-container .module-row .module-right {
@@ -733,13 +733,13 @@
 
             <section class="module-container">
                 <div class="module-row">
-                    <div class="module-top">
+                    <div class="module-wrapper">
+                        <div class="module-left">
 
-                    </div>
-                    <div class="module-left">
+                        </div>
+                        <div class="module-right">
 
-                    </div>
-                    <div class="module-right">
+                        </div>
 
                     </div>
                 </div>
