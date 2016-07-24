@@ -415,12 +415,24 @@
         }
 
         .container .content .module-container .module-row .module-left .module-header .module-tab .module-tab-slider {
-            height: 0;
+            height: 2px;
             width: 40px;
             position: absolute;
             bottom: 0;
-            left: 10px;
-            border: 1px solid lightblue;
+            left: 15px;
+            top: 34px;
+            border-bottom: 3px solid lightblue;
+        }
+
+        .container .content .module-container .module-row .module-left .module-header .module-tab .module-tab-slider span {
+            display: block;
+            margin: 0 auto;
+            width: 0;
+            height: 0;
+            border-top: 4px solid red;
+            border-right: 4px solid blue;
+            border-bottom: 4px solid green;
+            border-left: 4px solid yellow;
         }
 
         .container .content .module-container .module-row .module-right {
