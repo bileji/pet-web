@@ -350,8 +350,8 @@
         }
 
         .container .content .module-container .module-row {
-            width: 100%;
             height: 200px;
+            width: 100%;
             background-color: #00b3ee;
             margin-top: 10px;
             overflow: hidden;
@@ -361,15 +361,20 @@
             -webkit-border-radius: 4px;
         }
 
-        .container .content .module-container .module-row .module-wrapper {
-            height: 100%;
+        .container .content .module-container .module-row .module-top {
+            height: 40px;
+            width: 100%;
+            float: left;
+            background-color: #2ca02c;
+        }
+
+        .container .content .module-container .module-row .module-left {
             width: 940px;
             background-color: #7a43b6;
             float: left;
         }
 
-        .container .content .module-container .module-row .rank-wrapper {
-            height: 100%;
+        .container .content .module-container .module-row .module-right {
             width: 280px;
             margin-left: 10px;
             float: right;
@@ -726,15 +731,13 @@
 
             <section class="module-container">
                 <div class="module-row">
-                    <div class="module-wrapper">
-                        <div class="module-header">
+                    <div class="module-top">
 
-                        </div>
-                        <div class="module-body">
-
-                        </div>
                     </div>
-                    <div class="rank-wrapper">
+                    <div class="module-left">
+
+                    </div>
+                    <div class="module-right">
 
                     </div>
                 </div>
