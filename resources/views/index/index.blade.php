@@ -499,12 +499,12 @@
         }
 
         .container .content .module-container .module-row .module-right .module-header .module-tab .module-tab-slider {
-            height: 10px;
+            height: 9px;
             position: absolute;
             bottom: 0;
             left: 15px;
             top: 24px;
-            border-bottom: 3px solid lightblue;
+            border-bottom: 2px solid lightblue;
             transition: all 0.2s;
             -moz-transition: all 0.2s;
             -webkit-transition: all 0.2s;
