@@ -450,7 +450,6 @@
             width: 280px;
             margin-left: 10px;
             float: right;
-            background-color: pink;
         }
 
         .container .content .module-container .module-row .module-right .module-header {
