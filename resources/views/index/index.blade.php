@@ -575,7 +575,7 @@
 
             // 模块tab
             $(".module-tab-item").click(function () {
-                var left = 15 + $(this).index() * ($(this).width() + 20);
+                var left = parseInt($(this).css('marginLeft')) + parseInt($(this).css('padding-left')) + $(this).index() * ($(this).width() + parseInt($(this).css('marginLeft')) + parseInt($(this).css('marginRight')));
                 $(this).parent().find(".module-tab-slider").css({left: left});
             });
         });
