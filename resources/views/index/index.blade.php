@@ -406,9 +406,12 @@
             position: relative;
         }
 
+        .container .content .module-container .module-row .module-left .module-header .module-tab li {
+            width: 40px;
+        }
+
         .container .content .module-container .module-row .module-left .module-header .module-tab .module-tab-item {
             height: 100%;
-            width: 40px;
             float: left;
             line-height: 42px;
             margin: 0 10px;
@@ -416,7 +419,6 @@
 
         .container .content .module-container .module-row .module-left .module-header .module-tab .module-tab-slider {
             height: 10px;
-            width: 40px;
             position: absolute;
             bottom: 0;
             left: 15px;
