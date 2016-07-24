@@ -460,17 +460,17 @@
 
         .container .content .module-container .module-row .module-right .module-header .module-title {
             height: 100%;
-            width: 55px;
+            width: 40px;
             float: left;
         }
 
         .container .content .module-container .module-row .module-right .module-header .module-title .module-title-t {
-            width: 55px;
+            width: 40px;
             height: 100%;
             line-height: 40px;
             display: block;
             float: left;
-            font-size: 24px;
+            font-size: 20px;
             color: #222;
         }
 
