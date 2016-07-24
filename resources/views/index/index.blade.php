@@ -504,7 +504,7 @@
 
             // 模块tab
             $(".module-tab-item").mouseover(function () {
-                var left = 20 + $(this).index() * ($(this).width() + 20);
+                var left = 15 + $(this).index() * ($(this).width() + 20);
                 $(this).parent().find(".module-tab-slider").css({left: left});
             }).mouseleave(function () {
 
