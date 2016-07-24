@@ -348,6 +348,19 @@
             width: 180px;
             height: 90px;
         }
+
+        .container .content .module-container .module-row {
+            width: 100%;
+            height: 200px;
+            background-color: #00b3ee;
+        }
+
+        .container .content .module-container .module-row .module-wrapper {
+
+        }
+
+        .container .content .module-container .module-row .rank-wrapper {
+        }
     </style>
 
     <script type="text/javascript">
@@ -694,6 +707,17 @@
                             <div><img src="{{ asset('assets/images/exc.jpg') }}"></div>
                         </li>
                     </ul>
+                </div>
+            </section>
+
+            <section class="module-container">
+                <div class="module-row">
+                    <div class="module-wrapper">
+
+                    </div>
+                    <div class="rank-wrapper">
+
+                    </div>
                 </div>
             </section>
         </div>
