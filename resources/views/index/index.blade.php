@@ -362,10 +362,18 @@
         }
 
         .container .content .module-container .module-row .module-wrapper {
-
+            height: 100%;
+            width: 840px;
+            background-color: #7a43b6;
+            float: left;
         }
 
         .container .content .module-container .module-row .rank-wrapper {
+            height: 100%;
+            width: 180px;
+            margin-left: 10px;
+            float: right;
+            background-color: pink;
         }
     </style>
 
@@ -719,7 +727,12 @@
             <section class="module-container">
                 <div class="module-row">
                     <div class="module-wrapper">
+                        <div class="module-header">
 
+                        </div>
+                        <div class="module-body">
+
+                        </div>
                     </div>
                     <div class="rank-wrapper">
 
