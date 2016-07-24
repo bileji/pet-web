@@ -353,6 +353,7 @@
             width: 100%;
             height: 200px;
             background-color: #00b3ee;
+            margin-top: 10px;
         }
 
         .container .content .module-container .module-row .module-wrapper {
@@ -711,6 +712,14 @@
             </section>
 
             <section class="module-container">
+                <div class="module-row">
+                    <div class="module-wrapper">
+
+                    </div>
+                    <div class="rank-wrapper">
+
+                    </div>
+                </div>
                 <div class="module-row">
                     <div class="module-wrapper">
 
