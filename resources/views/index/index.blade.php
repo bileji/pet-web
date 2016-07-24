@@ -366,7 +366,17 @@
             height: 100%;
             width: 940px;
             float: left;
-            background-color: #7a43b6;
+        }
+
+        .container .content .module-container .module-row .module-left .module-header {
+            height: 40px;
+            width: 100%;
+        }
+
+        .container .content .module-container .module-row .module-left .module-header .module-title {
+            height: 100%;
+            width: 100px;
+            font-size: 18px;
         }
 
         .container .content .module-container .module-row .module-right {
