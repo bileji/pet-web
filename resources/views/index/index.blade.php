@@ -373,15 +373,24 @@
             width: 100%;
         }
 
-        /*.container .content .module-container .module-row .module-left .module-header .module-title {*/
-            /*height: 100%;*/
-            /*width: 100px;*/
-            /*font-size: 24px;*/
-        /*}*/
+        .container .content .module-container .module-row .module-left .module-header .module-title {
+            height: 100%;
+            width: 120px;
+        }
 
         .container .content .module-container .module-row .module-left .module-header .module-title .module-title-i {
             width: 40px;
             height: 40px;
+            display: block;
+            float: left;
+        }
+
+        .container .content .module-container .module-row .module-left .module-header .module-title .module-title-t {
+            width: 80px;
+            height: 100%;
+            line-height: 100%;
+            display: block;
+            float: left;
         }
 
         .container .content .module-container .module-row .module-right {
@@ -748,7 +757,7 @@
                                 <div class="module-title">
                                     <span class="module-title-i fillet"></span>
                                     <span class="module-title-t">
-                                        <h2>厨神</h2>
+                                        <h3>厨神</h3>
                                     </span>
                                 </div>
                                 <ul class="module-tab">
