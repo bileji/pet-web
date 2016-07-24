@@ -375,7 +375,7 @@
 
         .container .content .module-container .module-row .module-left .module-header .module-title {
             height: 100%;
-            width: 120px;
+            width: 100px;
         }
 
         .container .content .module-container .module-row .module-left .module-header .module-title .module-title-i {
@@ -386,9 +386,9 @@
         }
 
         .container .content .module-container .module-row .module-left .module-header .module-title .module-title-t {
-            width: 80px;
+            width: 60px;
             height: 100%;
-            line-height: 100%;
+            line-height: 40px;
             display: block;
             float: left;
         }
@@ -756,9 +756,7 @@
                             <div class="module-header">
                                 <div class="module-title">
                                     <span class="module-title-i fillet"></span>
-                                    <span class="module-title-t">
-                                        <h3>厨神</h3>
-                                    </span>
+                                    <span class="module-title-t">厨神</span>
                                 </div>
                                 <ul class="module-tab">
 
