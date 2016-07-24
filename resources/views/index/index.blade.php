@@ -363,14 +363,14 @@
 
         .container .content .module-container .module-row .module-wrapper {
             height: 100%;
-            width: 840px;
+            width: 940px;
             background-color: #7a43b6;
             float: left;
         }
 
         .container .content .module-container .module-row .rank-wrapper {
             height: 100%;
-            width: 180px;
+            width: 280px;
             margin-left: 10px;
             float: right;
             background-color: pink;
