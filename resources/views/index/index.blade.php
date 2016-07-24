@@ -373,10 +373,15 @@
             width: 100%;
         }
 
-        .container .content .module-container .module-row .module-left .module-header .module-title {
-            height: 100%;
-            width: 100px;
-            font-size: 18px;
+        /*.container .content .module-container .module-row .module-left .module-header .module-title {*/
+            /*height: 100%;*/
+            /*width: 100px;*/
+            /*font-size: 24px;*/
+        /*}*/
+
+        .container .content .module-container .module-row .module-left .module-header .module-title .module-title-i {
+            width: 40px;
+            height: 40px;
         }
 
         .container .content .module-container .module-row .module-right {
@@ -741,7 +746,10 @@
                         <div class="module-left fillet">
                             <div class="module-header">
                                 <div class="module-title">
-                                    大厨
+                                    <span class="module-title-i fillet"></span>
+                                    <span class="module-title-t">
+                                        <h2>厨神</h2>
+                                    </span>
                                 </div>
                                 <ul class="module-tab">
 
