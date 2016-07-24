@@ -467,7 +467,6 @@
         .container .content .module-container .module-row .module-right .module-header .module-title .module-title-t {
             width: 40px;
             height: 100%;
-            line-height: 40px;
             display: block;
             float: left;
             line-height: 44px;
@@ -479,7 +478,7 @@
             height: 100%;
             width: auto;
             float: left;
-            padding: 0 5px;
+            padding: 0 10px;
             position: relative;
         }
 
@@ -503,7 +502,7 @@
             height: 9px;
             position: absolute;
             bottom: 0;
-            left: 10px;
+            left: 15px;
             top: 24px;
             border-bottom: 2px solid lightblue;
             transition: all 0.2s;
