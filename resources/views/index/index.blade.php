@@ -460,20 +460,12 @@
 
         .container .content .module-container .module-row .module-right .module-header .module-title {
             height: 100%;
-            width: 100px;
+            width: 55px;
             float: left;
-        }
-
-        .container .content .module-container .module-row .module-right .module-header .module-title .module-title-i {
-            width: 40px;
-            height: 40px;
-            display: block;
-            float: left;
-            background: url('https://web.bileji.com/assets/images/icons.png') no-repeat -141px -461px;;
         }
 
         .container .content .module-container .module-row .module-right .module-header .module-title .module-title-t {
-            width: 60px;
+            width: 55px;
             height: 100%;
             line-height: 40px;
             display: block;
