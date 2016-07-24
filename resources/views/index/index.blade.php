@@ -491,7 +491,7 @@
             height: 100%;
             float: left;
             line-height: 42px;
-            margin: 0 10px;
+            margin: 0 5px;
         }
 
         .container .content .module-container .module-row .module-right .module-header .module-tab .module-tab-item:hover {
@@ -502,7 +502,7 @@
             height: 9px;
             position: absolute;
             bottom: 0;
-            left: 15px;
+            left: 10px;
             top: 24px;
             border-bottom: 2px solid lightblue;
             transition: all 0.2s;
