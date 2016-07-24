@@ -383,6 +383,7 @@
             height: 40px;
             display: block;
             float: left;
+            background: url('https://web.bileji.com/assets/images/icons.png') no-repeat -141px -461px;;
         }
 
         .container .content .module-container .module-row .module-left .module-header .module-title .module-title-t {
@@ -391,6 +392,8 @@
             line-height: 40px;
             display: block;
             float: left;
+            font-size: 24px;
+            color: #222;
         }
 
         .container .content .module-container .module-row .module-right {
@@ -755,7 +758,9 @@
                         <div class="module-left fillet">
                             <div class="module-header">
                                 <div class="module-title">
-                                    <span class="module-title-i fillet"></span>
+                                    <span class="module-title-i fillet">
+                                        <img src="">
+                                    </span>
                                     <span class="module-title-t">厨神</span>
                                 </div>
                                 <ul class="module-tab">
