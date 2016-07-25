@@ -529,7 +529,9 @@
 
         .container .content .module-container .module-row .module-left .module-body .module-body-tab {
             width: 100%;
-            height: 100%;
+            height: 4700px;
+            position: relative;
+            z-index: -100;
         }
 
         .container .content .module-container .module-row .module-left .module-body .module-body-tab .module-body-list .module-body-item {
@@ -916,36 +918,38 @@
                                     </li>
                                 </ul>
                             </div>
-                            <ul class="module-body">
-                                <li class="module-body-tab">
-                                    <ul class="module-body-list">
-                                        <li class="module-body-item module-body-first"></li>
-                                        <li class="module-body-item"></li>
-                                        <li class="module-body-item"></li>
-                                        <li class="module-body-item"></li>
-                                        <li class="module-body-item"></li>
-                                        <li class="module-body-item module-body-first"></li>
-                                        <li class="module-body-item"></li>
-                                        <li class="module-body-item"></li>
-                                        <li class="module-body-item"></li>
-                                        <li class="module-body-item"></li>
-                                    </ul>
-                                </li>
-                                <li class="module-body-tab">
-                                    <ul class="module-body-list">
-                                        <li class="module-body-item module-body-first"></li>
-                                        <li class="module-body-item"></li>
-                                        <li class="module-body-item"></li>
-                                        <li class="module-body-item"></li>
-                                        <li class="module-body-item"></li>
-                                        <li class="module-body-item module-body-first"></li>
-                                        <li class="module-body-item"></li>
-                                        <li class="module-body-item"></li>
-                                        <li class="module-body-item"></li>
-                                        <li class="module-body-item"></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <div class="module-body">
+                                <ul class="module-body-tab">
+                                    <li>
+                                        <ul class="module-body-list">
+                                            <li class="module-body-item module-body-first"></li>
+                                            <li class="module-body-item"></li>
+                                            <li class="module-body-item"></li>
+                                            <li class="module-body-item"></li>
+                                            <li class="module-body-item"></li>
+                                            <li class="module-body-item module-body-first"></li>
+                                            <li class="module-body-item"></li>
+                                            <li class="module-body-item"></li>
+                                            <li class="module-body-item"></li>
+                                            <li class="module-body-item"></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <ul class="module-body-list">
+                                            <li class="module-body-item module-body-first"></li>
+                                            <li class="module-body-item"></li>
+                                            <li class="module-body-item"></li>
+                                            <li class="module-body-item"></li>
+                                            <li class="module-body-item"></li>
+                                            <li class="module-body-item module-body-first"></li>
+                                            <li class="module-body-item"></li>
+                                            <li class="module-body-item"></li>
+                                            <li class="module-body-item"></li>
+                                            <li class="module-body-item"></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="module-right fillet">
                             <div class="module-header">
