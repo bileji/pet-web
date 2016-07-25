@@ -525,6 +525,11 @@
             height: 160px;
             width: 180px;
             float: left;
+            margin-left: 10px;
+        }
+
+        .container .content .module-container .module-row .module-left .module-body li:first-child {
+            margin-left: 0;
         }
     </style>
 
