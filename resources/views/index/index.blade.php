@@ -521,14 +521,15 @@
             z-index: -10;
         }
 
-        .container .content .module-container .module-row .module-left .module-body li {
+        .container .content .module-container .module-row .module-left .module-body .module-body-item {
             height: 160px;
             width: 180px;
             float: left;
             margin-left: 10px;
+            background-color: gray;
         }
 
-        .container .content .module-container .module-row .module-left .module-body li:first-child {
+        .container .content .module-container .module-row .module-left .module-body .module-body-first {
             margin-left: 0;
         }
     </style>
@@ -905,16 +906,16 @@
                                 </ul>
                             </div>
                             <ul class="module-body">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                <li class="module-body-item module-body-first"></li>
+                                <li class="module-body-item"></li>
+                                <li class="module-body-item"></li>
+                                <li class="module-body-item"></li>
+                                <li class="module-body-item"></li>
+                                <li class="module-body-item module-body-first"></li>
+                                <li class="module-body-item"></li>
+                                <li class="module-body-item"></li>
+                                <li class="module-body-item"></li>
+                                <li class="module-body-item"></li>
                             </ul>
                         </div>
                         <div class="module-right fillet">
