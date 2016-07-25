@@ -544,7 +544,7 @@
         }
 
         .container .content .module-container .module-row .module-left .module-body .module-body-tab .module-body-list .module-body-item {
-            height: 160px;
+            height: 170px;
             width: 180px;
             margin-left: 10px;
             background-color: gray;
