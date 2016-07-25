@@ -520,6 +520,12 @@
             position: relative;
             z-index: -10;
         }
+
+        .container .content .module-container .module-row .module-right .module-body li {
+            height: 160px;
+            width: 180px;
+            float: left;
+        }
     </style>
 
     <script type="text/javascript">
@@ -894,7 +900,16 @@
                                 </ul>
                             </div>
                             <ul class="module-body">
-
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
                             </ul>
                         </div>
                         <div class="module-right fillet">
