@@ -528,10 +528,15 @@
         }
 
         .container .content .module-container .module-row .module-left .module-body .module-body-tab {
-            width: 100%;
-            height: 4700px;
+            width: 4700px;
+            height: 100%;
             position: relative;
             z-index: -100;
+        }
+
+        .container .content .module-container .module-row .module-left .module-body .module-body-tab .module-body-list {
+            width: 940px;
+            height: 100%;
         }
 
         .container .content .module-container .module-row .module-left .module-body .module-body-tab .module-body-list .module-body-item {
