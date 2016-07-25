@@ -534,6 +534,10 @@
             z-index: -100;
         }
 
+        .container .content .module-container .module-row .module-left .module-body .module-body-tab li {
+            float: left;
+        }
+
         .container .content .module-container .module-row .module-left .module-body .module-body-tab .module-body-list {
             width: 940px;
             height: 100%;
@@ -542,7 +546,6 @@
         .container .content .module-container .module-row .module-left .module-body .module-body-tab .module-body-list .module-body-item {
             height: 160px;
             width: 180px;
-            float: left;
             margin-left: 10px;
             background-color: gray;
         }
