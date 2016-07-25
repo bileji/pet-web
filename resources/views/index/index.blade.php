@@ -931,6 +931,20 @@
                                         <li class="module-body-item"></li>
                                     </ul>
                                 </li>
+                                <li class="module-body-tab">
+                                    <ul class="module-body-list">
+                                        <li class="module-body-item module-body-first"></li>
+                                        <li class="module-body-item"></li>
+                                        <li class="module-body-item"></li>
+                                        <li class="module-body-item"></li>
+                                        <li class="module-body-item"></li>
+                                        <li class="module-body-item module-body-first"></li>
+                                        <li class="module-body-item"></li>
+                                        <li class="module-body-item"></li>
+                                        <li class="module-body-item"></li>
+                                        <li class="module-body-item"></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                         <div class="module-right fillet">
