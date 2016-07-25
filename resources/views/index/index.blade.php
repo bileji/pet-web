@@ -521,7 +521,7 @@
             z-index: -10;
         }
 
-        .container .content .module-container .module-row .module-right .module-body li {
+        .container .content .module-container .module-row .module-left .module-body li {
             height: 160px;
             width: 180px;
             float: left;
