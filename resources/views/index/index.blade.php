@@ -578,6 +578,9 @@
         .card-wrapper .card .matter .image img {
             width: 180px;
             height: 90px;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
         }
 
         .card-wrapper .card .matter .title {
