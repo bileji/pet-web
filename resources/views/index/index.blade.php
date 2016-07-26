@@ -575,6 +575,11 @@
             -webkit-border-radius: 4px;
         }
 
+        .card-wrapper .card .matter .image img {
+            width: 180px;
+            height: 90px;
+        }
+
         .card-wrapper .card .matter .title {
             width: 100%;
             height: 30px;
