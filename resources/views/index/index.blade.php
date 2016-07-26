@@ -562,7 +562,7 @@
 
         .card-wrapper .card .matter {
             width: 100%;
-            height: 150px;
+            height: 120px;
             position: relative;
         }
 
@@ -589,7 +589,7 @@
             width: 100%;
             height: 30px;
             position: absolute;
-            bottom: 0;
+            bottom: 30px;
             z-index: 100;
         }
     </style>
