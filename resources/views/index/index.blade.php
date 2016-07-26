@@ -587,7 +587,9 @@
 
         .card-wrapper .card .matter .info {
             width: 100%;
-            height: 30px;
+            height: 20px;
+            line-height: 20px;
+            font-size: 10px;
             position: absolute;
             bottom: 30px;
             z-index: 100;
@@ -978,7 +980,7 @@
                                                 <div class="card">
                                                     <div class="matter">
                                                         <a class="image" href="#">
-                                                            <img src="">
+                                                            <img src="{{ asset('assets/images/exc.jpg') }}">
                                                         </a>
                                                         <a class="title" href="#"></a>
                                                         <div class="info">
