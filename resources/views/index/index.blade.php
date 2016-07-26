@@ -561,6 +561,11 @@
             clear: both;
         }
 
+        .card-wrapper .card:hover {
+            cursor: pointer;
+            color: orange;
+        }
+
         .card-wrapper .card .matter {
             width: 100%;
             height: 120px;
