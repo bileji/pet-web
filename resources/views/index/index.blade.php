@@ -554,16 +554,16 @@
         }
 
         /*card css*/
+        .card-wrapper:hover {
+            cursor: pointer;
+            color: orange;
+        }
+
         .card-wrapper .card {
             width: auto;
             height: auto;
             overflow: hidden;
             clear: both;
-        }
-
-        .card-wrapper .card a:hover {
-            cursor: pointer;
-            color: orange;
         }
 
         .card-wrapper .card .matter {
