@@ -600,7 +600,7 @@
             line-height: 20px;
             font-size: 10px;
             position: absolute;
-            bottom: 0;
+            bottom: 30px;
             z-index: 100;
             background: url({{ asset('assets/images/transparent.png') }}) repeat 0 0;
             color: #fff;
@@ -991,8 +991,8 @@
                                                         <a class="image" href="#">
                                                             <img src="{{ asset('assets/images/exc.jpg') }}">
                                                         </a>
-                                                        <a class="info"></a>
-                                                        <a class="title" href="#"></a>
+                                                        <a class="info">200</a>
+                                                        <a class="title" href="#">测试图片</a>
                                                     </div>
                                                 </div>
                                             </li>
