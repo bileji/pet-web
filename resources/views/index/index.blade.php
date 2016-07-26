@@ -593,6 +593,9 @@
             z-index: 100;
             background: url({{ asset('assets/images/transparent.png') }}) repeat 0 0;
             color: #fff;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
         }
     </style>
 
