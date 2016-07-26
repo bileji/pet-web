@@ -547,11 +547,43 @@
             height: 170px;
             width: 180px;
             margin-left: 10px;
-            background-color: gray;
         }
 
         .container .content .module-container .module-row .module-left .module-body .module-body-tab .module-body-list .module-body-first {
             margin-left: 0;
+        }
+
+        .card-wrapper .card {
+            width: auto;
+            height: auto;
+            overflow: hidden;
+            clear: both;
+        }
+
+        .card-wrapper .card .matter {
+            width: 100%;
+            height: 150px;
+        }
+
+        .card-wrapper .card .matter .image {
+            width: 100%;
+            height: 120px;
+            display: block;
+            border: 1px solid white;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+        }
+
+        .card-wrapper .card .matter .title {
+            width: 100%;
+            height: 30px;
+            display: block;
+            line-height: 30px;
+        }
+
+        .card-wrapper .card .info {
+
         }
     </style>
 
@@ -930,7 +962,19 @@
                                 <ul class="module-body-tab">
                                     <li>
                                         <ul class="module-body-list">
-                                            <li class="module-body-item module-body-first"></li>
+                                            <li class="module-body-item module-body-first card-wrapper">
+                                                <div class="card">
+                                                    <div class="matter">
+                                                        <a class="image" href="#">
+                                                            <img src="">
+                                                        </a>
+                                                        <a class="title" href="#"></a>
+                                                    </div>
+                                                    <div class="info">
+
+                                                    </div>
+                                                </div>
+                                            </li>
                                             <li class="module-body-item"></li>
                                             <li class="module-body-item"></li>
                                             <li class="module-body-item"></li>
