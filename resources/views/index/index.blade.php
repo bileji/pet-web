@@ -553,6 +553,7 @@
             margin-left: 0;
         }
 
+        /*card css*/
         .card-wrapper .card {
             width: auto;
             height: auto;
@@ -583,16 +584,6 @@
             -webkit-border-radius: 4px;
         }
 
-        .card-wrapper .card .matter .title {
-            width: 100%;
-            height: 30px;
-            display: block;
-            line-height: 30px;
-            border-radius: 4px;
-            -moz-border-radius: 4px;
-            -webkit-border-radius: 4px;
-        }
-
         .card-wrapper .card .matter .info {
             width: 100%;
             height: 20px;
@@ -607,6 +598,17 @@
             border-radius: 0 0 4px 4px;
             -moz-border-radius: 0 0 4px 4px;
             -webkit-border-radius: 0 0 4px 4px;
+        }
+
+        .card-wrapper .card .matter .title {
+            width: 100%;
+            height: 30px;
+            display: block;
+            line-height: 30px;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            text-align: left;
         }
     </style>
 
