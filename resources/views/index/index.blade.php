@@ -591,6 +591,8 @@
             position: absolute;
             bottom: 30px;
             z-index: 100;
+            background: url({{ asset('assets/images/transparent.png') }}) repeat 0 0;
+            color: #fff;
         }
     </style>
 
