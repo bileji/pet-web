@@ -563,13 +563,13 @@
         .card-wrapper .card .matter {
             width: 100%;
             height: 150px;
+            position: relative;
         }
 
         .card-wrapper .card .matter .image {
             width: 100%;
-            height: 120px;
+            height: 90px;
             display: block;
-            border: 1px solid white;
             border-radius: 4px;
             -moz-border-radius: 4px;
             -webkit-border-radius: 4px;
@@ -580,10 +580,17 @@
             height: 30px;
             display: block;
             line-height: 30px;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
         }
 
-        .card-wrapper .card .info {
-
+        .card-wrapper .card .matter .info {
+            width: 100%;
+            height: 30px;
+            position: absolute;
+            bottom: 0;
+            z-index: 100;
         }
     </style>
 
@@ -969,9 +976,9 @@
                                                             <img src="">
                                                         </a>
                                                         <a class="title" href="#"></a>
-                                                    </div>
-                                                    <div class="info">
+                                                        <div class="info">
 
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
