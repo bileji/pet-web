@@ -596,10 +596,11 @@
         .card-wrapper .card .matter .info {
             width: 100%;
             height: 20px;
+            display: block;
             line-height: 20px;
             font-size: 10px;
             position: absolute;
-            bottom: 30px;
+            bottom: 0;
             z-index: 100;
             background: url({{ asset('assets/images/transparent.png') }}) repeat 0 0;
             color: #fff;
@@ -990,10 +991,8 @@
                                                         <a class="image" href="#">
                                                             <img src="{{ asset('assets/images/exc.jpg') }}">
                                                         </a>
+                                                        <a class="info"></a>
                                                         <a class="title" href="#"></a>
-                                                        <div class="info">
-
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
