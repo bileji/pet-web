@@ -561,7 +561,7 @@
             clear: both;
         }
 
-        .card-wrapper .card:hover {
+        .card-wrapper .card a:hover {
             cursor: pointer;
             color: orange;
         }
