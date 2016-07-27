@@ -673,7 +673,7 @@
                 var left = parseInt($(this).css('marginLeft')) + parseInt($(this).parent().css('padding-left')) + $(this).index() * ($(this).width() + parseInt($(this).css('marginLeft')) + parseInt($(this).css('marginRight')));
                 $(this).parent().find(".module-tab-slider").css({left: left});
 
-                var width = $(this).parent().parent().parent().find(".module-body").find(".module-tab").find("li").first().css('width');
+                var width = $(this).parent().parent().parent().find(".module-body").find(".module-tab").find("li").css('width');
                 console.log(width);
                 $(this).parent().parent().parent().find(".module-body").find(".module-tab").css({left: 0 - (parseInt(width) * $(this).index())});
             });
