@@ -674,6 +674,7 @@
                 $(this).parent().find(".module-tab-slider").css({left: left});
 
                 var width = $(this).parent().parent().parent().find(".module-body").find(".module-tab").find("li").first().css('width');
+                console.log(width);
                 $(this).parent().parent().parent().find(".module-body").find(".module-tab").css({left: 0 - (parseInt(width) * $(this).index())});
             });
         });
