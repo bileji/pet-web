@@ -608,8 +608,8 @@
             height: 9px;
             position: absolute;
             bottom: 0;
-            top: 24px;
-            border-bottom: 2px solid lightblue;
+            top: 25px;
+            border-bottom: 2px solid orange;
             transition: all 0.2s;
             -moz-transition: all 0.2s;
             -webkit-transition: all 0.2s;
@@ -621,7 +621,7 @@
             display: block;
             margin: 0 auto;
             border: 4px solid white;
-            border-bottom: 4px solid lightblue;
+            border-bottom: 4px solid orange;
             position: relative;
             z-index: -10;
         }
