@@ -583,6 +583,10 @@
 
         }
 
+        .tab-control > .header > .option-list > li {
+            width: 42px;
+        }
+
         .tab-control > .header > .option-list > li:hover {
             color: orange;
             cursor: pointer;
@@ -593,7 +597,6 @@
         }
 
         .tab-control > .header > .option-list > .option {
-            width: 40px;
             height: 40px;
             line-height: 42px;
             float: left;
