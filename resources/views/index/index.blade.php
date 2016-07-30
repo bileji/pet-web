@@ -764,7 +764,7 @@
 
             // 选项卡
             $(".tab-control .option").click(function () {
-                var left = parseInt($(this).css('marginLeft')) + parseInt($(this).parent().css('padding-left')) + $(this).index() * ($(this).width() + parseInt($(this).css('marginLeft')) + parseInt($(this).css('marginRight')));
+                var left = $(this).index() * ($(this).width() + parseInt($(this).css('marginLeft')) + parseInt($(this).css('marginRight')));
                 $(this).parent().find(".slider").css({left: left});
             });
         });
