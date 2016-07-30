@@ -553,26 +553,85 @@
             margin-left: 0;
         }
 
+        /*tab control css*/
+        .tab-control {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .tab-control > .header {
+            width: 100%;
+            height: 40px;
+            clear: both;
+        }
+
+        .tab-control > .header > .title {
+            width: 40px;
+            height: 40px;
+            float: left;
+        }
+
+        .tab-control > .header > .option-list {
+
+        }
+
+        .tab-control > .header > .option-list > li:hover {
+            color: orange;
+            cursor: pointer;
+        }
+
+        .tab-control > .header > .option-list > .active {
+            color: orange;
+        }
+
+        .tab-control > .header > .option-list > .option {
+
+        }
+
+        .tab-control > .header > .option-list > .slider {
+            height: 9px;
+            position: absolute;
+            bottom: 0;
+            left: 15px;
+            top: 24px;
+            border-bottom: 2px solid lightblue;
+            transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            -webkit-transition: all 0.2s;
+        }
+
+        .tab-control > .header > .option-list > .slider > span {
+            width: 0;
+            height: 0;
+            display: block;
+            margin: 0 auto;
+            border: 4px solid white;
+            border-bottom: 4px solid lightblue;
+            position: relative;
+            z-index: -10;
+        }
+
         /*card css*/
         .card-wrapper:hover {
             cursor: pointer;
             color: orange;
         }
 
-        .card-wrapper .card {
+        .card-wrapper > .card {
             width: auto;
             height: auto;
             overflow: hidden;
             clear: both;
         }
 
-        .card-wrapper .card .matter {
+        .card-wrapper > .card > .matter {
             width: 100%;
             height: 120px;
             position: relative;
         }
 
-        .card-wrapper .card .matter .image {
+        .card-wrapper > .card > .matter > .image {
             width: 100%;
             height: 90px;
             display: block;
@@ -581,7 +640,7 @@
             -webkit-border-radius: 4px;
         }
 
-        .card-wrapper .card .matter .image img {
+        .card-wrapper > .card > .matter > .image > img {
             width: 180px;
             height: 90px;
             border-radius: 4px;
@@ -589,7 +648,7 @@
             -webkit-border-radius: 4px;
         }
 
-        .card-wrapper .card .matter .info {
+        .card-wrapper > .card > .matter > .info {
             width: 100%;
             height: 20px;
             display: block;
@@ -605,7 +664,7 @@
             -webkit-border-radius: 0 0 4px 4px;
         }
 
-        .card-wrapper .card .matter .title {
+        .card-wrapper > .card > .matter > .title {
             width: 100%;
             height: 30px;
             display: block;
@@ -1035,22 +1094,52 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="module-right fillet">
-                            <div class="module-header">
-                                <div class="module-title">
-                                    <span class="module-title-t">排行</span>
-                                </div>
-                                <ul class="module-tab">
-                                    <li class="module-tab-item">选项1</li>
-                                    <li class="module-tab-item">选项2</li>
-                                    <li class="module-tab-slider">
-                                        <span></span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <ul class="module-body">
+                    {{--<div class="module-right fillet">--}}
+                    {{--<div class="module-header">--}}
+                    {{--<div class="module-title">--}}
+                    {{--<span class="module-title-t">排行</span>--}}
+                    {{--</div>--}}
+                    {{--<ul class="module-tab">--}}
+                    {{--<li class="module-tab-item">选项1</li>--}}
+                    {{--<li class="module-tab-item">选项2</li>--}}
+                    {{--<li class="module-tab-slider">--}}
+                    {{--<span></span>--}}
+                    {{--</li>--}}
+                    {{--</ul>--}}
+                    {{--</div>--}}
+                    {{--<ul class="module-body">--}}
 
-                            </ul>
+                    {{--</ul>--}}
+                    {{--</div>--}}
+
+                    <!--选项卡-->
+                        <div class="rank-wrapper">
+                            <div class="tab-control">
+                                <div class="header">
+                                    <div class="title"></div>
+                                    <ul class="option-list">
+                                        <li class="option active">
+                                            选项一
+                                        </li>
+                                        <li class="option">
+                                            选项二
+                                        </li>
+                                        <li class="slider">
+                                            <span></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="body">
+                                    <ul class="box-list">
+                                        <li class="box">
+
+                                        </li>
+                                        <li class="box">
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
