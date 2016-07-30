@@ -585,6 +585,7 @@
 
         .tab-control > .header > .option-list > li {
             width: 42px;
+            margin: 0 8px;
         }
 
         .tab-control > .header > .option-list > li:hover {
