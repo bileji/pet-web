@@ -581,6 +581,7 @@
 
         .tab-control > .header > .option-list {
             position: relative;
+            float: left;
         }
 
         .tab-control > .header > .option-list > li {
