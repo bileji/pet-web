@@ -612,6 +612,7 @@
             height: 40px;
             line-height: 42px;
             float: left;
+            text-align: center;
         }
 
         .tab-control > .header > .option-list > .slider {
@@ -759,6 +760,12 @@
                 var width = $(this).parent().parent().parent().find(".module-body").find(".module-tab").find("li");
                 console.log(width);
                 $(this).parent().parent().parent().find(".module-body").find(".module-tab").css({left: 0 - (parseInt(width) * $(this).index())});
+            });
+
+            // 选项卡
+            $(".tab-control .option").click(function () {
+                var left = parseInt($(this).css('marginLeft')) + parseInt($(this).parent().css('padding-left')) + $(this).index() * ($(this).width() + parseInt($(this).css('marginLeft')) + parseInt($(this).css('marginRight')));
+                $(this).parent().find("slider").css({left: left});
             });
         });
     </script>
@@ -1144,12 +1151,8 @@
                                         <span>排行</span>
                                     </div>
                                     <ul class="option-list">
-                                        <li class="option active">
-                                            选项一
-                                        </li>
-                                        <li class="option">
-                                            选项二
-                                        </li>
+                                        <li class="option active">选项1</li>
+                                        <li class="option">选项2</li>
                                         <li class="slider">
                                             <span></span>
                                         </li>
@@ -1157,12 +1160,8 @@
                                 </div>
                                 <div class="body">
                                     <ul class="box-list">
-                                        <li class="box">
-
-                                        </li>
-                                        <li class="box">
-
-                                        </li>
+                                        <li class="box"></li>
+                                        <li class="box"></li>
                                     </ul>
                                 </div>
                             </div>
