@@ -554,6 +554,13 @@
         }
 
         /*tab control css*/
+        .rank-wrapper {
+            height: 100%;
+            width: 280px;
+            margin-left: 10px;
+            float: right;
+        }
+
         .tab-control {
             width: 100%;
             height: 100%;
