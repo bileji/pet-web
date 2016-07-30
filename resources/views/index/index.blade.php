@@ -618,7 +618,7 @@
             height: 9px;
             position: absolute;
             bottom: 0;
-            top: 25px;
+            top: 24px;
             border-bottom: 2px solid orange;
             transition: all 0.2s;
             -moz-transition: all 0.2s;
