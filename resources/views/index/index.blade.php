@@ -650,12 +650,15 @@
             width: 500%;
             position: relative;
             z-index: -100;
+            transition: all .2s;
+            -webkit-transition: all .2s;
+            -moz-transition: all .2s;
         }
 
         .tab-control > .body > .box-list > .box {
             float: left;
-            width: 280px;
-            position: relative;
+            width: auto;
+            height: auto;
         }
 
         /*card css*/
