@@ -619,6 +619,7 @@
             height: 9px;
             position: absolute;
             bottom: 0;
+            left: 0;
             top: 24px;
             border-bottom: 2px solid orange;
             transition: all 0.2s;
