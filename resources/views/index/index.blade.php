@@ -574,9 +574,10 @@
         }
 
         .tab-control > .header > .title {
-            width: 40px;
+            width: 48px;
             height: 40px;
             float: left;
+            text-align: left;
         }
 
         .tab-control > .header > .title > span {
