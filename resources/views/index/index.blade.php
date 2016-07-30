@@ -579,6 +579,15 @@
             float: left;
         }
 
+        .tab-control > .header > .title > span {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            line-height: 44px;
+            font-size: 20px;
+            color: #222;
+        }
+
         .tab-control > .header > .option-list {
             position: relative;
             float: left;
@@ -1130,7 +1139,9 @@
                         <div class="rank-wrapper">
                             <div class="tab-control">
                                 <div class="header">
-                                    <div class="title"></div>
+                                    <div class="title">
+                                        <span>排行</span>
+                                    </div>
                                     <ul class="option-list">
                                         <li class="option active">
                                             选项一
