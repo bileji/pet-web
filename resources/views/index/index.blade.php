@@ -639,6 +639,24 @@
             z-index: -10;
         }
 
+        .tab-control > .body {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .tab-control > .body > .box-list {
+            width: 500%;
+            position: relative;
+            z-index: -100;
+        }
+
+        .tab-control > .body > .box-list > .box {
+            background-color: red;
+            float: left;
+        }
+
         /*card css*/
         .card-wrapper:hover {
             cursor: pointer;
