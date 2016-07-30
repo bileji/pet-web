@@ -593,7 +593,10 @@
         }
 
         .tab-control > .header > .option-list > .option {
-
+            width: 40px;
+            height: 40px;
+            line-height: 42px;
+            float: left;
         }
 
         .tab-control > .header > .option-list > .slider {
