@@ -580,7 +580,7 @@
         }
 
         .tab-control > .header > .option-list {
-
+            position: relative;
         }
 
         .tab-control > .header > .option-list > li {
@@ -607,7 +607,6 @@
             height: 9px;
             position: absolute;
             bottom: 0;
-            left: 15px;
             top: 24px;
             border-bottom: 2px solid lightblue;
             transition: all 0.2s;
