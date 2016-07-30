@@ -653,8 +653,9 @@
         }
 
         .tab-control > .body > .box-list > .box {
-            background-color: red;
             float: left;
+            width: 280px;
+            position: relative;
         }
 
         /*card css*/
@@ -785,7 +786,8 @@
             // 选项卡
             $(".tab-control .option").click(function () {
                 var left = $(this).index() * ($(this).width() + parseInt($(this).css('marginLeft')) + parseInt($(this).css('marginRight')));
-                $(this).parent().find("li").removeClass("active").parent().find(this).addClass("active").parent().find(".slider").css({left: left}).closest(".tab-control").find(".box").eq($(this).index()).css({left: 0});
+                var box = $(this).parent().find("li").removeClass("active").parent().find(this).addClass("active").parent().find(".slider").css({left: left}).closest(".tab-control").find(".box");
+                box.css({left: 0 - parseInt(box.width() * $(this).index())});
             });
         });
     </script>
