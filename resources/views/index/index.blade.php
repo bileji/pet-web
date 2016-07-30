@@ -595,8 +595,9 @@
         }
 
         .tab-control > .header > .option-list > li {
-            width: 42px;
+            width: 32px;
             margin: 0 8px;
+            font-size: 12px;
         }
 
         .tab-control > .header > .option-list > li:hover {
@@ -766,7 +767,7 @@
             // 选项卡
             $(".tab-control .option").click(function () {
                 var left = $(this).index() * ($(this).width() + parseInt($(this).css('marginLeft')) + parseInt($(this).css('marginRight')));
-                $(this).parent().find(".slider").css({left: left});
+                $(this).addClass(".active").parent().find(".slider").css({left: left});
             });
         });
     </script>
