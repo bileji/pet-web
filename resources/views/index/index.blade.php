@@ -733,6 +733,18 @@
             -webkit-border-radius: 4px;
             text-align: left;
         }
+
+        /*box list*/
+        .box {
+            width: 940px;
+            height: 100%;
+        }
+
+        .box > .item {
+            height: 170px;
+            width: 180px;
+            margin-left: 10px;
+        }
     </style>
 
     <script type="text/javascript">
@@ -1206,8 +1218,8 @@
                                 <div class="body">
                                     <ul class="container-list">
                                         <li class="container">
-                                            <ul>
-                                                <li></li>
+                                            <ul class="box">
+                                                <li class="item"></li>
                                             </ul>
                                         </li>
                                         <li class="container"></li>
