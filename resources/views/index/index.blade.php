@@ -656,7 +656,7 @@
             position: relative;
         }
 
-        .tab-control > .body > .container-list {
+        .tab-control > .body > .chest {
             width: 500%;
             position: relative;
             z-index: -100;
@@ -665,9 +665,9 @@
             -moz-transition: all .2s;
         }
 
-        .tab-control > .body > .box-list > .container {
+        .tab-control > .body > .chest > .chunk {
             float: left;
-            width: auto;
+            width: 20%;
             height: auto;
         }
 
@@ -1188,9 +1188,9 @@
                                     </ul>
                                 </div>
                                 <div class="body">
-                                    <ul class="container-list">
-                                        <li class="container"></li>
-                                        <li class="container"></li>
+                                    <ul class="chest">
+                                        <li class="chunk"></li>
+                                        <li class="chunk"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1216,13 +1216,13 @@
                                     </ul>
                                 </div>
                                 <div class="body">
-                                    <ul class="container-list">
-                                        <li class="container">
+                                    <ul class="chest">
+                                        <li class="chunk">
                                             <ul class="box">
                                                 <li class="item"></li>
                                             </ul>
                                         </li>
-                                        <li class="container"></li>
+                                        <li class="chunk"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1243,9 +1243,9 @@
                                     </ul>
                                 </div>
                                 <div class="body">
-                                    <ul class="container-list">
-                                        <li class="container"></li>
-                                        <li class="container"></li>
+                                    <ul class="chest">
+                                        <li class="chunk"></li>
+                                        <li class="chunk"></li>
                                     </ul>
                                 </div>
                             </div>
