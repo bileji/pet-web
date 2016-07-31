@@ -585,7 +585,7 @@
             float: left;
             width: 40px;
             height: 100%;
-            background: url('https://web.bileji.com/assets/images/icons.png') no-repeat -141px -461px;
+            background: url('{{ asset('/assets/images/icons.png') }}') no-repeat -141px -461px;
         }
 
         .tab-control > .header > .title > .text {
