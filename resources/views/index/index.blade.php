@@ -1229,7 +1229,7 @@
                                     <ul class="chest">
                                         <li class="chunk">
                                             <ul class="box">
-                                                <li class="item first">
+                                                <li class="item first card-wrapper">
                                                     <div class="card">
                                                         <div class="matter">
                                                             <a class="image" href="#">
@@ -1240,7 +1240,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="item">
+                                                <li class="item card-wrapper">
                                                     <div class="card">
                                                         <div class="matter">
                                                             <a class="image" href="#">
@@ -1251,7 +1251,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="item">
+                                                <li class="item card-wrapper">
                                                     <div class="card">
                                                         <div class="matter">
                                                             <a class="image" href="#">
@@ -1262,7 +1262,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="item">
+                                                <li class="item card-wrapper">
                                                     <div class="card">
                                                         <div class="matter">
                                                             <a class="image" href="#">
@@ -1273,7 +1273,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="item">
+                                                <li class="item card-wrapper">
                                                     <div class="card">
                                                         <div class="matter">
                                                             <a class="image" href="#">
@@ -1284,7 +1284,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="item first">
+                                                <li class="item first card-wrapper">
                                                     <div class="card">
                                                         <div class="matter">
                                                             <a class="image" href="#">
@@ -1295,7 +1295,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="item">
+                                                <li class="item card-wrapper">
                                                     <div class="card">
                                                         <div class="matter">
                                                             <a class="image" href="#">
@@ -1306,7 +1306,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="item">
+                                                <li class="item card-wrapper">
                                                     <div class="card">
                                                         <div class="matter">
                                                             <a class="image" href="#">
@@ -1317,7 +1317,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="item">
+                                                <li class="item card-wrapper">
                                                     <div class="card">
                                                         <div class="matter">
                                                             <a class="image" href="#">
@@ -1328,7 +1328,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="item">
+                                                <li class="item card-wrapper">
                                                     <div class="card">
                                                         <div class="matter">
                                                             <a class="image" href="#">
@@ -1343,7 +1343,7 @@
                                         </li>
                                         <li class="chunk">
                                             <ul class="box">
-                                                <li class="item first">
+                                                <li class="item first card-wrapper">
                                                     <div class="card">
                                                         <div class="matter">
                                                             <a class="image" href="#">
@@ -1354,7 +1354,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="item">
+                                                <li class="item card-wrapper">
                                                     <div class="card">
                                                         <div class="matter">
                                                             <a class="image" href="#">
@@ -1365,7 +1365,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="item">
+                                                <li class="item card-wrapper">
                                                     <div class="card">
                                                         <div class="matter">
                                                             <a class="image" href="#">
@@ -1376,7 +1376,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="item">
+                                                <li class="item card-wrapper">
                                                     <div class="card">
                                                         <div class="matter">
                                                             <a class="image" href="#">
@@ -1387,7 +1387,7 @@
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li class="item">
+                                                <li class="item card-wrapper">
                                                     <div class="card">
                                                         <div class="matter">
                                                             <a class="image" href="#">
