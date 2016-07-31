@@ -588,7 +588,7 @@
             background: url('https://web.bileji.com/assets/images/icons.png') no-repeat -141px -461px;
         }
 
-        .tab-control > .header > .title > .title {
+        .tab-control > .header > .title > .text {
             width: 48px;
             height: 100%;
             display: inline-block;
