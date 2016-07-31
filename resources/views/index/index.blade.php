@@ -349,7 +349,8 @@
             height: 90px;
         }
 
-        .container .content .module-container .module-row {
+        /*module`*/
+        .module-row {
             height: 320px;
             width: 100%;
             margin-top: 10px;
@@ -357,25 +358,25 @@
             clear: both;
         }
 
-        .container .content .module-container .module-row .module-wrapper {
+        .module-row .module-wrapper {
             height: 100%;
             width: 100%;
         }
 
-        .container .content .module-container .module-row .module-left {
+        .module-row .module-wrapper .recipe-wrapper {
             height: 100%;
             width: 940px;
             float: left;
         }
 
-        /*tab control css*/
-        .rank-wrapper {
+        .module-row .module-wrapper .rank-wrapper {
             height: 100%;
             width: 280px;
             margin-left: 10px;
             float: right;
         }
 
+        /*tab*/
         .tab-control {
             width: 100%;
             height: 100%;
@@ -487,7 +488,7 @@
             height: auto;
         }
 
-        /*card css*/
+        /*card*/
         .card-wrapper:hover {
             cursor: pointer;
             color: orange;
@@ -550,7 +551,7 @@
             text-align: left;
         }
 
-        /*box list*/
+        /*box*/
         .box {
             width: 940px;
             height: 100%;
@@ -928,7 +929,7 @@
                 <!--模块1-->
                 <div class="module-row fillet">
                     <div class="module-wrapper">
-                        <div class="module-left fillet">
+                        <div class="recipe-wrapper fillet">
                             <div class="tab-control">
                                 <div class="header">
                                     <div class="title">
@@ -1124,7 +1125,7 @@
                             </div>
                         </div>
                         <!--排行-->
-                        <div class="rank-wrapper">
+                        <div class="rank-wrapper fillet">
                             <div class="tab-control">
                                 <div class="header">
                                     <div class="title">
@@ -1152,7 +1153,7 @@
                 <!--模块2-->
                 <div class="module-row fillet">
                     <div class="module-wrapper">
-                        <div class="module-left fillet">
+                        <div class="recipe-wrapper fillet">
                             <div class="tab-control">
                                 <div class="header">
                                     <div class="title">
@@ -1348,7 +1349,7 @@
                             </div>
                         </div>
                         <!--排行-->
-                        <div class="rank-wrapper">
+                        <div class="rank-wrapper fillet">
                             <div class="tab-control">
                                 <div class="header">
                                     <div class="title">
