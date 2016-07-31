@@ -687,13 +687,13 @@
 
         .card-wrapper > .card > .matter {
             width: 100%;
-            height: 120px;
+            height: 130px;
             position: relative;
         }
 
         .card-wrapper > .card > .matter > .image {
             width: 100%;
-            height: 90px;
+            height: auto;
             display: block;
             border-radius: 4px;
             -moz-border-radius: 4px;
@@ -701,8 +701,8 @@
         }
 
         .card-wrapper > .card > .matter > .image > img {
-            width: 180px;
-            height: 90px;
+            width: 165px;
+            height: 100px;
             border-radius: 4px;
             -moz-border-radius: 4px;
             -webkit-border-radius: 4px;
@@ -742,9 +742,7 @@
         }
 
         .box > .item {
-            height: 170px;
-            width: 180px;
-            margin-left: 10px;
+            margin: 5px 12px;
             float: left;
         }
 
