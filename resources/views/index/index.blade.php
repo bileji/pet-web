@@ -744,6 +744,7 @@
             height: 170px;
             width: 180px;
             margin-left: 10px;
+            background: red;
         }
 
         .box > .item:hover {
@@ -819,7 +820,7 @@
             // 选项卡
             $(".tab-control .option").click(function () {
                 var left = $(this).index() * ($(this).width() + parseInt($(this).css('marginLeft')) + parseInt($(this).css('marginRight')));
-                var box = $(this).parent().find("li").removeClass("active").parent().find(this).addClass("active").parent().find(".slider").css({left: left}).closest(".tab-control").find(".box");
+                var box = $(this).parent().find("li").removeClass("active").parent().find(this).addClass("active").parent().find(".slider").css({left: left}).closest(".tab-control").find(".chest");
                 box.parent().css({left: 0 - parseInt(box.width() * $(this).index())});
             });
         });
