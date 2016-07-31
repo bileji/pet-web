@@ -656,7 +656,7 @@
             position: relative;
         }
 
-        .tab-control > .body > .box-list {
+        .tab-control > .body > .container-list {
             width: 500%;
             position: relative;
             z-index: -100;
@@ -665,7 +665,7 @@
             -moz-transition: all .2s;
         }
 
-        .tab-control > .body > .box-list > .box {
+        .tab-control > .body > .box-list > .container {
             float: left;
             width: auto;
             height: auto;
@@ -1176,9 +1176,9 @@
                                     </ul>
                                 </div>
                                 <div class="body">
-                                    <ul class="box-list">
-                                        <li class="box"></li>
-                                        <li class="box"></li>
+                                    <ul class="container-list">
+                                        <li class="container"></li>
+                                        <li class="container"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1204,9 +1204,13 @@
                                     </ul>
                                 </div>
                                 <div class="body">
-                                    <ul class="box-list">
-                                        <li class="box"></li>
-                                        <li class="box"></li>
+                                    <ul class="container-list">
+                                        <li class="container">
+                                            <ul>
+                                                <li></li>
+                                            </ul>
+                                        </li>
+                                        <li class="container"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1227,9 +1231,9 @@
                                     </ul>
                                 </div>
                                 <div class="body">
-                                    <ul class="box-list">
-                                        <li class="box"></li>
-                                        <li class="box"></li>
+                                    <ul class="container-list">
+                                        <li class="container"></li>
+                                        <li class="container"></li>
                                     </ul>
                                 </div>
                             </div>
