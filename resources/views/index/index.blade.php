@@ -1230,9 +1230,21 @@
                                         <li class="chunk">
                                             <ul class="box">
                                                 <li class="item first"></li>
+                                                <li class="item"></li>
+                                                <li class="item"></li>
+                                                <li class="item"></li>
+                                                <li class="item"></li>
                                             </ul>
                                         </li>
-                                        <li class="chunk"></li>
+                                        <li class="chunk">
+                                            <ul class="box">
+                                                <li class="item first"></li>
+                                                <li class="item"></li>
+                                                <li class="item"></li>
+                                                <li class="item"></li>
+                                                <li class="item"></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
