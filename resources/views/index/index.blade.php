@@ -596,7 +596,7 @@
             font-size: 20px;
             color: #222;
             float: left;
-            margin-left: 10px;
+            margin-left: 5px;
         }
 
         .tab-control > .header > .option-list {
