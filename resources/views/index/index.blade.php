@@ -746,6 +746,10 @@
             margin-left: 10px;
         }
 
+        .box > .item:hover {
+            cursor: pointer;
+        }
+
         .box > .first {
             margin-left: 0;
         }
