@@ -746,7 +746,6 @@
             width: 180px;
             margin-left: 10px;
             float: left;
-            background: red;
         }
 
         .box > .item:hover {
@@ -1230,20 +1229,175 @@
                                     <ul class="chest">
                                         <li class="chunk">
                                             <ul class="box">
-                                                <li class="item first"></li>
-                                                <li class="item"></li>
-                                                <li class="item"></li>
-                                                <li class="item"></li>
-                                                <li class="item"></li>
+                                                <li class="item first">
+                                                    <div class="card">
+                                                        <div class="matter">
+                                                            <a class="image" href="#">
+                                                                <img src="{{ asset('assets/images/exc.jpg') }}">
+                                                            </a>
+                                                            <a class="info">200</a>
+                                                            <a class="title" href="#">测试图片</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="card">
+                                                        <div class="matter">
+                                                            <a class="image" href="#">
+                                                                <img src="{{ asset('assets/images/exc.jpg') }}">
+                                                            </a>
+                                                            <a class="info">200</a>
+                                                            <a class="title" href="#">测试图片</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="card">
+                                                        <div class="matter">
+                                                            <a class="image" href="#">
+                                                                <img src="{{ asset('assets/images/exc.jpg') }}">
+                                                            </a>
+                                                            <a class="info">200</a>
+                                                            <a class="title" href="#">测试图片</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="card">
+                                                        <div class="matter">
+                                                            <a class="image" href="#">
+                                                                <img src="{{ asset('assets/images/exc.jpg') }}">
+                                                            </a>
+                                                            <a class="info">200</a>
+                                                            <a class="title" href="#">测试图片</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="card">
+                                                        <div class="matter">
+                                                            <a class="image" href="#">
+                                                                <img src="{{ asset('assets/images/exc.jpg') }}">
+                                                            </a>
+                                                            <a class="info">200</a>
+                                                            <a class="title" href="#">测试图片</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item first">
+                                                    <div class="card">
+                                                        <div class="matter">
+                                                            <a class="image" href="#">
+                                                                <img src="{{ asset('assets/images/exc.jpg') }}">
+                                                            </a>
+                                                            <a class="info">200</a>
+                                                            <a class="title" href="#">测试图片</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="card">
+                                                        <div class="matter">
+                                                            <a class="image" href="#">
+                                                                <img src="{{ asset('assets/images/exc.jpg') }}">
+                                                            </a>
+                                                            <a class="info">200</a>
+                                                            <a class="title" href="#">测试图片</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="card">
+                                                        <div class="matter">
+                                                            <a class="image" href="#">
+                                                                <img src="{{ asset('assets/images/exc.jpg') }}">
+                                                            </a>
+                                                            <a class="info">200</a>
+                                                            <a class="title" href="#">测试图片</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="card">
+                                                        <div class="matter">
+                                                            <a class="image" href="#">
+                                                                <img src="{{ asset('assets/images/exc.jpg') }}">
+                                                            </a>
+                                                            <a class="info">200</a>
+                                                            <a class="title" href="#">测试图片</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="card">
+                                                        <div class="matter">
+                                                            <a class="image" href="#">
+                                                                <img src="{{ asset('assets/images/exc.jpg') }}">
+                                                            </a>
+                                                            <a class="info">200</a>
+                                                            <a class="title" href="#">测试图片</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li class="chunk">
                                             <ul class="box">
-                                                <li class="item first"></li>
-                                                <li class="item"></li>
-                                                <li class="item"></li>
-                                                <li class="item"></li>
-                                                <li class="item"></li>
+                                                <li class="item first">
+                                                    <div class="card">
+                                                        <div class="matter">
+                                                            <a class="image" href="#">
+                                                                <img src="{{ asset('assets/images/exc.jpg') }}">
+                                                            </a>
+                                                            <a class="info">200</a>
+                                                            <a class="title" href="#">测试图片</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="card">
+                                                        <div class="matter">
+                                                            <a class="image" href="#">
+                                                                <img src="{{ asset('assets/images/exc.jpg') }}">
+                                                            </a>
+                                                            <a class="info">200</a>
+                                                            <a class="title" href="#">测试图片</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="card">
+                                                        <div class="matter">
+                                                            <a class="image" href="#">
+                                                                <img src="{{ asset('assets/images/exc.jpg') }}">
+                                                            </a>
+                                                            <a class="info">200</a>
+                                                            <a class="title" href="#">测试图片</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="card">
+                                                        <div class="matter">
+                                                            <a class="image" href="#">
+                                                                <img src="{{ asset('assets/images/exc.jpg') }}">
+                                                            </a>
+                                                            <a class="info">200</a>
+                                                            <a class="title" href="#">测试图片</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="card">
+                                                        <div class="matter">
+                                                            <a class="image" href="#">
+                                                                <img src="{{ asset('assets/images/exc.jpg') }}">
+                                                            </a>
+                                                            <a class="info">200</a>
+                                                            <a class="title" href="#">测试图片</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
                                             </ul>
                                         </li>
                                     </ul>
