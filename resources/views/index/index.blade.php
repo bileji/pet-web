@@ -1165,7 +1165,6 @@
                             <div class="tab-control">
                                 <div class="header">
                                     <div class="title">
-                                        <span class="image"></span>
                                         <span class="text">排行</span>
                                     </div>
                                     <ul class="option-list">
@@ -1217,7 +1216,6 @@
                             <div class="tab-control">
                                 <div class="header">
                                     <div class="title">
-                                        <span class="image"></span>
                                         <span class="text">排行</span>
                                     </div>
                                     <ul class="option-list">
