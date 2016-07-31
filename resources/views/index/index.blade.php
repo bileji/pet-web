@@ -654,13 +654,13 @@
             height: auto;
             overflow: hidden;
             position: relative;
+            z-index: 100;
         }
 
         .tab-control > .body > .chest {
             width: 500%;
             position: relative;
             left: 0;
-            z-index: -100;
             transition: all .2s;
             -webkit-transition: all .2s;
             -moz-transition: all .2s;
