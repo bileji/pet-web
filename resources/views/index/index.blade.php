@@ -1189,10 +1189,52 @@
                 <div class="module-row fillet">
                     <div class="module-wrapper">
                         <div class="module-left fillet">
-
+                            <div class="tab-control">
+                                <div class="header">
+                                    <div class="title">
+                                        <span class="image"></span>
+                                        <span class="text">厨神</span>
+                                    </div>
+                                    <ul class="option-list">
+                                        <li class="option active">选项1</li>
+                                        <li class="option">选项2</li>
+                                        <li class="option">选项3</li>
+                                        <li class="slider">
+                                            <span></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="body">
+                                    <ul class="box-list">
+                                        <li class="box"></li>
+                                        <li class="box"></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="module-right fillet">
-
+                        <!--排行-->
+                        <div class="rank-wrapper">
+                            <div class="tab-control">
+                                <div class="header">
+                                    <div class="title">
+                                        <span class="image"></span>
+                                        <span class="text">排行</span>
+                                    </div>
+                                    <ul class="option-list">
+                                        <li class="option active">选项1</li>
+                                        <li class="option">选项2</li>
+                                        <li class="slider">
+                                            <span></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="body">
+                                    <ul class="box-list">
+                                        <li class="box"></li>
+                                        <li class="box"></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
