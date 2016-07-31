@@ -822,7 +822,7 @@
             // 选项卡
             $(".tab-control .option").click(function () {
                 var left = $(this).index() * ($(this).width() + parseInt($(this).css('marginLeft')) + parseInt($(this).css('marginRight')));
-                var box = $(this).parent().find("li").removeClass("active").parent().find(this).addClass("active").parent().find(".slider").css({left: left}).closest(".tab-control").find(".chest");
+                var box = $(this).parent().find("li").removeClass("active").parent().find(this).addClass("active").parent().find(".slider").css({left: left}).closest(".tab-control").find(".chunk");
                 box.parent().css({left: 0 - parseInt(box.width() * $(this).index())});
             });
         });
