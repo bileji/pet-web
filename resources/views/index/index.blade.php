@@ -745,6 +745,7 @@
             height: 170px;
             width: 180px;
             margin-left: 10px;
+            float: left;
             background: red;
         }
 
