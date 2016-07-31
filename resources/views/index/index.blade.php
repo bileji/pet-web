@@ -806,16 +806,6 @@
                 singleItem: true
             });
 
-            // 模块tab
-            $(".module-tab-item").click(function () {
-                var left = parseInt($(this).css('marginLeft')) + parseInt($(this).parent().css('padding-left')) + $(this).index() * ($(this).width() + parseInt($(this).css('marginLeft')) + parseInt($(this).css('marginRight')));
-                $(this).parent().find(".module-tab-slider").css({left: left});
-
-                var width = $(this).parent().parent().parent().find(".module-body").find(".module-tab").find("li");
-                console.log(width);
-                $(this).parent().parent().parent().find(".module-body").find(".module-tab").css({left: 0 - (parseInt(width) * $(this).index())});
-            });
-
             // 选项卡
             $(".tab-control .option").click(function () {
                 var left = $(this).index() * ($(this).width() + parseInt($(this).css('marginLeft')) + parseInt($(this).css('marginRight')));
