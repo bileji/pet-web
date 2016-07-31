@@ -385,7 +385,7 @@
             height: 40px;
             display: block;
             float: left;
-            background: url('https://web.bileji.com/assets/images/icons.png') no-repeat -141px -461px;;
+            background: url('https://web.bileji.com/assets/images/icons.png') no-repeat -141px -461px;
         }
 
         .container .content .module-container .module-row .module-left .module-header .module-title .module-title-t {
@@ -574,19 +574,29 @@
         }
 
         .tab-control > .header > .title {
-            width: 48px;
-            height: 40px;
+            width: auto;
+            height: 100%;
             float: left;
             text-align: left;
         }
 
-        .tab-control > .header > .title > span {
-            width: 100%;
+        .tab-control > .header > .title > .image {
+            display: inline-block;
+            float: left;
+            width: 40px;
+            height: 100%;
+            background: url('https://web.bileji.com/assets/images/icons.png') no-repeat -141px -461px;
+        }
+
+        .tab-control > .header > .title > .title {
+            width: 48px;
             height: 100%;
             display: inline-block;
             line-height: 44px;
             font-size: 20px;
             color: #222;
+            float: left;
+            margin-left: 10px;
         }
 
         .tab-control > .header > .option-list {
@@ -1150,30 +1160,13 @@
                                 </ul>
                             </div>
                         </div>
-                    {{--<div class="module-right fillet">--}}
-                    {{--<div class="module-header">--}}
-                    {{--<div class="module-title">--}}
-                    {{--<span class="module-title-t">排行</span>--}}
-                    {{--</div>--}}
-                    {{--<ul class="module-tab">--}}
-                    {{--<li class="module-tab-item">选项1</li>--}}
-                    {{--<li class="module-tab-item">选项2</li>--}}
-                    {{--<li class="module-tab-slider">--}}
-                    {{--<span></span>--}}
-                    {{--</li>--}}
-                    {{--</ul>--}}
-                    {{--</div>--}}
-                    {{--<ul class="module-body">--}}
-
-                    {{--</ul>--}}
-                    {{--</div>--}}
-
-                    <!--选项卡-->
+                        <!--选项卡-->
                         <div class="rank-wrapper">
                             <div class="tab-control">
                                 <div class="header">
                                     <div class="title">
-                                        <span>排行</span>
+                                        <span class="image"></span>
+                                        <span class="text">排行</span>
                                     </div>
                                     <ul class="option-list">
                                         <li class="option active">选项1</li>
