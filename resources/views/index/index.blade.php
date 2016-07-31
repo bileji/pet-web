@@ -671,6 +671,10 @@
             height: auto;
         }
 
+        .tab-control > .body > .chest > .first {
+            margin-left: 0;
+        }
+
         /*card css*/
         .card-wrapper:hover {
             cursor: pointer;
@@ -1217,7 +1221,7 @@
                                 </div>
                                 <div class="body">
                                     <ul class="chest">
-                                        <li class="chunk">
+                                        <li class="chunk first">
                                             <ul class="box">
                                                 <li class="item"></li>
                                             </ul>
